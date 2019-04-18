@@ -1,5 +1,5 @@
-# OGC Templates
+# OGC CoverageJSON
 
-This GitHub repository contains templates for OGC documents.
+This GitHub repository contains documents to prpoduce an OGC Implementation Standard for CoverageJSON.
 
-Note that the Apache license applies only to the template. Once a  document has been created, the license must reflect the OGC document license.
+The starting point for the stadnrd is the work by Jon Blower and Mail Reichart of Reading University, and other usage by NASA and NCAR.
