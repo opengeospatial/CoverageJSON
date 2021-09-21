@@ -10,4 +10,4 @@ After any adoption, it is proposed that the commonalities and differences with o
 
 So far, the Business Justfication for this plan has just finished a formal Public Comment period on 25 July 2021 and responses to the received comments are being processed at an OGC GoToMeeting session on 28 July 2021. All were agreed to be closed apart from one, which needed more information for a considered meaningful response. This has been requested from the original commentator.
 
-
+After more informaton, the supporters formaly processed all the public comments, and the Business Justification was presented to the OGC Technical Cmmittee on 20 September 2021, which, with no objections to unanimous consent, agreed to formally vote on commencing the work.
