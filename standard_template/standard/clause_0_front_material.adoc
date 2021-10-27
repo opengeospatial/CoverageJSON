@@ -1,18 +1,23 @@
 [big]*i.     Abstract*
 
-CoverageJSON is a geospatial coverage interchange format based on JavaScript Object Notation (JSON)
+CoverageJSON is a format for publishing geo-temporal data to the Web, based on JavaScript Object Notation (JSON). Simplicity, machine and human readability and efficiency of the format were the primary design goals.
+
+CoverageJSON has been demonstrated to be an effective, efficient format, friendly to web and application developers, and therefore consistent with the current OGC API developments. The format supports the efficient download, from big data stores, of useful quantities of data to lightweight clients, such as browsers and mobile applications. This enables local manipulation of the data in a format familiar to, and popular with, web developers, and readily usable, for example, by science researchers.
+
+It can be used to encode coverages and collections of coverages, possibly tiled, such as multi-dimensional grids, time series, and vertical profiles, distinguished by the geometry of their spatio-temporal domain.  It uses linked-data (JSON-LD) to reduce data payload volumes. 
+
+It is proposed to be adopted as a Community Standard.
 
 [big]*ii.    Keywords*
 
 The following are keywords to be used by search engines and document catalogues.
 
-ogcdoc, OGC document, JSON, CoverageJSON, CovJSON, Coverage
+ogcdoc, OGC document, JSON, JSON-LD, CoverageJSON, CovJSON, Coverage, spatiotemporal, linked-data
 
 [big]*iii.   Preface*
 
 [NOTE]
 ====
-Insert Preface Text here. Give OGC specific commentary: describe the technical content, reason for document, history of the document and precursors, and plans for future work. >
 Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.
 
 Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.
@@ -37,15 +42,15 @@ ESIP/JPL/NASA (Strategic Member)
 
 All questions regarding this submission should be directed to the editor or the submitters:
 
-Chris Little    UK Met Office 
+Chris Little    (editor)        UK Met Office 
 
-Jon Blower      University of Reading 
+Jon Blower      (editor)        University of Reading 
 
-Tom Kralidis    Meteorological Service of Canada 
+Tom Kralidis    (contributor)   Meteorological Service of Canada 
 
-Ethan Davies    Unidata UCAR 
+Ethan Davies    (contributor)   Unidata UCAR 
 
-Steve Olson     US NWS/NOAA 
+Steve Olson     (contributor)   US NWS/NOAA 
 
-Lewis McGibbney ESIP/JPL/NASA 
+Lewis McGibbney (contributor)   ESIP/JPL/NASA 
 
