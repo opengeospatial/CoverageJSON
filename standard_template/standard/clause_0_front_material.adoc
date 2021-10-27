@@ -18,6 +18,8 @@ ogcdoc, OGC document, JSON, JSON-LD, CoverageJSON, CovJSON, Coverage, spatiotemp
 
 [NOTE]
 ====
+The specification was an outcome of a European Union project, "Maximizing the Exploitation of Linked Open Data in Enterprise and Science" (MELODIES), run from 2013 to 2016, and released under a Creative Commons 4.0 Licence. 
+
 Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.
 
 Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.
