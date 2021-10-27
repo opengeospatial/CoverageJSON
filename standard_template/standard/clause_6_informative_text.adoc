@@ -1,59 +1,5 @@
 == Clauses not Containing Normative Material
 
-
-[domain-types]: domain-types.md
-
-# The CoverageJSON Format Specification
-
-WORK-IN-PROGRESS
-
-<!-- Document Info -->
-<table class="table">
-  <tr>
-    <th>Authors</th>
-    <td>
-      <a href="https://github.com/letmaik">Maik Riechert</a> (<a href="http://www.reading.ac.uk">University of Reading</a>),
-      <a href="http://www.met.reading.ac.uk/users/users/1659">Jon Blower</a> (<a href="http://www.reading.ac.uk">University of Reading</a>)
-    </td>
-  </tr>
-  <tr>
-    <th>Revision</th>
-    <td>0.2-draft</td>
-  </tr>
-  <tr>
-    <th>Date</th>
-    <td>xx yy 2016</td>
-  </tr>
-  <tr>
-    <th>Abstract</th>
-    <td>
-      CoverageJSON is a geospatial coverage interchange format based on JavaScript
-      Object Notation (JSON).
-    </td>
-  </tr>
-  <tr>
-    <th>Copyright</th>
-    <td>
-      Copyright &copy; 2015 by ... . This work is licensed under a
-      <a href="http://creativecommons.org/licenses/by/4.0/">
-        Creative Commons Attribution 4.0 International License</a>.
-    </td>
-  </tr>
-</table>
-
-## TODO
-
-The following items are (major) outstanding issues to be resolved for the first version:
-
-- [#45](https://github.com/Reading-eScience-Centre/coveragejson/issues/45)
-  Representation of multiple time axes
-
-## Contents
-{:.no_toc}
-
-* TOC
-{:toc}
-
 ## 1. Introduction
 
 CoverageJSON is a format for encoding coverage data like grids, time series, and vertical profiles, distinguished by the geometry of their spatiotemporal domain. A CoverageJSON object represents a domain, a range, a coverage, or a collection of coverages. A range in CoverageJSON  represents coverage values. A coverage in CoverageJSON is the combination of a domain, parameters, ranges, and additional metadata. A coverage collection represents a list of coverages.
