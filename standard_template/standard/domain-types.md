@@ -1,46 +1,5 @@
 # Common CoverageJSON Domain Types Specification
 
-WORK-IN-PROGRESS
-
-<!-- Document Info -->
-<table class="table">
-  <tr>
-    <th>Authors</th>
-    <td>
-      Maik Riechert (<a href="http://www.reading.ac.uk">University of Reading</a>),
-      Jon Blower (<a href="http://www.reading.ac.uk">University of Reading</a>)
-    </td>
-  </tr>
-  <tr>
-    <th>Revision</th>
-    <td>0.1</td>
-  </tr>
-  <tr>
-    <th>Date</th>
-    <td>xx xxxx 2015</td>
-  </tr>
-  <tr>
-    <th>Abstract</th>
-    <td>
-
-    </td>
-  </tr>
-  <tr>
-    <th>Copyright</th>
-    <td>
-      Copyright &copy; 2015 by ... . This work is licensed under a
-      <a href="http://creativecommons.org/licenses/by/4.0/">
-        Creative Commons Attribution 4.0 International License</a>.
-    </td>
-  </tr>
-</table>
-
-## Contents
-{:.no_toc}
-
-* TOC
-{:toc}
-
 ## 1. Introduction
 
 ### 1.1. Definitions
