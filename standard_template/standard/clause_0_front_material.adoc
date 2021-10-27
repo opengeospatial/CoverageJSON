@@ -38,9 +38,14 @@ ESIP/JPL/NASA (Strategic Member)
 All questions regarding this submission should be directed to the editor or the submitters:
 
 Chris Little    UK Met Office 
+
 Jon Blower      University of Reading 
+
 Tom Kralidis    Meteorological Service of Canada 
+
 Ethan Davies    Unidata UCAR 
+
 Steve Olson     US NWS/NOAA 
+
 Lewis McGibbney ESIP/JPL/NASA 
 
