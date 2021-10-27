@@ -1,8 +1,6 @@
 == References
 The following normative documents contain provisions that, through reference in this text, constitute provisions of this document. For dated references, subsequent amendments to, or revisions of, any of these publications do not apply. For undated references, the latest edition of the normative document referred to applies.
 
-[NOTE]
-====
 https://covjson.org/spec 
 
 OGC07-011, Abstract Specification Topic 6 Schema for coverage geometry and functions 
@@ -24,5 +22,3 @@ UTC http://www.opengis.net/def/trs/BIPM/0/UTC
 ISO8601-based lexical representations
 
 CoverageJSON media type SHALL be application/prs.coverage+json with an optional parameter profile which is a non-empty list of space-separated URIs identifying specific constraints or conventions that apply to a CoverageJSON document according to RFC6906
-
-====
