@@ -7,3 +7,5 @@
 [1] Blower, J., Riechert, M.: Original GitHub repository, https://covjson.org/spec/
 
 [2] Blower, J., Riechert, M., Roberts, B.: Overview of the CoverageJSON format, https://www.w3.org/TR/covjson-overview/
+
+[3] W3C JSON-LD 1.1, JSON-based Serialization for Linked Data, W3C Recommendation 2020-07-16, https://www.w3.org/TR/json-ld11/
