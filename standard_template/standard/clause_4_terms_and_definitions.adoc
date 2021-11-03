@@ -11,3 +11,7 @@ Best Current Practice. It may include several RFCs (IETF)
 
 === *Coverage*
 feature that acts as a function to return values from its range for any direct position within its spatial, temporal or spatiotemporal domain (ISO19123-1)
+
+=== *i18n object*
+string in multiple languages with tags as defined in [BCP 47](http://tools.ietf.org/html/bcp47), and the value is the string in that language.
+The special language tag `"und"` can be used to identify a value whose language is unknown or undetermined. (IETF BCP47)
