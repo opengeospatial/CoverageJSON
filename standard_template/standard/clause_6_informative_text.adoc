@@ -93,13 +93,6 @@ The following lists some areas where the model used by CoverageJSON departs from
 - CIS has no specific model for describing categories of a categorical parameter, CoverageJSON defines such a model.
 - CIS has no notion of semantically grouping parameters (e.g. velocity = speed + direction), CoverageJSON allows that.
 
-### 1.3. Definitions
-
-- JavaScript Object Notation (JSON), and the terms object, name, value, array, string, number, and null, are defined in [IETF RFC 4627](http://www.ietf.org/rfc/rfc4627.txt).
-- JSON-LD is defined in [http://www.w3.org/TR/json-ld/](http://www.w3.org/TR/json-ld/).
-- A compact URI has the form prefix:suffix.
-- The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [IETF RFC 2119](http://www.ietf.org/rfc/rfc2119.txt).
-
 ## 2. i18n Objects
 
 An i18n object represents a string in multiple languages where each key is a language tag as defined in [BCP 47](http://tools.ietf.org/html/bcp47), and the value is the string in that language.
