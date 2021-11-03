@@ -8,3 +8,6 @@ Request For Comment (IETF)
 
 === *BCP*
 Best Current Practice. It may include several RFCs (IETF)
+
+=== *Coverage*
+feature that acts as a function to return values from its range for any direct position within its spatial, temporal or spatiotemporal domain (ISO19123-1)
