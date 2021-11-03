@@ -936,7 +936,7 @@ Requirements for all domain types defined in this specification:
 |Section           |   |   |+  |   |+
 |======================================
 
-.Key
+.Table Key
 [options="header,footer"]
 |==================
 |Symbol| Description
@@ -945,7 +945,6 @@ Requirements for all domain types defined in this specification:
 |+     | Axis with one or more coordinates
 |[+]   | Optional axis with one or more coordinates
 |===================
-
 
 ### 2.1. Grid
 
@@ -1947,3 +1946,4 @@ This specification uses ideas and sentence structures from the http://geojson.or
 ## Acknowledgements
 
 This work was inspired by a demonstration of the concept by Joan Masó of CREAF.
+
