@@ -79,12 +79,12 @@ Range data can also be directly embedded into the main CoverageJSON document, ma
 
 ### 1.2. Differences to OGC Coverage Implementation Schema (CIS)
 
-The candidate OGC standard [Coverage Implementation Schema 1.1](http://www.opengeospatial.org/pressroom/pressreleases/2345) (short CIS)
+The candidate OGC standard http://www.opengeospatial.org/pressroom/pressreleases/2345[Coverage Implementation Schema 1.1] (abbreviated to CIS)
 defines a coverage model targeted towards OGC service types like Web Coverage Service (WCS)
-and is the successor of the
-["GML 3.2.1 Application Schema – Coverages" version 1.0](https://portal.opengeospatial.org/files/?artifact_id=48553) (short GMLCOV).
+and is the successor of the https://portal.opengeospatial.org/files/?artifact_id=48553
+["GML 3.2.1 Application Schema – Coverages" version 1.0] (abbreviated to GMLCOV).
 
-The model of CoverageJSON can be seen as a mix of CIS and the data cube-based [NetCDF file format](https://en.wikipedia.org/wiki/NetCDF).
+The model of CoverageJSON can be seen as a mix of CIS and the data cube-based https://en.wikipedia.org/wiki/NetCDF[NetCDF file format].
 
 The following lists some areas where the model used by CoverageJSON departs from CIS:
 
@@ -95,7 +95,7 @@ The following lists some areas where the model used by CoverageJSON departs from
 
 ## 2. i18n Objects
 
-An i18n object represents a string in multiple languages where each key is a language tag as defined in [BCP 47](http://tools.ietf.org/html/bcp47), and the value is the string in that language.
+An i18n object represents a string in multiple languages where each key is a language tag as defined in http://tools.ietf.org/html/bcp47[BCP 47], and the value is the string in that language.
 The special language tag `"und"` can be used to identify a value whose language is unknown or undetermined.
 
 Example:
@@ -118,7 +118,7 @@ Parameter objects represent metadata about the values of the coverage in terms o
 - A parameter object MAY have a member with the name `"description"` where the value MUST be an i18n object which is a, perhaps lengthy, textual description of the parameter.
 - A parameter object MUST have a member with the name `"observedProperty"` where the value is an object which MUST have the member `"label"` and which MAY have the members `"id"`, `"description"`, and `"categories"`. The value of `"label"` MUST be an i18n object that is the name of the observed property and which SHOULD be short. If given, the value of `"id"` MUST be a string and SHOULD be a common identifier. If given, the value of `"description"` MUST be an i18n object with a textual description of the observed property. If given, the value of `"categories"` MUST be a non-empty array of category objects. A category object MUST an `"id"` and a `"label"` member,  and MAY have a `"description"` member. The value of `"id"` MUST be a string and SHOULD be a common identifier. The value of `"label"` MUST be an i18n object of the name of the category and SHOULD be short. If given, the value of `"description"` MUST be an i18n object with a textual description of the category.
 - A parameter object MAY have a member with the name `"categoryEncoding"` where the value is an object where each key is equal to an `"id"` value of the `"categories"` array within the `"observedProperty"` member of the parameter object. There MUST be no duplicate keys. The value is either an integer or an array of integers where each integer MUST be unique within the object.
-- A parameter object MAY have a member with the name `"unit"` where the value is an object which MUST have either or both the members `"label"` or/and "`symbol`", and which MAY have the member `"id"`. If given, the value of `"symbol"` MUST either be a string of the symbolic notation of the unit, or an object with the members `"value"` and `"type"` where `"value"` is the symbolic unit notation and `"type"` references the unit serialization scheme that is used. `"type"` MUST HAVE the value `"http://www.opengis.net/def/uom/UCUM/`" if [UCUM](http://unitsofmeasure.org) is used, or a custom value as recommended in section "Extensions". If given, the value of `"label"` MUST be an i18n object of the name of the unit and SHOULD be short. If given, the value of `"id"` MUST be a string and SHOULD be a common identifier. It is RECOMMENDED to reference a unit serialization scheme to allow automatic unit conversion.
+- A parameter object MAY have a member with the name `"unit"` where the value is an object which MUST have either or both the members `"label"` or/and "`symbol`", and which MAY have the member `"id"`. If given, the value of `"symbol"` MUST either be a string of the symbolic notation of the unit, or an object with the members `"value"` and `"type"` where `"value"` is the symbolic unit notation and `"type"` references the unit serialization scheme that is used. `"type"` MUST HAVE the value `"http://www.opengis.net/def/uom/UCUM/`" if http://unitsofmeasure.org[UCUM] is used, or a custom value as recommended in section "Extensions". If given, the value of `"label"` MUST be an i18n object of the name of the unit and SHOULD be short. If given, the value of `"id"` MUST be a string and SHOULD be a common identifier. It is RECOMMENDED to reference a unit serialization scheme to allow automatic unit conversion.
 - A parameter object MUST NOT have a `"unit"` member if the `"observedProperty"` member has a `"categories"` member.
 
 
@@ -325,7 +325,7 @@ Projected CRSs use two coordinates to denote positions on a Cartesian plane, whi
 
 If a Coverage conforms to one of the defined [domain types][domain-types] then the coordinate identifier `"x"` is used to denote easting and `"y"` is used for northing.
 
-Example of a projected CRS (here [British National Grid](http://spatialreference.org/ref/epsg/osgb-1936-british-national-grid/)):
+Example of a projected CRS using the http://spatialreference.org/ref/epsg/osgb-1936-british-national-grid/[British National Grid]:
 
 ```json
 {
@@ -390,7 +390,7 @@ In this specification, only a string-based notation for time values is defined.
 - A temporal RS object MUST have a member `"calendar"` with value `"Gregorian"` or a URI.
 - If the Gregorian calender is used, then `"calendar"` MUST have the value `"Gregorian"` and cannot be a URI.
 - A temporal RS object MAY have a member `"timeScale"` with a URI as value.
-  If omitted, the time scale defaults to UTC (`"http://www.opengis.net/def/trs/BIPM/0/UTC"`).
+  If omitted, the time scale defaults to `"http://www.opengis.net/def/trs/BIPM/0/UTC[UTC]"`).
   If the time scale is UTC, the `"timeScale"` member MUST be omitted.
 - If the calendar is based on years, months, days, then the referenced values SHOULD use one of the following
   ISO8601-based lexical representations:
@@ -651,7 +651,7 @@ A CoverageJSON object with the type `"TiledNdArray"` is a TiledNdArray object. I
 - A TiledNdArray object MUST have a member with the name `"axisNames"` where the value is a string array of the same length as `"shape"`.
 - A TiledNdArray object MUST have a member with the name `"tileSets"` where the value is a non-empty array of TileSet objects.
 - A TileSet object MUST have a member with the name `"tileShape"` where the value is an array of the same length as `"shape"` and where each array element is either null or an integer lower or equal than the corresponding element in `"shape"`. A null value denotes that the axis is not tiled.
-- A TileSet object MUST have a member with the name `"urlTemplate"` where the value is a Level 1 URI template as defined in [RFC 6570](https://tools.ietf.org/html/rfc6570). The URI template MUST contain a variable for each axis name whose corresponding element in `"tileShape"` is not null. A variable for an axis of total size `totalSize` (from `"shape"`) and tile size `tileSize` (from `"tileShape"`) has as value one of the integers `0, 1, ..., q + r - 1` where `q` and `r` are the quotient and remainder obtained by dividing `totalSize` by `tileSize`. Each URI that can be generated from the URI template MUST resolve to an NdArray CoverageJSON document where the members `"dataType"` and `"axisNames`" are identical to the ones of the TiledNdArray object, and where each value of `"shape"` is an integer equal, or lower if an edge tile, to the corresponding element in `"tileShape"` while replacing null with the corresponding element of `"shape"` of the TiledNdArray.
+- A TileSet object MUST have a member with the name `"urlTemplate"` where the value is a Level 1 URI template as defined in https://tools.ietf.org/html/rfc6570[RFC 6570] . The URI template MUST contain a variable for each axis name whose corresponding element in `"tileShape"` is not null. A variable for an axis of total size `totalSize` (from `"shape"`) and tile size `tileSize` (from `"tileShape"`) has as value one of the integers `0, 1, ..., q + r - 1` where `q` and `r` are the quotient and remainder obtained by dividing `totalSize` by `tileSize`. Each URI that can be generated from the URI template MUST resolve to an NdArray CoverageJSON document where the members `"dataType"` and `"axisNames`" are identical to the ones of the TiledNdArray object, and where each value of `"shape"` is an integer equal, or lower if an edge tile, to the corresponding element in `"tileShape"` while replacing null with the corresponding element of `"shape"` of the TiledNdArray.
 
 Example:
 
@@ -769,7 +769,7 @@ A CoverageJSON object with the type `"Coverage"` is a coverage object.
 
 Example:
 
-See the [Vertcal Profile Coverage Example](https://covjson.org/spec/#vertical-profile-coverage)
+See the https://covjson.org/spec/#vertical-profile-coverage[Vertical Profile Coverage Example]
 
 ### 6.5. Coverage Collection Objects
 
@@ -784,7 +784,7 @@ A CoverageJSON object with the type `"CoverageCollection"` is a coverage collect
 
 Example:
 
-See the [Coverage Collection Example](https://covjson.org/spec/#coverage-collection)
+See the https://covjson.org/spec/#coverage-collection[Coverage Collection Example]
 
 ## 7. Extensions
 
@@ -868,13 +868,13 @@ Example of a custom reference system type using a compact URI:
 
 ## 8. JSON-LD
 
-If no JSON-LD context is given, then the default context `https://covjson.org/context.jsonld` SHALL be assumed. Note that this context includes [registered namespace prefixes](https://covjson.org/prefixes/) and MAY be updated in a backwards-compatible way as the format evolves.
+If no JSON-LD context is given, then the default context `https://covjson.org/context.jsonld` SHALL be assumed. Note that this context includes https://covjson.org/prefixes/[registered namespace prefixes] and MAY be updated in a backwards-compatible way as the format evolves.
 
 Additional semantics not provided by the default context MAY be provided by specifying an explicit `"@context"` member in the root of a CoverageJSON document. The value of that member MUST be an array where the first element is the default context URL. Any additional context definitions SHALL NOT override definitions of the default context, except when the definition is identical.
 
 Providing an explicit context is especially useful for extensions. A recommended practice is to include any used namespace prefixes, even if registered, in the explicit context. This provides additional clarity and helps humans understand the document more quickly.
 
-It is NOT RECOMMENDED to use the explicit JSON-LD context to map simple names, for example, `"license": "dct:license"`. On one side, this would hinder interoperability for generic non-JSON-LD clients, as they generally rely on absolute URIs or [registered prefixes](https://covjson.org/prefixes/) of compact URIs. On the other side, it would make documents less future-proof as there may be name collisions with future versions of the format where semantics of that name may be defined differently. It is therefore RECOMMENDED to use compact or absolute URIs if an explicit JSON-LD context is included.
+It is NOT RECOMMENDED to use the explicit JSON-LD context to map simple names, for example, `"license": "dct:license"`. On one side, this would hinder interoperability for generic non-JSON-LD clients, as they generally rely on absolute URIs or https://covjson.org/prefixes/[registered prefixes]() of compact URIs. On the other side, it would make documents less future-proof as there may be name collisions with future versions of the format where semantics of that name may be defined differently. It is therefore RECOMMENDED to use compact or absolute URIs if an explicit JSON-LD context is included.
 
 Note that domain axis values and range values SHOULD NOT be exposed as linked data via the JSON-LD context since they are not suitable for such representation.
 
@@ -918,30 +918,33 @@ Requirements for all domain types defined in this specification:
 
 ### Overview of domain types
 
-{:.table}
-Domain Type          | x | y | z | t | composite
----------------------|---|---|---|---|----------
-Grid                 | + | + |[+]|[+]
-VerticalProfile      | 1 | 1 | + |[1]
-PointSeries          | 1 | 1 |[1]| +
-Point                | 1 | 1 |[1]|[1]
-MultiPointSeries     |   |   |   | + | +
-MultiPoint           |   |   |   |[1]| +
-PolygonSeries        |   |   |[1]| + | 1
-Polygon              |   |   |[1]|[1]| 1
-MultiPolygonSeries   |   |   |[1]| + | +
-MultiPolygon         |   |   |[1]|[1]| +
-Trajectory           |   |   |[1]|   | +
-Section              |   |   | + |   | +
+.Domain Types table
+[options="header,footer"]
+|======================================
+|Domain Type       |x  |y  |z  |t  |composite
+|Grid              |+  |+  |[+]|[+]|
+|VerticalProfile   |1  |1  | + |[1]|
+|PointSeries       |1  |1  |[1]|+  |
+|Point             |1  |1  |[1]|[1]|
+|MultiPointSeries  |   |   |   |+  |+
+|MultiPoint        |   |   |   |[1]|+
+|PolygonSeries     |   |   |[1]|+  |1
+|Polygon           |   |   |[1]|[1]|1
+|MultiPolygonSeries|   |   |[1]|+  |+
+|MultiPolygon      |   |   |[1]|[1]|+
+|Trajectory        |   |   |[1]|   |+
+|Section           |   |   |+  |   |+
+|======================================
 
-{:.table}
-Symbol | Description
------|--------------------
-1   | Axis with one coordinate
-[1] | Optional axis with one coordinate
-+   | Axis with one or more coordinates
-[+] | Optional axis with one or more coordinates
-
+.Key
+[options="header,footer"]
+|==================
+|Symbol| Description
+|1     | Axis with one coordinate
+|[1]   | Optional axis with one coordinate
+|+     | Axis with one or more coordinates
+|[+]   | Optional axis with one or more coordinates
+|===================
 
 
 ### 2.1. Grid
@@ -1939,7 +1942,7 @@ Coverage example:
 
 ## Attribution
 
-This specification uses ideas and sentence structures from the [GeoJSON specification](http://geojson.org/geojson-spec.html) which is licensed under a [Creative Commons Attribution 3.0 United States License](http://creativecommons.org/licenses/by/3.0/us/).
+This specification uses ideas and sentence structures from the http://geojson.org/geojson-spec.html[GeoJSON specification] which is licensed under a http://creativecommons.org/licenses/by/3.0/usCreative Commons Attribution 3.0 United States License].
 
 ## Acknowledgements
 
