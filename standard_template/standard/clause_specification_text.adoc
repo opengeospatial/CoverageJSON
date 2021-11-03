@@ -901,9 +901,7 @@ In this example, additional semantics for the registered `dct` prefix are provid
 
 If a domain or range is referenced by a URL in a CoverageJSON document, then the client should, whenever is appropriate, load the data from the given URL and treat the loaded data as if it was directly embedded in place of the URL. When sending HTTP requests, the `Accept` header SHOULD be set appropriately to the CoverageJSON media type.
 
-# Common CoverageJSON Domain Types Specification
-
-## 2. Common Domain Types
+## 10. Common Domain Types
 
 This specification defines the following domain domain types: Grid, VerticalProfile, PointSeries, Point, MultiPointSeries, MultiPoint, PolygonSeries, Polygon, MultiPolygonSeries, MultiPolygon, Trajectory, Section.
 
@@ -946,7 +944,7 @@ Requirements for all domain types defined in this specification:
 |[+]   | Optional axis with one or more coordinates
 |===================
 
-### 2.1. Grid
+### 10.1. Grid
 
 - A domain with Grid domain type MUST have the axes `"x"` and `"y"` and MAY have the axes `"z"` and `"t"`.
 
@@ -997,7 +995,7 @@ Coverage example:
 }
 ```
 
-### 2.2. VerticalProfile
+### 10.2. VerticalProfile
 
 - A domain with VerticalProfile domain type MUST have the axes `"x"`, `"y"`, and `"z"`, where `"x"` and `"y"` MUST have a single coordinate only.
 
@@ -1048,7 +1046,7 @@ Coverage example:
 }
 ```
 
-### 2.3. PointSeries
+### 10.3. PointSeries
 
 - A domain with PointSeries domain type MUST have the axes `"x"`, `"y"`, and `"t"` where `"x"` and `"y"` MUST have a single coordinate only.
 - A domain with PointSeries domain type MAY have the axis `"z"` which MUST have a single coordinate only.
@@ -1100,7 +1098,7 @@ Coverage example:
 }
 ```
 
-### 2.4. Point
+### 10.4. Point
 
 - A domain with Point domain type MUST have the axes `"x"` and `"y"` and MAY have the axes `"z"` and `"t"` where all MUST have a single coordinate only.
 
@@ -1149,7 +1147,7 @@ Coverage example:
 }
 ```
 
-### 2.5. MultiPointSeries
+### 10.5. MultiPointSeries
 
 - A domain with MultiPointSeries domain type MUST have the axes `"composite"` and `"t"`.
 - The axis `"composite"` MUST have the data type `"tuple"` and the coordinate identifiers `"x","y","z"` or `"x","y"`.
@@ -1233,7 +1231,7 @@ Coverage example:
 ```
 
 
-### 2.6. MultiPoint
+### 10.6. MultiPoint
 
 - A domain with MultiPoint domain type MUST have the axis `"composite"` and MAY have the axis `"t"` where `"t"` MUST have a single coordinate only.
 - The axis `"composite"` MUST have the data type `"tuple"` and the coordinate identifiers `"x","y","z"` or `"x","y"`.
@@ -1314,7 +1312,7 @@ Coverage example:
 }
 ```
 
-### 2.7. Trajectory
+### 10.7. Trajectory
 
 - A domain with Trajectory domain type MUST have the axis `"composite"` and MAY have the axis `"z"` where `"z"` MUST have a single coordinate only.
 - The axis `"composite"` MUST have the data type `"tuple"` and the coordinate identifiers `"t","x","y","z"` or `"t","x","y"`.
@@ -1416,7 +1414,7 @@ Coverage example:
 }
 ```
 
-### 2.8. Section
+### 10.8. Section
 
 - A domain with Section domain type MUST have the axes `"composite"` and `"z"`.
 - The axis `"composite"` MUST have the data type `"tuple"` and the coordinate identifiers `"t","x","y"`.
@@ -1479,7 +1477,7 @@ Coverage example:
 }
 ```
 
-### 2.9. Polygon
+### 10.9. Polygon
 
 Polygons in this domain domain type are defined equally to GeoJSON, except that they can only contain `[x,y]` positions (and not `z` or additional coordinates):
 - A LinearRing is an array of 4 or more `[x,y]` arrays where each of `x` and `y` is a coordinate value. The first and last `[x,y]` elements are identical.
@@ -1544,7 +1542,7 @@ Coverage example:
 }
 ```
 
-### 2.10. PolygonSeries
+### 10.10. PolygonSeries
 
 - A domain with PolygonSeries domain type MUST have the axes `"composite"` and `"t"` where `"composite"` MUST have a single Polygon value. Polygons are defined in the Polygon domain type.
 - A domain with PolygonSeries domain type MAY have the axis `"z"` which MUST have a single value only.
@@ -1607,7 +1605,7 @@ Coverage example:
 }
 ```
 
-### 2.11. MultiPolygon
+### 10.11. MultiPolygon
 
 - A domain with MultiPolygon domain type MUST have the axis `"composite"` where the values are Polygons. Polygons are defined in the Polygon domain type.
 - The axis `"composite"` MUST have the data type `"polygon"` and the coordinate identifiers `"x","y"`.
@@ -1672,7 +1670,7 @@ Coverage example:
 }
 ```
 
-### 2.12. MultiPolygonSeries
+### 10.12. MultiPolygonSeries
 
 - A domain with MultiPolygonSeries domain type MUST have the axes `"composite"` and `"t"` where the values of `"composite"` are Polygons. Polygons are defined in the Polygon domain type.
 - The axis `"composite"` MUST have the data type `"polygon"` and the coordinate identifiers `"x","y"`.
