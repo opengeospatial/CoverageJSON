@@ -914,11 +914,9 @@ Requirements for all domain types defined in this specification:
 - A domain that states conformance to one of the domain types in this specification MAY have any number of additional one-coordinate axes not defined here.
 - In a Coverage object, the axis ordering in `"axisNames"` of NdArray objects SHOULD follow the order "t", "z", "y, "x", "composite", leaving out all axes that do not exist or are single-valued.
 
-### Overview of domain types
-
 .Domain Types table
 [options="header,footer"]
-|======================================
+|======
 |Domain Type       |x  |y  |z  |t  |composite
 |Grid              |+  |+  |[+]|[+]|
 |VerticalProfile   |1  |1  | + |[1]|
@@ -932,17 +930,17 @@ Requirements for all domain types defined in this specification:
 |MultiPolygon      |   |   |[1]|[1]|+
 |Trajectory        |   |   |[1]|   |+
 |Section           |   |   |+  |   |+
-|======================================
+|======
 
 .Table Key
-[options="header,footer"]
-|==================
+[options="header"]
+|=====
 |Symbol| Description
 |1     | Axis with one coordinate
 |[1]   | Optional axis with one coordinate
 |+     | Axis with one or more coordinates
 |[+]   | Optional axis with one or more coordinates
-|===================
+|=====
 
 ### 10.1. Grid
 
