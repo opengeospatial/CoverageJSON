@@ -1733,10 +1733,6 @@ Coverage example:
 }
 ```
 
-## Attribution
-
-This specification uses ideas and sentence structures from the http://geojson.org/geojson-spec.html[GeoJSON specification] which is licensed under a http://creativecommons.org/licenses/by/3.0/usCreative Commons Attribution 3.0 United States License].
-
 ## Acknowledgements
 
 This work was inspired by a demonstration of the concept by Joan Masó of CREAF.
