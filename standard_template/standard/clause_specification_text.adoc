@@ -903,7 +903,7 @@ If a domain or range is referenced by a URL in a CoverageJSON document, then the
 
 ## 10. Common Domain Types
 
-This specification defines the following domain domain types: Grid, VerticalProfile, PointSeries, Point, MultiPointSeries, MultiPoint, PolygonSeries, Polygon, MultiPolygonSeries, MultiPolygon, Trajectory, Section.
+This specification defines the following domain types: Grid, VerticalProfile, PointSeries, Point, MultiPointSeries, MultiPoint, PolygonSeries, Polygon, MultiPolygonSeries, MultiPolygon, Trajectory, Section.
 
 Requirements for all domain types defined in this specification:
 
