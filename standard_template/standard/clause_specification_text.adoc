@@ -1,4 +1,4 @@
-== Clauses not Containing Normative Material
+== Full Specification: Normative and Informative intermixed
 
 ## 1. Introduction
 
@@ -79,12 +79,12 @@ Range data can also be directly embedded into the main CoverageJSON document, ma
 
 ### 1.2. Differences to OGC Coverage Implementation Schema (CIS)
 
-The candidate OGC standard [Coverage Implementation Schema 1.1](http://www.opengeospatial.org/pressroom/pressreleases/2345) (short CIS)
+The candidate OGC standard http://www.opengeospatial.org/pressroom/pressreleases/2345[Coverage Implementation Schema 1.1] (abbreviated to CIS)
 defines a coverage model targeted towards OGC service types like Web Coverage Service (WCS)
-and is the successor of the
-["GML 3.2.1 Application Schema – Coverages" version 1.0](https://portal.opengeospatial.org/files/?artifact_id=48553) (short GMLCOV).
+and is the successor of the https://portal.opengeospatial.org/files/?artifact_id=48553
+["GML 3.2.1 Application Schema – Coverages" version 1.0] (abbreviated to GMLCOV).
 
-The model of CoverageJSON can be seen as a mix of CIS and the data cube-based [NetCDF file format](https://en.wikipedia.org/wiki/NetCDF).
+The model of CoverageJSON can be seen as a mix of CIS and the data cube-based https://en.wikipedia.org/wiki/NetCDF[NetCDF file format].
 
 The following lists some areas where the model used by CoverageJSON departs from CIS:
 
@@ -95,7 +95,7 @@ The following lists some areas where the model used by CoverageJSON departs from
 
 ## 2. i18n Objects
 
-An i18n object represents a string in multiple languages where each key is a language tag as defined in [BCP 47](http://tools.ietf.org/html/bcp47), and the value is the string in that language.
+An i18n object represents a string in multiple languages where each key is a language tag as defined in http://tools.ietf.org/html/bcp47[BCP 47], and the value is the string in that language.
 The special language tag `"und"` can be used to identify a value whose language is unknown or undetermined.
 
 Example:
@@ -118,7 +118,7 @@ Parameter objects represent metadata about the values of the coverage in terms o
 - A parameter object MAY have a member with the name `"description"` where the value MUST be an i18n object which is a, perhaps lengthy, textual description of the parameter.
 - A parameter object MUST have a member with the name `"observedProperty"` where the value is an object which MUST have the member `"label"` and which MAY have the members `"id"`, `"description"`, and `"categories"`. The value of `"label"` MUST be an i18n object that is the name of the observed property and which SHOULD be short. If given, the value of `"id"` MUST be a string and SHOULD be a common identifier. If given, the value of `"description"` MUST be an i18n object with a textual description of the observed property. If given, the value of `"categories"` MUST be a non-empty array of category objects. A category object MUST an `"id"` and a `"label"` member,  and MAY have a `"description"` member. The value of `"id"` MUST be a string and SHOULD be a common identifier. The value of `"label"` MUST be an i18n object of the name of the category and SHOULD be short. If given, the value of `"description"` MUST be an i18n object with a textual description of the category.
 - A parameter object MAY have a member with the name `"categoryEncoding"` where the value is an object where each key is equal to an `"id"` value of the `"categories"` array within the `"observedProperty"` member of the parameter object. There MUST be no duplicate keys. The value is either an integer or an array of integers where each integer MUST be unique within the object.
-- A parameter object MAY have a member with the name `"unit"` where the value is an object which MUST have either or both the members `"label"` or/and "`symbol`", and which MAY have the member `"id"`. If given, the value of `"symbol"` MUST either be a string of the symbolic notation of the unit, or an object with the members `"value"` and `"type"` where `"value"` is the symbolic unit notation and `"type"` references the unit serialization scheme that is used. `"type"` MUST HAVE the value `"http://www.opengis.net/def/uom/UCUM/`" if [UCUM](http://unitsofmeasure.org) is used, or a custom value as recommended in section "Extensions". If given, the value of `"label"` MUST be an i18n object of the name of the unit and SHOULD be short. If given, the value of `"id"` MUST be a string and SHOULD be a common identifier. It is RECOMMENDED to reference a unit serialization scheme to allow automatic unit conversion.
+- A parameter object MAY have a member with the name `"unit"` where the value is an object which MUST have either or both the members `"label"` or/and "`symbol`", and which MAY have the member `"id"`. If given, the value of `"symbol"` MUST either be a string of the symbolic notation of the unit, or an object with the members `"value"` and `"type"` where `"value"` is the symbolic unit notation and `"type"` references the unit serialization scheme that is used. `"type"` MUST HAVE the value `"http://www.opengis.net/def/uom/UCUM/`" if http://unitsofmeasure.org[UCUM] is used, or a custom value as recommended in section "Extensions". If given, the value of `"label"` MUST be an i18n object of the name of the unit and SHOULD be short. If given, the value of `"id"` MUST be a string and SHOULD be a common identifier. It is RECOMMENDED to reference a unit serialization scheme to allow automatic unit conversion.
 - A parameter object MUST NOT have a `"unit"` member if the `"observedProperty"` member has a `"categories"` member.
 
 
@@ -325,7 +325,7 @@ Projected CRSs use two coordinates to denote positions on a Cartesian plane, whi
 
 If a Coverage conforms to one of the defined [domain types][domain-types] then the coordinate identifier `"x"` is used to denote easting and `"y"` is used for northing.
 
-Example of a projected CRS (here [British National Grid](http://spatialreference.org/ref/epsg/osgb-1936-british-national-grid/)):
+Example of a projected CRS using the http://spatialreference.org/ref/epsg/osgb-1936-british-national-grid/[British National Grid]:
 
 ```json
 {
@@ -390,7 +390,7 @@ In this specification, only a string-based notation for time values is defined.
 - A temporal RS object MUST have a member `"calendar"` with value `"Gregorian"` or a URI.
 - If the Gregorian calender is used, then `"calendar"` MUST have the value `"Gregorian"` and cannot be a URI.
 - A temporal RS object MAY have a member `"timeScale"` with a URI as value.
-  If omitted, the time scale defaults to UTC (`"http://www.opengis.net/def/trs/BIPM/0/UTC"`).
+  If omitted, the time scale defaults to `"http://www.opengis.net/def/trs/BIPM/0/UTC[UTC]"`).
   If the time scale is UTC, the `"timeScale"` member MUST be omitted.
 - If the calendar is based on years, months, days, then the referenced values SHOULD use one of the following
   ISO8601-based lexical representations:
@@ -651,7 +651,7 @@ A CoverageJSON object with the type `"TiledNdArray"` is a TiledNdArray object. I
 - A TiledNdArray object MUST have a member with the name `"axisNames"` where the value is a string array of the same length as `"shape"`.
 - A TiledNdArray object MUST have a member with the name `"tileSets"` where the value is a non-empty array of TileSet objects.
 - A TileSet object MUST have a member with the name `"tileShape"` where the value is an array of the same length as `"shape"` and where each array element is either null or an integer lower or equal than the corresponding element in `"shape"`. A null value denotes that the axis is not tiled.
-- A TileSet object MUST have a member with the name `"urlTemplate"` where the value is a Level 1 URI template as defined in [RFC 6570](https://tools.ietf.org/html/rfc6570). The URI template MUST contain a variable for each axis name whose corresponding element in `"tileShape"` is not null. A variable for an axis of total size `totalSize` (from `"shape"`) and tile size `tileSize` (from `"tileShape"`) has as value one of the integers `0, 1, ..., q + r - 1` where `q` and `r` are the quotient and remainder obtained by dividing `totalSize` by `tileSize`. Each URI that can be generated from the URI template MUST resolve to an NdArray CoverageJSON document where the members `"dataType"` and `"axisNames`" are identical to the ones of the TiledNdArray object, and where each value of `"shape"` is an integer equal, or lower if an edge tile, to the corresponding element in `"tileShape"` while replacing null with the corresponding element of `"shape"` of the TiledNdArray.
+- A TileSet object MUST have a member with the name `"urlTemplate"` where the value is a Level 1 URI template as defined in https://tools.ietf.org/html/rfc6570[RFC 6570] . The URI template MUST contain a variable for each axis name whose corresponding element in `"tileShape"` is not null. A variable for an axis of total size `totalSize` (from `"shape"`) and tile size `tileSize` (from `"tileShape"`) has as value one of the integers `0, 1, ..., q + r - 1` where `q` and `r` are the quotient and remainder obtained by dividing `totalSize` by `tileSize`. Each URI that can be generated from the URI template MUST resolve to an NdArray CoverageJSON document where the members `"dataType"` and `"axisNames`" are identical to the ones of the TiledNdArray object, and where each value of `"shape"` is an integer equal, or lower if an edge tile, to the corresponding element in `"tileShape"` while replacing null with the corresponding element of `"shape"` of the TiledNdArray.
 
 Example:
 
@@ -769,7 +769,7 @@ A CoverageJSON object with the type `"Coverage"` is a coverage object.
 
 Example:
 
-See the [Vertcal Profile Coverage Example](https://covjson.org/spec/#vertical-profile-coverage)
+See the https://covjson.org/spec/#vertical-profile-coverage[Vertical Profile Coverage Example]
 
 ### 6.5. Coverage Collection Objects
 
@@ -784,7 +784,7 @@ A CoverageJSON object with the type `"CoverageCollection"` is a coverage collect
 
 Example:
 
-See the [Coverage Collection Example](https://covjson.org/spec/#coverage-collection)
+See the https://covjson.org/spec/#coverage-collection[Coverage Collection Example]
 
 ## 7. Extensions
 
@@ -868,13 +868,13 @@ Example of a custom reference system type using a compact URI:
 
 ## 8. JSON-LD
 
-If no JSON-LD context is given, then the default context `https://covjson.org/context.jsonld` SHALL be assumed. Note that this context includes [registered namespace prefixes](https://covjson.org/prefixes/) and MAY be updated in a backwards-compatible way as the format evolves.
+If no JSON-LD context is given, then the default context `https://covjson.org/context.jsonld` SHALL be assumed. Note that this context includes https://covjson.org/prefixes/[registered namespace prefixes] and MAY be updated in a backwards-compatible way as the format evolves.
 
 Additional semantics not provided by the default context MAY be provided by specifying an explicit `"@context"` member in the root of a CoverageJSON document. The value of that member MUST be an array where the first element is the default context URL. Any additional context definitions SHALL NOT override definitions of the default context, except when the definition is identical.
 
 Providing an explicit context is especially useful for extensions. A recommended practice is to include any used namespace prefixes, even if registered, in the explicit context. This provides additional clarity and helps humans understand the document more quickly.
 
-It is NOT RECOMMENDED to use the explicit JSON-LD context to map simple names, for example, `"license": "dct:license"`. On one side, this would hinder interoperability for generic non-JSON-LD clients, as they generally rely on absolute URIs or [registered prefixes](https://covjson.org/prefixes/) of compact URIs. On the other side, it would make documents less future-proof as there may be name collisions with future versions of the format where semantics of that name may be defined differently. It is therefore RECOMMENDED to use compact or absolute URIs if an explicit JSON-LD context is included.
+It is NOT RECOMMENDED to use the explicit JSON-LD context to map simple names, for example, `"license": "dct:license"`. On one side, this would hinder interoperability for generic non-JSON-LD clients, as they generally rely on absolute URIs or https://covjson.org/prefixes/[registered prefixes]() of compact URIs. On the other side, it would make documents less future-proof as there may be name collisions with future versions of the format where semantics of that name may be defined differently. It is therefore RECOMMENDED to use compact or absolute URIs if an explicit JSON-LD context is included.
 
 Note that domain axis values and range values SHOULD NOT be exposed as linked data via the JSON-LD context since they are not suitable for such representation.
 
@@ -901,212 +901,839 @@ In this example, additional semantics for the registered `dct` prefix are provid
 
 If a domain or range is referenced by a URL in a CoverageJSON document, then the client should, whenever is appropriate, load the data from the given URL and treat the loaded data as if it was directly embedded in place of the URL. When sending HTTP requests, the `Accept` header SHOULD be set appropriately to the CoverageJSON media type.
 
-## Appendix A. Coverage Examples
+## 10. Common Domain Types
 
-### Vertical Profile Coverage
+This specification defines the following domain types: Grid, VerticalProfile, PointSeries, Point, MultiPointSeries, MultiPoint, PolygonSeries, Polygon, MultiPolygonSeries, MultiPolygon, Trajectory, Section.
+
+Requirements for all domain types defined in this specification:
+
+- The axis and coordinate identifiers `"x"` and `"y"` MUST refer to horizontal spatial coordinates,
+`"z"` to vertical spatial coordinates, and all of `"x"`, `"y"`, and `"z"` MUST be referenced by a spatial coordinate reference system.
+- The axis and coordinate identifier `"t"` MUST refer to temporal coordinates and be referenced by a temporal reference system.
+- If a spatial CRS is used that has the axes longitude and latitude, or easting and northing, then the axis and coordinate identifier `"x"` MUST refer to longitude / easting, and `"y"` to latitude / northing.
+- A domain that states conformance to one of the domain types in this specification MAY have any number of additional one-coordinate axes not defined here.
+- In a Coverage object, the axis ordering in `"axisNames"` of NdArray objects SHOULD follow the order "t", "z", "y, "x", "composite", leaving out all axes that do not exist or are single-valued.
+
+.Domain Types table
+[options="header,footer"]
+|======
+|Domain Type       |x  |y  |z  |t  |composite
+|Grid              |+  |+  |[+]|[+]|
+|VerticalProfile   |1  |1  | + |[1]|
+|PointSeries       |1  |1  |[1]|+  |
+|Point             |1  |1  |[1]|[1]|
+|MultiPointSeries  |   |   |   |+  |+
+|MultiPoint        |   |   |   |[1]|+
+|PolygonSeries     |   |   |[1]|+  |1
+|Polygon           |   |   |[1]|[1]|1
+|MultiPolygonSeries|   |   |[1]|+  |+
+|MultiPolygon      |   |   |[1]|[1]|+
+|Trajectory        |   |   |[1]|   |+
+|Section           |   |   |+  |   |+
+|======
+
+.Table Key
+[options="header"]
+|=====
+|Symbol| Description
+|1     | Axis with one coordinate
+|[1]   | Optional axis with one coordinate
+|+     | Axis with one or more coordinates
+|[+]   | Optional axis with one or more coordinates
+|=====
+
+### 10.1. Grid
+
+- A domain with Grid domain type MUST have the axes `"x"` and `"y"` and MAY have the axes `"z"` and `"t"`.
+
+Domain example:
+
+```json
+{
+  "type": "Domain",
+  "domainType": "Grid",
+  "axes": {
+    "x": { "values": [1,2,3] },
+    "y": { "values": [20,21] },
+    "z": { "values": [1] },
+    "t": { "values": ["2008-01-01T04:00:00Z"] }
+  },
+  "referencing": [...]
+}
+```
+
+Coverage example:
 
 ```json
 {
   "type" : "Coverage",
   "domain" : {
     "type" : "Domain",
-    "domainType" : "VerticalProfile",
+    "domainType" : "Grid",
     "axes": {
-      "x" : { "values": [-10.1] },
-      "y" : { "values": [ -40.2] },
-      "z" : { "values": [
-              5.4562, 8.9282, 14.8802, 20.8320, 26.7836, 32.7350,
-              38.6863, 44.6374, 50.5883, 56.5391, 62.4897, 68.4401,
-              74.3903, 80.3404, 86.2902, 92.2400, 98.1895, 104.1389,
-              110.0881, 116.0371, 121.9859 ] },
-      "t" : { "values": ["2013-01-13T11:12:20Z"] }
+      "x": { "values": [1,2,3] },
+      "y": { "values": [20,21] },
+      "z": { "values": [1] },
+      "t": { "values": ["2008-01-01T04:00:00Z"] }
     },
-    "referencing": [{
-      "coordinates": ["x","y"],
-      "system": {
-        "type": "GeographicCRS",
-        "id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-      }
-    }, {
-      "coordinates": ["z"],
-      "system": {
-        "type": "VerticalCRS",
-        "cs": {
-          "csAxes": [{
-            "name": {
-              "en": "Pressure"
-            },
-            "direction": "down",
-            "unit": {
-              "symbol": "Pa"
-            }
-          }]
-        }
-      }
-    }, {
-      "coordinates": ["t"],
-      "system": {
-        "type": "TemporalRS",
-        "calendar": "Gregorian"
-      }
-    }]
+    "referencing": [...]
   },
   "parameters" : {
-    "PSAL": {
-      "type" : "Parameter",
-      "description" : {
-        "en": "The measured salinity, in practical salinity units (psu) of the sea water "
-      },
-      "unit" : {
-        "symbol" : "psu"
-      },
-      "observedProperty" : {
-        "id" : "http://vocab.nerc.ac.uk/standard_name/sea_water_salinity/",
-        "label" : {
-          "en": "Sea Water Salinity"
-        }
-      }
-    },
-    "POTM": {
-      "type" : "Parameter",
-      "description" : {
-        "en": "The potential temperature, in degrees celcius, of the sea water"
-      },
-      "unit" : {
-        "symbol" : "°C"
-      },
-      "observedProperty" : {
-        "id" : "http://vocab.nerc.ac.uk/standard_name/sea_water_potential_temperature/",
-        "label" : {
-          "en": "Sea Water Potential Temperature"
-        }
-      }
-    }
+    "temperature": {...}
   },
   "ranges" : {
-    "PSAL" : {
+    "temperature" : {
       "type" : "NdArray",
       "dataType": "float",
-      "shape": [21],
-      "axisNames": ["z"],
-      "values" : [ 43.9599, 43.9599, 43.9640, 43.9640, 43.9679, 43.9879, 44.0040,
-                   44.0120, 44.0120, 44.0159, 44.0320, 44.0320, 44.0480, 44.0559,
-                   44.0559, 44.0579, 44.0680, 44.0740, 44.0779, 44.0880, 44.0940 ]
-    },
-    "POTM" : {
-      "type" : "NdArray",
-      "dataType": "float",
-      "shape": [21],
-      "axisNames": ["z"],
-      "values" : [ 23.8, 23.7, 23.5, 23.4, 23.2, 22.4, 21.8,
-                   21.7, 21.5, 21.3, 21.0, 20.6, 20.1, 19.7,
-                   19.4, 19.1, 18.9, 18.8, 18.7, 18.6, 18.5 ]
+      "axisNames": ["t", "z", "y", "x"],
+      "shape": [1, 1, 2, 3],
+      "values" : [...]
     }
   }
 }
 ```
 
-### Coverage Collection
+### 10.2. VerticalProfile
+
+- A domain with VerticalProfile domain type MUST have the axes `"x"`, `"y"`, and `"z"`, where `"x"` and `"y"` MUST have a single coordinate only.
+
+Domain example:
 
 ```json
 {
-  "type" : "CoverageCollection",
-  "domainType" : "VerticalProfile",
-  "parameters" : {
-    "PSAL": {
-      "type" : "Parameter",
-      "description" : {
-        "en": "The measured salinity, in practical salinity units (psu) of the sea water"
-      },
-      "unit" : {
-        "symbol" : "psu"
-      },
-      "observedProperty" : {
-        "id": "http://vocab.nerc.ac.uk/standard_name/sea_water_salinity/",
-        "label" : {
-          "en": "Sea Water Salinity"
-        }
-      }
-    }
+  "type": "Domain",
+  "domainType": "VerticalProfile",
+  "axes": {
+    "x": { "values": [1] },
+    "y": { "values": [21] },
+    "z": { "values": [1,5,20] },
+    "t": { "values": ["2008-01-01T04:00:00Z"] }
   },
-  "referencing": [{
-    "coordinates": ["x","y"],
-    "system": {
-      "type": "GeographicCRS",
-      "id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-    }
-  }, {
-    "coordinates": ["z"],
-    "system": {
-      "type": "VerticalCRS",
-      "cs": {
-        "csAxes": [{
-          "name": {
-            "en": "Pressure"
-          },
-          "direction": "down",
-          "unit": {
-            "symbol": "Pa"
-          }
-        }]
-      }
-    }
-  }, {
-    "coordinates": ["t"],
-    "system": {
-      "type": "TemporalRS",
-      "calendar": "Gregorian"
-    }
-  }],
-  "coverages": [
-    {
-      "type" : "Coverage",
-      "domain" : {
-        "type": "Domain",
-        "axes": {
-          "x": { "values": [-10.1] },
-          "y": { "values": [-40.2] },
-          "z": { "values": [ 5, 8, 14 ] },
-          "t": { "values": ["2013-01-13T11:12:20Z"] }
-        }
-      },
-      "ranges" : {
-        "PSAL" : {
-          "type" : "NdArray",
-          "dataType": "float",
-          "shape": [3],
-          "axisNames": ["z"],
-          "values" : [ 43.7, 43.8, 43.9 ]
-        }
-      }
-    }, {
-      "type" : "Coverage",
-      "domain" : {
-        "type": "Domain",
-        "axes": {
-          "x": { "values": [-11.1] },
-          "y": { "values": [-45.2] },
-          "z": { "values": [ 4, 7, 9 ] },
-          "t": { "values": ["2013-01-13T12:12:20Z"] }
-        }
-      },
-      "ranges" : {
-        "PSAL" : {
-          "type" : "NdArray",
-          "dataType": "float",
-          "shape": [3],
-          "axisNames": ["z"],
-          "values" : [ 42.7, 41.8, 40.9 ]
-        }
-      }
-    }]
+  "referencing": [...]
 }
 ```
 
-## Attribution
+Coverage example:
 
-This specification uses ideas and sentence structures from the [GeoJSON specification](http://geojson.org/geojson-spec.html) which is licensed under a [Creative Commons Attribution 3.0 United States License](http://creativecommons.org/licenses/by/3.0/us/).
+```json
+{
+  "type" : "Coverage",
+  "domain" : {
+    "type": "Domain",
+    "domainType": "VerticalProfile",
+    "axes": {
+      "x": { "values": [1] },
+      "y": { "values": [21] },
+      "z": { "values": [1,5,20] },
+      "t": { "values": ["2008-01-01T04:00:00Z"] }
+    },
+    "referencing": [...]
+  },
+  "parameters" : {
+    "temperature": {...}
+  },
+  "ranges" : {
+    "temperature" : {
+      "type" : "NdArray",
+      "dataType": "float",
+      "axisNames": ["z"],
+      "shape": [3],
+      "values" : [...]
+    }
+  }
+}
+```
+
+### 10.3. PointSeries
+
+- A domain with PointSeries domain type MUST have the axes `"x"`, `"y"`, and `"t"` where `"x"` and `"y"` MUST have a single coordinate only.
+- A domain with PointSeries domain type MAY have the axis `"z"` which MUST have a single coordinate only.
+
+Domain example:
+
+```json
+{
+  "type": "Domain",
+  "domainType": "PointSeries",
+  "axes": {
+    "x": { "values": [1] },
+    "y": { "values": [20] },
+    "z": { "values": [1] },
+    "t": { "values": ["2008-01-01T04:00:00Z","2008-01-01T05:00:00Z"] }
+  },
+  "referencing": [...]
+}
+```
+
+Coverage example:
+
+```json
+{
+  "type" : "Coverage",
+  "domain" : {
+    "type": "Domain",
+    "domainType": "PointSeries",
+    "axes": {
+      "x": { "values": [1] },
+      "y": { "values": [20] },
+      "z": { "values": [1] },
+      "t": { "values": ["2008-01-01T04:00:00Z","2008-01-01T05:00:00Z"] }
+    },
+    "referencing": [...]
+  },
+  "parameters" : {
+    "temperature": {...}
+  },
+  "ranges" : {
+    "temperature" : {
+      "type" : "NdArray",
+      "dataType": "float",
+      "axisNames": ["t"],
+      "shape": [2],
+      "values" : [...]
+    }
+  }
+}
+```
+
+### 10.4. Point
+
+- A domain with Point domain type MUST have the axes `"x"` and `"y"` and MAY have the axes `"z"` and `"t"` where all MUST have a single coordinate only.
+
+Domain example:
+
+```json
+{
+  "type": "Domain",
+  "domainType": "Point",
+  "axes": {
+    "x": { "values": [1] },
+    "y": { "values": [20] },
+    "z": { "values": [1] },
+    "t": { "values": ["2008-01-01T04:00:00Z"] }
+  },
+  "referencing": [...]
+}
+```
+
+Coverage example:
+
+```json
+{
+  "type" : "Coverage",
+  "domain" : {
+    "type": "Domain",
+    "domainType": "Point",
+    "axes": {
+      "x": { "values": [1] },
+      "y": { "values": [20] },
+      "z": { "values": [1] },
+      "t": { "values": ["2008-01-01T04:00:00Z"] }
+    },
+    "referencing": [...]
+  },
+  "parameters" : {
+    "temperature": {...}
+  },
+  "ranges" : {
+    "temperature" : {
+      "type" : "NdArray",
+      "dataType": "float",
+      "values" : [...]
+    }
+  }
+}
+```
+
+### 10.5. MultiPointSeries
+
+- A domain with MultiPointSeries domain type MUST have the axes `"composite"` and `"t"`.
+- The axis `"composite"` MUST have the data type `"tuple"` and the coordinate identifiers `"x","y","z"` or `"x","y"`.
+
+Domain example:
+
+```json
+{
+  "type": "Domain",
+  "domainType": "MultiPointSeries",
+  "axes": {
+    "t": { "values": ["2008-01-01T04:00:00Z", "2008-01-01T05:00:00Z"] },
+    "composite": {
+      "dataType": "tuple",
+      "coordinates": ["x","y","z"],
+      "values": [
+        [1, 20, 1],
+        [2, 21, 3]
+      ]
+    }
+  },
+  "referencing": [...]
+}
+```
+
+Domain example without z:
+
+```json
+{
+  "type": "Domain",
+  "domainType": "MultiPointSeries",
+  "axes": {
+    "t": { "values": ["2008-01-01T04:00:00Z", "2008-01-01T05:00:00Z"] },
+    "composite": {
+      "dataType": "tuple",
+      "coordinates": ["x","y"],
+      "values": [
+        [1, 20],
+        [2, 21]
+      ]
+    }    
+  },
+  "referencing": [...]
+}
+```
+
+Coverage example:
+
+```json
+{
+  "type" : "Coverage",
+  "domain" : {
+    "type": "Domain",
+    "domainType": "MultiPointSeries",
+    "axes": {
+      "t": { "values": ["2008-01-01T04:00:00Z", "2008-01-01T05:00:00Z"] },
+      "composite": {
+        "dataType": "tuple",
+        "coordinates": ["x","y","z"],
+        "values": [
+          [1, 20, 1],
+          [2, 21, 3],
+          [2, 20, 4]
+        ]
+      }
+    }
+  },
+  "parameters" : {
+    "temperature": {...}
+  },
+  "ranges" : {
+    "temperature" : {
+      "type" : "NdArray",
+      "dataType": "float",
+      "axisNames": ["t", "composite"],
+      "shape": [2, 3],
+      "values" : [...]
+    }
+  }
+}
+```
+
+
+### 10.6. MultiPoint
+
+- A domain with MultiPoint domain type MUST have the axis `"composite"` and MAY have the axis `"t"` where `"t"` MUST have a single coordinate only.
+- The axis `"composite"` MUST have the data type `"tuple"` and the coordinate identifiers `"x","y","z"` or `"x","y"`.
+
+Domain example:
+
+```json
+{
+  "type": "Domain",
+  "domainType": "MultiPoint",
+  "axes": {
+    "t": { "values": ["2008-01-01T04:00:00Z"] },
+    "composite": {
+      "dataType": "tuple",
+      "coordinates": ["x","y","z"],
+      "values": [
+        [1, 20, 1],
+        [2, 21, 3]
+      ]
+    }
+  },
+  "referencing": [...]
+}
+```
+
+Domain example without z and t:
+
+```json
+{
+  "type": "Domain",
+  "domainType": "MultiPoint",
+  "axes": {
+    "composite": {
+      "dataType": "tuple",
+      "coordinates": ["x","y"],
+      "values": [
+        [1, 20],
+        [2, 21]
+      ]
+    }    
+  },
+  "referencing": [...]
+}
+```
+
+Coverage example:
+
+```json
+{
+  "type" : "Coverage",
+  "domain" : {
+    "type": "Domain",
+    "domainType": "MultiPoint",
+    "axes": {
+      "t": { "values": ["2008-01-01T04:00:00Z"] },
+      "composite": {
+        "dataType": "tuple",
+        "coordinates": ["x","y","z"],
+        "values": [
+          [1, 20, 1],
+          [2, 21, 3]
+        ]
+      }
+    }
+  },
+  "parameters" : {
+    "temperature": {...}
+  },
+  "ranges" : {
+    "temperature" : {
+      "type" : "NdArray",
+      "dataType": "float",
+      "axisNames": ["composite"],
+      "shape": [2],
+      "values" : [...]
+    }
+  }
+}
+```
+
+### 10.7. Trajectory
+
+- A domain with Trajectory domain type MUST have the axis `"composite"` and MAY have the axis `"z"` where `"z"` MUST have a single coordinate only.
+- The axis `"composite"` MUST have the data type `"tuple"` and the coordinate identifiers `"t","x","y","z"` or `"t","x","y"`.
+- The value ordering of the axis `"composite"` MUST follow the ordering of its `"t"` coordinate as defined in the corresponding reference system.
+
+Domain example:
+
+```json
+{
+  "type": "Domain",
+  "domainType": "Trajectory",
+  "axes": {
+    "composite": {
+      "dataType": "tuple",
+      "coordinates": ["t","x","y","z"],      
+      "values": [
+        ["2008-01-01T04:00:00Z", 1, 20, 1],
+        ["2008-01-01T04:30:00Z", 2, 21, 3]
+      ]
+    }
+  },
+  "referencing": [...]
+}
+```
+
+Domain example without z:
+
+```json
+{
+  "type": "Domain",
+  "domainType": "Trajectory",
+  "axes": {
+    "composite": {
+      "dataType": "tuple",
+      "coordinates": ["t","x","y"],      
+      "values": [
+        ["2008-01-01T04:00:00Z", 1, 20],
+        ["2008-01-01T04:30:00Z", 2, 21]
+      ]
+    }
+  },
+  "referencing": [...]
+}
+```
+
+Domain example with z defined as constant value:
+
+```json
+{
+  "type": "Domain",
+  "domainType": "Trajectory",
+  "axes": {
+    "composite": {
+      "dataType": "tuple",
+      "coordinates": ["t","x","y"],      
+      "values": [
+        ["2008-01-01T04:00:00Z", 1, 20],
+        ["2008-01-01T04:30:00Z", 2, 21]
+      ]
+    },
+    "z": { "values": [5] }
+  },
+  "referencing": [...]
+}
+```
+
+Coverage example:
+
+```json
+{
+  "type" : "Coverage",
+  "domain" : {
+    "type": "Domain",
+    "domainType": "Trajectory",
+    "axes": {
+      "composite": {
+        "dataType": "tuple",
+        "coordinates": ["t","x","y","z"],      
+        "values": [
+          ["2008-01-01T04:00:00Z", 1, 20, 1],
+          ["2008-01-01T04:30:00Z", 2, 21, 3]
+        ]
+      }
+    },
+    "referencing": [...]
+  },
+  "parameters" : {
+    "temperature": {...}
+  },
+  "ranges" : {
+    "temperature" : {
+      "type" : "NdArray",
+      "dataType": "float",
+      "axisNames": ["composite"],
+      "shape": [2],
+      "values" : [...]
+    }
+  }
+}
+```
+
+### 10.8. Section
+
+- A domain with Section domain type MUST have the axes `"composite"` and `"z"`.
+- The axis `"composite"` MUST have the data type `"tuple"` and the coordinate identifiers `"t","x","y"`.
+- The value ordering of the axis `"composite"` MUST follow the ordering of its `"t"` coordinate as defined in the corresponding reference system.
+
+Domain example:
+
+```json
+{
+  "type": "Domain",
+  "domainType": "Section",
+  "axes": {
+    "z": { "values": [10,20,30] },
+    "composite": {
+      "dataType": "tuple",
+      "coordinates": ["t","x","y"],
+      "values": [
+        ["2008-01-01T04:00:00Z", 1, 20],
+        ["2008-01-01T04:30:00Z", 2, 21]
+      ]
+    }
+  },
+  "referencing": [...]
+}
+```
+
+Coverage example:
+
+```json
+{
+  "type" : "Coverage",
+  "domain" : {
+    "type": "Domain",
+    "domainType": "Section",
+    "axes": {
+      "z": { "values": [10,20,30] },
+      "composite": {
+        "dataType": "tuple",
+        "coordinates": ["t","x","y"],
+        "values": [
+          ["2008-01-01T04:00:00Z", 1, 20],
+          ["2008-01-01T04:30:00Z", 2, 21]
+        ]
+      }
+    },
+    "referencing": [...]
+  },
+  "parameters" : {
+    "temperature": {...}
+  },
+  "ranges" : {
+    "temperature" : {
+      "type" : "NdArray",
+      "dataType": "float",
+      "axisNames": ["z", "composite"],
+      "shape": [3, 2],
+      "values" : [...]
+    }
+  }
+}
+```
+
+### 10.9. Polygon
+
+Polygons in this domain domain type are defined equally to GeoJSON, except that they can only contain `[x,y]` positions (and not `z` or additional coordinates):
+- A LinearRing is an array of 4 or more `[x,y]` arrays where each of `x` and `y` is a coordinate value. The first and last `[x,y]` elements are identical.
+- A Polygon is an array of LinearRing arrays. For Polygons with multiple rings, the first MUST be the exterior ring and any others MUST be interior rings or holes.
+
+- A domain with Polygon domain type MUST have the axis `"composite"` which has a single Polygon value.
+- The axis `"composite"` MUST have the data type `"polygon"` and the coordinate identifiers `"x","y"`.
+- A Polygon domain MAY have the axes `"z"` and `"t"` which both MUST have a single value only.
+
+Domain example:
+
+```json
+{
+  "type": "Domain",
+  "domainType": "Polygon",
+  "axes": {
+    "composite": {
+      "dataType": "polygon",
+      "coordinates": ["x","y"],
+      "values": [
+        [ [ [100.0, 0.0], [101.0, 0.0], [101.0, 1.0], [100.0, 1.0], [100.0, 0.0] ]  ]
+      ]
+    },
+    "z": { "values": [2] },
+    "t": { "values": ["2008-01-01T04:00:00Z"] }
+  },
+  "referencing": [...]
+}
+```
+
+Coverage example:
+
+```json
+{
+  "type" : "Coverage",
+  "domain" : {
+    "type": "Domain",
+    "domainType": "Polygon",
+    "axes": {
+      "composite": {
+        "dataType": "polygon",
+        "coordinates": ["x","y"],
+        "values": [
+          [ [ [100.0, 0.0], [101.0, 0.0], [101.0, 1.0], [100.0, 1.0], [100.0, 0.0] ]  ]
+        ]
+      },
+      "z": { "values": [2] },
+      "t": { "values": ["2008-01-01T04:00:00Z"] }
+    },
+    "referencing": [...]
+  },
+  "parameters" : {
+    "temperature": {...}
+  },
+  "ranges" : {
+    "temperature" : {
+      "type" : "NdArray",
+      "dataType": "float",
+      "values" : [...]
+    }
+  }
+}
+```
+
+### 10.10. PolygonSeries
+
+- A domain with PolygonSeries domain type MUST have the axes `"composite"` and `"t"` where `"composite"` MUST have a single Polygon value. Polygons are defined in the Polygon domain type.
+- A domain with PolygonSeries domain type MAY have the axis `"z"` which MUST have a single value only.
+- The axis `"composite"` MUST have the data type `"polygon"` and the coordinate identifiers `"x","y"`.
+
+Domain example:
+
+```json
+{
+  "type": "Domain",
+  "domainType": "PolygonSeries",
+  "axes": {
+    "composite": {
+      "dataType": "polygon",
+      "coordinates": ["x","y"],
+      "values": [
+        [ [ [100.0, 0.0], [101.0, 0.0], [101.0, 1.0], [100.0, 1.0], [100.0, 0.0] ]  ]
+      ]
+    },
+    "z": { "values": [2] },
+    "t": { "values": ["2008-01-01T04:00:00Z","2008-01-01T05:00:00Z"] }
+  },
+  "referencing": [...]
+}
+```
+
+Coverage example:
+
+```json
+{
+  "type" : "Coverage",
+  "domain" : {
+    "type": "Domain",
+    "domainType": "PolygonSeries",
+    "axes": {
+      "composite": {
+        "dataType": "polygon",
+        "coordinates": ["x","y"],
+        "values": [
+          [ [ [100.0, 0.0], [101.0, 0.0], [101.0, 1.0], [100.0, 1.0], [100.0, 0.0] ]  ]
+        ]
+      },
+      "z": { "values": [2] },
+      "t": { "values": ["2008-01-01T04:00:00Z","2008-01-01T05:00:00Z"] }
+    },
+    "referencing": [...]
+  },
+  "parameters" : {
+    "temperature": {...}
+  },
+  "ranges" : {
+    "temperature" : {
+      "type" : "NdArray",
+      "dataType": "float",
+      "axisNames": ["t"],
+      "shape": [2],
+      "values" : [...]
+    }
+  }
+}
+```
+
+### 10.11. MultiPolygon
+
+- A domain with MultiPolygon domain type MUST have the axis `"composite"` where the values are Polygons. Polygons are defined in the Polygon domain type.
+- The axis `"composite"` MUST have the data type `"polygon"` and the coordinate identifiers `"x","y"`.
+- A MultiPolygon domain MAY have the axes `"z"` and `"t"` which both MUST have a single value only.
+
+Domain example:
+
+```json
+{
+  "type": "Domain",
+  "domainType": "MultiPolygon",
+  "axes": {
+    "composite": {
+      "dataType": "polygon",
+      "coordinates": ["x","y"],
+      "values": [
+        [ [ [100.0, 0.0], [101.0, 0.0], [101.0, 1.0], [100.0, 1.0], [100.0, 0.0] ]  ],
+        [ [ [200.0, 10.0], [201.0, 10.0], [201.0, 11.0], [200.0, 11.0], [200.0, 10.0] ] ]
+      ]
+    },
+    "z": { "values": [2] },
+    "t": { "values": ["2008-01-01T04:00:00Z"] }
+  },
+  "referencing": [...]
+}
+```
+
+Coverage example:
+
+```json
+{
+  "type" : "Coverage",
+  "domain" : {
+    "type": "Domain",
+    "domainType": "MultiPolygon",
+    "axes": {
+      "composite": {
+        "dataType": "polygon",
+        "coordinates": ["x","y"],
+        "values": [
+          [ [ [100.0, 0.0], [101.0, 0.0], [101.0, 1.0], [100.0, 1.0], [100.0, 0.0] ]  ],
+          [ [ [200.0, 10.0], [201.0, 10.0], [201.0, 11.0], [200.0, 11.0], [200.0, 10.0] ] ]
+        ]
+      },
+      "z": { "values": [2] },
+      "t": { "values": ["2008-01-01T04:00:00Z"] }
+    },
+    "referencing": [...]
+  },
+  "parameters" : {
+    "temperature": {...}
+  },
+  "ranges" : {
+    "temperature" : {
+      "type" : "NdArray",
+      "dataType": "float",
+      "axisNames": ["composite"],
+      "shape": [2],
+      "values" : [...]
+    }
+  }
+}
+```
+
+### 10.12. MultiPolygonSeries
+
+- A domain with MultiPolygonSeries domain type MUST have the axes `"composite"` and `"t"` where the values of `"composite"` are Polygons. Polygons are defined in the Polygon domain type.
+- The axis `"composite"` MUST have the data type `"polygon"` and the coordinate identifiers `"x","y"`.
+- A MultiPolygon domain MAY have the axis `"z"` which MUST have a single value only.
+
+Domain example:
+
+```json
+{
+  "type": "Domain",
+  "domainType": "MultiPolygonSeries",
+  "axes": {
+    "composite": {
+      "dataType": "polygon",
+      "coordinates": ["x","y"],
+      "values": [
+        [ [ [100.0, 0.0], [101.0, 0.0], [101.0, 1.0], [100.0, 1.0], [100.0, 0.0] ]  ],
+        [ [ [200.0, 10.0], [201.0, 10.0], [201.0, 11.0], [200.0, 11.0], [200.0, 10.0] ] ]
+      ]
+    },
+    "z": { "values": [2] },
+    "t": { "values": ["2008-01-01T04:00:00Z", "2010-01-01T00:00:00Z"] }
+  },
+  "referencing": [...]
+}
+```
+
+Coverage example:
+
+```json
+{
+  "type" : "Coverage",
+  "domain" : {
+    "type": "Domain",
+    "domainType": "MultiPolygonSeries",
+    "axes": {
+      "composite": {
+        "dataType": "polygon",
+        "coordinates": ["x","y"],
+        "values": [
+          [ [ [100.0, 0.0], [101.0, 0.0], [101.0, 1.0], [100.0, 1.0], [100.0, 0.0] ]  ],
+          [ [ [200.0, 10.0], [201.0, 10.0], [201.0, 11.0], [200.0, 11.0], [200.0, 10.0] ] ]
+        ]
+      },
+      "z": { "values": [2] },
+      "t": { "values": ["2008-01-01T04:00:00Z", "2010-01-01T00:00:00Z", "2012-01-01T00:00:00Z"] }
+    },
+    "referencing": [...]
+  },
+  "parameters" : {
+    "temperature": {...}
+  },
+  "ranges" : {
+    "temperature" : {
+      "type" : "NdArray",
+      "dataType": "float",
+      "axisNames": ["t", "composite"],
+      "shape": [3, 2],
+      "values" : [...]
+    }
+  }
+}
+```
 
 ## Acknowledgements
 
 This work was inspired by a demonstration of the concept by Joan Masó of CREAF.
+

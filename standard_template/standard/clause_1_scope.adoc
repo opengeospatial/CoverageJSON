@@ -1,5 +1,5 @@
 == Scope
 
-The standard has been stable for several years, with a wide-spread international community in the environmental sciences. The current version of the open specification, on [GitHub](https://covjson.org/spec/), is labelled ‘V0.2-draft’. This document standardises that version with only editorial changes for presentation.
+The standard has been stable for several years, with a wide-spread international community in the environmental sciences. The current version of the open specification, on https://covjson.org/spec[GitHub], is labelled ‘V0.2-draft’. This document standardises that version with only editorial changes for presentation.
 
 Future improvements have been identified, such as improving the use of multiple time dimensions, or to use JSON-LD V1.1 which may give better compatibility with CIS. These enhancements are out of scope of this document.
