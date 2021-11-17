@@ -3,11 +3,23 @@ Topic 6: Schema for coverage geometry and functions.
 
 == ISO19123:2005 / Abstract Spec Topic 6 extracts
 
-Coverage  is  a  subtype  of  feature
-Coverage  is  a  feature  that  has  multiple values  for  each  attribute  type
-Each  direct  position  within  the  geometric  representation  of  the  feature has a single value for each attribute type.
+=== Introduction
 
-Coverage: feature that acts as a function to return values from its range for any direct position within its spatial, temporal or spatiotemporal domain.
+Coverage is a subtype of feature
+
+Coverage  is  a  feature that has multiple values for each attribute type
+
+Each  direct  position  within  the  geometric  representation  of  the  feature has a single value for each attribute type
+
+The same phenomenon may be represented as either a discrete feature or a coverage
+
+Coverage can  be  derived  from  a  collection  of  discrete  features  with  common  attributes
+
+Values of the coverage at each position being the values of the attributes of the feature located at that position
+
+
+
+Coverage: feature that acts as a function to return values from its range for any direct position within its spatial, temporal or spatiotemporal domain
 
 === 1. CV_Coverage shall support three attributes, five operations, and three associations.
 
