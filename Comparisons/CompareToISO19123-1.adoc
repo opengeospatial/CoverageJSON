@@ -139,12 +139,11 @@ Range shall have a constant dimension over the entire domain, and each field of 
 This International Standard does not specify how the Domain and Range associations are to be implemented
 
 === Domain Object
-Domain Object is an aggregation of objects that may include any combination of GM_Objects (ISO 19107:2003), TM_GeometricPrimitives (ISO 10108), or 
-spatial or temporal objects defined in other standards
+Domain Object is an aggregation of objects that may include any combination of spatial or temporal objects defined in other standards
   
-SpatialComposition shall associate a CV_DomainObject to the set of GM_Objects of which it is composed
+SpatialComposition shall associate a Domain Object to the set of Objects of which it is composed
 
-TemporalComposition shall associate a CV_DomainObject to the set of TM_GeometricPrimitives of which it is composed 
+TemporalComposition shall associate a Domain Object to the set of Geometric Primitives of which it is composed 
   
 === Attribute Values
 Attribute Values represents an element from the range of the coverage
@@ -188,18 +187,42 @@ Operation EvaluateInverse shall return a null value if none of the Geometry Valu
 
 Association CoverageFunction shall link the Discrete Coverage to the set of Geometry Value Pairs included in the coverage
 
+=== Geometry Value Pair
 Class Geometry Value Pair describes an element of a set that defines the relationships of a discrete coverage
 
 Each member of Geometry Value Pair class consists of two parts: a domain object from the domain of the coverage to which it belongs and a record of feature attribute values from the range of the coverage to which it belongs
 
 Geometry Value Pair class restricts the pairing of a feature attribute value record to a specific subtype of domain object
 
+Attribute  geometry:CV_DomainObject shall hold the Domain Object that is a member of this Geometry Value Pair 
 
+Attribute value:Record shall hold the record of feature attribute values associated with this Domain Object 
 
+Association Coverage Function shall link this Geometry Value Pair with the Discrete Coverage of which it is an element 
+ 
+Association Control is empty in the case of a discrete coverage
 
+=== Continuous Coverage
+Continuous Coverage is the subclass of Coverage that returns a distinct record of feature attribute values for any direct position within its domain
 
+etc
 
+etc
+  
+  
+=== Abstract test suite 
+Simple coverage interface:  Verify that an application schema or profile instantiates Coverage with the attribute domainExtent, the operation evaluate, and the  ssociations Domain, Range, and Coordinate Reference System
 
+Discrete coverage interface: Verify that an application schema or profile instantiates Discrete Coverage and its subtypes with the operations locate, find and list, and  the association Coverage Function
+
+Discrete coverage interface: Verify that it instantiates the class Geometry Value Pair with the attributes geometry and value
+
+Discrete coverage interchange: Verify that an interchange schema correctly implements the mandatory attributes and associations of Discrete Coverage or one of its subclasses
+
+=== Interpolation
+Interpolation Method Code List may be extended in an application schema that specifies additional interpolation methods
+
+== Some left over statements
 Coverage may provide a set of values for a particular position.
 
 Different views on this coverage concept exist.
@@ -217,15 +240,4 @@ The range of CRSs to be used is open-ended; CRSs not described nor mentioned in 
 In a coverage, the domain and range sets may be organised in different ways, driven by practical considerations.
 
 Some realization alternatives; concrete standards may or may not adopt these (Coverage by Partitioning, by Domain&Range, by Function), and may provide further ones
-
-  
-  
-=== Abstract test suite 
-Simple coverage interface:  Verify  that  an  application  schema  or  profile  instantiates  CV_Coverage  with  the  attribute domainExtent,  the  operation  evaluate,  and  the  associations  Domain,  Range,  and  Coordinate  Reference System. 
-
-
-
-
-
-
 
