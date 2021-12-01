@@ -1,0 +1,2 @@
+## JRC No Vote
+We are in principle not against adopting a community standard on JSON coverage encoding, and so our ’no’ is primarily due to the lack of evidence that this proposal will be aligned with existing standards and the working group structure in OGC. We underline that it should be avoided by all means that incompatible versions of related concepts (in this case ‘coverage’) evolve and strongly encourage that the discussion is held within the already existing SWG.
