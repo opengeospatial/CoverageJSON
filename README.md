@@ -12,7 +12,7 @@ So far, the Business Justfication for this plan has finished a formal Public Com
 
 After more information, the supporters formally processed all the public comments, and the Business Justification was presented to the OGC Technical Committee on 20 September 2021, which, with no objections to unanimous consent, agreed to formally vote on commencing the work. The electronic vote commenced on 28 September 2021 and finished on the 12 November 2021.
 
-The Technical Committee vote was 20 YES votes, 14 ABSTAIN and 5 NO votes, and quorum was readily acheived. So the work will proceed, probably under the auspices of the CoverageSWG. The various comments from the cast votes will be published and addressed in this repo.
+The Technical Committee vote was 20 YES votes, 14 ABSTAIN and 5 NO votes, and quorum was readily acheived. So the work will proceed, under the auspices of the CoverageSWG. The various comments from the cast votes will be published and addressed in this repo.
 
 At the December 2021 meeting of the OGC Technical Committee, the following plan was agreed:
 
