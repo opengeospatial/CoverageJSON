@@ -48,7 +48,7 @@ Recipients of this document are invited to submit, with their comments, notifica
 
 [width = "50%", grid = "none"]
 |===
-|Document type:   	OGC® Standard
+|Document type:   	OGC® Candidate Community Standard
 |Document subtype:   	if applicable
 |Document stage:   	Draft
 |Document language: 	English
