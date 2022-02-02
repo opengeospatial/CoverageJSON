@@ -79,7 +79,7 @@ Range data can also be directly embedded into the main CoverageJSON document, ma
 
 ### 1.2. Differences to OGC Coverage Implementation Schema (CIS)
 
-The candidate OGC standard http://www.opengeospatial.org/pressroom/pressreleases/2345[Coverage Implementation Schema 1.1] (abbreviated to CIS)
+The OGC standard http://www.opengeospatial.org/pressroom/pressreleases/2345[Coverage Implementation Schema 1.1] (abbreviated to CIS)
 defines a coverage model targeted towards OGC service types like Web Coverage Service (WCS)
 and is the successor of the https://portal.opengeospatial.org/files/?artifact_id=48553
 ["GML 3.2.1 Application Schema – Coverages" version 1.0] (abbreviated to GMLCOV).
