@@ -1,10 +1,12 @@
 [big]*i.     Abstract*
 
-CoverageJSON is a format for publishing geo-temporal data to the Web, based on JavaScript Object Notation (JSON). Simplicity, machine and human readability and efficiency of the format were the primary design goals.
+CoverageJSON is a format for publishing geo-temporal data to the Web, based on JavaScript Object Notation (JSON). Simplicity, machine and human readability and efficiency of the format were the primary design goals. The primary use case for CoverageJSON is to enable the development of interactive visual websites that display and manipulate environmental data within a web browser, although other use cases are possible.
 
-CoverageJSON has been demonstrated to be an effective, efficient format, friendly to web and application developers, and therefore consistent with the current OGC API developments. The format supports the efficient download, from big data stores, of useful quantities of data to lightweight clients, such as browsers and mobile applications. This enables local manipulation of the data in a format familiar to, and popular with, web developers, and readily usable, for example, by science researchers.
+CoverageJSON has been demonstrated to be an effective, efficient format, friendly to web and application developers, and therefore consistent with the current OGC API developments. The format supports the efficient transfer, from big data stores, of useful quantities of data to lightweight clients, such as browsers and mobile applications. This enables local manipulation of the data in a format familiar to, and popular with, web developers, and readily usable, for example, by science researchers.
 
-It can be used to encode coverages and collections of coverages, possibly tiled, such as multi-dimensional grids, time series, and vertical profiles, distinguished by the geometry of their spatio-temporal domain.  It uses linked-data (JSON-LD) to reduce data payload volumes. 
+It can be used to encode coverages and collections of coverages. Data may be gridded or non-gridded, and data values may represent continuous values (such as temperature) or discrete categories (such as land cover classes). CoverageJSON uses JSON-LD to provide interoperability with RDF and Semantic Web applications.
+
+Relatively large datasets can be handled efficiently in a "web-friendly" way by paritioning information among several CoverageJSON documents, including a mechanism for tiling. Nevertheless, CoverageJSON is not intended to be a replacement for efficient binary formats such as NetCDF, HDF or GRIB, and is not intended as a means to store or transfer very large datasets in bulk.
 
 It is proposed to be adopted as a Community Standard.
 
