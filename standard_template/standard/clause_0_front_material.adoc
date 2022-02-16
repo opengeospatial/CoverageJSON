@@ -6,7 +6,7 @@ CoverageJSON has been demonstrated to be an effective, efficient format, friendl
 
 It can be used to encode coverages and collections of coverages. Data may be gridded or non-gridded, and data values may represent continuous values (such as temperature) or discrete categories (such as land cover classes). CoverageJSON uses JSON-LD to provide interoperability with RDF and Semantic Web applications.
 
-Relatively large datasets can be handled efficiently in a "web-friendly" way by paritioning information among several CoverageJSON documents, including a mechanism for tiling. Nevertheless, CoverageJSON is not intended to be a replacement for efficient binary formats such as NetCDF, HDF or GRIB, and is not intended as a means to store or transfer very large datasets in bulk.
+Relatively large datasets can be handled efficiently in a "web-friendly" way by partitioning information among several CoverageJSON documents, including a mechanism for tiling. Nevertheless, CoverageJSON is not intended to be a replacement for efficient binary formats such as NetCDF, HDF or GRIB, and is not intended primarily to store or transfer very large datasets in bulk.
 
 It is proposed to be adopted as a Community Standard.
 
