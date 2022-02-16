@@ -20,3 +20,4 @@ At the December 2021 meeting of the OGC Technical Committee, the following plan 
 
 See the [Wiki](https://github.com/opengeospatial/CoverageJSON/wiki) for details of progress, minutes of meetings, etc, and [Issues](https://github.com/opengeospatial/CoverageJSON/issues).
 
+Any contributor to this repo should understand that any contributions, if accepted by the OGC Membership, shall be incorporated into OGC standards documents and that all copyright and intellectual property shall be vested in the University of Reading.
