@@ -1,5 +1,9 @@
 == Scope
 
-The specification has been stable for several years, with a wide-spread international community in the environmental sciences. The current version of the open specification, on https://covjson.org/spec[GitHub], is labelled ‘V0.2-draft’. This document proposes that version, with only editorial changes for presentation, as a Community Standard.
+The specification is a logical implementation of the long-established abstract conceptual standard ISO19123:2005 (also know as OGC Abstract Topic 6). The CoverageJSON specification has been stable for several years, with a wide-spread international community in the environmental sciences. The current version of the open specification, on https://covjson.org/spec[GitHub], is labelled ‘V0.2-draft’. This document proposes that version, with only editorial changes for presentation, as a Community Standard. 
 
-Future improvements have been identified, such as improving the use of multiple time dimensions, or to use JSON-LD V1.1 which may give better compatibility with CIS. These enhancements are out of scope of this document.
+A formal JSON schema has been added for all the JSON objects identified, so that conformance to the specification can be checked. 
+
+Unused or imprecisely specified components have been removed.
+
+Future improvements have been identified, such as the use of multiple time dimensions, or to use JSON-LD V1.1 which may give better compatibility with CIS. These improvements are out of scope of this document.
