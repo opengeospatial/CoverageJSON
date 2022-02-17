@@ -65,9 +65,9 @@ Topic 6: Schema for coverage geometry and functions.
 3+^|**Coverage Schema**
 |Coverage schema is organized into seven packages | |
 3+^|**Coverage Core**
-|CV_Coverage shall support three attributes, five operations, and three associations. | |
+|CV_Coverage shall support three attributes, five operations, and three associations | |
 3+^|**1.1 Attributes:**
-|  *domainExtent* shall contain the extent of the domain of the coverage. The data type EX_Extent is defined in ISO 19115:2003. Extents may be specified in space, time or space-time.  | |
+|  *domainExtent* shall contain the extent of the domain of the coverage. The data type EX_Extent is defined in ISO 19115:2003. Extents may be specified in space, time or space-time  | |
 | *rangeType* A simple list is the most common form of rangeType, but RecordType can be used recursively to describe more complex structures. The rangeType for a specific coverage shall be specified in an application schema | |
 |*commonPointRule*  identifies the procedure for evaluating the Coverage at a position that falls either on a boundary between geometric objects or within the boundaries of two or more overlapping geometric objects | |
 3+^|**1.2 Operations:**
@@ -129,13 +129,13 @@ Topic 6: Schema for coverage geometry and functions.
 3+^|**Interpolation**
 |Interpolation Method Code List may be extended in an application schema that specifies additional interpolation methods | |
 3+^|**Some left over statements**
-|Coverage may provide a set of values for a particular position. | |
-|Different views on this coverage concept exist. | |
-|While in general more than one value can be returned for a particular Direct Position, sometimes exactly one  value will be delivered. | |
-|The Domain Set of a coverage, as described by its Coordinate Reference System (CRS) consists of a number of axes which together define some n-dimensional space, with n>0.  | |
+|Coverage may provide a set of values for a particular position | |
+|Different views on this coverage concept exist | |
+|While in general more than one value can be returned for a particular Direct Position, sometimes exactly one  value will be delivered | |
+|The Domain Set of a coverage, as described by its Coordinate Reference System (CRS) consists of a number of axes which together define some n-dimensional space, with n>0  | |
 |Axes can represent alternate representations of coordinate measurements. | |
-|Axes, without any spatial nor temporal semantics, might be called “abstract”. | |
+|Axes, without any spatial nor temporal semantics, might be called “abstract” | |
 |The range of CRSs to be used is open-ended; CRSs not described nor mentioned in this standard might be used | |
-|In a coverage, the domain and range sets may be organised in different ways, driven by practical considerations. | |
+|In a coverage, the domain and range sets may be organised in different ways, driven by practical considerations | |
 |Some realization alternatives; concrete standards may or may not adopt these (Coverage by Partitioning, by Domain&Range, by Function), and may provide further ones | |
 |===
