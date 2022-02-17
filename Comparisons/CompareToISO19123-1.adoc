@@ -29,205 +29,113 @@ Topic 6: Schema for coverage geometry and functions.
 |Interface conformance classes require implementation of all attributes, associations and operations of relevant classes | | 
 |Single conformance class (A.2.1) that supports a simple interface for evaluation of any coverage type, but exposes none of the internal structure of the coverage | | 
 |Conformance classes that support interfaces to specific coverage types that expose additional information about the internal structure of the coverage | | 
-
-| 
 3+^|**Normative references**
-| | |Retrieve 
-| | |Retrieve 
+|ISO/TS 19103:2005, Geographic information — Conceptual schema language | |
+|ISO 19107:2003, Geographic information — Spatial schema | |
+|ISO 19108:2002, Geographic information — Temporal schema | |
+|ISO 19109:2005, Geographic information — Rules for application schema | | 
+|ISO 19111:2003, Geographic information — Spatial referencing by coordinates | | 
+|ISO 19115:2003, Geographic information — Metadata | |
+3+^|**Terms, definitions, abbreviated terms and notation**
+|Continuous coverage returns different values for the same feature attribute at different direct positions within a single spatial object, temporal object or spatiotemporal object in its domain | |
+|Coverage: feature that acts as a function to return values from its range for any direct position within its spatial, temporal or spatiotemporal domain | |
+|Discrete coverage returns the same feature attribute values for every direct position within any single spatial object, temporal object or spatiotemporal object in its domain | |
+|Domain of a discrete coverage consists of a finite set of spatial, temporal, or spatiotemporal objects | |
+3+^|**Fundamental characteristics of coverages**
+|Coverage is a feature that associates positions within a bounded space (its domain) to feature attribute values (its range) | | 
+|Coverage is both a feature and a function | | 
+|Coverage may represent a single feature or a set of features | | 
+|Coverage domain is a set of geometric objects described in terms of direct positions | | 
+|Coverage subtypes may be defined in terms of their domains | | 
+|Coverage domain can contain overlapping geometric objects | | 
+|Range of a coverage is a set of feature attribute values | | 
+|Range of a coverage may be either a finite or a transfinite set | | 
+|Value set is represented as a collection of records with a common schema | | 
+|Feature attribute value may be of any data type | | 
+|Inverse evaluation is the calculation and exposure of a set of geometric objects associated with specific values of the attribute | | 
+|Inverse evaluation may return many geometric objects associated with a single feature attribute value | | 
+|Coverages are of two types | | 
+|Discrete coverage has a domain that consists of a finite collection of geometric objects and the direct positions contained in those geometric objects | | 
+|Discrete coverage maps each geometric object to a single record of feature attribute values | | 
+|Geometric object and its associated record form a geometry value pair | | 
+|Discrete coverage may be represented as a collection of ordered pairs of independent and dependent variables | | 
+|Each independent variable is a geometric object and each dependent variable is a record of feature attribute values | | 
+|Continuous coverage has a domain that consists of a set of direct positions in a coordinate space  | | 
+|Continuous coverage maps direct positions to value records | |  
+3+^|**Coverage Schema**
+|Coverage schema is organized into seven packages | |
+3+^|**Coverage Core**
+|CV_Coverage shall support three attributes, five operations, and three associations. | |
+3+^|**1.1 Attributes:**
+|  *domainExtent* shall contain the extent of the domain of the coverage. The data type EX_Extent is defined in ISO 19115:2003. Extents may be specified in space, time or space-time.  | |
+| *rangeType* A simple list is the most common form of rangeType, but RecordType can be used recursively to describe more complex structures. The rangeType for a specific coverage shall be specified in an application schema | |
+|*commonPointRule*  identifies the procedure for evaluating the Coverage at a position that falls either on a boundary between geometric objects or within the boundaries of two or more overlapping geometric objects | |
+3+^|**1.2 Operations:**
+| *List* returns all objects with their attribute values. Returns null for analytic coverages | |
+|  *Select* filters returned values by geometry and time. Returns null for analytic coverages | |
+|  *Find* returns the n nearest objects and their attribute values. Returns null for analytic coverages | |
+|  *Evaluate* returns specified attribute values for a specified direct position | |
+|  *EvaluateInverse* returns a set of objects for a specified set of attributes | |
+3+^|**1.3 Associations:**
+|  *CRS*     multiplicity = 1: coverage with the same range but with its domain defined in a different CRS is a different coverage | |
+|  *Domain*  links the coverage to the set of objects in the domain | |
+|  *Range*   links the coverage to the set of attribute values in the range | |
+|Range of a coverage shall be a homogeneous collection of records  | |
+|Range shall have a constant dimension over the entire domain, and each field of the record shall provide a value of the same attribute type over the entire domain | |
+|This International Standard does not specify how the Domain and Range associations are to be implemented | |
+3+^|**Domain Object**
+|Domain Object is an aggregation of objects that may include any combination of spatial or temporal objects defined in other standards | |
+|SpatialComposition shall associate a Domain Object to the set of Objects of which it is composed | |
+|TemporalComposition shall associate a Domain Object to the set of Geometric Primitives of which it is composed  | |
+3+^|**Attribute Values**
+|Attribute Values represents an element from the range of the coverage | |
+|Attribute Values is a Record containing one value for each attribute | |
+|Association Range shall link the set of Attribute Values to the coverage that has the set as its range  | |
+|Discrete Coverage has one instance of Attribute Values for each instance of Domain Object  | |
+|Continuous Coverage has a transfinite number of instances of Attribute Values for each Domain Object | |
+|Common Point Rule is a list of codes that identify methods where the Direct Position input to the evaluate operation falls within two or more geometric  objects | |
+|These Common Point Rules differ between discrete and continuous coverages | |
+|Discrete coverage each Geometry Value Pair provides one value for each attribute | |
+|Discrete coverage Common Point Rule is applied to the set of values associated with the set of Geometry Value Pairs that contain the Direct Position | |
+|Continuous coverage: a value for each attribute shall be interpolated for each Value Object that contains the DirectPosition | |
+|Continuous coverage Common Point Rule shall then be applied to the set of interpolated values for each attribute | |
+3+^|**Discrete Coverage**
+|Discrete Coverage returns the same record of feature attribute values for any direct position within a single Domain Object in its domain | |
+|Operation Locate shall accept a DirectPosition as input and return the set of Geometry Value Pairs that include Domain Objects containing the Direct Position | |
+|Operation Locate shall return a null value if the Direct Position is not on any of the Domain Objects within the domain of the Discrete Coverage | |
+|Operation Evaluate shall accept a Direct Position as input, locate the Geometry Value Pairs that include the Domain Objects that contain the DirectPosition, and return a set of records of feature attribute values  | |
+|Operation Evaluate shall return a record of feature attribute values derived according to the value of the attribute Common Point Rule if the DirectPosition falls on the  boundary  between two Geometry Pairs, or within two or more overlapping Geometry Value Pairs  | |
+|Operation Evaluate shall return a null value if the Direct Position is not on any of the Domain Objects within the domain of the Discrete Coverage | |
+|Operation EvaluateInverse shall accept a Record of feature attribute values as input, locate the Geometry Value Pairs for which value equals the input record, and return the set of Domain Objects belonging to those Geometry Value Pairs | |
+|Operation EvaluateInverse shall return a null value if none of the Geometry Value Pairs associated with the Discrete Coverage has a value equal to the input Record  | |
+|Association CoverageFunction shall link the Discrete Coverage to the set of Geometry Value Pairs included in the coverage | |
+3+^|**Geometry Value Pair**
+|Class Geometry Value Pair describes an element of a set that defines the relationships of a discrete coverage | |
+|Each member of Geometry Value Pair class consists of two parts: a domain object from the domain of the coverage to which it belongs and a record of feature attribute values from the range of the coverage to which it belongs | |
+|Geometry Value Pair class restricts the pairing of a feature attribute value record to a specific subtype of domain object | |
+|Attribute  geometry:CV_DomainObject shall hold the Domain Object that is a member of this Geometry Value Pair  | |
+|Attribute value:Record shall hold the record of feature attribute values associated with this Domain Object  | |
+|Association Coverage Function shall link this Geometry Value Pair with the Discrete Coverage of which it is an element  | |
+|Association Control is empty in the case of a discrete coverage | |
+3+^|**Continuous Coverage**
+|Continuous Coverage is the subclass of Coverage that returns a distinct record of feature attribute values for any direct position within its domain | |
+|etc | |
+|etc | |
+3+^|**Abstract test suite**
+|Simple coverage interface:  Verify that an application schema or profile instantiates Coverage with the attribute domainExtent, the operation evaluate, and the  ssociations Domain, Range, and Coordinate Reference System | |
+|Discrete coverage interface: Verify that an application schema or profile instantiates Discrete Coverage and its subtypes with the operations locate, find and list, and  the association Coverage Function | |
+|Discrete coverage interface: Verify that it instantiates the class Geometry Value Pair with the attributes geometry and value | |
+|Discrete coverage interchange: Verify that an interchange schema correctly implements the mandatory attributes and associations of Discrete Coverage or one of its subclasses | |
+3+^|**Interpolation**
+|Interpolation Method Code List may be extended in an application schema that specifies additional interpolation methods | |
+3+^|**Some left over statements**
+|Coverage may provide a set of values for a particular position. | |
+|Different views on this coverage concept exist. | |
+|While in general more than one value can be returned for a particular Direct Position, sometimes exactly one  value will be delivered. | |
+|The Domain Set of a coverage, as described by its Coordinate Reference System (CRS) consists of a number of axes which together define some n-dimensional space, with n>0.  | |
+|Axes can represent alternate representations of coordinate measurements. | |
+|Axes, without any spatial nor temporal semantics, might be called “abstract”. | |
+|The range of CRSs to be used is open-ended; CRSs not described nor mentioned in this standard might be used | |
+|In a coverage, the domain and range sets may be organised in different ways, driven by practical considerations. | |
+|Some realization alternatives; concrete standards may or may not adopt these (Coverage by Partitioning, by Domain&Range, by Function), and may provide further ones | |
 |===
-
-=== Normative references 
-ISO/TS 19103:2005, Geographic information — Conceptual schema language 
-
-ISO 19107:2003, Geographic information — Spatial schema 
-
-ISO 19108:2002, Geographic information — Temporal schema 
-
-ISO 19109:2005, Geographic information — Rules for application schema 
-
-ISO 19111:2003, Geographic information — Spatial referencing by coordinates 
-
-ISO 19115:2003, Geographic information — Metadata 
-
-=== Terms, definitions, abbreviated terms and notation
-Continuous coverage returns different values for the same feature attribute at different direct positions within a single spatial object, temporal object or spatiotemporal object in its domain
-
-Coverage: feature that acts as a function to return values from its range for any direct position within its spatial, temporal or spatiotemporal domain
-
-Discrete coverage returns the same feature attribute values for every direct position within any single spatial object, temporal object or spatiotemporal object in its domain 
-
-Domain of a discrete coverage consists of a finite set of spatial, temporal, or spatiotemporal objects
-
-=== Fundamental characteristics of coverages 
-Coverage is a feature that associates positions within a bounded space (its domain) to feature attribute values (its range)
-
-Coverage is both a feature and a function
-
-Coverage may represent a single feature or a set of features
-
-Coverage domain is a set of geometric objects described in terms of direct positions
-
-Coverage subtypes may be defined in terms of their domains
-
-Coverage domain can contain overlapping geometric objects
-
-Range of a coverage is a set of feature attribute values
-
-Range of a coverage may be either a finite or a transfinite set
-
-Value set is represented as a collection of records with a common schema
-
-Feature attribute value may be of any data type
-
-Inverse evaluation is the calculation and exposure of a set of geometric objects associated with specific values of the attribute
-
-Inverse evaluation may return many geometric objects associated with a single feature attribute value
-
-Coverages are of two types
-
-Discrete coverage has a domain that consists of a finite collection of geometric objects and the direct positions contained in those geometric objects
-
-Discrete coverage maps each geometric object to a single record of feature attribute values
-
-Geometric object and its associated record form a geometry value pair
-
-Discrete coverage may be represented as a collection of ordered pairs of independent and dependent variables
-
-Each independent variable is a geometric object and each dependent variable is a record of feature attribute values
-
-Continuous coverage has a domain that consists of a set of direct positions in a coordinate space  
-
-Continuous coverage maps direct positions to value records
-
-=== Coverage Schema
-Coverage schema is organized into seven packages
-
-=== Coverage Core
-CV_Coverage shall support three attributes, five operations, and three associations.
-
-==== 1.1 Attributes:
-  *domainExtent* shall contain the extent of the domain of the coverage. The data type EX_Extent is defined in ISO 19115:2003. Extents may be specified in space, time or space-time. 
-  *rangeType* A simple list is the most common form of rangeType, but RecordType can be used recursively to describe more complex structures. The rangeType for a specific coverage shall be specified in an application schema
-  *commonPointRule*  identifies the procedure for evaluating the Coverage at a position that falls either on a boundary between geometric objects or within the boundaries of two or more overlapping geometric objects
-
-==== 1.2 Operations:
-  *List* returns all objects with their attribute values. Returns null for analytic coverages
-  *Select* filters returned values by geometry and time. Returns null for analytic coverages
-  *Find* returns the n nearest objects and their attribute values. Returns null for analytic coverages
-  *Evaluate* returns specified attribute values for a specified direct position
-  *EvaluateInverse* returns a set of objects for a specified set of attributes
-
-==== 1.3 Associations:
-  *CRS*     multiplicity = 1: coverage with the same range but with its domain defined in a different CRS is a different coverage
-  *Domain*  links the coverage to the set of objects in the domain
-  *Range*   links the coverage to the set of attribute values in the range
-
-Range of a coverage shall be a homogeneous collection of records 
-
-Range shall have a constant dimension over the entire domain, and each field of the record shall provide a value of the same attribute type over the entire domain
-
-This International Standard does not specify how the Domain and Range associations are to be implemented
-
-=== Domain Object
-Domain Object is an aggregation of objects that may include any combination of spatial or temporal objects defined in other standards
-  
-SpatialComposition shall associate a Domain Object to the set of Objects of which it is composed
-
-TemporalComposition shall associate a Domain Object to the set of Geometric Primitives of which it is composed 
-  
-=== Attribute Values
-Attribute Values represents an element from the range of the coverage
-
-Attribute Values is a Record containing one value for each attribute
-  
-Association Range shall link the set of Attribute Values to the coverage that has the set as its range 
-  
-Discrete Coverage has one instance of Attribute Values for each instance of Domain Object 
- 
-Continuous Coverage has a transfinite number of instances of Attribute Values for each Domain Object
-
-Common Point Rule is a list of codes that identify methods where the Direct Position input to the evaluate operation falls within two or more geometric  objects
-
-These Common Point Rules differ between discrete and continuous coverages
-
-Discrete coverage each Geometry Value Pair provides one value for each attribute
-
-Discrete coverage Common Point Rule is applied to the set of values associated with the set of Geometry Value Pairs that contain the Direct Position
-
-Continuous coverage: a value for each attribute shall be interpolated for each Value Object that contains the DirectPosition
-
-Continuous coverage Common Point Rule shall then be applied to the set of interpolated values for each attribute
-
-=== Discrete Coverage
-Discrete Coverage returns the same record of feature attribute values for any direct position within a single Domain Object in its domain
-
-Operation Locate shall accept a DirectPosition as input and return the set of Geometry Value Pairs that include Domain Objects containing the Direct Position
-
-Operation Locate shall return a null value if the Direct Position is not on any of the Domain Objects within the domain of the Discrete Coverage
-
-Operation Evaluate shall accept a Direct Position as input, locate the Geometry Value Pairs that include the Domain Objects that contain the DirectPosition, and return a set of records of feature attribute values 
-
-Operation Evaluate shall return a record of feature attribute values derived according to the value of the attribute Common Point Rule if the DirectPosition falls on the  boundary  between two Geometry Pairs, or within two or more overlapping Geometry Value Pairs 
- 
-Operation Evaluate shall return a null value if the Direct Position is not on any of the Domain Objects within the domain of the Discrete Coverage
-
-Operation EvaluateInverse shall accept a Record of feature attribute values as input, locate the Geometry Value Pairs for which value equals the input record, and return the set of Domain Objects belonging to those Geometry Value Pairs
-
-Operation EvaluateInverse shall return a null value if none of the Geometry Value Pairs associated with the Discrete Coverage has a value equal to the input Record 
-
-Association CoverageFunction shall link the Discrete Coverage to the set of Geometry Value Pairs included in the coverage
-
-=== Geometry Value Pair
-Class Geometry Value Pair describes an element of a set that defines the relationships of a discrete coverage
-
-Each member of Geometry Value Pair class consists of two parts: a domain object from the domain of the coverage to which it belongs and a record of feature attribute values from the range of the coverage to which it belongs
-
-Geometry Value Pair class restricts the pairing of a feature attribute value record to a specific subtype of domain object
-
-Attribute  geometry:CV_DomainObject shall hold the Domain Object that is a member of this Geometry Value Pair 
-
-Attribute value:Record shall hold the record of feature attribute values associated with this Domain Object 
-
-Association Coverage Function shall link this Geometry Value Pair with the Discrete Coverage of which it is an element 
- 
-Association Control is empty in the case of a discrete coverage
-
-=== Continuous Coverage
-Continuous Coverage is the subclass of Coverage that returns a distinct record of feature attribute values for any direct position within its domain
-
-etc
-
-etc
-  
-  
-=== Abstract test suite 
-Simple coverage interface:  Verify that an application schema or profile instantiates Coverage with the attribute domainExtent, the operation evaluate, and the  ssociations Domain, Range, and Coordinate Reference System
-
-Discrete coverage interface: Verify that an application schema or profile instantiates Discrete Coverage and its subtypes with the operations locate, find and list, and  the association Coverage Function
-
-Discrete coverage interface: Verify that it instantiates the class Geometry Value Pair with the attributes geometry and value
-
-Discrete coverage interchange: Verify that an interchange schema correctly implements the mandatory attributes and associations of Discrete Coverage or one of its subclasses
-
-=== Interpolation
-Interpolation Method Code List may be extended in an application schema that specifies additional interpolation methods
-
-== Some left over statements
-Coverage may provide a set of values for a particular position.
-
-Different views on this coverage concept exist.
-
-While in general more than one value can be returned for a particular Direct Position, sometimes exactly one  value will be delivered.
-
-The Domain Set of a coverage, as described by its Coordinate Reference System (CRS) consists of a number of axes which together define some n-dimensional space, with n>0. 
-
-Axes can represent alternate representations of coordinate measurements.
-
-Axes, without any spatial nor temporal semantics, might be called “abstract”.
-
-The range of CRSs to be used is open-ended; CRSs not described nor mentioned in this standard might be used
-
-In a coverage, the domain and range sets may be organised in different ways, driven by practical considerations.
-
-Some realization alternatives; concrete standards may or may not adopt these (Coverage by Partitioning, by Domain&Range, by Function), and may provide further ones
-
