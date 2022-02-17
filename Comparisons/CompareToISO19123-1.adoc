@@ -2,49 +2,39 @@ This is a list of all the assertions in the ISO19123-1 (2007), also known as OGC
 Topic 6: Schema for coverage geometry and functions.
 
 == ISO19123:2005 / Abstract Spec Topic 6 extracts
+ 
+[width="90%",cols="3,2,5",options="header"]
+|===
+^|**Abstract Spec Topic 6 extracts** ^|**CoverageJSON** ^|**GeoTiff**
+3+^|**Introduction**
+|Coverage is a subtype of feature | |
+|Coverage is a feature that has multiple values for each attribute type | |
+|Each direct position within the geometric representation of the feature has a single value for each attribute type | |
+|The same phenomenon may be represented as either a discrete feature or a coverage | |
+|Coverage can be derived from a collection of discrete features with common attributes | |
+|Values of the coverage at each position being the values of the attributes of the feature located at that position | |
+3+^|**Scope**
+|Coverages support mapping from a spatial, temporal or spatiotemporal domain to feature attribute values where feature attribute types are common to all geographic positions within the domain | | 
+|Coverage domain consists of a collection of direct positions in a coordinate space that may be defined in terms of up to three spatial dimensions as well as a temporal dimension | | 
+|Defines the relationship between the domain of a coverage and an associated attribute range | | 
+|Characteristics of the spatial domain are defined | | 
+|Characteristics of the attribute range are not part of this standard | | 
+3+^|**Conformance**
+|Specifies interfaces for several types of coverage objects | | 
+|Supports the interchange of coverage data independently of those interfaces  | | 
+|Two sets of conformance classes: one for implementation of the interfaces, the other for the exchange of coverage data | | 
+|Simple coverage interface A.1.1  | | 
+|Discrete coverage interface A.1.2  | | 
+|Discrete coverage interchange A.2.1 | | 
+|Interface conformance classes require implementation of all attributes, associations and operations of relevant classes | | 
+|Single conformance class (A.2.1) that supports a simple interface for evaluation of any coverage type, but exposes none of the internal structure of the coverage | | 
+|Conformance classes that support interfaces to specific coverage types that expose additional information about the internal structure of the coverage | | 
 
-=== Introduction
-Coverage is a subtype of feature
-
-Coverage is a feature that has multiple values for each attribute type
-
-Each direct position within the geometric representation of the feature has a single value for each attribute type
-
-The same phenomenon may be represented as either a discrete feature or a coverage
-
-Coverage can be derived from a collection of discrete features with common attributes
-
-Values of the coverage at each position being the values of the attributes of the feature located at that position
-
-=== Scope
-Coverages support mapping from a spatial, temporal or spatiotemporal domain to feature attribute values where feature attribute types are common to all geographic positions within the domain
-
-Coverage domain consists of a collection of direct positions in a coordinate space that may be defined in terms of up to three spatial dimensions as well as a temporal dimension
-
-Defines the relationship between the domain of a coverage and an associated attribute range
-
-Characteristics of the spatial domain are defined 
-
-Characteristics of the attribute range are not part of this standard
-
-=== Conformance
-Specifies interfaces for several types of coverage objects
-
-Supports the interchange of coverage data independently of those interfaces 
-
-Two sets of conformance classes: one for implementation of the interfaces, the other for the exchange of coverage data
-
-Simple coverage interface A.1.1 
-
-Discrete coverage interface A.1.2 
-
-Discrete coverage interchange A.2.1
-
-Interface conformance classes require implementation of all attributes, associations and operations of relevant classes
-
-Single conformance class (A.2.1) that supports a simple interface for evaluation of any coverage type, but exposes none of the internal structure of the coverage
-
-Conformance classes that support interfaces to specific coverage types that expose additional information about the internal structure of the coverage
+| 
+3+^|**Normative references**
+| | |Retrieve 
+| | |Retrieve 
+|===
 
 === Normative references 
 ISO/TS 19103:2005, Geographic information — Conceptual schema language 
