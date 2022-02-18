@@ -1,8 +1,6 @@
 This is a list of all the assertions in the ISO19123-1 (2007), also known as OGC07-001 Abstract Specification 
 Topic 6: Schema for coverage geometry and functions.
 
-== ISO19123:2005 / Abstract Spec Topic 6 extracts
- 
 [width="90%",cols="3,2,2,2,2",options="header"]
 |===
 ^|**Abstract Spec Topic 6 extracts** ^|**CoverageJSON** ^|**GeoTiff** ^|**CIS JSON** ^|**CIS NetCDF**
