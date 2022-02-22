@@ -1,39 +1,25 @@
 This is a list of all the assertions in the proposed CD19123-1 (2021).
-
-== CD19123:2021
-
-Coverage: any data representation that assigns values directly to spatio-temporal position. 
-
-A coverage is a function from a spatial, temporal or spatiotemporal domain to an attribute range. 
-
-A coverage associates a position within its domain to a record of values of defined data types.
-
-A coverage is a mapping from a spatial, temporal or spatiotemporal domain to attribute values sharing the same type within the domain.
-
-This document defines the relationship between the domain of a coverage and an associated attribute range. 
-
-The characteristics of the domain are defined whereas the characteristics of the attribute range are not part of this standard.
-
-Coverage: feature that acts as a function to return values from its range for any direct position within its domain
-
-A coverage conceptually can be viewed as a function which, for every value of its domain set, provides a particular value taken from its range set; actually, a coverage may provide a set of values for a particular position.
-
-Coordinates in a coverage are all expressed in one and the same Coordinate Reference System (CRS), its Native CRS.
-
-Different views on this coverage concept exist.
-
-While in general more than one value can be returned for a particular Direct Position, sometimes exactly one  value will be delivered.
-
-The Domain Set of a coverage, as described by its Coordinate Reference System (CRS) consists of a number vof axes which together define some n-dimensional space, with n>0. 
-
-Axes can represent alternate representations of coordinate measurements.
-
-Axes, without any spatial nor temporal semantics, might be called “abstract”.
-
-The range of CRSs to be used is open-ended; CRSs not described nor mentioned in this standard might be used
-
-In a coverage, the domain and range sets may be organised in different ways, driven by practical considerations.
-
-Some realization alternatives; concrete standards may or may not adopt these (Coverage by Partitioning, by Domain&Range, by Function), and may provide further ones
-
+ 
+[width="90%",cols="3,2,2,2,2",options="header"]
+|===
+^|**ISO CD19123:2021 extracts** ^|**CoverageJSON** ^|**GeoTiff** ^|**CIS JSON** ^|**CIS NetCDF**
+5+^|**Introduction**
+|Coverage: any data representation that assigns values directly to spatio-temporal position | | | |
+|A coverage is a function from a spatial, temporal or spatiotemporal domain to an attribute range | | | |
+|A coverage associates a position within its domain to a record of values of defined data types | | | |
+|A coverage is a mapping from a spatial, temporal or spatiotemporal domain to attribute values sharing the same type within the domain | | | |
+|This document defines the relationship between the domain of a coverage and an associated attribute range | | | |
+|The characteristics of the domain are defined whereas the characteristics of the attribute range are not part of this standard | | | |
+|Coverage: feature that acts as a function to return values from its range for any direct position within its domain | | | |
+|A coverage conceptually can be viewed as a function which, for every value of its domain set, provides a particular value taken from its range set; actually, a coverage may provide a set of values for a particular position | | | |
+|Coordinates in a coverage are all expressed in one and the same Coordinate Reference System (CRS), its Native CRS | | | |
+|Different views on this coverage concept exist | | | |
+|While in general more than one value can be returned for a particular Direct Position, sometimes exactly one  value will be delivered | | | |
+|The Domain Set of a coverage, as described by its Coordinate Reference System (CRS) consists of a number vof axes which together define some n-dimensional space, with n>0 | | | | 
+|Axes can represent alternate representations of coordinate measurements | | | |
+|Axes, without any spatial nor temporal semantics, might be called “abstract” | | | |
+|The range of CRSs to be used is open-ended; CRSs not described nor mentioned in this standard might be used | | | |
+|In a coverage, the domain and range sets may be organised in different ways, driven by practical considerations | | | |
+|Some realization alternatives; concrete standards may or may not adopt these (Coverage by Partitioning, by Domain&Range, by Function), and may provide further ones | | | |
+|===
 
