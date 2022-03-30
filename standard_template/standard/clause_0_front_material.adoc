@@ -10,7 +10,7 @@ Relatively large datasets can be handled efficiently in a "web-friendly" way by 
 
 The simplest and most common use case is to embed the data values of all variables in a Coverage object within the CoverageJSON document, so that it is completely standalone. This can be declared as using the standalone profile of CoverageJSON, which would enable the use of very simple clients.
 
-The next-simplest use case is to put data values for each variable (parameter) in separate aarray objects in separate CoverageJSON documents, linked from the Coverage object. This is useful for a multi-variable dataset, where one might want temperature, humidity, wind speed, etc., to be recorded in separate files, so the user client only needs to load the variables of interest.
+The next-simplest use case is to put data values for each variable (parameter) in separate array objects in separate CoverageJSON documents, linked from the Coverage object. This is useful for a multi-variable dataset, where one might want temperature, humidity, wind speed, etc., to be recorded in separate files, so the user client only needs to load the variables of interest.
 
 A sophisticated use case is to use tiling objects, where the data values are partitioned spatially and temporally, so that a single variable's data values would be split among several dobjects. A simple example of this would be to encode each timestep of a dataset in a separate file, but the tiles could also be divided spatially, like a tiled map server.
 
