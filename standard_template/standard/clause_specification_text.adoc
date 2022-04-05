@@ -341,7 +341,7 @@ Vertical CRSs use a single coordinate to denote some measure of height or depth,
 
 - The value of the `"type"` member MUST be "VerticalCRS"
 - The object MAY have an `"id"` member, whose value MUST be a string and SHOULD be a common identifier for the reference system.
- - The object MAY have a `"description"` member, whose value must be a string, but no standardised content is interpreted from this description.
+- The object MAY have a `"description"` member, whose value must be a string, but no standardised content is interpreted from this description.
 
 Example of a vertical CRS, here representing height above the NAV88 datum:
 
