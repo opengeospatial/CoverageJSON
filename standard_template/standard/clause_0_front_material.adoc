@@ -4,9 +4,15 @@ CoverageJSON is a format for publishing geo-temporal data to the Web, based on J
 
 CoverageJSON has been demonstrated to be an effective, efficient format, friendly to web and application developers, and therefore consistent with the current OGC API developments. The format supports the efficient transfer, from big data stores, of useful quantities of data to lightweight clients, such as browsers and mobile applications. This enables local manipulation of the data in a format familiar to, and popular with, web developers, and readily usable, for example, by science researchers.
 
-It can be used to encode coverages and collections of coverages. Data may be gridded or non-gridded, and data values may represent continuous values (such as temperature) or discrete categories (such as land cover classes). CoverageJSON uses JSON-LD to provide interoperability with RDF and Semantic Web applications.
+It can be used to encode coverages and collections of coverages. Data may be gridded or non-gridded, and data values may represent continuous values (such as temperature) or discrete categories (such as land cover classes). CoverageJSON uses JSON-LD to provide interoperability with RDF and Semantic Web applications and to reduce the potential size of the payload.
 
 Relatively large datasets can be handled efficiently in a "web-friendly" way by partitioning information among several CoverageJSON documents, including a mechanism for tiling. Nevertheless, CoverageJSON is not intended to be a replacement for efficient binary formats such as NetCDF, HDF or GRIB, and is not intended primarily to store or transfer very large datasets in bulk.
+
+The simplest and most common use case is to embed the data values of all variables in a Coverage object within the CoverageJSON document, so that it is completely standalone, which would enable the use of very simple clients.
+
+The next-simplest use case is to put data values for each variable (parameter) in separate array objects in separate CoverageJSON documents, linked from the Coverage object. This is useful for a multi-variable dataset, where one might want temperature, humidity, wind speed, etc., to be recorded in separate files, so the user client only needs to load the variables of interest.
+
+A sophisticated use case is to use tiling objects, where the data values are partitioned spatially and temporally, so that a single variable's data values would be split among several documents. A simple example of this would be to encode each timestep of a dataset in a separate file, but the tiles could also be divided spatially, like a tiled map server.
 
 It is proposed to be adopted as a Community Standard.
 
