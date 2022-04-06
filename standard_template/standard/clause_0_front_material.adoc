@@ -8,7 +8,7 @@ It can be used to encode coverages and collections of coverages. Data may be gri
 
 Relatively large datasets can be handled efficiently in a "web-friendly" way by partitioning information among several CoverageJSON documents, including a mechanism for tiling. Nevertheless, CoverageJSON is not intended to be a replacement for efficient binary formats such as NetCDF, HDF or GRIB, and is not intended primarily to store or transfer very large datasets in bulk.
 
-The simplest and most common use case is to embed the data values of all variables in a Coverage object within the CoverageJSON document, so that it is completely standalone. This can be declared as using the standalone profile of CoverageJSON, which would enable the use of very simple clients.
+The simplest and most common use case is to embed the data values of all variables in a Coverage object within the CoverageJSON document, so that it is completely standalone, which would enable the use of very simple clients.
 
 The next-simplest use case is to put data values for each variable (parameter) in separate array objects in separate CoverageJSON documents, linked from the Coverage object. This is useful for a multi-variable dataset, where one might want temperature, humidity, wind speed, etc., to be recorded in separate files, so the user client only needs to load the variables of interest.
 
