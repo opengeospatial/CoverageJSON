@@ -294,6 +294,7 @@ Geographic CRSs anchor coordinate values to an ellipsoidal approximation of the 
 
  - The value of the `"type"` member MUST be "GeographicCRS"
  - The object MAY have an `"id"` member, whose value MUST be a string and SHOULD be a common identifier for the reference system.
+ - The object MAY have a `"description"` member, where the value MUST be an i18n object, but no standardised content is interpreted from this description.
 
 Note that sometimes (e.g. for numerical model data) the exact CRS may not be known or may be undefined. In this case the `"id"` may be omitted, but the `"type"` still indicates that this is a geographic CRS. Therefore clients can still use geodetic longitude, geodetic latitude (and maybe height) axes, even if they can't accurately georeference the information.
 
@@ -322,6 +323,7 @@ Projected CRSs use two coordinates to denote positions on a Cartesian plane, whi
 
  - The value of the `"type"` member MUST be "ProjectedCRS"
  - The object MAY have an `"id"` member, whose value MUST be a string and SHOULD be a common identifier for the reference system.
+ - The object MAY have a `"description"` member, where the value MUST be an i18n object, but no standardised content is interpreted from this description.
 
 If a Coverage conforms to one of the defined [domain types][domain-types] then the coordinate identifier `"x"` is used to denote easting and `"y"` is used for northing.
 
@@ -339,6 +341,7 @@ Vertical CRSs use a single coordinate to denote some measure of height or depth,
 
 - The value of the `"type"` member MUST be "VerticalCRS"
 - The object MAY have an `"id"` member, whose value MUST be a string and SHOULD be a common identifier for the reference system.
+- The object MAY have a `"description"` member, where the value MUST be an i18n object, but no standardised content is interpreted from this description.
 
 Example of a vertical CRS, here representing height above the NAV88 datum:
 
@@ -348,38 +351,6 @@ Example of a vertical CRS, here representing height above the NAV88 datum:
   "id": "http://www.opengis.net/def/crs/EPSG/0/5703"
 }
 ```
-
-#### 5.1.4 Providing inline definitions of CRSs
-Sometimes there may be no well-known identifier for a geospatial CRS. Or the data provider may wish to make the CoverageJSON file more self-contained by avoiding external lookups. In this case a full inline definition of the CRS in JSON (instead of, or in addition to the `"id"`). This has not yet been fully defined in this specification, but we recommend following the OGC Well-Known Text (WKT) structure, for example:
-
-```json
-{
-  "type": "VerticalCRS",
-  "id": "http://www.opengis.net/def/crs/EPSG/0/5703",
-  "datum": {
-    "id": "http://www.opengis.net/def/datum/EPSG/0/5103",
-    "label": {
-      "en": "North American Vertical Datum 1988"
-    }
-  },
-  "cs": {
-    "id": "http://www.opengis.net/def/cs/EPSG/0/6499",
-    "csAxes": [{
-      "id": "http://www.opengis.net/def/axis/EPSG/0/114",
-      "name": {
-        "en": "Gravity-related height"
-      },
-      "direction": "up",
-      "unit": {
-        "symbol": "m"
-      }
-    }]
-  }
-}
-```
-
-In future work, a mapping from OGC WKT2 to JSON may be defined, and may be adopted into the CoverageJSON specification.
-
 
 ### 5.2. Temporal Reference Systems
 
