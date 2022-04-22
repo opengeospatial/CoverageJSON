@@ -965,6 +965,7 @@ Coverage example:
 ### 10.2. VerticalProfile
 
 - A domain with VerticalProfile domain type MUST have the axes `"x"`, `"y"`, and `"z"`, where `"x"` and `"y"` MUST have a single coordinate only.
+- A domain with VerticalProfile domain type MAY have the axis `"t"` which MUST have a single coordinate only.
 
 Domain example:
 
@@ -1117,7 +1118,7 @@ Coverage example:
 ### 10.5. MultiPointSeries
 
 - A domain with MultiPointSeries domain type MUST have the axes `"composite"` and `"t"`.
-- The axis `"composite"` MUST have the data type `"tuple"` and the coordinate identifiers `"x","y","z"` or `"x","y"`.
+- The axis `"composite"` MUST have the data type `"tuple"` and the coordinate identifiers `"x","y","z"` or `"x","y"`, in that order.
 
 Domain example:
 
@@ -1201,7 +1202,7 @@ Coverage example:
 ### 10.6. MultiPoint
 
 - A domain with MultiPoint domain type MUST have the axis `"composite"` and MAY have the axis `"t"` where `"t"` MUST have a single coordinate only.
-- The axis `"composite"` MUST have the data type `"tuple"` and the coordinate identifiers `"x","y","z"` or `"x","y"`.
+- The axis `"composite"` MUST have the data type `"tuple"` and the coordinate identifiers `"x","y","z"` or `"x","y"`, in that order.
 
 Domain example:
 
@@ -1282,7 +1283,7 @@ Coverage example:
 ### 10.7. Trajectory
 
 - A domain with Trajectory domain type MUST have the axis `"composite"` and MAY have the axis `"z"` where `"z"` MUST have a single coordinate only.
-- The axis `"composite"` MUST have the data type `"tuple"` and the coordinate identifiers `"t","x","y","z"` or `"t","x","y"`.
+- The axis `"composite"` MUST have the data type `"tuple"` and the coordinate identifiers `"t","x","y","z"` or `"t","x","y"`, in that order.
 - The value ordering of the axis `"composite"` MUST follow the ordering of its `"t"` coordinate as defined in the corresponding reference system.
 
 Domain example:
@@ -1384,7 +1385,7 @@ Coverage example:
 ### 10.8. Section
 
 - A domain with Section domain type MUST have the axes `"composite"` and `"z"`.
-- The axis `"composite"` MUST have the data type `"tuple"` and the coordinate identifiers `"t","x","y"`.
+- The axis `"composite"` MUST have the data type `"tuple"` and the coordinate identifiers `"t","x","y"`, in that order.
 - The value ordering of the axis `"composite"` MUST follow the ordering of its `"t"` coordinate as defined in the corresponding reference system.
 
 Domain example:
@@ -1451,7 +1452,7 @@ Polygons in this domain domain type are defined equally to GeoJSON, except that 
 - A Polygon is an array of LinearRing arrays. For Polygons with multiple rings, the first MUST be the exterior ring and any others MUST be interior rings or holes.
 
 - A domain with Polygon domain type MUST have the axis `"composite"` which has a single Polygon value.
-- The axis `"composite"` MUST have the data type `"polygon"` and the coordinate identifiers `"x","y"`.
+- The axis `"composite"` MUST have the data type `"polygon"` and the coordinate identifiers `"x","y"`, in that order.
 - A Polygon domain MAY have the axes `"z"` and `"t"` which both MUST have a single value only.
 
 Domain example:
@@ -1513,7 +1514,7 @@ Coverage example:
 
 - A domain with PolygonSeries domain type MUST have the axes `"composite"` and `"t"` where `"composite"` MUST have a single Polygon value. Polygons are defined in the Polygon domain type.
 - A domain with PolygonSeries domain type MAY have the axis `"z"` which MUST have a single value only.
-- The axis `"composite"` MUST have the data type `"polygon"` and the coordinate identifiers `"x","y"`.
+- The axis `"composite"` MUST have the data type `"polygon"` and the coordinate identifiers `"x","y"`, in that order.
 
 Domain example:
 
@@ -1575,7 +1576,7 @@ Coverage example:
 ### 10.11. MultiPolygon
 
 - A domain with MultiPolygon domain type MUST have the axis `"composite"` where the values are Polygons. Polygons are defined in the Polygon domain type.
-- The axis `"composite"` MUST have the data type `"polygon"` and the coordinate identifiers `"x","y"`.
+- The axis `"composite"` MUST have the data type `"polygon"` and the coordinate identifiers `"x","y"`, in that order.
 - A MultiPolygon domain MAY have the axes `"z"` and `"t"` which both MUST have a single value only.
 
 Domain example:
@@ -1640,7 +1641,7 @@ Coverage example:
 ### 10.12. MultiPolygonSeries
 
 - A domain with MultiPolygonSeries domain type MUST have the axes `"composite"` and `"t"` where the values of `"composite"` are Polygons. Polygons are defined in the Polygon domain type.
-- The axis `"composite"` MUST have the data type `"polygon"` and the coordinate identifiers `"x","y"`.
+- The axis `"composite"` MUST have the data type `"polygon"` and the coordinate identifiers `"x","y"`, in that order.
 - A MultiPolygon domain MAY have the axis `"z"` which MUST have a single value only.
 
 Domain example:
@@ -1705,4 +1706,3 @@ Coverage example:
 ## Acknowledgements
 
 This work was inspired by a demonstration of the concept by Joan Masó of CREAF.
-
