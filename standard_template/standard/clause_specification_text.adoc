@@ -880,7 +880,7 @@ Requirements for all domain types defined in this specification:
 `"z"` to vertical spatial coordinates, and all of `"x"`, `"y"`, and `"z"` MUST be referenced by a spatial coordinate reference system.
 - The axis and coordinate identifier `"t"` MUST refer to temporal coordinates and be referenced by a temporal reference system.
 - If a spatial CRS is used that has the axes longitude and latitude, or easting and northing, then the axis and coordinate identifier `"x"` MUST refer to longitude / easting, and `"y"` to latitude / northing.
-- A domain that states conformance to one of the domain types in this specification MAY have any number of additional one-coordinate axes not defined here.
+- A domain that states conformance to one of the domain types in this specification MUST only contain axes defined by the domain type: additional axes are not allowed.
 - In a Coverage object, the axis ordering in `"axisNames"` of NdArray objects SHOULD follow the order "t", "z", "y, "x", "composite", leaving out all axes that do not exist or are single-valued.
 
 .Domain Types table
