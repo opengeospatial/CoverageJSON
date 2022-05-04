@@ -62,3 +62,8 @@ Steve Olson     (contributor)   US NWS/NOAA
 
 Lewis McGibbney (contributor)   ESIP/JPL/NASA 
 
+[big]*vi. Acknowledgements*
+
+This work was inspired by a demonstration of the concept by Joan Masó of CREAF.
+
+
