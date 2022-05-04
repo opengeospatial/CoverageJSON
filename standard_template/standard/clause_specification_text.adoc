@@ -409,7 +409,7 @@ The domain values in the above example would be `"de"` and `"gb"`.
 CoverageJSON documents always consist of a single object. This object (referred to as the CoverageJSON object below) represents a domain, range, coverage, or collection of coverages.
 
 - The CoverageJSON object MAY have any number of members (name/value pairs).
-- The CoverageJSON object MUST have a member with the name `"type"` which has as value one of: `"Domain"`, `"NdArray"` (a range encoding), `"TiledNdArray"` (a range encoding), `"Coverage"`, or `"CoverageCollection"`. The case of the type member values MUST be as shown here.
+- The CoverageJSON object MUST have a member with the name `"type"` whose value is one of: `"Domain"`, `"NdArray"` (a range encoding), `"TiledNdArray"` (a range encoding), `"Coverage"`, or `"CoverageCollection"`. The case of the type member values MUST be as shown here.
 
 ### 6.1. Domain Objects
 
@@ -428,6 +428,7 @@ Its general structure is:
 - The value of the `"type"` member MUST be `"Domain"`.
 - For interoperability reasons it is RECOMMENDED that a domain object has the member `"domainType"` with a string value to indicate that the domain follows a certain structure (e.g. a time series, a vertical profile, a spatio-temporal 4D grid). See the ["Common CoverageJSON Domain Types Specification"][domain-types], which forms part of this specification, for details. Custom domain types may be used as recommended in the section "Extensions".
 - A domain object MUST have the member `"axes"` which has as value an object where each key is an axis identifier and each value an axis object as defined below.
+- The `"axes"` member MUST NOT be empty.
 - A domain object MAY have the member `"referencing"` where the value is an array of reference system connection objects as defined below.
 - A domain object MUST have a `"referencing"` member if the domain object is not part of a coverage collection or if the coverage collection does not have a `"referencing"` member.
 
@@ -574,12 +575,12 @@ Example of a domain object with [`"Trajectory"`][domain-types] domain type:
 
 ### 6.2. NdArray Objects
 
-A CoverageJSON object with the type `"NdArray"` is an NdArray object. It represents a multidimensional (>= 0D) array with named axes, encoded as a flat one-dimensional array in row-major order.
+A CoverageJSON object with the type `"NdArray"` is an NdArray object. It represents a multidimensional (>= 1D) array with named axes, encoded as a flat one-dimensional array in row-major order.
 
 - An NdArray object MUST have a member with the name `"values"` where the value is an array of numbers and nulls, or strings and nulls, where nulls represent missing data.
 - An NdArray object MUST have a member with the name `"dataType"` where the value is either `"float"`, `"integer"`, or `"string"` and MUST correspond to the data type of the non-null values in the `"values"` array.
-- An NdArray object MAY have a member with the name `"shape"` where the value is an array of integers. For 0D arrays, `"shape"` MAY be omitted (defaulting to `[]`), for >= 1D arrays it MUST be included.
-- An NdArray object MAY have a member with the name `"axisNames"` where the value is a string array of the same length as `"shape"`. For 0D arrays, `"axisNames"` MAY be omitted (defaulting to `[]`), for >= 1D arrays it MUST be included.
+- An NdArray object MUST have a member with the name `"shape"` where the value is an array of integers. The product of these integers MUST equal the number of items in the `"values"` array.
+- An NdArray object MUST have a member with the name `"axisNames"` where the value is a string array of the same length as `"shape"`.
 - Note that common JSON implementations use 64-bit floating point numbers as data type for `"values"`, therefore precision has to be taken into account. For example, only integers within the extent [-2^32, 2^32] can be accurately represented with 64-bit floating point numbers.
 
 Example:
