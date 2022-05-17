@@ -575,12 +575,13 @@ Example of a domain object with [`"Trajectory"`][domain-types] domain type:
 
 ### 6.2. NdArray Objects
 
-A CoverageJSON object with the type `"NdArray"` is an NdArray object. It represents a multidimensional (>= 1D) array with named axes, encoded as a flat one-dimensional array in row-major order.
+A CoverageJSON object with the type `"NdArray"` is an NdArray object. It represents a multidimensional (>= 0D) array with named axes, encoded as a flat one-dimensional array in row-major order.
 
 - An NdArray object MUST have a member with the name `"values"` where the value is a non-empty array of numbers and nulls, or strings and nulls, where nulls represent missing data.
+- Zero-dimensional NdArrays MUST have exactly one item in the `"values"` array.
 - An NdArray object MUST have a member with the name `"dataType"` where the value is either `"float"`, `"integer"`, or `"string"` and MUST correspond to the data type of the non-null values in the `"values"` array.
-- An NdArray object MUST have a member with the name `"shape"` where the value is an array of integers. The product of these integers MUST equal the number of items in the `"values"` array.
-- An NdArray object MUST have a member with the name `"axisNames"` where the value is a string array of the same length as `"shape"`.
+- An NdArray object MAY have a member with the name `"shape"` where the value is an array of integers. For 0D arrays, `"shape"` MAY be omitted (defaulting to `[]`), for >= 1D arrays it MUST be included.
+- An NdArray object MAY have a member with the name `"axisNames"` where the value is a string array of the same length as `"shape"`. For 0D arrays, `"axisNames"` MAY be omitted (defaulting to `[]`), for >= 1D arrays it MUST be included.
 - Note that common JSON implementations use 64-bit floating point numbers as data type for `"values"`, therefore precision has to be taken into account. For example, only integers within the extent [-2^32, 2^32] can be accurately represented with 64-bit floating point numbers.
 
 Example:
