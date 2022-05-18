@@ -338,17 +338,15 @@ Example of a vertical CRS, here representing height above the NAV88 datum:
 
 ### 5.2. Temporal Reference Systems
 
-Time is referenced by a temporal reference system (temporal RS).
-In this specification, only a string-based notation for time values is defined.
+Time is referenced by a temporal reference system (temporal RS). In the current specification, only a string-based notation for time values is defined. Future versions of this specification may allow for alternative notations, such as recording time values as numeric offsets from a given temporal datum (e.g. "days since 1970-01-01").
 
 - A temporal RS object MUST have a member `"type"`. The only currently defined value of it is `"TemporalRS"`.
 - A temporal RS object MUST have a member `"calendar"` with value `"Gregorian"` or a URI.
-- If the Gregorian calender is used, then `"calendar"` MUST have the value `"Gregorian"` and cannot be a URI.
+- If the Gregorian calendar is used, then `"calendar"` MUST have the value `"Gregorian"` and cannot be a URI.
 - A temporal RS object MAY have a member `"timeScale"` with a URI as value.
-  If omitted, the time scale defaults to `"http://www.opengis.net/def/trs/BIPM/0/UTC[UTC]"`).
+  If omitted, the time scale defaults to `"http://www.opengis.net/def/trs/BIPM/0/UTC[UTC]"`.
   If the time scale is UTC, the `"timeScale"` member MUST be omitted.
-- If the calendar is based on years, months, days, then the referenced values SHOULD use one of the following
-  ISO8601-based lexical representations:
+- If the calendar is based on years, months, days, then the referenced values SHOULD use one of the following ISO8601-based lexical representations:
   - YYYY
   - ±XYYYY (where X stands for extra year digits)
   - YYYY-MM
@@ -356,6 +354,7 @@ In this specification, only a string-based notation for time values is defined.
   - YYYY-MM-DDTHH:MM:SS[.F]Z where Z is either "Z" or a time scale offset +|-HH:MM
 - If calendar dates with reduced precision are used in a lexical representation (e.g. `"2016"`), then
   a client SHOULD interpret those dates in that reduced precision.
+- If `"type"` is `"TemporalRS"` and `"calendar"` is `"Gregorian"`, then the above lexical representation MUST be used.
 
 Example:
 
