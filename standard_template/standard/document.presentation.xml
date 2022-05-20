@@ -1,0 +1,2491 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ogc-standard xmlns="https://www.metanorma.org/ns/ogc" type="presentation" version="2.0.6">
+<bibdata type="standard">
+<title language="en" format="text/plain">OGC CoverageJSON Community Standard</title>
+<uri type="xml">./document.xml</uri><uri type="pdf">./document.pdf</uri><uri type="doc">./document.doc</uri><docidentifier type="ogc-external">http://www.opengis.net/doc/CS/covjson/1.0</docidentifier><docidentifier type="ogc-internal">21-069</docidentifier><docnumber>21-069</docnumber><date type="published"><on>2029-03-30</on></date><date type="issued"><on>2029-03-30</on></date><date type="received"><on>2029-03-30</on></date><contributor><role type="author"/><organization>
+<name>UK Met Office</name>
+</organization></contributor><contributor><role type="author"/><organization>
+<name>University of Reading</name>
+</organization></contributor><contributor><role type="author"/><organization>
+<name>Meteorological Service of Canada</name>
+</organization></contributor><contributor><role type="author"/><organization>
+<name>Unidata UCAR</name>
+</organization></contributor><contributor><role type="author"/><organization>
+<name>US NOAA / National Weather Service</name>
+</organization></contributor><contributor><role type="author"/><organization>
+<name>ESIP/JPL/NASA</name>
+</organization></contributor><contributor><role type="editor"/><person>
+<name><completename>Chris Little</completename></name>
+</person></contributor><contributor><role type="editor"/><person>
+<name><completename>Jon Blower</completename></name>
+</person></contributor><contributor><role type="publisher"/><organization>
+<name>Open Geospatial Consortium</name>
+</organization></contributor><edition>1.0</edition><version><draft>3.0</draft></version><language current="true">en</language><script current="true">Latn</script><abstract><p>CoverageJSON is a format for publishing geo-temporal data to the Web, based on JavaScript Object Notation (JSON). Simplicity, machine and human readability and efficiency of the format were the primary design goals. The primary use case for CoverageJSON is to enable the development of interactive visual websites that display and manipulate environmental data within a web browser, although other use cases are possible.</p>
+
+<p>CoverageJSON has been demonstrated to be an effective, efficient format, friendly to web and application developers, and therefore consistent with the current OGC API developments. The format supports the efficient transfer, from big data stores, of useful quantities of data to lightweight clients, such as browsers and mobile applications. This enables local manipulation of the data in a format familiar to, and popular with, web developers, and readily usable, for example, by science researchers.</p>
+
+<p>It can be used to encode coverages and collections of coverages. Data may be gridded or non-gridded, and data values may represent continuous values (such as temperature) or discrete categories (such as land cover classes). CoverageJSON uses JSON-LD to provide interoperability with RDF and Semantic Web applications and to reduce the potential size of the payload.</p>
+
+<p>Relatively large datasets can be handled efficiently in a "web-friendly" way by partitioning information among several CoverageJSON documents, including a mechanism for tiling. Nevertheless, CoverageJSON is not intended to be a replacement for efficient binary formats such as NetCDF, HDF or GRIB, and is not intended primarily to store or transfer very large datasets in bulk.</p>
+
+<p>The simplest and most common use case is to embed the data values of all variables in a Coverage object within the CoverageJSON document, so that it is completely standalone, which would enable the use of very simple clients.</p>
+
+<p>The next-simplest use case is to put data values for each variable (parameter) in separate array objects in separate CoverageJSON documents, linked from the Coverage object. This is useful for a multi-variable dataset, where one might want temperature, humidity, wind speed, etc., to be recorded in separate files, so the user client only needs to load the variables of interest.</p>
+
+<p>A sophisticated use case is to use tiling objects, where the data values are partitioned spatially and temporally, so that a single variable’s data values would be split among several documents. A simple example of this would be to encode each timestep of a dataset in a separate file, but the tiles could also be divided spatially, like a tiled map server.</p>
+</abstract><status><stage language="">draft</stage><stage language="en">Draft</stage></status><copyright><from>2022</from><owner><organization>
+<name>Open Geospatial Consortium</name>
+</organization></owner></copyright><keyword>ogcdoc</keyword><keyword>OGC document</keyword><keyword>JSON</keyword><keyword>JSON-LD</keyword><keyword>CoverageJSON</keyword><keyword>CovJSON</keyword><keyword>Coverage</keyword><keyword>spatiotemporal</keyword><keyword>linked-data</keyword><ext><doctype language="">standard</doctype><subdoctype>implementation</subdoctype><editorialgroup><committee>technical</committee></editorialgroup></ext></bibdata><localized-strings><localized-string key="scope" language="en">Scope</localized-string><localized-string key="symbolsabbrev" language="en">Symbols and abbreviated terms</localized-string><localized-string key="abbrev" language="en">Abbreviated terms</localized-string><localized-string key="symbols" language="en">Symbols</localized-string><localized-string key="table_of_contents" language="en">Table of contents</localized-string><localized-string key="introduction" language="en">Introduction</localized-string><localized-string key="foreword" language="en">Preface</localized-string><localized-string key="abstract" language="en">Abstract</localized-string><localized-string key="acknowledgements" language="en">Acknowledgements</localized-string><localized-string key="termsdef" language="en">Terms and definitions</localized-string><localized-string key="termsdefsymbolsabbrev" language="en">Terms, definitions, symbols and abbreviated terms</localized-string><localized-string key="termsdefsymbols" language="en">Terms, definitions and symbols</localized-string><localized-string key="termsdefabbrev" language="en">Terms, definitions and abbreviated terms</localized-string><localized-string key="normref" language="en">Normative references</localized-string><localized-string key="bibliography" language="en">Bibliography</localized-string><localized-string key="preface" language="en">Preface</localized-string><localized-string key="clause" language="en">Clause</localized-string><localized-string key="annex" language="en">Annex</localized-string><localized-string key="appendix" language="en">Appendix</localized-string><localized-string key="no_terms_boilerplate" language="en"><p>No terms and definitions are listed in this document.</p>
+</localized-string><localized-string key="internal_terms_boilerplate" language="en"><p>This document uses the terms defined in <link target="https://portal.ogc.org/public_ogc/directives/directives.php">OGC Policy Directive 49</link>, which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word “shall” (not “must”) is the verb form used to indicate a requirement to be strictly followed to conform to this document and OGC documents do not use the equivalent phrases in the ISO/IEC Directives, Part 2.</p>
+<p>This document also uses terms defined in the OGC Standard for Modular specifications (<link target="https://portal.opengeospatial.org/files/?artifact_id=34762">OGC 08-131r3</link>), also known as the 'ModSpec'. The definitions of terms such as standard, specification, requirement, and conformance test are provided in the ModSpec.</p>
+<p>For the purposes of this document, the following additional terms and definitions apply.</p>
+</localized-string><localized-string key="norm_with_refs_pref" language="en">The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.</localized-string><localized-string key="norm_empty_pref" language="en">There are no normative references in this document.</localized-string><localized-string key="external_terms_boilerplate" language="en"><p>This document uses the terms defined in <link target="https://portal.ogc.org/public_ogc/directives/directives.php">OGC Policy Directive 49</link>, which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word “shall” (not “must”) is the verb form used to indicate a requirement to be strictly followed to conform to this document and OGC documents do not use the equivalent phrases in the ISO/IEC Directives, Part 2.</p>
+<p>This document also uses terms defined in the OGC Standard for Modular specifications (<link target="https://portal.opengeospatial.org/files/?artifact_id=34762">OGC 08-131r3</link>), also known as the 'ModSpec'. The definitions of terms such as standard, specification, requirement, and conformance test are provided in the ModSpec.</p>
+<p>For the purposes of this document, the terms and definitions given in % additionally apply.</p>
+</localized-string><localized-string key="internal_external_terms_boilerplate" language="en"><p>This document uses the terms defined in <link target="https://portal.ogc.org/public_ogc/directives/directives.php">OGC Policy Directive 49</link>, which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word “shall” (not “must”) is the verb form used to indicate a requirement to be strictly followed to conform to this document and OGC documents do not use the equivalent phrases in the ISO/IEC Directives, Part 2.</p>
+<p>This document also uses terms defined in the OGC Standard for Modular specifications (<link target="https://portal.opengeospatial.org/files/?artifact_id=34762">OGC 08-131r3</link>), also known as the 'ModSpec'. The definitions of terms such as standard, specification, requirement, and conformance test are provided in the ModSpec.</p>
+<p>For the purposes of this document, the terms and definitions given in % and the following additionally apply.</p>
+</localized-string><localized-string key="term_defined_in" language="en">(%)</localized-string><localized-string key="binary_and" language="en">%1 and %2</localized-string><localized-string key="multiple_and" language="en">%1, and %2</localized-string><localized-string key="binary_or" language="en">%1 or %2</localized-string><localized-string key="multiple_or" language="en">%1, or %2</localized-string><localized-string key="chain_and" language="en">%1 and %2</localized-string><localized-string key="chain_or" language="en">%1 or %2</localized-string><localized-string key="chain_from" language="en">%1 from %2</localized-string><localized-string key="chain_to" language="en">%1 to %2</localized-string><localized-string key="note" language="en">NOTE</localized-string><localized-string key="note_xref" language="en">Note</localized-string><localized-string key="termnote" language="en">Note % to entry</localized-string><localized-string key="list" language="en">List</localized-string><localized-string key="deflist" language="en">Definition List</localized-string><localized-string key="figure" language="en">Figure</localized-string><localized-string key="formula" language="en">Formula</localized-string><localized-string key="inequality" language="en">Formula</localized-string><localized-string key="table" language="en">Table</localized-string><localized-string key="requirement" language="en">Requirement</localized-string><localized-string key="recommendation" language="en">Recommendation</localized-string><localized-string key="permission" language="en">Permission</localized-string><localized-string key="key" language="en">Key</localized-string><localized-string key="example" language="en">Example</localized-string><localized-string key="example_xref" language="en">Example</localized-string><localized-string key="where" language="en">where</localized-string><localized-string key="wholeoftext" language="en">Whole of text</localized-string><localized-string key="draft_label" language="en">draft</localized-string><localized-string key="inform_annex" language="en">informative</localized-string><localized-string key="norm_annex" language="en">normative</localized-string><localized-string key="modified" language="en">modified</localized-string><localized-string key="deprecated" language="en">DEPRECATED</localized-string><localized-string key="source" language="en">SOURCE</localized-string><localized-string key="and" language="en">and</localized-string><localized-string key="all_parts" language="en">All Parts</localized-string><localized-string key="toc_figures" language="en">List of figures</localized-string><localized-string key="toc_tables" language="en">List of tables</localized-string><localized-string key="toc_recommendations" language="en">List of recommendations</localized-string><localized-string key="month_january" language="en">January</localized-string><localized-string key="month_february" language="en">February</localized-string><localized-string key="month_march" language="en">March</localized-string><localized-string key="month_april" language="en">April</localized-string><localized-string key="month_may" language="en">May</localized-string><localized-string key="month_june" language="en">June</localized-string><localized-string key="month_july" language="en">July</localized-string><localized-string key="month_august" language="en">August</localized-string><localized-string key="month_september" language="en">September</localized-string><localized-string key="month_october" language="en">October</localized-string><localized-string key="month_november" language="en">November</localized-string><localized-string key="month_december" language="en">December</localized-string><localized-string key="obligation" language="en">Obligation</localized-string><localized-string key="subject" language="en">Subject</localized-string><localized-string key="inherits" language="en">Inherits</localized-string><localized-string key="admonition.danger" language="en">Danger</localized-string><localized-string key="admonition.warning" language="en">Warning</localized-string><localized-string key="admonition.caution" language="en">Caution</localized-string><localized-string key="admonition.important" language="en">Important</localized-string><localized-string key="admonition.safety_precautions" language="en">Safety Precautions</localized-string><localized-string key="locality.section" language="en">Section</localized-string><localized-string key="locality.clause" language="en">Clause</localized-string><localized-string key="locality.part" language="en">Part</localized-string><localized-string key="locality.paragraph" language="en">Paragraph</localized-string><localized-string key="locality.chapter" language="en">Chapter</localized-string><localized-string key="locality.page" language="en">Page</localized-string><localized-string key="locality.table" language="en">Table</localized-string><localized-string key="locality.annex" language="en">Annex</localized-string><localized-string key="locality.figure" language="en">Figure</localized-string><localized-string key="locality.example" language="en">Example</localized-string><localized-string key="locality.note" language="en">Note</localized-string><localized-string key="locality.formula" language="en">Formula</localized-string><localized-string key="grammar_abbrevs.masculine" language="en">m</localized-string><localized-string key="grammar_abbrevs.feminine" language="en">f</localized-string><localized-string key="grammar_abbrevs.neuter" language="en">n</localized-string><localized-string key="grammar_abbrevs.common" language="en">common</localized-string><localized-string key="grammar_abbrevs.singular" language="en">sg</localized-string><localized-string key="grammar_abbrevs.dual" language="en">dual</localized-string><localized-string key="grammar_abbrevs.pl" language="en">pl</localized-string><localized-string key="grammar_abbrevs.isPreposition" language="en">prep</localized-string><localized-string key="grammar_abbrevs.isParticiple" language="en">part</localized-string><localized-string key="grammar_abbrevs.isAdjective" language="en">adj</localized-string><localized-string key="grammar_abbrevs.isAdverb" language="en">adv</localized-string><localized-string key="grammar_abbrevs.isNoun" language="en">noun</localized-string><localized-string key="grammar_abbrevs.isVerb" language="en">verb</localized-string><localized-string key="relatedterms.deprecates" language="en">deprecates</localized-string><localized-string key="relatedterms.supersedes" language="en">supersedes</localized-string><localized-string key="relatedterms.narrower" language="en">narrower</localized-string><localized-string key="relatedterms.broader" language="en">broader</localized-string><localized-string key="relatedterms.equivalent" language="en">equivalent</localized-string><localized-string key="relatedterms.compare" language="en">compare</localized-string><localized-string key="relatedterms.contrast" language="en">contrast</localized-string><localized-string key="relatedterms.see" language="en">see</localized-string><localized-string key="Clause.sg" language="en">Clause</localized-string><localized-string key="Clause.pl" language="en">Clauses</localized-string><localized-string key="Annex.sg" language="en">Annex</localized-string><localized-string key="Annex.pl" language="en">Annexes</localized-string><localized-string key="Appendix.sg" language="en">Appendix</localized-string><localized-string key="Appendix.pl" language="en">Appendixes</localized-string><localized-string key="Note.sg" language="en">Note</localized-string><localized-string key="Note.pl" language="en">Notes</localized-string><localized-string key="Note_%_to_entry.sg" language="en">Note % to entry</localized-string><localized-string key="Note_%_to_entry.pl" language="en">Notes % to entry</localized-string><localized-string key="List.sg" language="en">List</localized-string><localized-string key="List.pl" language="en">Lists</localized-string><localized-string key="Figure.sg" language="en">Figure</localized-string><localized-string key="Figure.pl" language="en">Figures</localized-string><localized-string key="Formula.sg" language="en">Formula</localized-string><localized-string key="Formula.pl" language="en">Formulas</localized-string><localized-string key="Table.sg" language="en">Table</localized-string><localized-string key="Table.pl" language="en">Tables</localized-string><localized-string key="Requirement.sg" language="en">Requirement</localized-string><localized-string key="Requirement.pl" language="en">Requirements</localized-string><localized-string key="Recommendation.sg" language="en">Recommendation</localized-string><localized-string key="Recommendation.pl" language="en">Recommendations</localized-string><localized-string key="Permission.sg" language="en">Permission</localized-string><localized-string key="Permission.pl" language="en">Permissions</localized-string><localized-string key="Example.sg" language="en">Example</localized-string><localized-string key="Example.pl" language="en">Examples</localized-string><localized-string key="Part.sg" language="en">Part</localized-string><localized-string key="Part.pl" language="en">Parts</localized-string><localized-string key="Section.sg" language="en">Section</localized-string><localized-string key="Section.pl" language="en">Sections</localized-string><localized-string key="Paragraph.sg" language="en">Paragraph</localized-string><localized-string key="Paragraph.pl" language="en">Paragraphs</localized-string><localized-string key="Chapter.sg" language="en">Chapter</localized-string><localized-string key="Chapter.pl" language="en">Chapters</localized-string><localized-string key="Page.sg" language="en">Page</localized-string><localized-string key="Page.pl" language="en">Pages</localized-string><localized-string key="admitted" language="en">ADMITTED</localized-string><localized-string key="submitters" language="en">Submitters</localized-string><localized-string key="recommendationtest" language="en">Recommendation test</localized-string><localized-string key="requirementtest" language="en">Requirement test</localized-string><localized-string key="permissiontest" language="en">Permission test</localized-string><localized-string key="recommendationclass" language="en">Recommendations class</localized-string><localized-string key="requirementclass" language="en">Requirements class</localized-string><localized-string key="permissionclass" language="en">Permissions class</localized-string><localized-string key="abstracttest" language="en">Abstract test</localized-string><localized-string key="conformanceclass" language="en">Conformance class</localized-string><localized-string key="security_empty" language="en">No security considerations have been made for this document.</localized-string><localized-string key="stage_dict.draft" language="en">Draft</localized-string><localized-string key="stage_dict.work-item-draft" language="en">Work Item Draft</localized-string><localized-string key="stage_dict.swg-draft" language="en">Candidate SWG Draft</localized-string><localized-string key="stage_dict.oab-review" language="en">Candidate OAB Review Draft</localized-string><localized-string key="stage_dict.public-rfc" language="en">Candidate Public RFC Draft</localized-string><localized-string key="stage_dict.tc-vote" language="en">Candidate TC Vote Draft</localized-string><localized-string key="stage_dict.approved" language="en">Approved</localized-string><localized-string key="stage_dict.published" language="en">Published</localized-string><localized-string key="stage_dict.deprecated" language="en">Deprecated</localized-string><localized-string key="stage_dict.rescinded" language="en">Rescinded</localized-string><localized-string key="stage_dict.retired" language="en">Retired</localized-string><localized-string key="language" language="en">en</localized-string><localized-string key="script" language="en">Latn</localized-string></localized-strings>
+<boilerplate>
+  <copyright-statement>
+    <clause>
+      <title depth="1">Copyright notice</title>
+
+      <p align="center" id="_609a02a1-fa53-7a69-1cb9-ff2ed59292e2">Copyright
+        © 2022 Open Geospatial Consortium<br/>
+        To obtain additional rights of use, visit
+        <link target="http://www.ogc.org/legal/">http://www.ogc.org/legal/</link></p>
+    </clause>
+    <clause>
+      <title depth="1">Note</title>
+      <p align="left" id="_11e88dba-9912-1a89-a82d-7291bf232191">Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.</p>
+
+      <p align="left" id="_15067213-c07b-cba0-7e18-395ab2e00ab3">Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.</p>
+    </clause>
+  </copyright-statement>
+  <license-statement>
+    <clause>
+      <title depth="1">License Agreement</title>
+
+      <p id="_e8566381-218f-c22d-320d-4d0371bfd58f">Permission is hereby granted by the Open Geospatial
+        Consortium, (“Licensor”), free of charge and subject to the terms set
+        forth below, to any person obtaining a copy of this Intellectual Property and
+        any associated documentation, to deal in the Intellectual Property without
+        restriction (except as set forth below), including without limitation the
+        rights to implement, use, copy, modify, merge, publish, distribute, and/or
+        sublicense copies of the Intellectual Property, and to permit persons to whom
+        the Intellectual Property is furnished to do so, provided that all copyright notices
+        on the intellectual property are retained intact and that each person to whom
+        the Intellectual Property is furnished agrees to the terms of this Agreement.</p>
+
+      <p id="_52ebb386-d365-27d0-d76d-a59ac165fc4d">If you modify the Intellectual Property, all copies of
+        the modified Intellectual Property must include, in addition to the above
+        copyright notice, a notice that the Intellectual Property includes
+        modifications that have not been approved or adopted by LICENSOR.</p>
+
+      <p id="_178f14b4-0718-a5b8-09cd-84f8f4b756ed">THIS LICENSE IS A COPYRIGHT LICENSE ONLY, AND DOES NOT
+        CONVEY ANY RIGHTS UNDER ANY PATENTS THAT MAY BE IN FORCE ANYWHERE IN THE WORLD.
+        THE INTELLECTUAL PROPERTY IS PROVIDED “AS
+        IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+        LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE,
+        AND NONINFRINGEMENT OF THIRD PARTY RIGHTS. THE COPYRIGHT HOLDER OR HOLDERS
+        INCLUDED IN THIS NOTICE DO NOT WARRANT THAT THE FUNCTIONS CONTAINED IN THE
+        INTELLECTUAL PROPERTY WILL MEET YOUR REQUIREMENTS OR THAT THE OPERATION OF THE
+        INTELLECTUAL PROPERTY WILL BE UNINTERRUPTED OR ERROR FREE. ANY USE OF THE
+        INTELLECTUAL PROPERTY SHALL BE MADE ENTIRELY AT THE USER’S OWN RISK. IN NO
+        EVENT SHALL THE COPYRIGHT HOLDER OR ANY CONTRIBUTOR OF INTELLECTUAL PROPERTY
+        RIGHTS TO THE INTELLECTUAL PROPERTY BE LIABLE FOR ANY CLAIM, OR ANY DIRECT,
+        SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING
+        FROM ANY ALLEGED INFRINGEMENT OR ANY LOSS OF USE, DATA OR PROFITS, WHETHER IN
+        AN ACTION OF CONTRACT, NEGLIGENCE OR UNDER ANY OTHER LEGAL THEORY, ARISING OUT
+        OF OR IN CONNECTION WITH THE IMPLEMENTATION, USE, COMMERCIALIZATION OR
+        PERFORMANCE OF THIS INTELLECTUAL PROPERTY.</p>
+
+      <p id="_2ad7fe27-9ae4-52c5-9dd9-faa4004247fb">This license is effective until terminated. You may
+        terminate it at any time by destroying the Intellectual Property together with
+        all copies in any form. The license will also terminate if you fail to comply
+        with any term or condition of this Agreement. Except as provided in the
+        following sentence, no such termination of this license shall require the
+        termination of any third party end-user sublicense to the Intellectual Property
+        which is in force as of the date of notice of such termination. In addition,
+        should the Intellectual Property, or the operation of the Intellectual
+        Property, infringe, or in LICENSOR’s sole opinion be
+        likely to infringe, any patent, copyright, trademark or other right of a third
+        party, you agree that LICENSOR, in its sole discretion, may terminate this
+        license without any compensation or liability to you, your licensees or any
+        other party. You agree upon termination of any kind to destroy or cause to be
+        destroyed the Intellectual Property together with all copies in any form,
+        whether held by you or by any third party.</p>
+
+      <p id="_3254c815-179c-5f54-9a01-b8e964837171">Except as contained in this notice, the name of
+        LICENSOR or of any other holder of a copyright in all or part of the Intellectual
+        Property shall not be used in advertising or otherwise to promote the sale, use
+        or other dealings in this Intellectual Property without prior written
+        authorization of LICENSOR or such copyright holder. LICENSOR is and shall at
+        all times be the sole entity that may authorize you or any third party to use
+        certification marks, trademarks or other special designations to indicate
+        compliance with any LICENSOR standards or specifications.
+        This Agreement is
+        governed by the laws of the Commonwealth of Massachusetts. The application to
+        this Agreement of the United Nations Convention on Contracts for the
+        International Sale of Goods is hereby expressly excluded. In the event any
+        provision of this Agreement shall be deemed unenforceable, void or invalid, such
+        provision shall be modified so as to make it valid and enforceable, and as so
+        modified the entire Agreement shall remain in full force and effect. No
+        decision, action or inaction by LICENSOR shall be construed to be a waiver of
+        any rights or remedies available to it.</p>
+
+      <p id="_4fa1ef5b-3dd5-7a05-3c68-bca93a0f14bb">None of the Intellectual Property or underlying information or technology may be downloaded or otherwise exported or reexported in violation of U.S. export laws and regulations. In addition, you are responsible for complying with any local laws in your jurisdiction which may impact your right to import, export or use the Intellectual Property, and you represent that you have complied with any regulations or registration procedures required by applicable law to make this license enforceable.</p>
+    </clause>
+  </license-statement>
+
+  <legal-statement>
+    
+    
+    <clause>
+      <title depth="1">Notice for Drafts</title>
+      <p id="_09caafd2-d047-3050-9095-b3f182faf86f">This document is not an OGC Standard. This document is distributed for review and comment. This document is subject to change without notice and may not be referred to as an OGC Standard.</p>
+
+      <p id="_d80fd0eb-fbfd-dec3-0ddb-92472f4d5fcf">Recipients of this document are invited to submit, with their comments, notification of any relevant patent rights of which they are aware and to provide supporting documentation.</p>
+    </clause>
+    
+
+
+    
+
+  </legal-statement>
+
+
+
+
+  <feedback-statement>
+    
+    <clause id="boilerplate-standard-feedback">
+      <p id="_bbc1a653-f270-135d-9455-af930feb3587">Suggested additions, changes and comments on this document are welcome and encouraged. Such suggestions may be submitted using the online change request form on OGC web site: <link target="http://portal.opengeospatial.org/public_ogc/change_request.php">http://portal.opengeospatial.org/public_ogc/change_request.php</link></p>
+    </clause>
+    
+  </feedback-statement>
+</boilerplate>
+<preface><abstract id="_abstract" displayorder="1"><title depth="1">I.<tab/>Abstract</title><p id="_42d22731-2da2-5d2d-05e7-628e36a323e6">CoverageJSON is a format for publishing geo-temporal data to the Web, based on JavaScript Object Notation (JSON). Simplicity, machine and human readability and efficiency of the format were the primary design goals. The primary use case for CoverageJSON is to enable the development of interactive visual websites that display and manipulate environmental data within a web browser, although other use cases are possible.</p>
+
+<p id="_46587f57-5dae-3164-3e5d-96a1614d482b">CoverageJSON has been demonstrated to be an effective, efficient format, friendly to web and application developers, and therefore consistent with the current OGC API developments. The format supports the efficient transfer, from big data stores, of useful quantities of data to lightweight clients, such as browsers and mobile applications. This enables local manipulation of the data in a format familiar to, and popular with, web developers, and readily usable, for example, by science researchers.</p>
+
+<p id="_3b0a858f-2461-b0ac-c2fd-8db9713eca15">It can be used to encode coverages and collections of coverages. Data may be gridded or non-gridded, and data values may represent continuous values (such as temperature) or discrete categories (such as land cover classes). CoverageJSON uses JSON-LD to provide interoperability with RDF and Semantic Web applications and to reduce the potential size of the payload.</p>
+
+<p id="_ae6fb0a5-5e60-70a0-8e2c-446495f18a43">Relatively large datasets can be handled efficiently in a “web-friendly” way by partitioning information among several CoverageJSON documents, including a mechanism for tiling. Nevertheless, CoverageJSON is not intended to be a replacement for efficient binary formats such as NetCDF, HDF or GRIB, and is not intended primarily to store or transfer very large datasets in bulk.</p>
+
+<p id="_3128d4e2-7ca0-e526-2335-26e8e38b2a3f">The simplest and most common use case is to embed the data values of all variables in a Coverage object within the CoverageJSON document, so that it is completely standalone, which would enable the use of very simple clients.</p>
+
+<p id="_0a416fa4-0375-93e6-0c2b-eee6f00069e5">The next-simplest use case is to put data values for each variable (parameter) in separate array objects in separate CoverageJSON documents, linked from the Coverage object. This is useful for a multi-variable dataset, where one might want temperature, humidity, wind speed, etc., to be recorded in separate files, so the user client only needs to load the variables of interest.</p>
+
+<p id="_79d9ae0f-1589-857e-8317-32998dbb4280">A sophisticated use case is to use tiling objects, where the data values are partitioned spatially and temporally, so that a single variable’s data values would be split among several documents. A simple example of this would be to encode each timestep of a dataset in a separate file, but the tiles could also be divided spatially, like a tiled map server.</p>
+</abstract><clause id="_b8297b66-e648-4df9-b89e-122c0a047ca2" type="keywords" displayorder="2">
+<title depth="1">II.<tab/>Keywords</title>
+<p>The following are keywords to be used by search engines and
+    document catalogues.</p>
+<p>ogcdoc, OGC document, JSON, JSON-LD, CoverageJSON, CovJSON, Coverage, spatiotemporal, linked-data</p></clause>
+<foreword id="_70d4166c-9c82-3d27-d9af-e2ed3cbed392" obligation="informative" displayorder="3">
+<title depth="1">III.<tab/>Preface</title>
+<p id="_99911c56-8472-7b8f-abbe-cf6b1a215e48">The specification was an outcome of a European Union project, “Maximizing the Exploitation of Linked Open Data in Enterprise and Science” (MELODIES), run from 2013 to 2016, and released under a Creative Commons 4.0 Licence.</p>
+
+<p id="_1672ef82-930c-138c-0481-953514878191">Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.</p>
+
+<p id="_0c62c3b3-5856-0347-1c13-3aecac513578">Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.</p>
+</foreword><clause type="security" id="_81b1ace7-21d3-2259-3346-8f24ee71ed45" obligation="informative" displayorder="4"><title depth="1">IV.<tab/>Security considerations</title><p id="_6bffb48c-5a4a-c73f-8352-74e8ed0d680a">No security considerations have been made for this document.</p></clause><clause id="_78904ba2-0cfa-4c9c-abd9-7971a1f3f4a3" type="submitting_orgs" displayorder="5">
+<title depth="1">V.<tab/>Submitting Organizations</title>
+<p>The following organizations submitted this Document to the
+   Open Geospatial Consortium (OGC):</p>
+ <ul><li>UK Met Office</li>
+<li>University of Reading</li>
+<li>Meteorological Service of Canada</li>
+<li>Unidata UCAR</li>
+<li>US NOAA / National Weather Service</li>
+<li>ESIP/JPL/NASA</li></ul>
+ </clause>
+<submitters id="_submitters" displayorder="6">
+<title depth="1">VI.<tab/>Submitters</title>
+<p id="_4fedf0b3-9809-e845-896b-09a34763f227">All questions regarding this submission should be directed to the editor or the submitters:</p>
+
+<p id="_5c7bf17f-242f-1c52-a01d-5bfbbe5fcf4d">Chris Little    (editor)        UK Met Office</p>
+
+<p id="_741c9b9f-704e-c6e8-896b-91174c312159">Jon Blower      (editor)        University of Reading</p>
+
+<p id="_d6a4a345-3af2-2d1a-635e-1392e032ba20">Tom Kralidis    (contributor)   Meteorological Service of Canada</p>
+
+<p id="_90c136e7-b459-f684-73f1-f4ee3ab10159">Ethan Davies    (contributor)   Unidata UCAR</p>
+
+<p id="_0c76df0d-e1ee-3e6e-8b7e-56c996f3963f">Steve Olson     (contributor)   US NWS/NOAA</p>
+
+<p id="_8dd785cf-eb2f-ab68-58f7-f638de33df44">Lewis McGibbney (contributor)   ESIP/JPL/NASA</p>
+</submitters><acknowledgements id="_acknowledgements" obligation="informative" displayorder="7">
+<title depth="1">VII.<tab/>Acknowledgements</title>
+<p id="_f6025082-66cd-7be4-e0cc-ba53f0a9f82e">This work was inspired by a demonstration of the concept by Joan Masó of CREAF.</p>
+</acknowledgements></preface><sections>
+
+
+
+<clause id="_scope" type="scope" obligation="normative" displayorder="8">
+<title depth="1">1.<tab/>Scope</title>
+<p id="_89aae34d-1a90-b405-99cd-22fb14129022">The specification is a logical implementation of the long-established abstract conceptual standard ISO19123:2005 (also known as OGC Abstract Topic 6). The CoverageJSON specification has been stable for several years, with a wide-spread international community in the environmental sciences. The current version of the open specification, on the <link target="https://covjson.org/spec">original GitHub</link>, is labelled ‘V0.2-draft’. This document proposes that version, with only editorial changes for presentation, as a Community Standard.</p>
+
+<p id="_e7af2889-8c38-2c66-e3cb-b6fb10cc851b">A formal JSON schema has been added for all the JSON objects identified, so that conformance to the specification can be checked.</p>
+
+<p id="_752b8da0-6b7d-ea55-83cc-6f4556805bf7">Unused or imprecisely specified components have been removed.</p>
+
+<p id="_8e73d775-2614-826a-a075-67f68d088044">Future improvements have been identified, such as the use of multiple time dimensions, or to use JSON-LD V1.1 which may give better compatibility with the OGC Coverage Implementation Schema (CIS) Version 1.1 (OGC09-146r8), which is a different logical implementation of the abstract conceptual standard ISO19123:2005/OGC Abstract Topic 6. These improvements are out of scope of this document.</p>
+
+<p id="_41266a55-60af-7c3f-c308-414c4e840fb3">This specification does not specify encoding of information in any format other than JSON.</p>
+</clause>
+
+<clause id="_conformance" type="conformance" obligation="normative">
+<title depth="1">2.<tab/>Conformance</title>
+<p id="_9f9dae8a-e5f6-fc64-b7ea-a59742ea5d80">Conformance with this specification shall be checked using all the relevant tests specified in Annex A (normative) of this document. The framework, concepts, and methodology for testing, and the criteria to claim conformance are specified in the OGC Compliance Testing Policies and Procedures and the OGC Compliance Testing web site.</p>
+
+<p id="_92732bbb-3c28-4256-6ca1-3d8dad9d7ea9">The one Standardization Target for this specification is the format of CoverageJSON.</p>
+
+<p id="_fc91e041-89d7-c705-9856-64590f4557ac">In order to conform to this OGC® Community Standard, a software implementation shall choose to implement any one of the conformance levels specified in Annex A (normative).</p>
+
+<p id="_bf118c4c-115d-5032-db80-087dc9bbc424">All requirements-classes and conformance-classes described in this document are owned by the standard(s) identified.</p>
+</clause>
+
+
+
+<terms id="_terms_and_definitions" obligation="normative" displayorder="10">
+<title depth="1">4.<tab/>Terms and definitions</title><p id="_7fe04b5b-db41-5d9b-ebe1-463b3a0c16c9">This document uses the terms defined in <link target="https://portal.ogc.org/public_ogc/directives/directives.php">OGC Policy Directive 49</link>, which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word “shall” (not “must”) is the verb form used to indicate a requirement to be strictly followed to conform to this document and OGC documents do not use the equivalent phrases in the ISO/IEC Directives, Part 2.</p>
+<p id="_e0235fe8-8273-26b4-faeb-a580ad58929f">This document also uses terms defined in the OGC Standard for Modular specifications (<link target="https://portal.opengeospatial.org/files/?artifact_id=34762">OGC 08-131r3</link>), also known as the ‘ModSpec’. The definitions of terms such as standard, specification, requirement, and conformance test are provided in the ModSpec.</p>
+<p id="_1448dc16-8929-d666-6525-0249826c75e3">For the purposes of this document, the following additional terms and definitions apply.</p>
+
+<p id="_8519aec7-f0c1-98b9-f960-9328198ca29b">The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”,  “MAY”, and “OPTIONAL” in this document are to be interpreted as described in IETF RFC 2119.</p>
+
+<p id="_ccf3e63b-6acc-0cd0-687c-fd7f951288d6">For the purposes of this document, the following additional terms and definitions apply.</p>
+
+<term id="term-rfc"><name>4.1.</name><preferred><strong><strong>RFC</strong></strong></preferred>
+<definition><p id="_abff4a48-e5eb-065e-6394-2d95b929bd18">Request For Comment (IETF)</p></definition>
+ </term>
+
+<term id="term-bcp"><name>4.2.</name><preferred><strong><strong>BCP</strong></strong></preferred>
+<definition><p id="_4d6371f9-e01c-5397-3ba4-90b3197949f9">Best Current Practice. It may include several RFCs (IETF)</p></definition>
+ </term>
+
+<term id="term-coverage"><name>4.3.</name><preferred><strong><strong>Coverage</strong></strong></preferred>
+<definition><p id="_2a862484-198a-2614-8c6c-12f2322e2971">feature that acts as a function to return values from its range for any direct position within its spatial, temporal or spatiotemporal domain (ISO19123-1)</p></definition>
+ </term>
+
+<term id="term-i18n-object"><name>4.4.</name><preferred><strong><strong>i18n object</strong></strong></preferred>
+<definition><p id="_b658de94-1085-6c64-f4a6-54e043e8d715">string in multiple languages with tags as defined in [BCP 47](<link target="http://tools.ietf.org/html/bcp47"/>), and the value is the string in that language.
+The special language tag <tt>"und"</tt> can be used to identify a value whose language is unknown or undetermined. (IETF BCP47)</p></definition>
+ </term>
+</terms>
+
+<clause id="_conventions" obligation="normative" displayorder="11">
+<title depth="1">5.<tab/>Conventions</title>
+<p id="_f287e0a4-ca0e-ef98-6e01-5d09472b62aa">This sections provides details and examples for any conventions used in the document. Examples of conventions are symbols, abbreviations, use of XML schema, or special notes regarding how to read the document.</p>
+
+<clause id="_identifiers" obligation="normative">
+<title depth="2">5.1.<tab/>Identifiers</title>
+<p id="_91e6da45-abe8-6e55-c397-ef075739dd41">The normative provisions in this specification are denoted by the URI</p>
+
+<p id="_f0191874-4eeb-2c92-18f2-f1367cf61a60"><link target="http://www.opengis.net/spec/covjson/1.0"/></p>
+
+<p id="_52250454-5ac3-4fce-7c83-eb454adf6103">All requirements and conformance tests that appear in this document are denoted by partial URIs which are relative to this base.</p>
+</clause>
+</clause>
+
+<clause id="_full_specification_normative_and_informative_intermixed" obligation="normative" displayorder="12">
+<title depth="1">6.<tab/>Full Specification: Normative and Informative intermixed</title>
+<clause id="_introduction" obligation="normative">
+<title depth="2">6.1.<tab/>Introduction</title>
+<p id="_f751d52f-741c-17c6-b904-4fbad25afaec">CoverageJSON is a format for encoding coverage data like grids, time series, and vertical profiles, distinguished by the geometry of their spatiotemporal domain. A CoverageJSON object represents a domain, a range, a coverage, or a collection of coverages. A range in CoverageJSON  represents coverage values. A coverage in CoverageJSON is the combination of a domain, parameters, ranges, and additional metadata. A coverage collection represents a list of coverages.</p>
+
+<p id="_fbce7fbf-677b-d79c-0d44-4b2852557789">A complete CoverageJSON data structure is always an object (in JSON terms). In CoverageJSON, an object consists of a collection of name/value pairs — also called members. For each member, the name is always a string. Member values are either a string, number, object, array or one of the literals: true, false, and null. An array consists of elements where each element is a value as described above.</p>
+
+<clause id="_example" obligation="normative">
+<title depth="3">6.1.1.<tab/>Example</title>
+<p id="_d0454bde-8c58-4b7f-7520-56d185471a64">A CoverageJSON grid coverage of global air temperature:</p>
+
+<sourcecode id="_6dea588f-dd13-3444-ea92-30e3f7a24205" lang="json" unnumbered="true">{
+  "type" : "Coverage",
+  "domain" : {
+    "type": "Domain",
+    "domainType": "Grid",
+    "axes": {
+      "x": { "start": -179.5, "stop": 179.5, "num": 360 },
+      "y": { "start": -89.5, "stop": 89.5, "num": 180 },
+      "t": { "values": ["2013-01-13T00:00:00Z"] }
+    },
+    "referencing": [{
+      "coordinates": ["x","y"],
+      "system": {
+        "type": "GeographicCRS",
+        "id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+      }
+    }, {
+      "coordinates": ["t"],
+      "system": {
+        "type": "TemporalRS",
+        "calendar": "Gregorian"
+      }
+    }]
+  },
+  "parameters" : {
+    "TEMP": {
+      "type" : "Parameter",
+      "description" : {
+        "en": "The air temperature measured in degrees Celsius."
+      },
+      "unit" : {
+        "label": {
+          "en": "Degree Celsius"
+        },
+        "symbol": {
+          "value": "Cel",
+          "type": "http://www.opengis.net/def/uom/UCUM/"
+        }
+      },
+      "observedProperty" : {
+        "id" : "http://vocab.nerc.ac.uk/standard_name/air_temperature/",
+        "label" : {
+          "en": "Air temperature",
+          "de": "Lufttemperatur"
+        }
+      }
+    }
+  },
+  "ranges" : {
+    "TEMP" : "http://example.com/coverages/123/TEMP"
+  }
+}</sourcecode>
+
+
+<p id="_ec80a5b8-d830-5998-89ca-6a90168e9a66">where <tt>"http://example.com/coverages/123/TEMP"</tt> points to the following document:</p>
+
+<sourcecode id="_4fc67049-0b07-0bd2-ada4-bb30c46afd54" lang="json" unnumbered="true">{
+  "type" : "NdArray",
+  "dataType": "float",
+  "axisNames": ["t","y","x"],
+  "shape": [1, 180, 360],
+  "values" : [ 27.1, 24.1, null, 25.1, ... ]
+}</sourcecode>
+
+
+<p id="_decdd139-befc-64e2-1dce-cf19cb37fbfd">Range data can also be directly embedded into the main CoverageJSON document, making it standalone.</p>
+</clause>
+</clause>
+
+<clause id="_i18n_objects" obligation="normative">
+<title depth="2">6.2.<tab/>i18n Objects</title>
+<p id="_b85fe2f5-1d1d-9e46-30d9-1dbb8aaf74b3">An i18n object represents a string in multiple languages where each key is a language tag as defined in <link target="http://tools.ietf.org/html/bcp47">BCP 47</link>, and the value is the string in that language.
+The special language tag <tt>"und"</tt> can be used to identify a value whose language is unknown or undetermined.</p>
+
+<p id="_bda68e06-43d5-0d84-47ac-5c09bbbd34dd">Example:</p>
+
+<sourcecode id="_550f3ca7-0889-ce0d-e546-967836794c3e" lang="json" unnumbered="true">{
+  "en": "Temperature",
+  "de": "Temperatur"
+}</sourcecode>
+
+</clause>
+
+<clause id="_parameter_objects" obligation="normative">
+<title depth="2">6.3.<tab/>Parameter Objects</title>
+<p id="_62f693e1-e38a-44b7-e671-970a8857fd8a">Parameter objects represent metadata about the values of the coverage in terms of the observed property (like water temperature), the units, and others.</p>
+
+<ul id="_54bf5efe-6994-3e14-52d8-0ff08408ecb2"><li><p id="_9cb5f29d-41ba-2e78-15cc-a91dfd32d505">A parameter object MAY have any number of members (name/value pairs).</p>
+</li>
+<li><p id="_9a9bffb7-c0b2-47ec-ec1a-fda49667080b">A parameter object MUST have a member with the name <tt>"type"</tt> and the value <tt>"Parameter"</tt>.</p>
+</li>
+<li><p id="_76d71f0f-4d97-5928-65a4-a310b4bcf38f">A parameter object MAY have a member with the name <tt>"id"</tt> where the value MUST be a string and SHOULD be a common identifier.</p>
+</li>
+<li><p id="_9f057233-4069-12fe-8fab-ec03274dd369">A parameter object MAY have a member with the name <tt>"label"</tt> where the value MUST be an i18n object that is the name of the parameter and which SHOULD be short. Note that this SHOULD be left out if it would be identical to the <tt>"label"</tt> of the <tt>"observedProperty"</tt> member.</p>
+</li>
+<li><p id="_12839228-7132-0b54-cd7f-4bad2ed8fa60">A parameter object MAY have a member with the name <tt>"description"</tt> where the value MUST be an i18n object which is a, perhaps lengthy, textual description of the parameter.</p>
+</li>
+<li><p id="_55326c6c-f4b6-3495-3fd9-981d1baa1cf8">A parameter object MUST have a member with the name <tt>"observedProperty"</tt> where the value is an object which MUST have the member <tt>"label"</tt> and which MAY have the members <tt>"id"</tt>, <tt>"description"</tt>, and <tt>"categories"</tt>. The value of <tt>"label"</tt> MUST be an i18n object that is the name of the observed property and which SHOULD be short. If given, the value of <tt>"id"</tt> MUST be a string and SHOULD be a common identifier. If given, the value of <tt>"description"</tt> MUST be an i18n object with a textual description of the observed property. If given, the value of <tt>"categories"</tt> MUST be a non-empty array of category objects. A category object MUST an <tt>"id"</tt> and a <tt>"label"</tt> member,  and MAY have a <tt>"description"</tt> member. The value of <tt>"id"</tt> MUST be a string and SHOULD be a common identifier. The value of <tt>"label"</tt> MUST be an i18n object of the name of the category and SHOULD be short. If given, the value of <tt>"description"</tt> MUST be an i18n object with a textual description of the category.</p>
+</li>
+<li><p id="_23b24c0f-869c-bd45-4312-5c07a24794d4">A parameter object MAY have a member with the name <tt>"categoryEncoding"</tt> where the value is an object where each key is equal to an <tt>"id"</tt> value of the <tt>"categories"</tt> array within the <tt>"observedProperty"</tt> member of the parameter object. There MUST be no duplicate keys. The value is either an integer or an array of integers where each integer MUST be unique within the object.</p>
+</li>
+<li><p id="_c0d010c2-2147-254d-69e6-51a15d4259a8">A parameter object MAY have a member with the name <tt>"unit"</tt> where the value is an object which MUST have either or both the members <tt>"label"</tt> or/and “symbol”, and which MAY have the member <tt>"id"</tt>. If given, the value of <tt>"symbol"</tt> MUST either be a string of the symbolic notation of the unit, or an object with the members <tt>"value"</tt> and <tt>"type"</tt> where <tt>"value"</tt> is the symbolic unit notation and <tt>"type"</tt> references the unit serialization scheme that is used. <tt>"type"</tt> MUST HAVE the value <tt>"http://www.opengis.net/def/uom/UCUM/`" if <link target="http://unitsofmeasure.org">UCUM</link> is used, or a custom value as recommended in section "Extensions". If given, the value of `"label"</tt> MUST be an i18n object of the name of the unit and SHOULD be short. If given, the value of <tt>"id"</tt> MUST be a string and SHOULD be a common identifier. It is RECOMMENDED to reference a unit serialization scheme to allow automatic unit conversion.</p>
+</li>
+<li><p id="_13773229-7f50-5dd3-cd45-d6d0d72483ed">A parameter object MUST NOT have a <tt>"unit"</tt> member if the <tt>"observedProperty"</tt> member has a <tt>"categories"</tt> member.</p>
+</li>
+</ul>
+
+<p id="_4d06f653-ff7b-e6a0-9716-6937feb456b0">Example for a continuous-data parameter:</p>
+
+<sourcecode id="_f3105223-ccb3-a96d-1ce9-735731bb38b2" lang="json" unnumbered="true">{
+  "type" : "Parameter",
+  "description" : {
+    "en": "The sea surface temperature in degrees Celsius."
+  },
+  "observedProperty" : {
+    "id" : "http://vocab.nerc.ac.uk/standard_name/sea_surface_temperature/",
+    "label" : {
+      "en": "Sea Surface Temperature"
+    },
+    "description" : {
+      "en": "The temperature of sea water near the surface (including the part under sea-ice, if any), and not the skin temperature."
+    }
+  },
+  "unit" : {
+    "label" : {
+      "en": "Degree Celsius"
+    },
+    "symbol": {
+      "value": "Cel",
+      "type": "http://www.opengis.net/def/uom/UCUM/"
+    }
+  }
+}</sourcecode>
+
+
+<p id="_b65c24dd-5620-86b1-4007-224bc83819d9">Example for a categorical-data parameter:</p>
+
+<sourcecode id="_961853cb-e60e-cf5e-d739-96a0e3ec1b95" lang="json" unnumbered="true">{
+  "type" : "Parameter",
+  "description" : {
+    "en": "The land cover category."
+  },
+  "observedProperty" : {
+    "id" : "http://example.com/land_cover",
+    "label" : {
+      "en": "Land Cover"
+    },
+    "description" : {
+      "en": "longer description..."
+    },
+    "categories": [{
+      "id": "http://example.com/land_cover/categories/grass",
+      "label": {
+        "en": "Grass"
+      },
+      "description": {
+        "en": "Very green grass."
+      }
+    }, {
+      "id": "http://example.com/land_cover/categories/forest",
+      "label": {
+        "en": "Forest"
+      }
+    }]
+  },
+  "categoryEncoding": {
+    "http://example.com/land_cover/categories/grass": 1,
+    "http://example.com/land_cover/categories/forest": [2,3]
+  }
+}</sourcecode>
+
+</clause>
+
+<clause id="_parametergroup_objects" obligation="normative">
+<title depth="2">6.4.<tab/>ParameterGroup Objects</title>
+<p id="_15bf3e13-6742-d96e-7d05-0ce60b532aa8">Parameter group objects represent logical groups of parameters, for example vector quantities.</p>
+
+<ul id="_fa311e7a-c09f-d71c-79f2-4c6cdafe1813"><li><p id="_9330ae69-1640-989c-5961-4e34a869cb0e">A parameter group object MAY have any number of members (name/value pairs).</p>
+</li>
+<li><p id="_04c713f6-747f-c27a-246c-0ca5113654d6">A parameter group object MUST have a member with the name <tt>"type"</tt> and the value <tt>"ParameterGroup"</tt>.</p>
+</li>
+<li><p id="_7f2d3039-85c7-ad32-917b-016e2139c9cb">A parameter group object MAY have a member with the name <tt>"id"</tt> where the value MUST be a string and SHOULD be a common identifier.</p>
+</li>
+<li><p id="_5846ec79-709b-6f06-9097-734280fd51b4">A parameter group object MAY have a member with the name <tt>"label"</tt> where the value MUST be an i18n object that is the name of the parameter group and which SHOULD be short. Note that this SHOULD be left out if it would be identical to the <tt>"label"</tt> of the <tt>"observedProperty"</tt> member.</p>
+</li>
+<li><p id="_d2029dc3-7e3d-ac58-1156-22dd181d3802">A parameter group object MAY have a member with the name <tt>"description"</tt> where the value MUST be an i18n object which is a, perhaps lengthy, textual description of the parameter group.</p>
+</li>
+<li><p id="_f23f2469-9c12-10e7-1e6c-431c97a6f021">A parameter group object MAY have a member with the name <tt>"observedProperty"</tt> where the value is an object as specified for parameter objects.</p>
+</li>
+<li><p id="_de89e600-eeb8-ba58-5eca-85f65ed4ba06">A parameter group object MUST have either or both the members <tt>"label"</tt> or/and <tt>"observedProperty"</tt>.</p>
+</li>
+<li><p id="_0a1be6b9-dbd7-366d-b5d7-f77c47df81e9">A parameter group object MUST have a member with the name <tt>"members"</tt> where the value is a non-empty array of parameter identifiers (see 6.3 Coverage objects).</p>
+</li>
+</ul>
+
+<p id="_a4a004f1-77c7-f384-65a2-f732d2d69668">Example of a group describing a vector quantity:</p>
+
+<sourcecode id="_262bf895-5cd3-6f3c-3a29-0ecef5c5a86d" lang="json" unnumbered="true">{
+  "type": "ParameterGroup",
+  "observedProperty": {
+    "label": {
+      "en": "Wind velocity"
+    }
+  },
+  "members": ["WIND_SPEED", "WIND_DIR"]
+}</sourcecode>
+
+
+<p id="_c8a9fcd0-5ca7-9c4f-592a-87a368bcf1b0">where <tt>"WIND_SPEED"</tt> and <tt>"WIND_DIR"</tt> reference existing parameters in a CoverageJSON coverage or collection object by their short identifiers.</p>
+
+<p id="_c7949b8f-6003-9d4b-4dc7-28cac50755ee">Example of a group describing uncertainty of a parameter:</p>
+
+<sourcecode id="_777141fe-caee-1658-bdb4-05ff00bb2d91" lang="json" unnumbered="true">{
+  "type": "ParameterGroup",
+  "label": {
+    "en": "Daily sea surface temperature with uncertainty information"
+  },
+  "observedProperty": {
+    "id": "http://vocab.nerc.ac.uk/standard_name/sea_surface_temperature/",
+    "label": {
+      "en": "Sea surface temperature"
+    }
+  },
+  "members": ["SST_mean", "SST_stddev"]
+}</sourcecode>
+
+
+<p id="_b20a40ef-e178-6e6e-658a-950e0344d619">where <tt>"SST_mean"</tt> references the following parameter:</p>
+
+<sourcecode id="_ca86cfe1-d36f-52a7-42cb-e4d68d6f8b1a" lang="json" unnumbered="true">{
+  "type" : "Parameter",
+  "observedProperty" : {
+    "label" : {
+      "en": "Sea surface temperature daily mean"
+    },
+    "statisticalMeasure": "http://www.uncertml.org/statistics/mean",
+    "statisticalPeriod": "P1D",
+    "narrowerThan": ["http://vocab.nerc.ac.uk/standard_name/sea_surface_temperature/"]
+  },
+  "unit" : {
+    "label": {
+      "en": "Kelvin"
+    },
+    "symbol": {
+      "value": "K",
+      "type": "http://www.opengis.net/def/uom/UCUM/"
+    }
+  }
+}</sourcecode>
+
+
+<p id="_3d811d44-8d47-f846-6421-15c00cba6681">and <tt>"SST_stddev"</tt>:</p>
+
+<sourcecode id="_1abb958e-e465-763c-1602-6645386c2f78" lang="json" unnumbered="true">{
+  "type" : "Parameter",
+  "observedProperty" : {
+    "label" : {
+      "en": "Sea surface temperature standard deviation of daily mean"
+    },
+    "statisticalMeasure": "http://www.uncertml.org/statistics/standard-deviation",
+    "narrowerThan": ["http://vocab.nerc.ac.uk/standard_name/sea_surface_temperature/"]
+  },
+  "unit" : {
+    "label": {
+      "en": "Kelvin"
+    },
+    "symbol": {
+      "value": "K",
+      "type": "http://www.opengis.net/def/uom/UCUM/"
+    }
+  }
+}</sourcecode>
+
+</clause>
+
+<clause id="_reference_system_objects" obligation="normative">
+<title depth="2">6.5.<tab/>Reference system objects</title>
+<p id="_13bea1db-a880-6115-3135-f9da8b04c032">Reference system objects are used to provide information about how to interpret coordinate values within the domain. Coordinates are usually geospatial or temporal in nature, but may also be categorical (based on identifiers). All reference system objects MUST have a member <tt>"type"</tt>, the possible values of which are given in the sections below. Custom values MAY be used as detailed in the “Extensions” section below.</p>
+
+<clause id="_geospatial_coordinate_reference_systems" obligation="normative">
+<title depth="3">6.5.1.<tab/>Geospatial Coordinate Reference Systems</title>
+<p id="_aeb84e04-be97-9dec-e957-2f9c042e9315">Geospatial coordinate reference systems (CRSs) link coordinate values to the Earth.</p>
+
+<clause id="_geographic_coordinate_reference_systems" obligation="normative">
+<title depth="4">6.5.1.1.<tab/>Geographic Coordinate Reference Systems</title>
+<p id="_a9d5cde8-5f7f-ce0c-3406-eab48af24539">Geographic CRSs anchor coordinate values to an ellipsoidal approximation of the Earth. They have coordinate axes of geodetic longitude and geodetic latitude, and perhaps height above the ellipsoid (i.e. they can be two- or three-dimensional). The origin of the CRS is on the surface of the ellipsoid.</p>
+
+<ul id="_74b1edd7-0d87-861e-6369-b8587e559783"><li><p id="_1ff15261-3d43-b28c-114b-c39479981c33">The value of the <tt>"type"</tt> member MUST be “GeographicCRS”</p>
+</li>
+<li><p id="_4c92043c-4f61-5fbd-a23a-a4ad45fa77e7">The object MAY have an <tt>"id"</tt> member, whose value MUST be a string and SHOULD be a common identifier for the reference system.</p>
+</li>
+<li><p id="_87817c44-3644-b176-27fa-487dc4024383">The object MAY have a <tt>"description"</tt> member, where the value MUST be an i18n object, but no standardised content is interpreted from this description.</p>
+</li>
+</ul>
+
+<p id="_8631313a-2fd4-4abd-ee84-2a082583dd0e">Note that sometimes (e.g. for numerical model data) the exact CRS may not be known or may be undefined. In this case the <tt>"id"</tt> may be omitted, but the <tt>"type"</tt> still indicates that this is a geographic CRS. Therefore clients can still use geodetic longitude, geodetic latitude (and maybe height) axes, even if they can’t accurately georeference the information.</p>
+
+<p id="_2762f466-9077-4dd6-80af-5f1b37566667">If a Coverage conforms to one of the defined [domain types][domain-types] then the coordinate identifier <tt>"x"</tt> is used to denote geodetic longitude, <tt>"y"</tt> is used for geodetic latitude and <tt>z</tt> for ellipsoidal height.</p>
+
+<p id="_41685fbf-ebe0-410f-e1fb-eff24be2d0e3">Example of a two-dimensional geographic CRS (longitude-latitude):</p>
+
+<sourcecode id="_16f1b667-b729-aa18-8db5-4fffb7055c78" lang="json" unnumbered="true">{
+  "type": "GeographicCRS",
+  "id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+}</sourcecode>
+
+
+<p id="_f55dfaa9-0159-4ade-3ed8-b53f79e714c0">Example of a three-dimensional geographic CRS (latitude-longitude-height):</p>
+
+<sourcecode id="_a817446f-38c9-9745-6d85-5b26cb424d32" lang="json" unnumbered="true">{
+  "type": "GeographicCRS",
+  "id": "http://www.opengis.net/def/crs/EPSG/0/4979"
+}</sourcecode>
+
+</clause>
+
+<clause id="_projected_coordinate_reference_systems" obligation="normative">
+<title depth="4">6.5.1.2.<tab/>Projected Coordinate Reference Systems</title>
+<p id="_d80eab1a-1a7a-14f0-ab16-244e8465e82f">Projected CRSs use two coordinates to denote positions on a Cartesian plane, which is derived from projecting the ellipsoid according to some defined transformation.</p>
+
+<ul id="_fdc0d1d1-83dd-cb11-44ca-b6ef456841b9"><li><p id="_edb181c7-cf05-e627-939b-0815ced980d1">The value of the <tt>"type"</tt> member MUST be “ProjectedCRS”</p>
+</li>
+<li><p id="_45a19b0b-71a1-3549-ad97-c25b355a3e87">The object MAY have an <tt>"id"</tt> member, whose value MUST be a string and SHOULD be a common identifier for the reference system.</p>
+</li>
+<li><p id="_7c6e447b-f8b3-f25e-9482-8235928e971f">The object MAY have a <tt>"description"</tt> member, where the value MUST be an i18n object, but no standardised content is interpreted from this description.</p>
+</li>
+</ul>
+
+<p id="_7cd2c992-d0d6-783c-61ac-0a59757617cd">If a Coverage conforms to one of the defined [domain types][domain-types] then the coordinate identifier <tt>"x"</tt> is used to denote easting and <tt>"y"</tt> is used for northing.</p>
+
+<p id="_1c10fa5d-28e4-1a6e-b3c1-244b5c5dd595">Example of a projected CRS using the <link target="http://spatialreference.org/ref/epsg/osgb-1936-british-national-grid/">British National Grid</link>:</p>
+
+<sourcecode id="_66692fb3-cd87-f1b3-f4e6-2eb71ac4a5cb" lang="json" unnumbered="true">{
+  "type": "ProjectedCRS",
+  "id": "http://www.opengis.net/def/crs/EPSG/0/27700"
+}</sourcecode>
+
+</clause>
+
+<clause id="_vertical_coordinate_reference_systems" obligation="normative">
+<title depth="4">6.5.1.3.<tab/>Vertical Coordinate Reference Systems</title>
+<p id="_bbc7ed83-e66b-5b6e-7015-06fcc4dd5b0c">Vertical CRSs use a single coordinate to denote some measure of height or depth, usually approximately oriented with gravity.</p>
+
+<ul id="_a6c53a40-bde7-066d-aa84-04702f767329"><li><p id="_f1857219-51c7-7a9e-9601-6c18c04d0559">The value of the <tt>"type"</tt> member MUST be “VerticalCRS”</p>
+</li>
+<li><p id="_ac12562b-5e50-8596-43dd-e9612eba48b5">The object MAY have an <tt>"id"</tt> member, whose value MUST be a string and SHOULD be a common identifier for the reference system.</p>
+</li>
+<li><p id="_a9813cdc-150e-05f0-6078-9fe94b315799">The object MAY have a <tt>"description"</tt> member, where the value MUST be an i18n object, but no standardised content is interpreted from this description.</p>
+</li>
+</ul>
+
+<p id="_744e13d1-0041-cf30-f1b8-fcb8956e6843">Example of a vertical CRS, here representing height above the NAV88 datum:</p>
+
+<sourcecode id="_d8e9fa17-d2d1-b278-2867-9b1ae5bfb245" lang="json" unnumbered="true">{
+  "type": "VerticalCRS",
+  "id": "http://www.opengis.net/def/crs/EPSG/0/5703"
+}</sourcecode>
+
+</clause>
+</clause>
+
+<clause id="_temporal_reference_systems" obligation="normative">
+<title depth="3">6.5.2.<tab/>Temporal Reference Systems</title>
+<p id="_854ba6bc-35b3-6fcb-2e3b-85e0c1086d87">Time is referenced by a temporal reference system (temporal RS). In the current specification, only a string-based notation for time values is defined. Future versions of this specification may allow for alternative notations, such as recording time values as numeric offsets from a given temporal datum (e.g. “days since 1970-01-01”).</p>
+
+<ul id="_7ce8c327-849b-634c-e6fa-f071907dfa51"><li><p id="_a698d7f2-4cb8-3759-b996-67770ab4f788">A temporal RS object MUST have a member <tt>"type"</tt>. The only currently defined value of it is <tt>"TemporalRS"</tt>.</p>
+</li>
+<li><p id="_1b24b0dd-5f0a-aaaf-f331-a5f2bc2d97d3">A temporal RS object MUST have a member <tt>"calendar"</tt> with value <tt>"Gregorian"</tt> or a URI.</p>
+</li>
+<li><p id="_8d4e76f4-e188-4e89-b88d-49026da36279">If the Gregorian calendar is used, then <tt>"calendar"</tt> MUST have the value <tt>"Gregorian"</tt> and cannot be a URI.</p>
+</li>
+<li><p id="_187d28a9-b2c7-a3f4-6f87-fadd6083fa12">A temporal RS object MAY have a member <tt>"timeScale"</tt> with a URI as value.
+If omitted, the time scale defaults to <tt>"<link target="http://www.opengis.net/def/trs/BIPM/0/UTC">UTC</link>"</tt>.
+If the time scale is UTC, the <tt>"timeScale"</tt> member MUST be omitted.</p>
+</li>
+<li><p id="_d91030a0-f404-1c29-12f9-a275ccd81096">If the calendar is based on years, months, days, then the referenced values SHOULD use one of the following ISO8601-based lexical representations:</p>
+</li>
+<li><p id="_e5d48371-ea16-c265-2f4b-100cfeeadc8e">YYYY</p>
+</li>
+<li><p id="_a7955a00-14f6-82c0-c23c-e6fbe643e52c">±XYYYY (where X stands for extra year digits)</p>
+</li>
+<li><p id="_2607ea43-211d-ad23-2fad-d45ca4ce6106">YYYY-MM</p>
+</li>
+<li><p id="_1d955dd6-c44f-4eec-bbce-f9534e308ed5">YYYY-MM-DD</p>
+</li>
+<li><p id="_75667910-04bd-8432-cf76-a3ed7748b623">YYYY-MM-DDTHH:MM:SS[.F]Z where Z is either “Z” or a time scale offset +|-HH:MM</p>
+</li>
+<li><p id="_dc572953-416b-4bf2-d63b-61911fb757be">If calendar dates with reduced precision are used in a lexical representation (e.g. <tt>"2016"</tt>), then
+a client SHOULD interpret those dates in that reduced precision.</p>
+</li>
+<li><p id="_e57b7d9f-479d-5aa3-3d3d-2ad7a16e1a59">If <tt>"type"</tt> is <tt>"TemporalRS"</tt> and <tt>"calendar"</tt> is <tt>"Gregorian"</tt>, then the above lexical representation MUST be used.</p>
+</li>
+</ul>
+
+<p id="_b29bef3e-c11b-ac75-3a4a-64ac7986d454">Example:</p>
+
+<sourcecode id="_e7c19e94-c769-d3b8-0cf9-d55f7df1642c" lang="json" unnumbered="true">{
+  "type": "TemporalRS",
+  "calendar": "Gregorian"
+}</sourcecode>
+
+</clause>
+
+<clause id="_identifier_based_reference_systems" obligation="normative">
+<title depth="3">6.5.3.<tab/>Identifier-based Reference Systems</title>
+<p id="_02ec4d0f-fbab-c97e-fb81-e4ca8ff75a36">Identifier-based reference systems (identifier RS) .</p>
+
+<ul id="_e5878a85-8a4a-c0ca-44ab-d3e406333312"><li><p id="_d67534cf-b1b9-d469-1af3-761cc0b55285">An identifier RS object MUST have a member <tt>"type"</tt> with value <tt>"IdentifierRS"</tt>.</p>
+</li>
+<li><p id="_a051f172-5e48-e3c4-fdb7-9c626982ec42">An identifier RS object MAY have a member <tt>"id"</tt> where the value MUST be a string and SHOULD be a common identifier for the reference system.</p>
+</li>
+<li><p id="_06950e36-ffe9-f68e-6076-23ccf656a0df">An identifier RS object MAY have a member <tt>"label"</tt> where the value MUST be an i18n object that is the name of the reference system.</p>
+</li>
+<li><p id="_eab4e3e5-be3f-15e3-0103-4060b98275a7">An identifier RS object MAY have a member <tt>"description"</tt> where the value MUST be an i18n object that is the (perhaps lengthy) description of the reference system.</p>
+</li>
+<li><p id="_c60f689b-025c-615b-3623-00e267f2bc3b">An identifier RS object MUST have a member <tt>"targetConcept"</tt> where the value is an object that MUST have a member <tt>"label"</tt> and MAY have a member <tt>"description"</tt> where the value of each MUST be an i18n object that is the name or description, respectively, of the concept which is referenced in the system.</p>
+</li>
+<li><p id="_b039a221-436f-c0c9-0434-7259acf93376">An identifier RS object MAY have a member <tt>"identifiers"</tt> where the value is an object where each key is an identifier referenced by the identifier RS and each value an object describing the referenced concept, equal to <tt>"targetConcept"</tt>.</p>
+</li>
+<li><p id="_9171104b-490d-11a7-64d4-afb3e2cfdb9d">Coordinate values associated with an identifier RS MUST be strings.</p>
+</li>
+</ul>
+
+<p id="_58cc7145-79ec-af8c-d6b2-bf5ed5a03405">Example of a geographic identifier reference system:</p>
+
+<sourcecode id="_e20891f5-d039-9e2d-3cf7-2a0baf7689e9" lang="json" unnumbered="true">{
+  "type": "IdentifierRS",
+  "id": "https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2",
+  "label": { "en": "ISO 3166-1 alpha-2 codes" },
+  "targetConcept": {
+    "id": "http://dbpedia.org/resource/Country",
+    "label": {"en": "Country", "de": "Land" }
+  },
+  "identifiers": {
+    "de": {
+      "id": "http://dbpedia.org/resource/Germany",
+      "label": { "de": "Deutschland", "en": "Germany" }
+    },
+    "gb": {
+      "id": "http://dbpedia.org/resource/United_Kingdom",
+      "label": { "de": "Vereinigtes Königreich", "en": "United Kingdom" }
+    }
+  }
+}</sourcecode>
+
+
+<p id="_d2e02b41-a8a6-f8ce-26dd-be935805b1c8">The domain values in the above example would be <tt>"de"</tt> and <tt>"gb"</tt>.</p>
+</clause>
+</clause>
+
+<clause id="_coveragejson_objects" obligation="normative">
+<title depth="2">6.6.<tab/>CoverageJSON Objects</title>
+<p id="_6bad8053-346f-c133-ad64-b5c2c90b6fba">CoverageJSON documents always consist of a single object. This object (referred to as the CoverageJSON object below) represents a domain, range, coverage, or collection of coverages.</p>
+
+<ul id="_42590ce0-744e-eaeb-e2f2-3d3888a81c0d"><li><p id="_00092ee6-0b4a-db46-9ea3-1fefe55ac7be">The CoverageJSON object MAY have any number of members (name/value pairs).</p>
+</li>
+<li><p id="_4b6242d0-85e6-adbd-6fd4-fe90b5843b53">The CoverageJSON object MUST have a member with the name <tt>"type"</tt> whose value is one of: <tt>"Domain"</tt>, <tt>"NdArray"</tt> (a range encoding), <tt>"TiledNdArray"</tt> (a range encoding), <tt>"Coverage"</tt>, or <tt>"CoverageCollection"</tt>. The case of the type member values MUST be as shown here.</p>
+</li>
+</ul>
+
+<clause id="_domain_objects" obligation="normative">
+<title depth="3">6.6.1.<tab/>Domain Objects</title>
+<p id="_32ed8891-f19f-ab3f-2966-cc4fb62ba124">A domain object is a CoverageJSON object which defines a set of positions and their extent in one or more referencing systems.
+Its general structure is:</p>
+
+<sourcecode id="_10e53a4e-2087-337c-a245-4b05547fca50" lang="json" unnumbered="true">{
+  "type": "Domain",
+  "domainType": "...",
+  "axes": { ... },
+  "referencing": [...]
+}</sourcecode>
+
+
+<ul id="_ba1655de-b905-8989-1591-856f3223921b"><li><p id="_63ccca61-4438-7c1a-2325-71d2f2e9412b">The value of the <tt>"type"</tt> member MUST be <tt>"Domain"</tt>.</p>
+</li>
+<li><p id="_d489b940-30d5-8227-891b-f433b0d516f3">For interoperability reasons it is RECOMMENDED that a domain object has the member <tt>"domainType"</tt> with a string value to indicate that the domain follows a certain structure (e.g. a time series, a vertical profile, a spatio-temporal 4D grid). See the [“Common CoverageJSON Domain Types Specification”][domain-types], which forms part of this specification, for details. Custom domain types may be used as recommended in the section “Extensions”.</p>
+</li>
+<li><p id="_25e8d0ed-61ea-f566-69d5-6f03de23be11">A domain object MUST have the member <tt>"axes"</tt> which has as value an object where each key is an axis identifier and each value an axis object as defined below.</p>
+</li>
+<li><p id="_74cb041d-5f13-2ae9-cd51-25928a11077b">The <tt>"axes"</tt> member MUST NOT be empty.</p>
+</li>
+<li><p id="_b40da623-7d80-d6cc-1f53-daa0a117ee93">A domain object MAY have the member <tt>"referencing"</tt> where the value is an array of reference system connection objects as defined below.</p>
+</li>
+<li><p id="_4b2e031a-de25-4896-3da2-262eb5953333">A domain object MUST have a <tt>"referencing"</tt> member if the domain object is not part of a coverage collection or if the coverage collection does not have a <tt>"referencing"</tt> member.</p>
+</li>
+</ul>
+
+<clause id="_axis_objects" obligation="normative">
+<title depth="4">6.6.1.1.<tab/>Axis Objects</title>
+<ul id="_d3638783-5f7e-7e4a-6497-0de35f4d4dcb"><li><p id="_fbae6c62-7a83-5e60-dc29-c663a4a99a16">An axis object MUST have either a <tt>"values"</tt> member or, as a compact notation for a regularly spaced numeric axis, all the members <tt>"start"</tt>, <tt>"stop"</tt>, and <tt>"num"</tt>.</p>
+</li>
+<li><p id="_e12b0514-779b-49ba-37eb-6f8036f0da17">The value of <tt>"values"</tt> is a non-empty array of axis values.</p>
+</li>
+<li><p id="_210e25d1-befa-18a1-cff2-4276484b4aef">The values of <tt>"start"</tt> and <tt>"stop"</tt> MUST be numbers, and the value of <tt>"num"</tt> an integer greater than zero. If the value of <tt>"num"</tt> is <tt>1</tt>, then <tt>"start"</tt> and <tt>"stop"</tt> MUST have identical values. For <tt>num &#x3e; 1</tt>, the array elements of <tt>"values"</tt> MAY be reconstructed with the formula <tt>start + i * step</tt> where <tt>i</tt> is the ith element and in the interval <tt>[0, num-1]</tt> and <tt>step = (stop - start) / (num - 1)</tt>. If <tt>num = 1</tt> then <tt>"values"</tt> is <tt>[start]</tt>. Note that <tt>"start"</tt> can be greater than <tt>"stop"</tt> in which case the axis values are descending.</p>
+</li>
+<li><p id="_d92430d9-aa9f-9ab2-9314-bd8f3769ad9a">The value of <tt>"dataType"</tt> determines the structure of an axis value and its coordinates that are made available for referencing. The values of <tt>"dataType"</tt> defined in this specification are <tt>"primitive"</tt>, <tt>"tuple"</tt>, and <tt>"polygon"</tt>. Custom values MAY be used as detailed in the “Extensions” section. For <tt>"primitive"</tt>, there is a single coordinate identifier and each axis value MUST be a number or string. For <tt>"tuple"</tt>, each axis value MUST be an array of fixed size of primitive values in a defined order, where the tuple size corresponds to the number of coordinate identifiers. For <tt>"polygon"</tt>, each axis value MUST be a GeoJSON Polygon coordinate array, where the order of coordinates is given by the <tt>"coordinates"</tt> array.</p>
+</li>
+<li><p id="_cb94343b-8114-fcc2-60a0-4d40e733a003">If missing, the member <tt>"dataType"</tt> defaults to <tt>"primitive"</tt> and MUST not be included for that default case.</p>
+</li>
+<li><p id="_1d94537b-5d94-9c55-c6b1-b5d877293921">If <tt>"dataType"</tt> is <tt>"primitive"</tt> and the associated reference system (see 6.1.2) defines a natural ordering of values then the array values in <tt>"values"</tt>, if existing, MUST be ordered monotonically, that is, increasing or decreasing.</p>
+</li>
+<li><p id="_f80ea7bb-4669-66c7-7299-bf2c52d3b3a1">The value of <tt>"coordinates"</tt> is a non-empty array of coordinate identifiers corresponding to the order of the coordinates defined by <tt>"dataType"</tt>.</p>
+</li>
+<li><p id="_8fa2b87b-047b-252e-c307-62bfa73dd099">If missing, the member <tt>"coordinates"</tt> defaults to a one-element array of the axis identifier and MUST NOT be included for that default case.</p>
+</li>
+<li><p id="_97b1b074-0248-1dfe-124a-d4ec6ffe3cae">A coordinate identifier SHALL NOT be defined more than once in all axis objects of a domain object.</p>
+</li>
+<li><p id="_81b31a64-1bd6-593a-b8b9-377580678a6b">An axis object MAY have axis value bounds defined in the member <tt>"bounds"</tt> where the value is an array of values of length <tt>len*2</tt> with <tt>len</tt> being the length of the <tt>"values"</tt> array. For each axis value at array index <tt>i</tt> in the <tt>"values"</tt> array, a lower and upper bounding value at positions <tt>2*i</tt> and <tt>2*i+1</tt>, respectively, are given in the bounds array.</p>
+</li>
+<li><p id="_19ef232a-a00d-2124-e14e-98c598f6560b">If a domain axis object has no <tt>"bounds"</tt> member then a bounds array MAY be derived automatically.</p>
+</li>
+</ul>
+
+<p id="_8fdaf9e4-fe39-da1b-c0c5-7411a2beb503">Example of an axis object with bounds:</p>
+
+<sourcecode id="_36939a23-79a2-f809-58e6-e465d3716b28" lang="json" unnumbered="true">{
+  "values": [20,21],
+  "bounds": [19.5,20.5,
+             20.5,21.5]
+}</sourcecode>
+
+
+<p id="_abbb9154-9858-b715-701d-2b4198b592f9">Example of an axis object with regular axis encoding:</p>
+
+<sourcecode id="_36979e72-3036-efe3-e5ca-c4db8ec4a544" lang="json" unnumbered="true">{
+  "start": 0,
+  "stop": 5,
+  "num": 6
+}</sourcecode>
+
+
+<p id="_b69da0b3-4626-6aac-6d04-7f2e521b3f91">The axis values in the above example are equal to <tt>"values": [0,1,2,3,4,5]</tt>.</p>
+
+<p id="_4871eed4-e48f-b531-7d98-3fc457c22b8d">Example of an axis object with tuple values:</p>
+
+<sourcecode id="_79af5471-76c3-c0f6-41f5-dc2b40869269" lang="json" unnumbered="true">{
+  "dataType": "tuple",
+  "coordinates": ["t","x","y"],
+  "values": [
+    ["2008-01-01T04:00:00Z",1,20],
+    ["2008-01-01T04:30:00Z",2,21]
+  ]
+}</sourcecode>
+
+
+<p id="_5d89d025-a2e0-2f96-acbe-97f08b89737b">Example of an axis object with Polygon values:</p>
+
+<sourcecode id="_97abd505-1bf5-ae71-83af-897fca482553" lang="json" unnumbered="true">{
+  "dataType": "polygon",
+  "coordinates": ["x","y"],
+  "values": [
+    [ [ [100.0, 0.0], [101.0, 0.0], [101.0, 1.0], [100.0, 1.0], [100.0, 0.0] ]  ]
+  ]
+}</sourcecode>
+
+</clause>
+
+<clause id="_reference_system_connection_objects" obligation="normative">
+<title depth="4">6.6.1.2.<tab/>Reference System Connection Objects</title>
+<p id="_3f67e656-df50-97ae-84a0-90977ad0cc68">A reference system connection object creates a link between values within domain axes and a reference system to be able to interpret those values, e.g. as coordinates in a certain coordinate reference system.</p>
+
+<ul id="_0256b441-6eb9-cc5e-0884-23fddb2ad391"><li><p id="_e556b9bb-8a3e-3036-59de-f91188d49d32">A reference system connection object MUST have a member <tt>"coordinates"</tt> which has as value an array of coordinate identifiers that are referenced in this object. Depending on the type of referencing, the ordering of the identifiers MAY be relevant, e.g. for 2D/3D coordinate reference systems. In this case, the order of the identifiers MUST match the order of axes in the coordinate reference system.</p>
+</li>
+<li><p id="_16d22801-2d73-b94e-cc32-d246950cfa8d">A reference system connection object MUST have a member <tt>"system"</tt> whose value MUST be a Reference System Object (defined in section 5 above).</p>
+</li>
+</ul>
+
+<p id="_0fe947e6-b3ec-856a-b80f-38bd515d2c6a">Example of a reference system connection object:</p>
+
+<sourcecode id="_ec10468e-fa3e-a600-c4da-c509490faf04" lang="json" unnumbered="true">{
+  "coordinates": ["y","x","z"],
+  "system": {
+    "type": "GeographicCRS",
+    "id": "http://www.opengis.net/def/crs/EPSG/0/4979"
+  }
+}</sourcecode>
+
+</clause>
+
+<clause id="_examples" obligation="normative">
+<title depth="4">6.6.1.3.<tab/>Examples</title>
+<p id="_457607e9-5858-27a3-dd23-4f32f4c4864d">Example of a domain object with [<tt>"Grid"</tt>][domain-types] domain type:</p>
+
+<sourcecode id="_9a782687-954f-5868-8daa-9f2d637493cb" lang="json" unnumbered="true">{
+  "type": "Domain",
+  "domainType": "Grid",
+  "axes": {
+    "x": { "values": [1,2,3] },
+    "y": { "values": [20,21] },
+    "z": { "values": [1] },
+    "t": { "values": ["2008-01-01T04:00:00Z"] }
+  },
+  "referencing": [{
+    "coordinates": ["t"],
+    "system": {
+      "type": "TemporalRS",
+      "calendar": "Gregorian"
+    }
+  }, {
+    "coordinates": ["y","x","z"],
+    "system": {
+      "type": "GeographicCRS",
+      "id": "http://www.opengis.net/def/crs/EPSG/0/4979"
+    }
+  }]
+}</sourcecode>
+
+
+<p id="_d262f7ac-7a4f-a31a-7fbd-fe9ae617c489">Example of a domain object with [<tt>"Trajectory"</tt>][domain-types] domain type:</p>
+
+<sourcecode id="_da9e44b9-8c3d-0cb8-3e69-978722c9275a" lang="json" unnumbered="true">{
+  "type": "Domain",
+  "domainType": "Trajectory",
+  "axes": {
+    "composite": {
+      "dataType": "tuple",
+      "coordinates": ["t","x","y"],
+      "values": [
+        ["2008-01-01T04:00:00Z", 1, 20],
+        ["2008-01-01T04:30:00Z", 2, 21]
+      ]
+    }
+  },
+  "referencing": [{
+    "coordinates": ["t"],
+    "system": {
+      "type": "TemporalRS",
+      "calendar": "Gregorian"
+    }
+  }, {
+    "coordinates": ["x","y"],
+    "system": {
+      "type": "GeographicCRS",
+      "id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+    }
+  }]
+}</sourcecode>
+
+</clause>
+</clause>
+
+<clause id="_ndarray_objects" obligation="normative">
+<title depth="3">6.6.2.<tab/>NdArray Objects</title>
+<p id="_00c73f48-52b8-4db9-aef7-2d411d9a856e">A CoverageJSON object with the type <tt>"NdArray"</tt> is an NdArray object. It represents a multidimensional (&#x3e;= 0D) array with named axes, encoded as a flat one-dimensional array in row-major order.</p>
+
+<ul id="_77d2bab1-36f2-9b17-382b-f09974bfcbfa"><li><p id="_37a368d0-fd75-e3c2-48c4-300c9e0156c2">An NdArray object MUST have a member with the name <tt>"values"</tt> where the value is a non-empty array of numbers and nulls, or strings and nulls, where nulls represent missing data.</p>
+</li>
+<li><p id="_549dc807-519a-e557-b135-f0f76936e67c">Zero-dimensional NdArrays MUST have exactly one item in the <tt>"values"</tt> array.</p>
+</li>
+<li><p id="_0ab52e59-b745-ac52-0c75-e04126e548e1">An NdArray object MUST have a member with the name <tt>"dataType"</tt> where the value is either <tt>"float"</tt>, <tt>"integer"</tt>, or <tt>"string"</tt> and MUST correspond to the data type of the non-null values in the <tt>"values"</tt> array.</p>
+</li>
+<li><p id="_24da4255-5cd1-d438-efc9-c2d7b86db03a">An NdArray object MAY have a member with the name <tt>"shape"</tt> where the value is an array of integers. For 0D arrays, <tt>"shape"</tt> MAY be omitted (defaulting to <tt>[]</tt>), for &#x3e;= 1D arrays it MUST be included.</p>
+</li>
+<li><p id="_931fee6b-0073-dd4b-c016-dca8bc4757ac">An NdArray object MAY have a member with the name <tt>"axisNames"</tt> where the value is a string array of the same length as <tt>"shape"</tt>. For 0D arrays, <tt>"axisNames"</tt> MAY be omitted (defaulting to <tt>[]</tt>), for &#x3e;= 1D arrays it MUST be included.</p>
+</li>
+<li><p id="_3d20d1f9-5775-4795-8352-9dd84a27def0">Note that common JSON implementations use 64-bit floating point numbers as data type for <tt>"values"</tt>, therefore precision has to be taken into account. For example, only integers within the extent [-2^32, 2^32] can be accurately represented with 64-bit floating point numbers.</p>
+</li>
+</ul>
+
+<p id="_628cfb25-ff36-445c-e52a-2fef5bd0da49">Example:</p>
+
+<sourcecode id="_2c048abd-ab44-11ea-916c-fc135aeb2729" lang="json" unnumbered="true">{
+  "type": "NdArray",
+  "dataType": "float",
+  "shape": [4, 2],
+  "axisNames": ["y", "x"],
+  "values": [
+    12.3, 12.5, 11.5, 23.1,
+    null, null, 10.1, 9.1
+  ]
+}</sourcecode>
+
+</clause>
+
+<clause id="_tiledndarray_objects" obligation="normative">
+<title depth="3">6.6.3.<tab/>TiledNdArray Objects</title>
+<p id="_5adcf17c-cf6a-52ee-d680-e2a97d34f23d">A CoverageJSON object with the type <tt>"TiledNdArray"</tt> is a TiledNdArray object. It represents a multidimensional (&#x3e;= 1D) array with named axes that is split up into sets of linked NdArray documents. Each tileset typically covers a specific data access scenario, for example, loading a single time slice of a grid vs. loading a time series of a spatial subset of a grid.</p>
+
+<ul id="_af69a130-3ca4-4254-f312-b81d796edfd7"><li><p id="_acbec689-2d87-8858-cc5f-0d1890f96956">A TiledNdArray object MUST have a member with the name <tt>"dataType"</tt> where the value is either <tt>"float"</tt>, <tt>"integer"</tt>, or <tt>"string"</tt>.</p>
+</li>
+<li><p id="_b6a00281-4a94-4bd1-4aa8-c4eeb21089aa">A TiledNdArray object MUST have a member with the name <tt>"shape"</tt> where the value is a non-empty array of integers.</p>
+</li>
+<li><p id="_c8dbf940-041d-ca35-7e65-21288b77c8b7">A TiledNdArray object MUST have a member with the name <tt>"axisNames"</tt> where the value is a string array of the same length as <tt>"shape"</tt>.</p>
+</li>
+<li><p id="_1f4a9de5-2d69-16bb-c612-59dcbf76e53a">A TiledNdArray object MUST have a member with the name <tt>"tileSets"</tt> where the value is a non-empty array of TileSet objects.</p>
+</li>
+<li><p id="_92954c98-2be5-e41e-ea67-b4603cde9dac">A TileSet object MUST have a member with the name <tt>"tileShape"</tt> where the value is an array of the same length as <tt>"shape"</tt> and where each array element is either null or an integer lower or equal than the corresponding element in <tt>"shape"</tt>. A null value denotes that the axis is not tiled.</p>
+</li>
+<li><p id="_f7afe78c-d76a-a9e1-da68-eac86a4164fa">A TileSet object MUST have a member with the name <tt>"urlTemplate"</tt> where the value is a Level 1 URI template as defined in <link target="https://tools.ietf.org/html/rfc6570">RFC 6570</link> . The URI template MUST contain a variable for each axis name whose corresponding element in <tt>"tileShape"</tt> is not null. A variable for an axis of total size <tt>totalSize</tt> (from <tt>"shape"</tt>) and tile size <tt>tileSize</tt> (from <tt>"tileShape"</tt>) has as value one of the integers <tt>0, 1, …​, q + r - 1</tt> where <tt>q</tt> and <tt>r</tt> are the quotient and remainder obtained by dividing <tt>totalSize</tt> by <tt>tileSize</tt>. Each URI that can be generated from the URI template MUST resolve to an NdArray CoverageJSON document where the members <tt>"dataType"</tt> and <tt>"axisNames`" are identical to the ones of the TiledNdArray object, and where each value of `"shape"</tt> is an integer equal, or lower if an edge tile, to the corresponding element in <tt>"tileShape"</tt> while replacing null with the corresponding element of <tt>"shape"</tt> of the TiledNdArray.</p>
+</li>
+</ul>
+
+<p id="_76a6d2fc-6bea-db84-c7a4-e9b2aa043588">Example:</p>
+
+<sourcecode id="_9f43edf6-f90c-330b-6773-f9ef1dbb872a" lang="json" unnumbered="true">{
+  "type" : "TiledNdArray",
+  "dataType": "integer",
+  "axisNames": ["t", "y", "x"],
+  "shape": [2, 5, 10],
+  "tileSets": [{
+    "tileShape": [null, null, null],
+    "urlTemplate": "http://example.com/a/all.covjson"
+  }, {
+    "tileShape": [1, null, null],
+    "urlTemplate": "http://example.com/b/{t}.covjson"
+  }, {
+    "tileShape": [null, 2, 3],
+    "urlTemplate": "http://example.com/c/{y}-{x}.covjson"
+  }]
+}</sourcecode>
+
+
+<p id="_804060b6-47cf-f2aa-a96c-ef39ffa00d5b"><tt><link target="http://example.com/a/all.covjson"/></tt>:</p>
+
+<sourcecode id="_72800455-b9a1-92ad-c721-f8b3039d4354" lang="json" unnumbered="true">{
+  "type": "NdArray",
+  "dataType": "integer",
+  "axisNames": ["t", "y", "x"],
+  "shape": [2, 5, 10],
+  "values": [
+     1,  2,  3,  4,  5,  6,  7,  8,  9, 10,
+    11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+    21, 22, 23, 24, 25, 26, 27, 28, 29, 30,
+    31, 32, 33, 34, 35, 36, 37, 38, 39, 40,
+    41, 42, 43, 44, 45, 46, 47, 48, 49, 50,
+
+    51, 52, 53, 54, 55, 56, 57, 58, 59, 60,
+    61, 62, 63, 64, 65, 66, 67, 68, 69, 70,
+    71, 72, 73, 74, 75, 76, 77, 78, 79, 80,
+    81, 82, 83, 84, 85, 86, 87, 88, 89, 90,
+    91, 92, 93, 94, 95, 96, 97, 98, 99, 100
+  ]
+}</sourcecode>
+
+
+<p id="_55f41e1e-5352-4fe2-8ae1-b06b7e58496f"><tt><link target="http://example.com/b/0.covjson"/></tt>:</p>
+
+<sourcecode id="_bb32fe5b-964f-a6e5-042d-93a0184ef86b" lang="json" unnumbered="true">{
+  "type": "NdArray",
+  "dataType": "integer",
+  "axisNames": ["t", "y", "x"],
+  "shape": [1, 5, 10],
+  "values": [
+     1,  2,  3,  4,  5,  6,  7,  8,  9, 10,
+    11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+    21, 22, 23, 24, 25, 26, 27, 28, 29, 30,
+    31, 32, 33, 34, 35, 36, 37, 38, 39, 40,
+    41, 42, 43, 44, 45, 46, 47, 48, 49, 50
+  ]
+}</sourcecode>
+
+
+<p id="_e2dd456b-fe2d-2e3e-124a-e74a7a68f1e5"><tt><link target="http://example.com/c/0-0.covjson"/></tt>:</p>
+
+<sourcecode id="_2495b3af-08ea-ad01-82cf-439f00f37434" lang="json" unnumbered="true">{
+  "type": "NdArray",
+  "dataType": "integer",
+  "axisNames": ["t", "y", "x"],
+  "shape": [2, 2, 3],
+  "values": [
+     1,  2,  3,
+    11, 12, 13,
+
+    51, 52, 53,
+    61, 62, 63
+  ]
+}</sourcecode>
+
+
+<p id="_022d6a87-da15-ba49-380b-fa122069f636"><tt><link target="http://example.com/c/0-3.covjson"/></tt>:</p>
+
+<sourcecode id="_94839dcf-c9bd-b745-2804-71c0efa15fdf" lang="json" unnumbered="true">{
+  "type": "NdArray",
+  "dataType": "integer",
+  "axisNames": ["t", "y", "x"],
+  "shape": [2, 2, 1],
+  "values": [
+    10,
+    20,
+
+    60,
+    70
+  ]
+}</sourcecode>
+
+</clause>
+
+<clause id="_coverage_objects" obligation="normative">
+<title depth="3">6.6.4.<tab/>Coverage Objects</title>
+<p id="_6ae19d07-83d5-1182-b126-6da6c9e5df80">A CoverageJSON object with the type <tt>"Coverage"</tt> is a coverage object.</p>
+
+<ul id="_7aa2901a-d8f5-cbde-1a4d-199a5597b62d"><li><p id="_daeca3d8-bc59-6089-343b-73aee6bbb9f9">If a coverage has a commonly used identifier, that identifier SHOULD be included as a member of the coverage object with the name <tt>"id"</tt>.</p>
+</li>
+<li><p id="_dd950ae7-df01-6a47-bd7f-c1389c6905e2">A coverage object MUST have a member with the name <tt>"domain"</tt> where the value is either a domain object or a URL.</p>
+</li>
+<li><p id="_c4359878-19cf-cdf1-efb4-a42c1d12272a">If the value of <tt>"domain"</tt> is a URL and the referenced domain has a <tt>"domainType"</tt> member, then the coverage object SHOULD have the member <tt>"domainType"</tt> where the value MUST equal that of the referenced domain.</p>
+</li>
+<li><p id="_fb3d07aa-283f-e025-d0f1-efc6565df619">If the coverage object is part of a coverage collection which has a <tt>"domainType"</tt> member then that member SHOULD be omitted in the coverage object.</p>
+</li>
+<li><p id="_52f170e9-4e0b-45a5-bfdf-27c3f32b48f6">A coverage object MAY have a member with the name <tt>"parameters"</tt> where the value is an object where each member has as name a short identifier and as value a parameter object. The identifier corresponds to the commonly known concept of “variable name” and is merely used in clients for conveniently accessing the corresponding range object.</p>
+</li>
+<li><p id="_ebcabbc2-ea8f-13be-893e-3445f0f6e9d7">A coverage object MUST have a <tt>"parameters"</tt> member if the coverage object is not part of a coverage collection or if the coverage collection does not have a <tt>"parameters"</tt> member.</p>
+</li>
+<li><p id="_4f6ec501-09fd-3f6d-eee3-7ebcfad7390b">A coverage object MAY have a member with the name <tt>"parameterGroups"</tt> where the value is an array of ParameterGroup objects.</p>
+</li>
+<li><p id="_fd1708f1-d959-066c-68c1-d278739e6dfa">A coverage object MUST have a member with the name <tt>"ranges"</tt> where the value is a range set object. Any member of a range set object has as name any of the names in a <tt>"parameters"</tt> object in scope and as value either an NdArray or TiledNdArray object or a URL resolving to a CoverageJSON document of such object. A <tt>"parameters"</tt> member in scope is either within the enclosing coverage object or, if part of a coverage collection, in the parent coverage collection object. The shape and axis names of each NdArray or TiledNdArray object MUST correspond to the domain axes defined by <tt>"domain"</tt>, while single-valued axes MAY be omitted. If the referenced parameter object has a <tt>"categoryEncoding"</tt> member, then each non-null array element of the <tt>"values"</tt> member of the NdArray object, or the linked NdArray objects within a TiledNdArray object, MUST be equal to one of the values defined in the <tt>"categoryEncoding"</tt> object and be interpreted as the matching category.</p>
+</li>
+</ul>
+
+<p id="_063f84ec-e438-fca0-9d2a-4aa2265fccf6">Example:</p>
+
+<p id="_da52c083-251f-1d17-e48e-8b9f7633ad53">See the <link target="https://covjson.org/spec/#vertical-profile-coverage">Vertical Profile Coverage Example</link></p>
+</clause>
+
+<clause id="_coverage_collection_objects" obligation="normative">
+<title depth="3">6.6.5.<tab/>Coverage Collection Objects</title>
+<p id="_0dafc990-2720-6cb6-2953-b692622af64e">A CoverageJSON object with the type <tt>"CoverageCollection"</tt> is a coverage collection object.</p>
+
+<ul id="_1da2259f-4ef2-78ca-8751-bf43728d1426"><li><p id="_033cc4ca-b999-bd08-68f4-4754eadbfa2e">A coverage collection object MAY have the member <tt>"domainType"</tt> with a string value to indicate that the coverage collection only contains coverages of the given domain type. See the [“Common CoverageJSON Domain Types Specification”][domain-types], which forms part of this specification, for details. Custom domain types may be used as recommended in the section “Extensions”.</p>
+</li>
+<li><p id="_2ae9c29e-e3ab-ffd0-cd4b-05245e48cd02">If a coverage collection object has the member <tt>"domainType"</tt>, then this member is inherited to all included coverages.</p>
+</li>
+<li><p id="_b09b17da-b42c-973d-d458-fde857d57b3f">A coverage collection object MUST have a member with the name <tt>"coverages"</tt>. The value corresponding to <tt>"coverages"</tt> is an array. Each element in the array is a coverage object as defined above.</p>
+</li>
+<li><p id="_c0c82724-edb6-a95e-028a-4c332f1dc3b4">A coverage collection object MAY have a member with the name <tt>"parameters"</tt> where the value is an object where each member has as name a short identifier and as value a parameter object.</p>
+</li>
+<li><p id="_bf9d9885-3c07-aaa8-4ed9-93928cc6fcbd">A coverage collection object MAY have a member with the name <tt>"parameterGroups"</tt> where the value is an array of ParameterGroup objects.</p>
+</li>
+<li><p id="_8b6ba3cd-966e-d4cd-b08a-a78cd18b3822">A coverage collection object MAY have a member with the name <tt>"referencing"</tt> where the value is an array of reference system connection objects.</p>
+</li>
+</ul>
+
+<p id="_0ac15894-a2da-5ce9-1ecd-44fa40789c23">Example:</p>
+
+<p id="_267a39f4-d722-932c-3bfb-cc873202dffe">See the <link target="https://covjson.org/spec/#coverage-collection">Coverage Collection Example</link></p>
+</clause>
+</clause>
+
+<clause id="_extensions" obligation="normative">
+<title depth="2">6.7.<tab/>Extensions</title>
+<p id="_ed368da1-332d-37bd-3fa1-1cba25c6f786">A CoverageJSON document can be extended with custom members and types in a robust and interoperable way. For that, it makes use of absolute URIs and compact URIs (prefix:suffix) in order to avoid conflicts with other extensions and future versions of the format. A central registry of compact URI prefixes is provided which anyone can extend and which is a simple mapping from compact URI prefix to namespace URI in order to avoid collisions with other extensions that are based on compact URIs as well. Extensions that do not follow this approach MAY use simple names instead of absolute or compact URIs but have to accept the consequence of the document being less interoperable and future-proof. In certain use cases this is not an issue and may be a preferred solution for simplicity reasons, for example, if such CoverageJSON documents are only used internally and are not meant to be shared to a wider audience.</p>
+
+<clause id="_custom_members" obligation="normative">
+<title depth="3">6.7.1.<tab/>Custom members</title>
+<p id="_a1c1a5ae-8362-027d-2484-7a3cbaecf0d9">If a custom member is added to a CoverageJSON document, its name SHOULD be a compact URIs of the form <tt>"prefix:suffix"</tt>.</p>
+
+<p id="_1675bd9e-91ea-ed2a-0511-fb5a7a8b146b">Example:</p>
+
+<sourcecode id="_b16b6013-e7a8-16c0-28ce-0e286983ceb1" lang="json" unnumbered="true">{
+  "type" : "Coverage",
+  "dct:license": "https://creativecommons.org/licenses/by/4.0/",
+  ...
+}</sourcecode>
+
+
+<p id="_4789189b-55e2-7a3e-8fec-cc15f8a00b0a">The prefix SHOULD be registered at <link target="https://covjson.org/prefixes/"/> which in the example above would be <tt>dct = <link target="http://purl.org/dc/terms/"/></tt>.</p>
+
+<p id="_187d92e3-360b-9dc8-9d24-5fc9025fa901">If the value of a custom member can have multiple structures, for example a string or an object, then a client should ignore the member if it does not understand the structure that is used.</p>
+
+<p id="_d8e057dd-a649-b38f-43e5-a6325eac082d">Example of a different value structure:</p>
+
+<sourcecode id="_dd778bda-7377-e694-e7f2-299d69ffd662" lang="json" unnumbered="true">{
+  "type" : "Coverage",
+  "dct:license": {
+    "id": "https://creativecommons.org/licenses/by/4.0/",
+    "label": {
+      "en": "Creative Commons Attribution 4.0 International License"
+    }
+  },
+  ...
+}</sourcecode>
+
+</clause>
+
+<clause id="_custom_types" obligation="normative">
+<title depth="3">6.7.2.<tab/>Custom types</title>
+<p id="_c48a806b-e2c0-6003-5cd4-343282a34908">Custom types MAY be used with the following members:</p>
+
+<ul id="_05abd491-21f7-b532-372c-2e301b222c80"><li><p id="_0aa05733-b731-877f-8231-c6bf8d51bd5c"><tt>"domainType"</tt> in domain objects</p>
+</li>
+<li><p id="_7c50b599-c057-4511-c795-f5e97d26a9b7"><tt>"dataType"</tt> in axis objects</p>
+</li>
+<li><p id="_69a508b3-32aa-fb53-b96e-28407b6fc3c5"><tt>"type"</tt> in reference system objects</p>
+</li>
+<li><p id="_f183a056-6e25-8c19-36df-9096fd86f49a"><tt>"type"</tt> in unit symbol objects</p>
+</li>
+<li><p id="_cb817fbd-dc8b-923e-cdee-52b9cf878e5e"><tt>"type"</tt> within custom members that have an object as value</p>
+</li>
+</ul>
+
+<p id="_407cd7f4-8b60-6b38-5687-12b7e5e68aa5">The custom value of those members SHOULD be either an absolute URI or a compact URI. If a compact URI is used, then the prefix SHOULD be registered at <link target="https://covjson.org/prefixes/"/>.</p>
+
+<p id="_4e3a46a3-49aa-f45a-024e-43389c457e8e">Example of a custom unit symbol type using an absolute URI:</p>
+
+<sourcecode id="_6ff03aff-520b-8521-669d-4d2f3d47a8ca" lang="json" unnumbered="true">{
+  "type" : "Parameter",
+  "unit" : {
+    "symbol": {
+      "value": "degreeC",
+      "type": "http://www.opengis.net/def/uom/UDUNITS/"
+    }
+  },
+  "observedProperty" : {
+    "label" : {
+      "en": "Air temperature"
+    }
+  }
+}</sourcecode>
+
+
+<p id="_f3289b51-ce27-e7b8-a7cd-c83b737bbfd5">Example of a custom reference system type using a compact URI:</p>
+
+<sourcecode id="_486d689c-1cc0-f90e-1265-a1c2fa40c980" lang="json" unnumbered="true">{
+  "type": "uor:HEALPixRS",
+  "uor:h": 3,
+  "uor:k": 3,
+  "uor:ordering": "nested"
+}</sourcecode>
+
+</clause>
+</clause>
+
+<clause id="_json_ld" obligation="normative">
+<title depth="2">6.8.<tab/>JSON-LD</title>
+<p id="_9bf746d1-4530-0364-7180-807a35e17844">If no JSON-LD context is given, then the default context <tt><link target="https://covjson.org/context.jsonld"/></tt> SHALL be assumed. Note that this context includes <link target="https://covjson.org/prefixes/">registered namespace prefixes</link> and MAY be updated in a backwards-compatible way as the format evolves.</p>
+
+<p id="_c8d6d4da-b55a-d8bc-c938-e8fa978b0f5e">Additional semantics not provided by the default context MAY be provided by specifying an explicit <tt>"@context"</tt> member in the root of a CoverageJSON document. The value of that member MUST be an array where the first element is the default context URL. Any additional context definitions SHALL NOT override definitions of the default context, except when the definition is identical.</p>
+
+<p id="_25079080-cd50-09bc-51fc-a169dd3a6ff5">Providing an explicit context is especially useful for extensions. A recommended practice is to include any used namespace prefixes, even if registered, in the explicit context. This provides additional clarity and helps humans understand the document more quickly.</p>
+
+<p id="_ad9bfe6b-9564-39a0-bf63-162bae91c589">It is NOT RECOMMENDED to use the explicit JSON-LD context to map simple names, for example, <tt>"license": "dct:license"</tt>. On one side, this would hinder interoperability for generic non-JSON-LD clients, as they generally rely on absolute URIs or <link target="https://covjson.org/prefixes/">registered prefixes</link>() of compact URIs. On the other side, it would make documents less future-proof as there may be name collisions with future versions of the format where semantics of that name may be defined differently. It is therefore RECOMMENDED to use compact or absolute URIs if an explicit JSON-LD context is included.</p>
+
+<p id="_76ff0905-6c33-f030-79e3-70dbfd42a659">Note that domain axis values and range values SHOULD NOT be exposed as linked data via the JSON-LD context since they are not suitable for such representation.</p>
+
+<p id="_87e441d1-9fc2-af21-8329-5d115dd79585">Example:</p>
+
+<sourcecode id="_60f8c939-3f1d-135d-bd97-e2fc7ae7b0a7" lang="json" unnumbered="true">{
+  "@context": [
+    "https://covjson.org/context.jsonld",
+    {
+      "dct": "http://purl.org/dc/terms/",
+      "dct:license": { "@type": "@id" }
+    }
+  ],
+  "type" : "Coverage",
+  "dct:license": "https://creativecommons.org/licenses/by/4.0/",
+   ...
+}</sourcecode>
+
+
+<p id="_640bcb53-2173-06c4-d426-416379d6524c">In this example, additional semantics for the registered <tt>dct</tt> prefix are provided by stating that the <tt>"dct:license"</tt> member value in this document is an identifier and not just an unstructured string.</p>
+</clause>
+
+<clause id="_resolving_domain_and_range_urls" obligation="normative">
+<title depth="2">6.9.<tab/>Resolving domain and range URLs</title>
+<p id="_1f49bf67-f35b-ce8d-9006-5f4629611015">If a domain or range is referenced by a URL in a CoverageJSON document, then the client should, whenever is appropriate, load the data from the given URL and treat the loaded data as if it was directly embedded in place of the URL. When sending HTTP requests, the <tt>Accept</tt> header SHOULD be set appropriately to the CoverageJSON media type.</p>
+</clause>
+
+<clause id="_common_domain_types" obligation="normative">
+<title depth="2">6.10.<tab/>Common Domain Types</title>
+<p id="_29e7116e-dece-1dc4-2c66-719d12780728">This specification defines the following domain types: Grid, VerticalProfile, PointSeries, Point, MultiPointSeries, MultiPoint, PolygonSeries, Polygon, MultiPolygonSeries, MultiPolygon, Trajectory, Section.</p>
+
+<p id="_d2f64a24-cc59-087b-cbd8-ebe6ec715f4c">Requirements for all domain types defined in this specification:</p>
+
+<ul id="_e62b119c-e51c-756e-c2e8-0cb37b2e2cb7"><li><p id="_0c5be78e-0801-c136-6dc5-10658250c303">The axis and coordinate identifiers <tt>"x"</tt> and <tt>"y"</tt> MUST refer to horizontal spatial coordinates,
+<tt>"z"</tt> to vertical spatial coordinates, and all of <tt>"x"</tt>, <tt>"y"</tt>, and <tt>"z"</tt> MUST be referenced by a spatial coordinate reference system.</p>
+</li>
+<li><p id="_078d270a-8839-385a-723b-dfc7af17488b">The axis and coordinate identifier <tt>"t"</tt> MUST refer to temporal coordinates and be referenced by a temporal reference system.</p>
+</li>
+<li><p id="_49262981-f627-a18b-afdc-d9734e28d121">If a spatial CRS is used that has the axes longitude and latitude, or easting and northing, then the axis and coordinate identifier <tt>"x"</tt> MUST refer to longitude / easting, and <tt>"y"</tt> to latitude / northing.</p>
+</li>
+<li><p id="_0e456689-92be-6629-cfa7-74129c732e6e">A domain that states conformance to one of the domain types in this specification MUST only contain axes defined by the domain type: additional axes are not allowed.</p>
+</li>
+<li><p id="_cb3bede8-0182-0137-3836-551140285bf9">In a Coverage object, the axis ordering in <tt>"axisNames"</tt> of NdArray objects SHOULD follow the order “t”, “z”, “y, “x”, “composite”, leaving out all axes that do not exist or are single-valued.</p>
+</li>
+</ul>
+
+<table id="_aa83c175-3801-d0c8-8c86-9c2bd8de720e">
+<name>Table 1 — Domain Types table</name>
+<thead><tr><th valign="middle" align="left">Domain Type</th>
+<th valign="middle" align="left">x</th>
+<th valign="middle" align="left">y</th>
+<th valign="middle" align="left">z</th>
+<th valign="middle" align="left">t</th>
+<th valign="middle" align="left">composite</th>
+</tr></thead>
+<tbody><tr><td valign="middle" align="left">Grid</td>
+<td valign="middle" align="left">+</td>
+<td valign="middle" align="left">+</td>
+<td valign="middle" align="left">[+]</td>
+<td valign="middle" align="left">[+]</td>
+<td valign="middle" align="left"/></tr><tr><td valign="middle" align="left">VerticalProfile</td>
+<td valign="middle" align="left">1</td>
+<td valign="middle" align="left">1</td>
+<td valign="middle" align="left">+</td>
+<td valign="middle" align="left">[1]</td>
+<td valign="middle" align="left"/></tr><tr><td valign="middle" align="left">PointSeries</td>
+<td valign="middle" align="left">1</td>
+<td valign="middle" align="left">1</td>
+<td valign="middle" align="left">[1]</td>
+<td valign="middle" align="left">+</td>
+<td valign="middle" align="left"/></tr><tr><td valign="middle" align="left">Point</td>
+<td valign="middle" align="left">1</td>
+<td valign="middle" align="left">1</td>
+<td valign="middle" align="left">[1]</td>
+<td valign="middle" align="left">[1]</td>
+<td valign="middle" align="left"/></tr><tr><td valign="middle" align="left">MultiPointSeries</td>
+<td valign="middle" align="left"/><td valign="middle" align="left"/><td valign="middle" align="left"/><td valign="middle" align="left">+</td>
+<td valign="middle" align="left">+</td>
+</tr><tr><td valign="middle" align="left">MultiPoint</td>
+<td valign="middle" align="left"/><td valign="middle" align="left"/><td valign="middle" align="left"/><td valign="middle" align="left">[1]</td>
+<td valign="middle" align="left">+</td>
+</tr><tr><td valign="middle" align="left">PolygonSeries</td>
+<td valign="middle" align="left"/><td valign="middle" align="left"/><td valign="middle" align="left">[1]</td>
+<td valign="middle" align="left">+</td>
+<td valign="middle" align="left">1</td>
+</tr><tr><td valign="middle" align="left">Polygon</td>
+<td valign="middle" align="left"/><td valign="middle" align="left"/><td valign="middle" align="left">[1]</td>
+<td valign="middle" align="left">[1]</td>
+<td valign="middle" align="left">1</td>
+</tr><tr><td valign="middle" align="left">MultiPolygonSeries</td>
+<td valign="middle" align="left"/><td valign="middle" align="left"/><td valign="middle" align="left">[1]</td>
+<td valign="middle" align="left">+</td>
+<td valign="middle" align="left">+</td>
+</tr><tr><td valign="middle" align="left">MultiPolygon</td>
+<td valign="middle" align="left"/><td valign="middle" align="left"/><td valign="middle" align="left">[1]</td>
+<td valign="middle" align="left">[1]</td>
+<td valign="middle" align="left">+</td>
+</tr><tr><td valign="middle" align="left">Trajectory</td>
+<td valign="middle" align="left"/><td valign="middle" align="left"/><td valign="middle" align="left">[1]</td>
+<td valign="middle" align="left"/><td valign="middle" align="left">+</td>
+</tr></tbody>
+<tfoot><tr><td valign="middle" align="left">Section</td>
+<td valign="middle" align="left"/><td valign="middle" align="left"/><td valign="middle" align="left">+</td>
+<td valign="middle" align="left"/><td valign="middle" align="left">+</td>
+</tr></tfoot>
+</table>
+
+<table id="_e0746c8e-ea73-7fb2-78eb-e6d8b5335b71">
+<name>Table 2 — Table Key</name>
+<thead><tr><th valign="middle" align="left">Symbol</th>
+<th valign="middle" align="left">Description</th>
+</tr></thead>
+<tbody><tr><td valign="middle" align="left">1</td>
+<td valign="middle" align="left">Axis with one coordinate</td>
+</tr><tr><td valign="middle" align="left">[1]</td>
+<td valign="middle" align="left">Optional axis with one coordinate</td>
+</tr><tr><td valign="middle" align="left">+</td>
+<td valign="middle" align="left">Axis with one or more coordinates</td>
+</tr><tr><td valign="middle" align="left">[+]</td>
+<td valign="middle" align="left">Optional axis with one or more coordinates</td>
+</tr></tbody>
+</table>
+
+<clause id="_grid" obligation="normative">
+<title depth="3">6.10.1.<tab/>Grid</title>
+<ul id="_1539ce22-1760-dbde-a92c-41c080b109e4"><li><p id="_1547f58b-f859-bde5-11ce-1e5490148dea">A domain with Grid domain type MUST have the axes <tt>"x"</tt> and <tt>"y"</tt> and MAY have the axes <tt>"z"</tt> and <tt>"t"</tt>.</p>
+</li>
+</ul>
+
+<p id="_48c34f2f-8529-ee5a-8304-cc11f0e2ab3d">Domain example:</p>
+
+<sourcecode id="_02eeea93-2877-8bb0-6bef-4fbdf00aed85" lang="json" unnumbered="true">{
+  "type": "Domain",
+  "domainType": "Grid",
+  "axes": {
+    "x": { "values": [1,2,3] },
+    "y": { "values": [20,21] },
+    "z": { "values": [1] },
+    "t": { "values": ["2008-01-01T04:00:00Z"] }
+  },
+  "referencing": [...]
+}</sourcecode>
+
+
+<p id="_fa42afbf-3c53-8672-7f87-3c473140f279">Coverage example:</p>
+
+<sourcecode id="_ad3133e0-e35c-590b-ab14-5e83d7b34701" lang="json" unnumbered="true">{
+  "type" : "Coverage",
+  "domain" : {
+    "type" : "Domain",
+    "domainType" : "Grid",
+    "axes": {
+      "x": { "values": [1,2,3] },
+      "y": { "values": [20,21] },
+      "z": { "values": [1] },
+      "t": { "values": ["2008-01-01T04:00:00Z"] }
+    },
+    "referencing": [...]
+  },
+  "parameters" : {
+    "temperature": {...}
+  },
+  "ranges" : {
+    "temperature" : {
+      "type" : "NdArray",
+      "dataType": "float",
+      "axisNames": ["t", "z", "y", "x"],
+      "shape": [1, 1, 2, 3],
+      "values" : [...]
+    }
+  }
+}</sourcecode>
+
+</clause>
+
+<clause id="_verticalprofile" obligation="normative">
+<title depth="3">6.10.2.<tab/>VerticalProfile</title>
+<ul id="_42d218a1-af6b-9321-3e8c-efa6595e5762"><li><p id="_57d1b0ce-48c4-5aaf-2e93-2d0da2240c63">A domain with VerticalProfile domain type MUST have the axes <tt>"x"</tt>, <tt>"y"</tt>, and <tt>"z"</tt>, where <tt>"x"</tt> and <tt>"y"</tt> MUST have a single coordinate value only.</p>
+</li>
+<li><p id="_73eae699-492c-b1d9-8f48-e4dfba2d360a">A domain with VerticalProfile domain type MAY have the axis <tt>"t"</tt> which MUST have a single coordinate value only.</p>
+</li>
+</ul>
+
+<p id="_a18cec41-7b3f-b50c-d39d-1ad0ddab4d7c">Domain example:</p>
+
+<sourcecode id="_d9ec89a2-84ce-243c-45b5-c4be96bbbccb" lang="json" unnumbered="true">{
+  "type": "Domain",
+  "domainType": "VerticalProfile",
+  "axes": {
+    "x": { "values": [1] },
+    "y": { "values": [21] },
+    "z": { "values": [1,5,20] },
+    "t": { "values": ["2008-01-01T04:00:00Z"] }
+  },
+  "referencing": [...]
+}</sourcecode>
+
+
+<p id="_f1c0f34d-b25b-0284-1e44-bd01e20dab66">Coverage example:</p>
+
+<sourcecode id="_dbc4d9da-421f-8432-d6ab-a860b4e426cb" lang="json" unnumbered="true">{
+  "type" : "Coverage",
+  "domain" : {
+    "type": "Domain",
+    "domainType": "VerticalProfile",
+    "axes": {
+      "x": { "values": [1] },
+      "y": { "values": [21] },
+      "z": { "values": [1,5,20] },
+      "t": { "values": ["2008-01-01T04:00:00Z"] }
+    },
+    "referencing": [...]
+  },
+  "parameters" : {
+    "temperature": {...}
+  },
+  "ranges" : {
+    "temperature" : {
+      "type" : "NdArray",
+      "dataType": "float",
+      "axisNames": ["z"],
+      "shape": [3],
+      "values" : [...]
+    }
+  }
+}</sourcecode>
+
+</clause>
+
+<clause id="_pointseries" obligation="normative">
+<title depth="3">6.10.3.<tab/>PointSeries</title>
+<ul id="_45b35391-f617-6176-c67b-495856412bac"><li><p id="_94790d5f-57a5-6b30-06c9-d2eab0aa96d2">A domain with PointSeries domain type MUST have the axes <tt>"x"</tt>, <tt>"y"</tt>, and <tt>"t"</tt> where <tt>"x"</tt> and <tt>"y"</tt> MUST have a single coordinate value only.</p>
+</li>
+<li><p id="_0ca3f992-1791-3edd-ef1b-c75f93d42c0e">A domain with PointSeries domain type MAY have the axis <tt>"z"</tt> which MUST have a single coordinate value only.</p>
+</li>
+</ul>
+
+<p id="_17f8498d-d615-11c8-683e-28b1a91bf86d">Domain example:</p>
+
+<sourcecode id="_e60a57c6-71e8-0ee3-fbb3-f10d0e675bbf" lang="json" unnumbered="true">{
+  "type": "Domain",
+  "domainType": "PointSeries",
+  "axes": {
+    "x": { "values": [1] },
+    "y": { "values": [20] },
+    "z": { "values": [1] },
+    "t": { "values": ["2008-01-01T04:00:00Z","2008-01-01T05:00:00Z"] }
+  },
+  "referencing": [...]
+}</sourcecode>
+
+
+<p id="_a87b0a5d-26c6-c260-82db-e758ab17261c">Coverage example:</p>
+
+<sourcecode id="_6936ee2f-bbe7-f5d1-1faa-6613520f57d8" lang="json" unnumbered="true">{
+  "type" : "Coverage",
+  "domain" : {
+    "type": "Domain",
+    "domainType": "PointSeries",
+    "axes": {
+      "x": { "values": [1] },
+      "y": { "values": [20] },
+      "z": { "values": [1] },
+      "t": { "values": ["2008-01-01T04:00:00Z","2008-01-01T05:00:00Z"] }
+    },
+    "referencing": [...]
+  },
+  "parameters" : {
+    "temperature": {...}
+  },
+  "ranges" : {
+    "temperature" : {
+      "type" : "NdArray",
+      "dataType": "float",
+      "axisNames": ["t"],
+      "shape": [2],
+      "values" : [...]
+    }
+  }
+}</sourcecode>
+
+</clause>
+
+<clause id="_point" obligation="normative">
+<title depth="3">6.10.4.<tab/>Point</title>
+<ul id="_fe2f40fd-8253-afff-8d97-958964057cb3"><li><p id="_d734d309-43a1-40e2-f05a-de7d7e81da26">A domain with Point domain type MUST have the axes <tt>"x"</tt> and <tt>"y"</tt> and MAY have the axes <tt>"z"</tt> and <tt>"t"</tt> where all MUST have a single coordinate value only.</p>
+</li>
+</ul>
+
+<p id="_87b93662-b138-d26c-32fc-0e190a6a42e8">Domain example:</p>
+
+<sourcecode id="_356cc233-b6eb-841a-f253-b4078eac3adf" lang="json" unnumbered="true">{
+  "type": "Domain",
+  "domainType": "Point",
+  "axes": {
+    "x": { "values": [1] },
+    "y": { "values": [20] },
+    "z": { "values": [1] },
+    "t": { "values": ["2008-01-01T04:00:00Z"] }
+  },
+  "referencing": [...]
+}</sourcecode>
+
+
+<p id="_aeb00fac-906f-16e9-f150-a0235d7d484d">Coverage example:</p>
+
+<sourcecode id="_2a1ff70b-bf9e-a978-90a0-c2e481b830f7" lang="json" unnumbered="true">{
+  "type" : "Coverage",
+  "domain" : {
+    "type": "Domain",
+    "domainType": "Point",
+    "axes": {
+      "x": { "values": [1] },
+      "y": { "values": [20] },
+      "z": { "values": [1] },
+      "t": { "values": ["2008-01-01T04:00:00Z"] }
+    },
+    "referencing": [...]
+  },
+  "parameters" : {
+    "temperature": {...}
+  },
+  "ranges" : {
+    "temperature" : {
+      "type" : "NdArray",
+      "dataType": "float",
+      "values" : [...]
+    }
+  }
+}</sourcecode>
+
+</clause>
+
+<clause id="_multipointseries" obligation="normative">
+<title depth="3">6.10.5.<tab/>MultiPointSeries</title>
+<ul id="_d41dea83-e390-1aaa-85d5-3e89fb4db661"><li><p id="_9cd3c0ea-b031-ac93-83fd-76a4cec40187">A domain with MultiPointSeries domain type MUST have the axes <tt>"composite"</tt> and <tt>"t"</tt>.</p>
+</li>
+<li><p id="_cfa5e0bd-127b-d34f-3b58-d67e7b7e7931">The axis <tt>"composite"</tt> MUST have the data type <tt>"tuple"</tt> and the coordinate identifiers <tt>"x","y","z"</tt> or <tt>"x","y"</tt>, in that order.</p>
+</li>
+</ul>
+
+<p id="_8537c087-089f-8cd7-2725-77623b822a55">Domain example:</p>
+
+<sourcecode id="_d786327d-7ad4-092e-15f2-c8be3fe52d82" lang="json" unnumbered="true">{
+  "type": "Domain",
+  "domainType": "MultiPointSeries",
+  "axes": {
+    "t": { "values": ["2008-01-01T04:00:00Z", "2008-01-01T05:00:00Z"] },
+    "composite": {
+      "dataType": "tuple",
+      "coordinates": ["x","y","z"],
+      "values": [
+        [1, 20, 1],
+        [2, 21, 3]
+      ]
+    }
+  },
+  "referencing": [...]
+}</sourcecode>
+
+
+<p id="_da26478f-3236-9bf7-27b8-960e3b9da7ac">Domain example without z:</p>
+
+<sourcecode id="_2ec2c834-ca5f-b1c0-7afe-22eb2bdca30f" lang="json" unnumbered="true">{
+  "type": "Domain",
+  "domainType": "MultiPointSeries",
+  "axes": {
+    "t": { "values": ["2008-01-01T04:00:00Z", "2008-01-01T05:00:00Z"] },
+    "composite": {
+      "dataType": "tuple",
+      "coordinates": ["x","y"],
+      "values": [
+        [1, 20],
+        [2, 21]
+      ]
+    }
+  },
+  "referencing": [...]
+}</sourcecode>
+
+
+<p id="_4bfd5b45-67f2-dbc8-356e-836a56b4a915">Coverage example:</p>
+
+<sourcecode id="_d7a6ab58-8d83-3a52-e59c-bffb952eac55" lang="json" unnumbered="true">{
+  "type" : "Coverage",
+  "domain" : {
+    "type": "Domain",
+    "domainType": "MultiPointSeries",
+    "axes": {
+      "t": { "values": ["2008-01-01T04:00:00Z", "2008-01-01T05:00:00Z"] },
+      "composite": {
+        "dataType": "tuple",
+        "coordinates": ["x","y","z"],
+        "values": [
+          [1, 20, 1],
+          [2, 21, 3],
+          [2, 20, 4]
+        ]
+      }
+    }
+  },
+  "parameters" : {
+    "temperature": {...}
+  },
+  "ranges" : {
+    "temperature" : {
+      "type" : "NdArray",
+      "dataType": "float",
+      "axisNames": ["t", "composite"],
+      "shape": [2, 3],
+      "values" : [...]
+    }
+  }
+}</sourcecode>
+
+</clause>
+
+<clause id="_multipoint" obligation="normative">
+<title depth="3">6.10.6.<tab/>MultiPoint</title>
+<ul id="_c6159ed3-16d5-b2fc-b5e9-f27e712009f8"><li><p id="_68e735ce-93b8-89a8-6240-fd63e64b5b3e">A domain with MultiPoint domain type MUST have the axis <tt>"composite"</tt> and MAY have the axis <tt>"t"</tt> where <tt>"t"</tt> MUST have a single coordinate value only.</p>
+</li>
+<li><p id="_3eb4510b-df1e-563a-7159-d5425e665bd9">The axis <tt>"composite"</tt> MUST have the data type <tt>"tuple"</tt> and the coordinate identifiers <tt>"x","y","z"</tt> or <tt>"x","y"</tt>, in that order.</p>
+</li>
+</ul>
+
+<p id="_ce21d7b3-ecba-a381-c2b9-37ed333c1e10">Domain example:</p>
+
+<sourcecode id="_5fb983c7-b690-913f-2a72-1e058a058e27" lang="json" unnumbered="true">{
+  "type": "Domain",
+  "domainType": "MultiPoint",
+  "axes": {
+    "t": { "values": ["2008-01-01T04:00:00Z"] },
+    "composite": {
+      "dataType": "tuple",
+      "coordinates": ["x","y","z"],
+      "values": [
+        [1, 20, 1],
+        [2, 21, 3]
+      ]
+    }
+  },
+  "referencing": [...]
+}</sourcecode>
+
+
+<p id="_a61ed510-1721-30df-3326-afd9d2a3896f">Domain example without z and t:</p>
+
+<sourcecode id="_a7d8b9bb-3551-ec02-7ead-28e337d77f3a" lang="json" unnumbered="true">{
+  "type": "Domain",
+  "domainType": "MultiPoint",
+  "axes": {
+    "composite": {
+      "dataType": "tuple",
+      "coordinates": ["x","y"],
+      "values": [
+        [1, 20],
+        [2, 21]
+      ]
+    }
+  },
+  "referencing": [...]
+}</sourcecode>
+
+
+<p id="_ee01d8c0-3651-d1a0-c78b-1053c3ff1052">Coverage example:</p>
+
+<sourcecode id="_091d99fc-b79d-d801-71e1-31bde702b47f" lang="json" unnumbered="true">{
+  "type" : "Coverage",
+  "domain" : {
+    "type": "Domain",
+    "domainType": "MultiPoint",
+    "axes": {
+      "t": { "values": ["2008-01-01T04:00:00Z"] },
+      "composite": {
+        "dataType": "tuple",
+        "coordinates": ["x","y","z"],
+        "values": [
+          [1, 20, 1],
+          [2, 21, 3]
+        ]
+      }
+    }
+  },
+  "parameters" : {
+    "temperature": {...}
+  },
+  "ranges" : {
+    "temperature" : {
+      "type" : "NdArray",
+      "dataType": "float",
+      "axisNames": ["composite"],
+      "shape": [2],
+      "values" : [...]
+    }
+  }
+}</sourcecode>
+
+</clause>
+
+<clause id="_trajectory" obligation="normative">
+<title depth="3">6.10.7.<tab/>Trajectory</title>
+<ul id="_a6835d54-e027-1037-0537-d40cc70678f0"><li><p id="_2240032b-6ef9-f116-1e10-49b6224e7385">A domain with Trajectory domain type MUST have the axis <tt>"composite"</tt> and MAY have the axis <tt>"z"</tt> where <tt>"z"</tt> MUST have a single coordinate value only.</p>
+</li>
+<li><p id="_a2ded8a5-2dda-4f70-7185-8a4fa1900db5">The axis <tt>"composite"</tt> MUST have the data type <tt>"tuple"</tt> and the coordinate identifiers <tt>"t","x","y","z"</tt> or <tt>"t","x","y"</tt>, in that order.</p>
+</li>
+<li><p id="_4dcd5886-0522-011c-35f4-5f0fad256493">The value ordering of the axis <tt>"composite"</tt> MUST follow the ordering of its <tt>"t"</tt> coordinate as defined in the corresponding reference system.</p>
+</li>
+</ul>
+
+<p id="_2c86ac38-cd9c-c3df-2e4d-65a8ecf2b503">Domain example:</p>
+
+<sourcecode id="_f45793d5-4cc7-f753-f7b8-41a8db3fcf19" lang="json" unnumbered="true">{
+  "type": "Domain",
+  "domainType": "Trajectory",
+  "axes": {
+    "composite": {
+      "dataType": "tuple",
+      "coordinates": ["t","x","y","z"],
+      "values": [
+        ["2008-01-01T04:00:00Z", 1, 20, 1],
+        ["2008-01-01T04:30:00Z", 2, 21, 3]
+      ]
+    }
+  },
+  "referencing": [...]
+}</sourcecode>
+
+
+<p id="_457872e8-1a6d-8504-3c41-3fc5af845398">Domain example without z:</p>
+
+<sourcecode id="_dcfaff9c-16d4-e8a5-db5e-c13b5f8d8b93" lang="json" unnumbered="true">{
+  "type": "Domain",
+  "domainType": "Trajectory",
+  "axes": {
+    "composite": {
+      "dataType": "tuple",
+      "coordinates": ["t","x","y"],
+      "values": [
+        ["2008-01-01T04:00:00Z", 1, 20],
+        ["2008-01-01T04:30:00Z", 2, 21]
+      ]
+    }
+  },
+  "referencing": [...]
+}</sourcecode>
+
+
+<p id="_7a61180f-003f-6317-0dd7-a318bb0060d6">Domain example with z defined as constant value:</p>
+
+<sourcecode id="_9b1b38d0-3436-cb3a-07a7-1ea9671e69b4" lang="json" unnumbered="true">{
+  "type": "Domain",
+  "domainType": "Trajectory",
+  "axes": {
+    "composite": {
+      "dataType": "tuple",
+      "coordinates": ["t","x","y"],
+      "values": [
+        ["2008-01-01T04:00:00Z", 1, 20],
+        ["2008-01-01T04:30:00Z", 2, 21]
+      ]
+    },
+    "z": { "values": [5] }
+  },
+  "referencing": [...]
+}</sourcecode>
+
+
+<p id="_2a9a30a3-ee4e-1a10-5ba4-87da6b46f8e9">Coverage example:</p>
+
+<sourcecode id="_a1a81899-4432-fe33-8b17-8c4cbfa95b55" lang="json" unnumbered="true">{
+  "type" : "Coverage",
+  "domain" : {
+    "type": "Domain",
+    "domainType": "Trajectory",
+    "axes": {
+      "composite": {
+        "dataType": "tuple",
+        "coordinates": ["t","x","y","z"],
+        "values": [
+          ["2008-01-01T04:00:00Z", 1, 20, 1],
+          ["2008-01-01T04:30:00Z", 2, 21, 3]
+        ]
+      }
+    },
+    "referencing": [...]
+  },
+  "parameters" : {
+    "temperature": {...}
+  },
+  "ranges" : {
+    "temperature" : {
+      "type" : "NdArray",
+      "dataType": "float",
+      "axisNames": ["composite"],
+      "shape": [2],
+      "values" : [...]
+    }
+  }
+}</sourcecode>
+
+</clause>
+
+<clause id="_section" obligation="normative">
+<title depth="3">6.10.8.<tab/>Section</title>
+<ul id="_03b560ea-b8de-2d59-ad62-2211d7ff9230"><li><p id="_4c19bbb7-ad45-7830-e55c-465f57d99d2a">A domain with Section domain type MUST have the axes <tt>"composite"</tt> and <tt>"z"</tt>.</p>
+</li>
+<li><p id="_5617b217-1361-1cab-a002-6b9384262fc4">The axis <tt>"composite"</tt> MUST have the data type <tt>"tuple"</tt> and the coordinate identifiers <tt>"t","x","y"</tt>, in that order.</p>
+</li>
+<li><p id="_74ec16e3-fd2f-78ed-a9e5-d1f0e119ca52">The value ordering of the axis <tt>"composite"</tt> MUST follow the ordering of its <tt>"t"</tt> coordinate as defined in the corresponding reference system.</p>
+</li>
+</ul>
+
+<p id="_1f3c2dd6-bbbe-afbf-1121-d6cbcc464d39">Domain example:</p>
+
+<sourcecode id="_1fa06d33-b1fe-341f-53e5-e23634ef011d" lang="json" unnumbered="true">{
+  "type": "Domain",
+  "domainType": "Section",
+  "axes": {
+    "z": { "values": [10,20,30] },
+    "composite": {
+      "dataType": "tuple",
+      "coordinates": ["t","x","y"],
+      "values": [
+        ["2008-01-01T04:00:00Z", 1, 20],
+        ["2008-01-01T04:30:00Z", 2, 21]
+      ]
+    }
+  },
+  "referencing": [...]
+}</sourcecode>
+
+
+<p id="_320b6de9-39f6-bd5c-8a34-244e6bab75d3">Coverage example:</p>
+
+<sourcecode id="_5d018f18-82c7-97c9-e2f7-e31831b65201" lang="json" unnumbered="true">{
+  "type" : "Coverage",
+  "domain" : {
+    "type": "Domain",
+    "domainType": "Section",
+    "axes": {
+      "z": { "values": [10,20,30] },
+      "composite": {
+        "dataType": "tuple",
+        "coordinates": ["t","x","y"],
+        "values": [
+          ["2008-01-01T04:00:00Z", 1, 20],
+          ["2008-01-01T04:30:00Z", 2, 21]
+        ]
+      }
+    },
+    "referencing": [...]
+  },
+  "parameters" : {
+    "temperature": {...}
+  },
+  "ranges" : {
+    "temperature" : {
+      "type" : "NdArray",
+      "dataType": "float",
+      "axisNames": ["z", "composite"],
+      "shape": [3, 2],
+      "values" : [...]
+    }
+  }
+}</sourcecode>
+
+</clause>
+
+<clause id="_polygon" obligation="normative">
+<title depth="3">6.10.9.<tab/>Polygon</title>
+<p id="_a3285981-c3a0-7294-8ec7-06b0ef1cfe0b">Polygons in this domain domain type are defined equally to GeoJSON, except that they can only contain <tt>[x,y]</tt> positions (and not <tt>z</tt> or additional coordinates):
+- A LinearRing is an array of 4 or more <tt>[x,y]</tt> arrays where each of <tt>x</tt> and <tt>y</tt> is a coordinate value. The first and last <tt>[x,y]</tt> elements are identical.
+- A Polygon is an array of LinearRing arrays. For Polygons with multiple rings, the first MUST be the exterior ring and any others MUST be interior rings or holes.</p>
+
+<ul id="_eff8cea2-1cea-ad19-ac8a-169fa522846d"><li><p id="_05d80241-c8f1-4ef0-5d85-74a52b2046b2">A domain with Polygon domain type MUST have the axis <tt>"composite"</tt> which has a single Polygon value.</p>
+</li>
+<li><p id="_67f14e68-dafd-ebbb-11b4-4908cae8b42b">The axis <tt>"composite"</tt> MUST have the data type <tt>"polygon"</tt> and the coordinate identifiers <tt>"x","y"</tt>, in that order.</p>
+</li>
+<li><p id="_2ab984a8-c589-4de4-2c61-294ce05a153e">A Polygon domain MAY have the axes <tt>"z"</tt> and <tt>"t"</tt> which both MUST have a single coordinate value only.</p>
+</li>
+</ul>
+
+<p id="_dd2ab119-51b9-5567-1912-66f1b66a8dc4">Domain example:</p>
+
+<sourcecode id="_48458bd2-1f42-4166-1e5a-25f202890263" lang="json" unnumbered="true">{
+  "type": "Domain",
+  "domainType": "Polygon",
+  "axes": {
+    "composite": {
+      "dataType": "polygon",
+      "coordinates": ["x","y"],
+      "values": [
+        [ [ [100.0, 0.0], [101.0, 0.0], [101.0, 1.0], [100.0, 1.0], [100.0, 0.0] ]  ]
+      ]
+    },
+    "z": { "values": [2] },
+    "t": { "values": ["2008-01-01T04:00:00Z"] }
+  },
+  "referencing": [...]
+}</sourcecode>
+
+
+<p id="_1448adaa-0ba7-599b-3bc7-9b4e76c67604">Coverage example:</p>
+
+<sourcecode id="_282690f2-52a0-18b9-98d4-aa9a83d8c0e3" lang="json" unnumbered="true">{
+  "type" : "Coverage",
+  "domain" : {
+    "type": "Domain",
+    "domainType": "Polygon",
+    "axes": {
+      "composite": {
+        "dataType": "polygon",
+        "coordinates": ["x","y"],
+        "values": [
+          [ [ [100.0, 0.0], [101.0, 0.0], [101.0, 1.0], [100.0, 1.0], [100.0, 0.0] ]  ]
+        ]
+      },
+      "z": { "values": [2] },
+      "t": { "values": ["2008-01-01T04:00:00Z"] }
+    },
+    "referencing": [...]
+  },
+  "parameters" : {
+    "temperature": {...}
+  },
+  "ranges" : {
+    "temperature" : {
+      "type" : "NdArray",
+      "dataType": "float",
+      "values" : [...]
+    }
+  }
+}</sourcecode>
+
+</clause>
+
+<clause id="_polygonseries" obligation="normative">
+<title depth="3">6.10.10.<tab/>PolygonSeries</title>
+<ul id="_4b73a91d-c46e-faa2-ff0f-66bd6f3f4efe"><li><p id="_4644e22f-071b-3560-d4dd-a43ae72797ad">A domain with PolygonSeries domain type MUST have the axes <tt>"composite"</tt> and <tt>"t"</tt> where <tt>"composite"</tt> MUST have a single Polygon value. Polygons are defined in the Polygon domain type.</p>
+</li>
+<li><p id="_4aece6fa-83ef-827c-c55c-ef537cb5ff4f">A domain with PolygonSeries domain type MAY have the axis <tt>"z"</tt> which MUST have a single coordinate value only.</p>
+</li>
+<li><p id="_c27a10a8-c663-a383-32c3-a4c12a94f409">The axis <tt>"composite"</tt> MUST have the data type <tt>"polygon"</tt> and the coordinate identifiers <tt>"x","y"</tt>, in that order.</p>
+</li>
+</ul>
+
+<p id="_c7bfc7d7-d5b4-40da-6d92-33893a70d4e2">Domain example:</p>
+
+<sourcecode id="_8a45f0e6-0f87-d9cb-3148-bb966c328a4a" lang="json" unnumbered="true">{
+  "type": "Domain",
+  "domainType": "PolygonSeries",
+  "axes": {
+    "composite": {
+      "dataType": "polygon",
+      "coordinates": ["x","y"],
+      "values": [
+        [ [ [100.0, 0.0], [101.0, 0.0], [101.0, 1.0], [100.0, 1.0], [100.0, 0.0] ]  ]
+      ]
+    },
+    "z": { "values": [2] },
+    "t": { "values": ["2008-01-01T04:00:00Z","2008-01-01T05:00:00Z"] }
+  },
+  "referencing": [...]
+}</sourcecode>
+
+
+<p id="_d0cf15c8-992d-d7f8-65e7-b7242039ba80">Coverage example:</p>
+
+<sourcecode id="_56702f37-9bb4-46d7-7adc-5aa1c6ab88a9" lang="json" unnumbered="true">{
+  "type" : "Coverage",
+  "domain" : {
+    "type": "Domain",
+    "domainType": "PolygonSeries",
+    "axes": {
+      "composite": {
+        "dataType": "polygon",
+        "coordinates": ["x","y"],
+        "values": [
+          [ [ [100.0, 0.0], [101.0, 0.0], [101.0, 1.0], [100.0, 1.0], [100.0, 0.0] ]  ]
+        ]
+      },
+      "z": { "values": [2] },
+      "t": { "values": ["2008-01-01T04:00:00Z","2008-01-01T05:00:00Z"] }
+    },
+    "referencing": [...]
+  },
+  "parameters" : {
+    "temperature": {...}
+  },
+  "ranges" : {
+    "temperature" : {
+      "type" : "NdArray",
+      "dataType": "float",
+      "axisNames": ["t"],
+      "shape": [2],
+      "values" : [...]
+    }
+  }
+}</sourcecode>
+
+</clause>
+
+<clause id="_multipolygon" obligation="normative">
+<title depth="3">6.10.11.<tab/>MultiPolygon</title>
+<ul id="_507168e0-473a-9f52-6284-86277ce0fbcc"><li><p id="_134da2ee-5a51-c355-f9a8-81c2c045f3f7">A domain with MultiPolygon domain type MUST have the axis <tt>"composite"</tt> where the values are Polygons. Polygons are defined in the Polygon domain type.</p>
+</li>
+<li><p id="_1d60d37c-a6da-4117-7096-efe1732488c9">The axis <tt>"composite"</tt> MUST have the data type <tt>"polygon"</tt> and the coordinate identifiers <tt>"x","y"</tt>, in that order.</p>
+</li>
+<li><p id="_c1e342cd-9376-26d2-49e5-cbf2b28907cf">A MultiPolygon domain MAY have the axes <tt>"z"</tt> and <tt>"t"</tt> which both MUST have a single coordinate value only.</p>
+</li>
+</ul>
+
+<p id="_e4df2897-b0f2-f359-99bf-cd7b5af60fdb">Domain example:</p>
+
+<sourcecode id="_f64fca8b-7218-07a9-b1b8-88c8eb1e7d52" lang="json" unnumbered="true">{
+  "type": "Domain",
+  "domainType": "MultiPolygon",
+  "axes": {
+    "composite": {
+      "dataType": "polygon",
+      "coordinates": ["x","y"],
+      "values": [
+        [ [ [100.0, 0.0], [101.0, 0.0], [101.0, 1.0], [100.0, 1.0], [100.0, 0.0] ]  ],
+        [ [ [200.0, 10.0], [201.0, 10.0], [201.0, 11.0], [200.0, 11.0], [200.0, 10.0] ] ]
+      ]
+    },
+    "z": { "values": [2] },
+    "t": { "values": ["2008-01-01T04:00:00Z"] }
+  },
+  "referencing": [...]
+}</sourcecode>
+
+
+<p id="_782c3847-8a2f-8d1d-2a01-2cee7b2115df">Coverage example:</p>
+
+<sourcecode id="_4cc01105-a797-3be4-fa58-db62813a817f" lang="json" unnumbered="true">{
+  "type" : "Coverage",
+  "domain" : {
+    "type": "Domain",
+    "domainType": "MultiPolygon",
+    "axes": {
+      "composite": {
+        "dataType": "polygon",
+        "coordinates": ["x","y"],
+        "values": [
+          [ [ [100.0, 0.0], [101.0, 0.0], [101.0, 1.0], [100.0, 1.0], [100.0, 0.0] ]  ],
+          [ [ [200.0, 10.0], [201.0, 10.0], [201.0, 11.0], [200.0, 11.0], [200.0, 10.0] ] ]
+        ]
+      },
+      "z": { "values": [2] },
+      "t": { "values": ["2008-01-01T04:00:00Z"] }
+    },
+    "referencing": [...]
+  },
+  "parameters" : {
+    "temperature": {...}
+  },
+  "ranges" : {
+    "temperature" : {
+      "type" : "NdArray",
+      "dataType": "float",
+      "axisNames": ["composite"],
+      "shape": [2],
+      "values" : [...]
+    }
+  }
+}</sourcecode>
+
+</clause>
+
+<clause id="_multipolygonseries" obligation="normative">
+<title depth="3">6.10.12.<tab/>MultiPolygonSeries</title>
+<ul id="_f14bfe1e-6baf-9e7b-c97d-b626fb3dcabe"><li><p id="_dde4cae6-f2ad-22c8-6b43-74fc61562dc5">A domain with MultiPolygonSeries domain type MUST have the axes <tt>"composite"</tt> and <tt>"t"</tt> where the values of <tt>"composite"</tt> are Polygons. Polygons are defined in the Polygon domain type.</p>
+</li>
+<li><p id="_5b8c2bb4-9410-06ed-a290-d24e8e7e363d">The axis <tt>"composite"</tt> MUST have the data type <tt>"polygon"</tt> and the coordinate identifiers <tt>"x","y"</tt>, in that order.</p>
+</li>
+<li><p id="_7f02d8ac-a624-2197-b5b9-9991829de98b">A MultiPolygon domain MAY have the axis <tt>"z"</tt> which MUST have a single coordinate value only.</p>
+</li>
+</ul>
+
+<p id="_74e3cc09-c254-9350-3b62-503d325903b0">Domain example:</p>
+
+<sourcecode id="_37456055-4292-a7e0-2f37-eea7c4c6e5b6" lang="json" unnumbered="true">{
+  "type": "Domain",
+  "domainType": "MultiPolygonSeries",
+  "axes": {
+    "composite": {
+      "dataType": "polygon",
+      "coordinates": ["x","y"],
+      "values": [
+        [ [ [100.0, 0.0], [101.0, 0.0], [101.0, 1.0], [100.0, 1.0], [100.0, 0.0] ]  ],
+        [ [ [200.0, 10.0], [201.0, 10.0], [201.0, 11.0], [200.0, 11.0], [200.0, 10.0] ] ]
+      ]
+    },
+    "z": { "values": [2] },
+    "t": { "values": ["2008-01-01T04:00:00Z", "2010-01-01T00:00:00Z"] }
+  },
+  "referencing": [...]
+}</sourcecode>
+
+
+<p id="_b96585a7-61d5-461e-63c1-e6b59a912c6f">Coverage example:</p>
+
+<sourcecode id="_78b68c99-caa8-c611-3623-a1ae6bbb919d" lang="json" unnumbered="true">{
+  "type" : "Coverage",
+  "domain" : {
+    "type": "Domain",
+    "domainType": "MultiPolygonSeries",
+    "axes": {
+      "composite": {
+        "dataType": "polygon",
+        "coordinates": ["x","y"],
+        "values": [
+          [ [ [100.0, 0.0], [101.0, 0.0], [101.0, 1.0], [100.0, 1.0], [100.0, 0.0] ]  ],
+          [ [ [200.0, 10.0], [201.0, 10.0], [201.0, 11.0], [200.0, 11.0], [200.0, 10.0] ] ]
+        ]
+      },
+      "z": { "values": [2] },
+      "t": { "values": ["2008-01-01T04:00:00Z", "2010-01-01T00:00:00Z", "2012-01-01T00:00:00Z"] }
+    },
+    "referencing": [...]
+  },
+  "parameters" : {
+    "temperature": {...}
+  },
+  "ranges" : {
+    "temperature" : {
+      "type" : "NdArray",
+      "dataType": "float",
+      "axisNames": ["t", "composite"],
+      "shape": [3, 2],
+      "values" : [...]
+    }
+  }
+}</sourcecode>
+
+</clause>
+</clause>
+</clause>
+
+<clause id="_media_type_and_file_extension" obligation="normative" displayorder="13">
+<title depth="1">7.<tab/>Media Type and File Extension</title>
+<p id="_83588d5c-cf51-9360-ec76-19faef8779cb">The CoverageJSON media type SHALL be <tt>application/prs.coverage+json</tt> with an optional parameter <tt>profile</tt> which is a non-empty list of space-separated URIs identifying specific constraints or conventions that apply to a CoverageJSON document according to <link target="http://www.ietf.org/rfc/rfc6906.txt">RFC6906</link>.</p>
+
+<p id="_bbb24830-202f-c66c-8b12-f7eedce5a742">The only profile URI defined in this document is <tt><link target="https://covjson.org/def/core#standalone"/></tt> which asserts that all domain and range objects are directly embedded in a CoverageJSON document and not referenced by URLs. There is no <tt>charset</tt> parameter and CoverageJSON documents MUST be serialized using the UTF-8 character encoding.</p>
+
+<p id="_56ca93b4-b665-8792-067f-d1975d7b6add">The file extension SHALL be <tt>covjson</tt>.</p>
+</clause>
+
+
+
+
+
+
+
+
+</sections><annex id="_conformance_class_abstract_test_suite_normative" obligation="informative" displayorder="14">
+<title><strong>Annex A</strong><br/>(informative)<br/><strong>Conformance Class Abstract Test Suite (Normative)</strong></title>
+<note id="_49fa4119-ff23-ba00-2b10-7c6008e83cc9"><name>NOTE</name><p id="_2f41c6a6-7963-8015-59ca-d74fafa8ae41">Ensure that there is a conformance class for each requirements class and a test for each requirement (identified by requirement name and number)</p>
+</note>
+
+<clause id="_conformance_class_a" obligation="informative">
+<title depth="2">A.1.<tab/>Conformance Class A</title>
+<clause id="_requirement_1" obligation="informative">
+<title depth="3">A.1.1.<tab/>Requirement 1</title>
+<table id="_81b98a43-7fe7-6d5f-4d55-9226a28666f9" width="100%"><name>Table A.1</name><colgroup><col width="20%"/><col width="80%"/></colgroup><tbody><tr><th valign="middle" align="right">Test id:</th>
+<td valign="middle" align="left">/conf/conf-class-a/req-name-1</td>
+</tr><tr><th valign="middle" align="right">Requirement:</th>
+<td valign="middle" align="left">/req/req-class-a/req-name-1</td>
+</tr><tr><th valign="middle" align="right">Test purpose:</th>
+<td valign="middle" align="left">Verify that…​</td>
+</tr><tr><th valign="middle" align="right">Test method:</th>
+<td valign="middle" align="left">Inspect…​</td>
+</tr></tbody>
+</table>
+</clause>
+
+<clause id="_requirement_2" obligation="informative">
+<title depth="3">A.1.2.<tab/>Requirement 2</title>
+</clause>
+</clause>
+</annex><annex id="_coverage_examples_informative" obligation="informative" displayorder="15">
+<title><strong>Annex B</strong><br/>(informative)<br/><strong>Coverage Examples ( {Informative} )</strong></title>
+<clause id="_vertical_profile_coverage" obligation="informative">
+<title depth="2">B.1.<tab/>Vertical Profile Coverage</title>
+<sourcecode id="_81dfcd90-f207-3c3f-0746-d9e86a39d44a" lang="json" unnumbered="true">{
+  "type" : "Coverage",
+  "domain" : {
+    "type" : "Domain",
+    "domainType" : "VerticalProfile",
+    "axes": {
+      "x" : { "values": [-10.1] },
+      "y" : { "values": [ -40.2] },
+      "z" : { "values": [
+              5.4562, 8.9282, 14.8802, 20.8320, 26.7836, 32.7350,
+              38.6863, 44.6374, 50.5883, 56.5391, 62.4897, 68.4401,
+              74.3903, 80.3404, 86.2902, 92.2400, 98.1895, 104.1389,
+              110.0881, 116.0371, 121.9859 ] },
+      "t" : { "values": ["2013-01-13T11:12:20Z"] }
+    },
+    "referencing": [{
+      "coordinates": ["x","y"],
+      "system": {
+        "type": "GeographicCRS",
+        "id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+      }
+    }, {
+      "coordinates": ["z"],
+      "system": {
+        "type": "VerticalCRS",
+        "cs": {
+          "csAxes": [{
+            "name": {
+              "en": "Pressure"
+            },
+            "direction": "down",
+            "unit": {
+              "symbol": "Pa"
+            }
+          }]
+        }
+      }
+    }, {
+      "coordinates": ["t"],
+      "system": {
+        "type": "TemporalRS",
+        "calendar": "Gregorian"
+      }
+    }]
+  },
+  "parameters" : {
+    "PSAL": {
+      "type" : "Parameter",
+      "description" : {
+        "en": "The measured salinity, in practical salinity units (psu) of the sea water "
+      },
+      "unit" : {
+        "symbol" : "psu"
+      },
+      "observedProperty" : {
+        "id" : "http://vocab.nerc.ac.uk/standard_name/sea_water_salinity/",
+        "label" : {
+          "en": "Sea Water Salinity"
+        }
+      }
+    },
+    "POTM": {
+      "type" : "Parameter",
+      "description" : {
+        "en": "The potential temperature, in degrees celcius, of the sea water"
+      },
+      "unit" : {
+        "symbol" : "°C"
+      },
+      "observedProperty" : {
+        "id" : "http://vocab.nerc.ac.uk/standard_name/sea_water_potential_temperature/",
+        "label" : {
+          "en": "Sea Water Potential Temperature"
+        }
+      }
+    }
+  },
+  "ranges" : {
+    "PSAL" : {
+      "type" : "NdArray",
+      "dataType": "float",
+      "shape": [21],
+      "axisNames": ["z"],
+      "values" : [ 43.9599, 43.9599, 43.9640, 43.9640, 43.9679, 43.9879, 44.0040,
+                   44.0120, 44.0120, 44.0159, 44.0320, 44.0320, 44.0480, 44.0559,
+                   44.0559, 44.0579, 44.0680, 44.0740, 44.0779, 44.0880, 44.0940 ]
+    },
+    "POTM" : {
+      "type" : "NdArray",
+      "dataType": "float",
+      "shape": [21],
+      "axisNames": ["z"],
+      "values" : [ 23.8, 23.7, 23.5, 23.4, 23.2, 22.4, 21.8,
+                   21.7, 21.5, 21.3, 21.0, 20.6, 20.1, 19.7,
+                   19.4, 19.1, 18.9, 18.8, 18.7, 18.6, 18.5 ]
+    }
+  }
+}</sourcecode>
+
+</clause>
+
+<clause id="_coverage_collection" obligation="informative">
+<title depth="2">B.2.<tab/>Coverage Collection</title>
+<sourcecode id="_65a9310b-f62a-c0c8-cfd3-3487a0f34d4a" lang="json" unnumbered="true">{
+  "type" : "CoverageCollection",
+  "domainType" : "VerticalProfile",
+  "parameters" : {
+    "PSAL": {
+      "type" : "Parameter",
+      "description" : {
+        "en": "The measured salinity, in practical salinity units (psu) of the sea water"
+      },
+      "unit" : {
+        "symbol" : "psu"
+      },
+      "observedProperty" : {
+        "id": "http://vocab.nerc.ac.uk/standard_name/sea_water_salinity/",
+        "label" : {
+          "en": "Sea Water Salinity"
+        }
+      }
+    }
+  },
+  "referencing": [{
+    "coordinates": ["x","y"],
+    "system": {
+      "type": "GeographicCRS",
+      "id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+    }
+  }, {
+    "coordinates": ["z"],
+    "system": {
+      "type": "VerticalCRS",
+      "cs": {
+        "csAxes": [{
+          "name": {
+            "en": "Pressure"
+          },
+          "direction": "down",
+          "unit": {
+            "symbol": "Pa"
+          }
+        }]
+      }
+    }
+  }, {
+    "coordinates": ["t"],
+    "system": {
+      "type": "TemporalRS",
+      "calendar": "Gregorian"
+    }
+  }],
+  "coverages": [
+    {
+      "type" : "Coverage",
+      "domain" : {
+        "type": "Domain",
+        "axes": {
+          "x": { "values": [-10.1] },
+          "y": { "values": [-40.2] },
+          "z": { "values": [ 5, 8, 14 ] },
+          "t": { "values": ["2013-01-13T11:12:20Z"] }
+        }
+      },
+      "ranges" : {
+        "PSAL" : {
+          "type" : "NdArray",
+          "dataType": "float",
+          "shape": [3],
+          "axisNames": ["z"],
+          "values" : [ 43.7, 43.8, 43.9 ]
+        }
+      }
+    }, {
+      "type" : "Coverage",
+      "domain" : {
+        "type": "Domain",
+        "axes": {
+          "x": { "values": [-11.1] },
+          "y": { "values": [-45.2] },
+          "z": { "values": [ 4, 7, 9 ] },
+          "t": { "values": ["2013-01-13T12:12:20Z"] }
+        }
+      },
+      "ranges" : {
+        "PSAL" : {
+          "type" : "NdArray",
+          "dataType": "float",
+          "shape": [3],
+          "axisNames": ["z"],
+          "values" : [ 42.7, 41.8, 40.9 ]
+        }
+      }
+    }]
+}</sourcecode>
+
+</clause>
+</annex><annex id="_6523696d-8f97-0e6a-d534-1cff8dca0b7c" obligation="" language="" script="" displayorder="16"><title><strong>Annex C</strong><br/>(informative)</title><references id="Bibliography" normative="false" obligation="informative">
+<title depth="1">C.<tab/>Bibliography</title>
+<p id="OGC2015">[1] Blower, J., Riechert, M.: Original GitHub repository, <link target="https://covjson.org/spec/"/></p>
+
+<p id="_35377102-dabc-9643-25d4-b0affc8e7613">[2] Blower, J., Riechert, M., Roberts, B.: Overview of the CoverageJSON format, <link target="https://www.w3.org/TR/covjson-overview/"/></p>
+
+<p id="_03b2572a-85d3-6f36-a827-35e5147a9674">[3] W3C JSON-LD 1.1, JSON-based Serialization for Linked Data, W3C Recommendation 2020-07-16, <link target="https://www.w3.org/TR/json-ld11/"/></p>
+</references></annex><annex id="_revision_history" obligation="informative" displayorder="17">
+<title><strong>Annex D</strong><br/>(informative)<br/><strong>Revision History</strong></title>
+<table id="_52ceb458-768b-d65c-433c-20b7432ea940" width="90%"><name>Table D.1</name><thead><tr><th valign="middle" align="left">Date</th>
+<th valign="middle" align="left">Release</th>
+<th valign="middle" align="left">Editor</th>
+<th valign="middle" align="left">Primary clauses modified</th>
+<th valign="middle" align="left">Description</th>
+</tr></thead>
+<tbody><tr><td valign="middle" align="left">2021-10-27</td>
+<td valign="middle" align="left">0.1</td>
+<td valign="middle" align="left">Chris Little</td>
+<td valign="middle" align="left">all</td>
+<td valign="middle" align="left">initial version</td>
+</tr><tr><td valign="middle" align="left">2021-11-03</td>
+<td valign="middle" align="left">0.2</td>
+<td valign="middle" align="left">Chris Little</td>
+<td valign="middle" align="left">6&amp;7 replaced</td>
+<td valign="middle" align="left">structured version</td>
+</tr><tr><td valign="middle" align="left">2022-02-02</td>
+<td valign="middle" align="left">0.2.1</td>
+<td valign="middle" align="left">Chris Little</td>
+<td valign="middle" align="left">all</td>
+<td valign="middle" align="left">replace standard by specification</td>
+</tr></tbody>
+</table>
+</annex><bibliography><references id="_references" normative="true" obligation="informative" displayorder="9">
+<title depth="1">3.<tab/>Normative references</title><p id="_dc52360f-66c0-cd26-ffb9-a1c80e731d3e">There are no normative references in this document.</p>
+<p id="_ca04a7f0-aa8a-286f-a31f-9abaef44d5b5">The following normative documents contain provisions that, through reference in this text, constitute provisions of this document. For dated references, subsequent amendments to, or revisions of, any of these publications do not apply. For undated references, the latest edition of the normative document referred to applies.</p>
+
+<p id="_436265b8-5260-ab76-d0fa-98bb59749728">[covjson] CoverageJSON original GitHub repository, <link target="https://covjson.org/spec"/></p>
+
+<p id="_70b1a109-ed37-f3cf-5937-178ab79fe82f">[netcdf] Network Common Data Form (NetCDF), <link target="https://www.unidata.ucar.edu/software/netcdf"/></p>
+
+<p id="_d8f49093-3e24-a245-c931-d5ddeccbc9ad">[ogc07011] Abstract Specification Topic 6 Schema for coverage geometry and functions, OGC 07-011, <link target="https://portal.ogc.org/files/?artifact_id=19820"/> also known as ISO19123:2005</p>
+
+<p id="_d3ccaa27-853b-f1e3-9561-5420e4674275">[ogc18010r7] Lott, R.: Well-Known Text representation of Coordinate Reference Systems, <link target="http://docs.opengeospatial.org/is/18-010r7/18-010r7.html"/></p>
+
+<p id="_faf6048e-10c0-8d73-db01-cf63cb16eb43">[ogcutc] OGC definition of the UTC Temporal Reference System,  <link target="http://www.opengis.net/def/trs/BIPM/0/UTC"/></p>
+
+<p id="_fd4612d4-6921-d348-fee6-cc8e71659efc">[rfc2119] Key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” are to be interpreted as described in IETF RFC 2119, <link target="https://datatracker.ietf.org/doc/html/rfc2119.txt"/></p>
+
+<p id="_32be8b7a-67f8-2443-d405-2d1f07b15089">[rfc2413] Weibel, S., Kunze, J., Lagoze, C., Wolf, M.: IETF RFC 2413, Dublin Core Metadata for Resource Discovery, <link target="https://tools.ietf.org/rfc/rfc2413.txt"/></p>
+
+<p id="_d6ad4dc9-eda8-f76e-4475-0f5179911f8d">[rfc3339] Klyne, G., Newman, C.: IETF RFC 3339, Date and Time on the Internet: Timestamps, <link target="https://tools.ietf.org/rfc/rfc3339.txt"/> (ISO8601-based lexical representation)</p>
+
+<p id="_0cfc7ddf-6cf1-6010-24c2-75a89dad61e8">[rfc3896] Berners-Lee, T., Fielding, R., Masinter, L: IETF RFC 3896, Uniform Resource Identifier (URI): Generic Syntax, <link target="https://tools.ietf.org/rfc/rfc3896.txt"/></p>
+
+<p id="_22bff088-e9cc-a0ae-de33-122d2d94cc77">[rfc4627] Crockford, D.: IETF RFC 4627, The application/json Media Type for JavaScript Object Notation (JSON), and terms <tt>object</tt>, <tt>array</tt>, <tt>name</tt>, <tt>value</tt>, <tt>string</tt>, <tt>number</tt>, and <tt>null</tt>, <link target="https://tools.ietf.org/rfc/rfc4627.txt"/>.</p>
+
+<p id="_71f2dac4-96e0-de68-ecfd-efee8756c072">[rfc4647] Phillips, A., Ed., and M. Davis, Ed., “Matching of Language Tags”, BCP 47, RFC 4647, September 2006, <link target="https://www.rfc-editor.org/info/bcp47"/></p>
+
+<p id="_766b2d9f-e021-fc2f-e938-a14f95a3424f">[rfc5646] Phillips, A., Ed., and M. Davis, Ed., “Tags for Identifying Languages”, BCP 47, RFC 5646, September 2009, <link target="https://www.rfc-editor.org/info/bcp47"/></p>
+
+<p id="_0a44fd58-1702-c448-cf93-91b7b6947183">[rfc6570] Gregorio, J., Fielding, R., Hadley, M., Nottingham, M., Orchard, D.: IETF RFC 6570, URI Template, <link target="https://datatracker.ietf.org/doc/html/rfc6570"/></p>
+
+<p id="_b7715e63-0d8c-53b6-41bf-ab681a740ef7">[rfc6906] Wilde, E.: A ‘profile’ Link Relation Type, IETF RFC 6906, <link target="https://datatracker.ietf.org/doc/html/rfc6906"/></p>
+
+<p id="_5825028d-6e6e-f53a-4630-53388b8f26c7">[rfc7946] Butler, H., Daly, M., Doyle, A., Gillies, S., Hagen, S., Schaub, T.: IETF RFC 7946, The GeoJSON Format, <link target="https://tools.ietf.org/rfc/rfc7946.txt"/></p>
+
+<p id="_d373494a-88a5-59f4-d7ff-259898617366">[w3ccurie] W3C CURIE Syntax 1.0, Syntax for expressing Compact URIs, Working Group Note, 2010-12-16, <link target="http://www.w3.org/TR/curie/"/></p>
+
+<p id="_3434dc6d-0b93-05c3-ff66-9b73e24b9966">[w3cjsonld10] W3C JSON-LD1.0, JSON-based Serialization for Linked Data, 2014-01-16 superseded 2020-11-03, <link target="https://www.w3.org/TR/2014/REC-json-ld-20140116/"/></p>
+
+<p id="_a88d8d72-80b2-c0da-9982-9a9d652df932">[UCUM] Schadow, G., McDonald, C. J.: Unified Code for Units of Measure, <link target="http://unitsofmeasure.org"/></p>
+</references></bibliography>
+</ogc-standard>

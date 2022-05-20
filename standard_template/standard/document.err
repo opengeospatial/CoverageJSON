@@ -1,0 +1,95 @@
+./document.err errors
+
+
+== Document Attributes
+
+(): 'Interface' is not a permitted subtype of Standard: reverting to 'implementation'
+(): draft is not an allowed status for standard
+
+
+== AsciiDoc Input
+
+(ID Bibliography): Section not marked up as [bibliography]!
+	#<Asciidoctor::Section@504440 {level: 1, title: "D. Bibliography", blocks: 3}>
+(ID _references): Section not marked up as [bibliography]!
+	#<Asciidoctor::Section@504420 {level: 1, title: "References", blocks: 19}>
+
+
+== Metanorma XML Style Warning
+
+(XML Line 000169): Hanging paragraph in clause
+	<clause id="_conventions" obligation="normative">
+	<title>Conventions</title>
+	<p id="_f287e0a4-ca0e-ef98-6e01-5d09472b62aa">This sections provides details and examples for any conventions used in the document. Examples of conventions are symbols, abbreviations, use of XML schema, or special notes regarding how to read the document.</p>
+	
+	<clause id="_identifiers" obligation="normative">
+(XML Line 000185): Hanging paragraph in clause
+	<clause id="_introduction" obligation="normative">
+	<title>Introduction</title>
+	<p id="_f751d52f-741c-17c6-b904-4fbad25afaec">CoverageJSON is a format for encoding coverage data like grids, time series, and vertical profiles, distinguished by the geometry of their spatiotemporal domain. A CoverageJSON object represents a domain, a range, a coverage, or a collection of coverages. A range in CoverageJSON  represents coverage values. A coverage in CoverageJSON is the combination of a domain, parameters, ranges, and additional metadata. A coverage collection represents a list of coverages.</p>
+	
+	<p id="_fbce7fbf-677b-d79c-0d44-4b2852557789">A complete CoverageJSON data structure is always an object (in JSON terms). In CoverageJSON, an object consists of a collection of name/value pairs — also called members. For each member, the name is always a string. Member values are either a string, number, object, array or one of the literals: true, false, and null. An array consists of elements where each element is a value as described above.</p>
+(XML Line 000470): Hanging paragraph in clause
+	<clause id="_reference_system_objects" obligation="normative">
+	<title>Reference system objects</title>
+	<p id="_13bea1db-a880-6115-3135-f9da8b04c032">Reference system objects are used to provide information about how to interpret coordinate values within the domain. Coordinates are usually geospatial or temporal in nature, but may also be categorical (based on identifiers). All reference system objects MUST have a member <tt>"type"</tt>, the possible values of which are given in the sections below. Custom values MAY be used as detailed in the “Extensions” section below.</p>
+	
+	<clause id="_geospatial_coordinate_reference_systems" obligation="normative">
+(XML Line 000474): Hanging paragraph in clause
+	<clause id="_geospatial_coordinate_reference_systems" obligation="normative">
+	<title>Geospatial Coordinate Reference Systems</title>
+	<p id="_aeb84e04-be97-9dec-e957-2f9c042e9315">Geospatial coordinate reference systems (CRSs) link coordinate values to the Earth.</p>
+	
+	<clause id="_geographic_coordinate_reference_systems" obligation="normative">
+(XML Line 000645): Hanging paragraph in clause
+	<clause id="_coveragejson_objects" obligation="normative">
+	<title>CoverageJSON Objects</title>
+	<p id="_6bad8053-346f-c133-ad64-b5c2c90b6fba">CoverageJSON documents always consist of a single object. This object (referred to as the CoverageJSON object below) represents a domain, range, coverage, or collection of coverages.</p>
+	
+	<ul id="_42590ce0-744e-eaeb-e2f2-3d3888a81c0d"><li><p id="_00092ee6-0b4a-db46-9ea3-1fefe55ac7be">The CoverageJSON object MAY have any number of members (name/value pairs).</p>
+(XML Line 000655): Hanging paragraph in clause
+	<clause id="_domain_objects" obligation="normative">
+	<title>Domain Objects</title>
+	<p id="_32ed8891-f19f-ab3f-2966-cc4fb62ba124">A domain object is a CoverageJSON object which defines a set of positions and their extent in one or more referencing systems.
+	Its general structure is:</p>
+	
+(XML Line 001033): Hanging paragraph in clause
+	<clause id="_extensions" obligation="normative">
+	<title>Extensions</title>
+	<p id="_ed368da1-332d-37bd-3fa1-1cba25c6f786">A CoverageJSON document can be extended with custom members and types in a robust and interoperable way. For that, it makes use of absolute URIs and compact URIs (prefix:suffix) in order to avoid conflicts with other extensions and future versions of the format. A central registry of compact URI prefixes is provided which anyone can extend and which is a simple mapping from compact URI prefix to namespace URI in order to avoid collisions with other extensions that are based on compact URIs as well. Extensions that do not follow this approach MAY use simple names instead of absolute or compact URIs but have to accept the consequence of the document being less interoperable and future-proof. In certain use cases this is not an issue and may be a preferred solution for simplicity reasons, for example, if such CoverageJSON documents are only used internally and are not meant to be shared to a wider audience.</p>
+	
+	<clause id="_custom_members" obligation="normative">
+(XML Line 001153): Hanging paragraph in clause
+	<clause id="_common_domain_types" obligation="normative">
+	<title>Common Domain Types</title>
+	<p id="_29e7116e-dece-1dc4-2c66-719d12780728">This specification defines the following domain types: Grid, VerticalProfile, PointSeries, Point, MultiPointSeries, MultiPoint, PolygonSeries, Polygon, MultiPolygonSeries, MultiPolygon, Trajectory, Section.</p>
+	
+	<p id="_d2f64a24-cc59-087b-cbd8-ebe6ec715f4c">Requirements for all domain types defined in this specification:</p>
+(XML Line 002075): Hanging paragraph in clause
+	<annex id="_conformance_class_abstract_test_suite_normative" obligation="informative">
+	<title>Conformance Class Abstract Test Suite (Normative)</title>
+	<note id="_49fa4119-ff23-ba00-2b10-7c6008e83cc9"><p id="_2f41c6a6-7963-8015-59ca-d74fafa8ae41">Ensure that there is a conformance class for each requirements class and a test for each requirement (identified by requirement name and number)</p>
+	</note>
+	
+(XML Line 002084): Table should have title
+	<table id="_81b98a43-7fe7-6d5f-4d55-9226a28666f9" width="100%"><colgroup><col width="20%"/><col width="80%"/></colgroup><tbody><tr><th valign="middle" align="right">Test id:</th>
+	<td valign="middle" align="left">/conf/conf-class-a/req-name-1</td>
+	</tr><tr><th valign="middle" align="right">Requirement:</th>
+	<td valign="middle" align="left">/req/req-class-a/req-name-1</td>
+	</tr><tr><th valign="middle" align="right">Test purpose:</th>
+(XML Line 002307): Table should have title
+	<table id="_52ceb458-768b-d65c-433c-20b7432ea940" width="90%"><thead><tr><th valign="middle" align="left">Date</th>
+	<th valign="middle" align="left">Release</th>
+	<th valign="middle" align="left">Editor</th>
+	<th valign="middle" align="left">Primary clauses modified</th>
+	<th valign="middle" align="left">Description</th>
+
+
+== Metanorma XML Syntax
+
+(XML Line 000179:78): element "acknowledgements" not allowed here; expected the element end-tag or element "submitters"
+(XML Line 000179:78): found attribute "id", but no attributes allowed here
+(XML Line 000179:78): found attribute "obligation", but no attributes allowed here
+(XML Line 000181:47): found attribute "id", but no attributes allowed here
+(XML Line 000182:112): element "clause" not allowed here; expected the element end-tag or element "submitters"
+(XML Line 002405:95): value of attribute "obligation" is invalid; must be equal to "informative" or "normative"

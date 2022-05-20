@@ -1,0 +1,63 @@
+= OGC CoverageJSON Community Standard
+:doctype: standard
+:encoding: utf-8
+:lang: en
+:status: draft
+:committee: technical
+:draft: 3.0
+:external-id: http://www.opengis.net/doc/CS/covjson/1.0
+:docnumber: 21-069
+:received-date: 2029-03-30
+:issued-date: 2029-03-30
+:published-date: 2029-03-30
+:fullname: Chris Little
+:fullname_2: Jon Blower
+:docsubtype: Interface
+:keywords: ogcdoc, OGC document, JSON, JSON-LD, CoverageJSON, CovJSON, Coverage, spatiotemporal, linked-data
+:submitting-organizations: UK Met Office;University of Reading;Meteorological Service of Canada;Unidata UCAR;US NOAA / National Weather Service;ESIP/JPL/NASA
+:mn-document-class: ogc
+:mn-output-extensions: xml,html,doc,pdf
+:local-cache-only:
+:data-uri-image:
+:pdf-uri: ./document.pdf
+:xml-uri: ./document.xml
+:doc-uri: ./document.doc
+:edition: 1.0
+
+
+////
+Make sure to complete each included document
+////
+include::clause_0_front_material.adoc[]
+
+include::clause_1_scope.adoc[]
+
+include::clause_2_conformance.adoc[]
+
+include::clause_3_references.adoc[]
+
+include::clause_4_terms_and_definitions.adoc[]
+
+include::clause_5_conventions.adoc[]
+
+include::clause_specification_text.adoc[]
+
+include::clause_8_media_types.adoc[]
+
+include::annex-a.adoc[]
+
+include::annex-b.adoc[]
+
+include::annex-history.adoc[]
+
+include::annex-bibliography.adoc[]
+
+////
+add or remove annexes after "A" as necessary
+////
+
+
+////
+Revision History should be the last annex before the Bibliography
+Bibliography should be the last annex
+////
