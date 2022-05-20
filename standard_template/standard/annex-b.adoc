@@ -2,8 +2,9 @@
 :appendix-caption: Annex
 == Coverage Examples ( {Informative} )
 
-### Vertical Profile Coverage
+=== Vertical Profile Coverage
 
+[%unnumbered%]
 ```json
 {
   "type" : "Coverage",
@@ -105,8 +106,9 @@
 }
 ```
 
-### Coverage Collection
+=== Coverage Collection
 
+[%unnumbered%]
 ```json
 {
   "type" : "CoverageCollection",

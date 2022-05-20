@@ -1,0 +1,64 @@
+<bibdata type="standard">
+  <fetched>2022-05-20</fetched>
+  <title format="text/plain" language="en" script="Latn">Dublin Core Metadata for Resource Discovery</title>
+  <uri type="xml">https://raw.githubusercontent.com/relaton/relaton-data-ietf/master/data/reference.RFC.2413.xml</uri>
+  <uri type="src">https://www.rfc-editor.org/info/rfc2413</uri>
+  <docidentifier type="RFC" primary="true">RFC 2413</docidentifier>
+  <docidentifier type="RFC" scope="anchor">RFC2413</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC2413</docidentifier>
+  <docnumber>RFC2413</docnumber>
+  <date type="published">
+    <on>1998-09</on>
+  </date>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>Internet Engineering Task Force</name>
+      <abbreviation>IETF</abbreviation>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <completename language="en">S. Weibel</completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <completename language="en">J. Kunze</completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <completename language="en">C. Lagoze</completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <completename language="en">M. Wolf</completename>
+      </name>
+    </person>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p>This is the first of a set of Informational RFCs describing the Dublin Core. Its purpose is to introduce the Dublin Core and to describe the consensus reached on the semantics of each of the 15 elements. This memo provides information for the Internet community.</p>
+  </abstract>
+  <series type="main">
+    <title format="text/plain" language="en" script="Latn">RFC</title>
+    <number>2413</number>
+  </series>
+  <ext>
+    <doctype>rfc</doctype>
+  </ext>
+</bibdata>
