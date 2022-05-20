@@ -1230,7 +1230,7 @@ span.hi {
 
     <div class="coverpage-alt-formats">
       
-      <span class="label">Version: </span> <span class="value">1.0</span><br />
+      <span class="label">Version: </span> <span class="value">1.0-draft_0.2.2</span><br />
       
     
       <span class="label">Additional Formats: </span>
@@ -1443,7 +1443,7 @@ span.hi {
         <p id="_0a416fa4-0375-93e6-0c2b-eee6f00069e5">The next-simplest use case is to put data values for each variable (parameter) in separate array objects in separate CoverageJSON documents, linked from the Coverage object. This is useful for a multi-variable dataset, where one might want temperature, humidity, wind speed, etc., to be recorded in separate files, so the user client only needs to load the variables of interest.</p>
         <p id="_79d9ae0f-1589-857e-8317-32998dbb4280">A sophisticated use case is to use tiling objects, where the data values are partitioned spatially and temporally, so that a single variable&#x2019;s data values would be split among several documents. A simple example of this would be to encode each timestep of a dataset in a separate file, but the tiles could also be divided spatially, like a tiled map server.</p>
       </div>
-      <div class="Section3" id="_b8297b66-e648-4df9-b89e-122c0a047ca2">
+      <div class="Section3" id="_eeed0a57-da84-46a1-9ac2-76e03f0b28e3">
         <h1 class="IntroTitle" id="toc1">II.&#xA0; Keywords</h1>
         <p>The following are keywords to be used by search engines and
     document catalogues.</p>
@@ -1460,7 +1460,7 @@ span.hi {
         <h1 class="IntroTitle" id="toc3">IV.&#xA0; Security considerations</h1>
         <p id="_6bffb48c-5a4a-c73f-8352-74e8ed0d680a">No security considerations have been made for this document.</p>
       </div>
-      <div class="Section3" id="_78904ba2-0cfa-4c9c-abd9-7971a1f3f4a3">
+      <div class="Section3" id="_5767105e-dd5c-4a54-aeb1-fb14e49806c7">
         <h1 class="IntroTitle" id="toc4">V.&#xA0; Submitting Organizations</h1>
         <p>The following organizations submitted this Document to the
    Open Geospatial Consortium (OGC):</p>
@@ -1473,13 +1473,20 @@ span.hi {
       </div>
       <div class="Section3" id="_submitters">
         <h1 class="IntroTitle" id="toc5">VI.&#xA0; Submitters</h1>
-        <p id="_4fedf0b3-9809-e845-896b-09a34763f227">All questions regarding this submission should be directed to the editor or the submitters:</p>
-        <p id="_5c7bf17f-242f-1c52-a01d-5bfbbe5fcf4d">Chris Little    (editor)        UK Met Office</p>
-        <p id="_741c9b9f-704e-c6e8-896b-91174c312159">Jon Blower      (editor)        University of Reading</p>
-        <p id="_d6a4a345-3af2-2d1a-635e-1392e032ba20">Tom Kralidis    (contributor)   Meteorological Service of Canada</p>
-        <p id="_90c136e7-b459-f684-73f1-f4ee3ab10159">Ethan Davies    (contributor)   Unidata UCAR</p>
-        <p id="_0c76df0d-e1ee-3e6e-8b7e-56c996f3963f">Steve Olson     (contributor)   US NWS/NOAA</p>
-        <p id="_8dd785cf-eb2f-ab68-58f7-f638de33df44">Lewis McGibbney (contributor)   ESIP/JPL/NASA</p>
+        <p id="_60b1643b-76a7-f154-a489-757cf275f9ed">All questions regarding this submission should be directed to the editor or the submitters:</p>
+        <ul id="_a6e8fd6b-b7bf-b673-156c-e9be471e2280"><li><p id="_07babde9-ca7a-07ea-2257-cd6f4aacb3a0">Chris Little    (editor)        UK Met Office</p>
+</li>
+<li><p id="_30b7498d-ec2d-de44-3301-3382085b063e">Jon Blower      (editor)        University of Reading</p>
+</li>
+<li><p id="_a34117e0-e64f-ba56-cde6-da483849c4d6">Tom Kralidis    (contributor)   Meteorological Service of Canada</p>
+</li>
+<li><p id="_c300b1a7-eaee-014a-9dd4-726854455274">Ethan Davies    (contributor)   Unidata UCAR</p>
+</li>
+<li><p id="_ff8ecd70-26d3-db50-5e00-bbb5be95bc60">Steve Olson     (contributor)   US NWS/NOAA</p>
+</li>
+<li><p id="_2fbc153a-59c5-0a4a-f797-26aa3c704111">Lewis McGibbney (contributor)   ESIP/JPL/NASA</p>
+</li>
+</ul>
       </div>
       <div class="Section3" id="_acknowledgements">
         <h1 class="IntroTitle" id="toc6">VII.&#xA0; Acknowledgements</h1>
@@ -1502,44 +1509,28 @@ span.hi {
         <p id="_bf118c4c-115d-5032-db80-087dc9bbc424">All requirements-classes and conformance-classes described in this document are owned by the standard(s) identified.</p>
       </div>
       <div><h1 id="toc9">3.&#xA0; Normative references</h1>
-<p id="_dc52360f-66c0-cd26-ffb9-a1c80e731d3e">There are no normative references in this document.</p>
-<p id="_ca04a7f0-aa8a-286f-a31f-9abaef44d5b5">The following normative documents contain provisions that, through reference in this text, constitute provisions of this document. For dated references, subsequent amendments to, or revisions of, any of these publications do not apply. For undated references, the latest edition of the normative document referred to applies.</p>
+<p id="_1984bddd-729c-8a94-b1f9-c24206c5d230">The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.</p>
 
-<p id="_436265b8-5260-ab76-d0fa-98bb59749728">[covjson] CoverageJSON original GitHub repository, <a href="https://covjson.org/spec">https://covjson.org/spec</a></p>
 
-<p id="_70b1a109-ed37-f3cf-5937-178ab79fe82f">[netcdf] Network Common Data Form (NetCDF), <a href="https://www.unidata.ucar.edu/software/netcdf">https://www.unidata.ucar.edu/software/netcdf</a></p>
+<p id="covjson" class="NormRef"><i>CoverageJSON original GitHub repository</i>, <a href="https://covjson.org/spec">https://covjson.org/spec</a></p>
+<p id="netcdf" class="NormRef"><i>Network Common Data Form (NetCDF)</i>, <a href="https://www.unidata.ucar.edu/software/netcdf">https://www.unidata.ucar.edu/software/netcdf</a></p>
+<p id="OGC07-011" class="NormRef">OGC: OGC 07-011, <i>Topic 6&#x2009;&#x2014;&#x2009;Schema for coverage geometry and functions</i>. <span>Open Geospatial Consortium</span> (2007). <a href="https://portal.ogc.org/files/?artifact_id=19820">https://portal.ogc.org/files/?artifact_id=19820</a></p>
+ <p id="OGC18-010r7" class="NormRef">Roger Lot: OGC 18-010r7, <i>Geographic information &#x2014; Well-known text representation of coordinate reference systems</i>. <span>Open Geospatial Consortium</span> (2019). <a href="http://docs.opengeospatial.org/is/18-010r7/18-010r7.html">http://docs.opengeospatial.org/is/18-010r7/18-010r7.html</a></p>
+<p id="ogcutc" class="NormRef"><i>OGC definition of the UTC Temporal Reference System</i>, <a href="http://www.opengis.net/def/trs/BIPM/0/UTC">http://www.opengis.net/def/trs/BIPM/0/UTC</a></p>
+<p id="rfc2413" class="NormRef">S. Weibel, J. Kunze, C. Lagoze, M. Wolf: RFC 2413, <i>Dublin Core Metadata for Resource Discovery</i>. <span>Internet Engineering Task Force</span> (1998). <a href="https://www.rfc-editor.org/info/rfc2413">https://www.rfc-editor.org/info/rfc2413</a></p>
+ <p id="rfc3339" class="NormRef">G. Klyne, C. Newman: RFC 3339, <i>Date and Time on the Internet: Timestamps</i>. <span>Internet Engineering Task Force</span> (2002). <a href="https://www.rfc-editor.org/info/rfc3339">https://www.rfc-editor.org/info/rfc3339</a></p>
+ <p id="rfc3896" class="NormRef">O. Nicklass: RFC 3896, <i>Definitions of Managed Objects for the DS3/E3 Interface Type</i>. <span>Internet Engineering Task Force</span> (2004). <a href="https://www.rfc-editor.org/info/rfc3896">https://www.rfc-editor.org/info/rfc3896</a></p>
+ <p id="rfc4627" class="NormRef">D. Crockford: RFC 4627, <i>The application/json Media Type for JavaScript Object Notation (JSON)</i>. <span>Internet Engineering Task Force</span> (2006). <a href="https://www.rfc-editor.org/info/rfc4627">https://www.rfc-editor.org/info/rfc4627</a></p>
+ <p id="rfc4647" class="NormRef">A. Phillips, M. Davis: RFC 4647, <i>Matching of Language Tags</i>. <span>Internet Engineering Task Force</span> (2006). <a href="https://www.rfc-editor.org/info/rfc4647">https://www.rfc-editor.org/info/rfc4647</a></p>
+ <p id="rfc5646" class="NormRef">A. Phillips, M. Davis: RFC 5646, <i>Tags for Identifying Languages</i>. <span>Internet Engineering Task Force</span> (2009). <a href="https://www.rfc-editor.org/info/rfc5646">https://www.rfc-editor.org/info/rfc5646</a></p>
+ <p id="rfc6570" class="NormRef">J. Gregorio, R. Fielding, M. Hadley, M. Nottingham, D. Orchard: RFC 6570, <i>URI Template</i>. <span>Internet Engineering Task Force</span> (2012). <a href="https://www.rfc-editor.org/info/rfc6570">https://www.rfc-editor.org/info/rfc6570</a></p>
+ <p id="rfc6906" class="NormRef">E. Wilde: RFC 6906, <i>The &#x2018;profile&#x2019; Link Relation Type</i>. <span>Internet Engineering Task Force</span> (2013). <a href="https://www.rfc-editor.org/info/rfc6906">https://www.rfc-editor.org/info/rfc6906</a></p>
+ <p id="rfc7946" class="NormRef">H. Butler, M. Daly, A. Doyle, S. Gillies, S. Hagen, T. Schaub: RFC 7946, <i>The GeoJSON Format</i>. <span>Internet Engineering Task Force</span> (2016). <a href="https://www.rfc-editor.org/info/rfc7946">https://www.rfc-editor.org/info/rfc7946</a></p>
+<p id="w3ccurie" class="NormRef">W3C CURIE Syntax 1.0, Syntax for expressing Compact URIs, Working Group Note, 2010-12-16, <a href="http://www.w3.org/TR/curie/">http://www.w3.org/TR/curie/</a></p>
+<p id="w3cjsonld10" class="NormRef">W3C JSON-LD1.0, JSON-based Serialization for Linked Data, 2014-01-16 superseded 2020-11-03, <a href="https://www.w3.org/TR/2014/REC-json-ld-20140116/">https://www.w3.org/TR/2014/REC-json-ld-20140116/</a></p>
+<p id="UCUM" class="NormRef">Schadow, G., McDonald, C. J.: Unified Code for Units of Measure, <a href="http://unitsofmeasure.org">http://unitsofmeasure.org</a></p>
 
-<p id="_d8f49093-3e24-a245-c931-d5ddeccbc9ad">[ogc07011] Abstract Specification Topic 6 Schema for coverage geometry and functions, OGC 07-011, <a href="https://portal.ogc.org/files/?artifact_id=19820">https://portal.ogc.org/files/?artifact_id=19820</a> also known as ISO19123:2005</p>
-
-<p id="_d3ccaa27-853b-f1e3-9561-5420e4674275">[ogc18010r7] Lott, R.: Well-Known Text representation of Coordinate Reference Systems, <a href="http://docs.opengeospatial.org/is/18-010r7/18-010r7.html">http://docs.opengeospatial.org/is/18-010r7/18-010r7.html</a></p>
-
-<p id="_faf6048e-10c0-8d73-db01-cf63cb16eb43">[ogcutc] OGC definition of the UTC Temporal Reference System,  <a href="http://www.opengis.net/def/trs/BIPM/0/UTC">http://www.opengis.net/def/trs/BIPM/0/UTC</a></p>
-
-<p id="_fd4612d4-6921-d348-fee6-cc8e71659efc">[rfc2119] Key words &#x201C;MUST&#x201D;, &#x201C;MUST NOT&#x201D;, &#x201C;REQUIRED&#x201D;, &#x201C;SHALL&#x201D;, &#x201C;SHALL NOT&#x201D;, &#x201C;SHOULD&#x201D;, &#x201C;SHOULD NOT&#x201D;, &#x201C;RECOMMENDED&#x201D;, &#x201C;MAY&#x201D;, and &#x201C;OPTIONAL&#x201D; are to be interpreted as described in IETF RFC 2119, <a href="https://datatracker.ietf.org/doc/html/rfc2119.txt">https://datatracker.ietf.org/doc/html/rfc2119.txt</a></p>
-
-<p id="_32be8b7a-67f8-2443-d405-2d1f07b15089">[rfc2413] Weibel, S., Kunze, J., Lagoze, C., Wolf, M.: IETF RFC 2413, Dublin Core Metadata for Resource Discovery, <a href="https://tools.ietf.org/rfc/rfc2413.txt">https://tools.ietf.org/rfc/rfc2413.txt</a></p>
-
-<p id="_d6ad4dc9-eda8-f76e-4475-0f5179911f8d">[rfc3339] Klyne, G., Newman, C.: IETF RFC 3339, Date and Time on the Internet: Timestamps, <a href="https://tools.ietf.org/rfc/rfc3339.txt">https://tools.ietf.org/rfc/rfc3339.txt</a> (ISO8601-based lexical representation)</p>
-
-<p id="_0cfc7ddf-6cf1-6010-24c2-75a89dad61e8">[rfc3896] Berners-Lee, T., Fielding, R., Masinter, L: IETF RFC 3896, Uniform Resource Identifier (URI): Generic Syntax, <a href="https://tools.ietf.org/rfc/rfc3896.txt">https://tools.ietf.org/rfc/rfc3896.txt</a></p>
-
-<p id="_22bff088-e9cc-a0ae-de33-122d2d94cc77">[rfc4627] Crockford, D.: IETF RFC 4627, The application/json Media Type for JavaScript Object Notation (JSON), and terms <tt>object</tt>, <tt>array</tt>, <tt>name</tt>, <tt>value</tt>, <tt>string</tt>, <tt>number</tt>, and <tt>null</tt>, <a href="https://tools.ietf.org/rfc/rfc4627.txt">https://tools.ietf.org/rfc/rfc4627.txt</a>.</p>
-
-<p id="_71f2dac4-96e0-de68-ecfd-efee8756c072">[rfc4647] Phillips, A., Ed., and M. Davis, Ed., &#x201C;Matching of Language Tags&#x201D;, BCP 47, RFC 4647, September 2006, <a href="https://www.rfc-editor.org/info/bcp47">https://www.rfc-editor.org/info/bcp47</a></p>
-
-<p id="_766b2d9f-e021-fc2f-e938-a14f95a3424f">[rfc5646] Phillips, A., Ed., and M. Davis, Ed., &#x201C;Tags for Identifying Languages&#x201D;, BCP 47, RFC 5646, September 2009, <a href="https://www.rfc-editor.org/info/bcp47">https://www.rfc-editor.org/info/bcp47</a></p>
-
-<p id="_0a44fd58-1702-c448-cf93-91b7b6947183">[rfc6570] Gregorio, J., Fielding, R., Hadley, M., Nottingham, M., Orchard, D.: IETF RFC 6570, URI Template, <a href="https://datatracker.ietf.org/doc/html/rfc6570">https://datatracker.ietf.org/doc/html/rfc6570</a></p>
-
-<p id="_b7715e63-0d8c-53b6-41bf-ab681a740ef7">[rfc6906] Wilde, E.: A &#x2018;profile&#x2019; Link Relation Type, IETF RFC 6906, <a href="https://datatracker.ietf.org/doc/html/rfc6906">https://datatracker.ietf.org/doc/html/rfc6906</a></p>
-
-<p id="_5825028d-6e6e-f53a-4630-53388b8f26c7">[rfc7946] Butler, H., Daly, M., Doyle, A., Gillies, S., Hagen, S., Schaub, T.: IETF RFC 7946, The GeoJSON Format, <a href="https://tools.ietf.org/rfc/rfc7946.txt">https://tools.ietf.org/rfc/rfc7946.txt</a></p>
-
-<p id="_d373494a-88a5-59f4-d7ff-259898617366">[w3ccurie] W3C CURIE Syntax 1.0, Syntax for expressing Compact URIs, Working Group Note, 2010-12-16, <a href="http://www.w3.org/TR/curie/">http://www.w3.org/TR/curie/</a></p>
-
-<p id="_3434dc6d-0b93-05c3-ff66-9b73e24b9966">[w3cjsonld10] W3C JSON-LD1.0, JSON-based Serialization for Linked Data, 2014-01-16 superseded 2020-11-03, <a href="https://www.w3.org/TR/2014/REC-json-ld-20140116/">https://www.w3.org/TR/2014/REC-json-ld-20140116/</a></p>
-
-<p id="_a88d8d72-80b2-c0da-9982-9a9d652df932">[UCUM] Schadow, G., McDonald, C. J.: Unified Code for Units of Measure, <a href="http://unitsofmeasure.org">http://unitsofmeasure.org</a></p>
+<p id="_9c9f4a30-77d1-feb2-0375-f61268fc6637">Key words &#x201C;MUST&#x201D;, &#x201C;MUST NOT&#x201D;, &#x201C;REQUIRED&#x201D;, &#x201C;SHALL&#x201D;, &#x201C;SHALL NOT&#x201D;, &#x201C;SHOULD&#x201D;, &#x201C;SHOULD NOT&#x201D;, &#x201C;RECOMMENDED&#x201D;, &#x201C;MAY&#x201D;, and &#x201C;OPTIONAL&#x201D; are to be interpreted as described in IETF RFC 2119, <a href="https://datatracker.ietf.org/doc/html/rfc2119.txt">https://datatracker.ietf.org/doc/html/rfc2119.txt</a></p>
 </div>
       <div id="_terms_and_definitions"><h1 id="toc10">4.&#xA0; Terms and definitions</h1><p id="_7fe04b5b-db41-5d9b-ebe1-463b3a0c16c9">This document uses the terms defined in <a href="https://portal.ogc.org/public_ogc/directives/directives.php">OGC Policy Directive 49</a>, which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word &#x201C;shall&#x201D; (not &#x201C;must&#x201D;) is the verb form used to indicate a requirement to be strictly followed to conform to this document and OGC documents do not use the equivalent phrases in the ISO/IEC Directives, Part 2.</p><p id="_e0235fe8-8273-26b4-faeb-a580ad58929f">This document also uses terms defined in the OGC Standard for Modular specifications (<a href="https://portal.opengeospatial.org/files/?artifact_id=34762">OGC 08-131r3</a>), also known as the &#x2018;ModSpec&#x2019;. The definitions of terms such as standard, specification, requirement, and conformance test are provided in the ModSpec.</p><p id="_1448dc16-8929-d666-6525-0249826c75e3">For the purposes of this document, the following additional terms and definitions apply.</p><p id="_8519aec7-f0c1-98b9-f960-9328198ca29b">The key words &#x201C;MUST&#x201D;, &#x201C;MUST NOT&#x201D;, &#x201C;REQUIRED&#x201D;, &#x201C;SHALL&#x201D;, &#x201C;SHALL NOT&#x201D;, &#x201C;SHOULD&#x201D;, &#x201C;SHOULD NOT&#x201D;, &#x201C;RECOMMENDED&#x201D;,  &#x201C;MAY&#x201D;, and &#x201C;OPTIONAL&#x201D; in this document are to be interpreted as described in IETF RFC 2119.</p><p id="_ccf3e63b-6acc-0cd0-687c-fd7f951288d6">For the purposes of this document, the following additional terms and definitions apply.</p><h2 class="TermNum" style="text-align:left;" id="term-rfc">4.1.&#xA0;<b><b>RFC</b></b></h2>
 <p id="_abff4a48-e5eb-065e-6394-2d95b929bd18">Request For Comment (IETF)</p>

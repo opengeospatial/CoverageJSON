@@ -1,0 +1,52 @@
+<bibdata type="standard">
+  <fetched>2022-05-20</fetched>
+  <title format="text/plain" language="en" script="Latn">Matching of Language Tags</title>
+  <uri type="xml">https://raw.githubusercontent.com/relaton/relaton-data-ietf/master/data/reference.RFC.4647.xml</uri>
+  <uri type="src">https://www.rfc-editor.org/info/rfc4647</uri>
+  <docidentifier type="RFC" primary="true">RFC 4647</docidentifier>
+  <docidentifier type="RFC" scope="anchor">RFC4647</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC4647</docidentifier>
+  <docnumber>RFC4647</docnumber>
+  <date type="published">
+    <on>2006-09</on>
+  </date>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>Internet Engineering Task Force</name>
+      <abbreviation>IETF</abbreviation>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="editor"/>
+    <person>
+      <name>
+        <completename language="en">A. Phillips</completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="editor"/>
+    <person>
+      <name>
+        <completename language="en">M. Davis</completename>
+      </name>
+    </person>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p>This document describes a syntax, called a "language-range", for specifying items in a user's list of language preferences. It also describes different mechanisms for comparing and matching these to language tags. Two kinds of matching mechanisms, filtering and lookup, are defined. Filtering produces a (potentially empty) set of language tags, whereas lookup produces a single language tag. Possible applications include language negotiation or content selection. This document, in combination with RFC 4646, replaces RFC 3066, which replaced RFC 1766. This document specifies an Internet Best Current Practices for the Internet Community, and requests discussion and suggestions for improvements.</p>
+  </abstract>
+  <series type="main">
+    <title format="text/plain" language="en" script="Latn">BCP</title>
+    <number>47</number>
+  </series>
+  <series type="main">
+    <title format="text/plain" language="en" script="Latn">RFC</title>
+    <number>4647</number>
+  </series>
+  <ext>
+    <doctype>rfc</doctype>
+  </ext>
+</bibdata>

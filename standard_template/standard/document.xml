@@ -20,7 +20,7 @@
 <name><completename>Jon Blower</completename></name>
 </person></contributor><contributor><role type="publisher"/><organization>
 <name>Open Geospatial Consortium</name>
-</organization></contributor><edition>1.0</edition><version><draft>3.0</draft></version><language>en</language><script>Latn</script><abstract><p>CoverageJSON is a format for publishing geo-temporal data to the Web, based on JavaScript Object Notation (JSON). Simplicity, machine and human readability and efficiency of the format were the primary design goals. The primary use case for CoverageJSON is to enable the development of interactive visual websites that display and manipulate environmental data within a web browser, although other use cases are possible.</p>
+</organization></contributor><edition>1.0-draft_0.2.2</edition><version><draft>3.0</draft></version><language>en</language><script>Latn</script><abstract><p>CoverageJSON is a format for publishing geo-temporal data to the Web, based on JavaScript Object Notation (JSON). Simplicity, machine and human readability and efficiency of the format were the primary design goals. The primary use case for CoverageJSON is to enable the development of interactive visual websites that display and manipulate environmental data within a web browser, although other use cases are possible.</p>
 
 <p>CoverageJSON has been demonstrated to be an effective, efficient format, friendly to web and application developers, and therefore consistent with the current OGC API developments. The format supports the efficient transfer, from big data stores, of useful quantities of data to lightweight clients, such as browsers and mobile applications. This enables local manipulation of the data in a format familiar to, and popular with, web developers, and readily usable, for example, by science researchers.</p>
 
@@ -181,19 +181,21 @@
 <p id="_f6025082-66cd-7be4-e0cc-ba53f0a9f82e">This work was inspired by a demonstration of the concept by Joan Masó of CREAF.</p>
 </acknowledgements><clause type="security" id="_81b1ace7-21d3-2259-3346-8f24ee71ed45" obligation="informative"><title>Security considerations</title><p id="_6bffb48c-5a4a-c73f-8352-74e8ed0d680a">No security considerations have been made for this document.</p></clause><submitters id="_submitters">
 <title>Submitters</title>
-<p id="_4fedf0b3-9809-e845-896b-09a34763f227">All questions regarding this submission should be directed to the editor or the submitters:</p>
+<p id="_60b1643b-76a7-f154-a489-757cf275f9ed">All questions regarding this submission should be directed to the editor or the submitters:</p>
 
-<p id="_5c7bf17f-242f-1c52-a01d-5bfbbe5fcf4d">Chris Little    (editor)        UK Met Office</p>
-
-<p id="_741c9b9f-704e-c6e8-896b-91174c312159">Jon Blower      (editor)        University of Reading</p>
-
-<p id="_d6a4a345-3af2-2d1a-635e-1392e032ba20">Tom Kralidis    (contributor)   Meteorological Service of Canada</p>
-
-<p id="_90c136e7-b459-f684-73f1-f4ee3ab10159">Ethan Davies    (contributor)   Unidata UCAR</p>
-
-<p id="_0c76df0d-e1ee-3e6e-8b7e-56c996f3963f">Steve Olson     (contributor)   US NWS/NOAA</p>
-
-<p id="_8dd785cf-eb2f-ab68-58f7-f638de33df44">Lewis McGibbney (contributor)   ESIP/JPL/NASA</p>
+<ul id="_a6e8fd6b-b7bf-b673-156c-e9be471e2280"><li><p id="_07babde9-ca7a-07ea-2257-cd6f4aacb3a0">Chris Little    (editor)        UK Met Office</p>
+</li>
+<li><p id="_30b7498d-ec2d-de44-3301-3382085b063e">Jon Blower      (editor)        University of Reading</p>
+</li>
+<li><p id="_a34117e0-e64f-ba56-cde6-da483849c4d6">Tom Kralidis    (contributor)   Meteorological Service of Canada</p>
+</li>
+<li><p id="_c300b1a7-eaee-014a-9dd4-726854455274">Ethan Davies    (contributor)   Unidata UCAR</p>
+</li>
+<li><p id="_ff8ecd70-26d3-db50-5e00-bbb5be95bc60">Steve Olson     (contributor)   US NWS/NOAA</p>
+</li>
+<li><p id="_2fbc153a-59c5-0a4a-f797-26aa3c704111">Lewis McGibbney (contributor)   ESIP/JPL/NASA</p>
+</li>
+</ul>
 </submitters></preface><sections>
 
 
@@ -2435,43 +2437,160 @@ Its general structure is:</p>
 </tr></tbody>
 </table>
 </annex><bibliography><references id="_references" normative="true" obligation="informative">
-<title>Normative references</title><p id="_dc52360f-66c0-cd26-ffb9-a1c80e731d3e">There are no normative references in this document.</p>
-<p id="_ca04a7f0-aa8a-286f-a31f-9abaef44d5b5">The following normative documents contain provisions that, through reference in this text, constitute provisions of this document. For dated references, subsequent amendments to, or revisions of, any of these publications do not apply. For undated references, the latest edition of the normative document referred to applies.</p>
+<title>Normative references</title><p id="_1984bddd-729c-8a94-b1f9-c24206c5d230">The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.</p>
 
-<p id="_436265b8-5260-ab76-d0fa-98bb59749728">[covjson] CoverageJSON original GitHub repository, <link target="https://covjson.org/spec"/></p>
 
-<p id="_70b1a109-ed37-f3cf-5937-178ab79fe82f">[netcdf] Network Common Data Form (NetCDF), <link target="https://www.unidata.ucar.edu/software/netcdf"/></p>
+<bibitem id="covjson"><formattedref format="application/x-isodoc+xml"><em>CoverageJSON original GitHub repository</em>, <link target="https://covjson.org/spec"/></formattedref><docidentifier>covjson</docidentifier></bibitem>
+<bibitem id="netcdf"><formattedref format="application/x-isodoc+xml"><em>Network Common Data Form (NetCDF)</em>, <link target="https://www.unidata.ucar.edu/software/netcdf"/></formattedref><docidentifier>netcdf</docidentifier></bibitem>
+<bibitem id="OGC07-011" type="standard">  <fetched>2022-05-20</fetched>  
+<title type="title-intro" format="text/plain" language="en" script="Latn">Topic 6</title>
+  
+<title type="title-main" format="text/plain" language="en" script="Latn">Schema for coverage geometry and functions</title>
+  
+<title type="main" format="text/plain" language="en" script="Latn">Topic 6 — Schema for coverage geometry and functions</title>
+  <uri type="obp">https://portal.ogc.org/files/?artifact_id=19820</uri>  <docidentifier type="OGC" primary="true">07-011</docidentifier>  <date type="published">    <on>2007-12-28</on>  </date>  <contributor>    <role type="author"/>    <person>      
+<name>        <completename>OGC</completename>      </name>
+    </person>  </contributor>  <contributor>    <role type="publisher"/>    <organization>      
+<name>Open Geospatial Consortium</name>
+    </organization>  </contributor>  <language>en</language>  <script>Latn</script>  <abstract format="text/plain" language="en" script="Latn">This International Standard defines a conceptual schema for the spatial characteristics of coverages. Coverages support mapping from a spatial, temporal or spatiotemporal domain to feature attribute values where feature attribute types are common to all geographic positions within the domain. A coverage domain consists of a collection of direct positions in a coordinate space that may be defined in terms of up to three spatial dimensions as well as a temporal dimension.</abstract>  </bibitem>
+ <bibitem id="OGC18-010r7" type="standard">  <fetched>2022-05-20</fetched>  
+<title type="title-main" format="text/plain" language="en" script="Latn">Geographic information — Well-known text representation of coordinate reference systems</title>
+  
+<title type="main" format="text/plain" language="en" script="Latn">Geographic information — Well-known text representation of coordinate reference systems</title>
+  <uri type="obp">http://docs.opengeospatial.org/is/18-010r7/18-010r7.html</uri>  <docidentifier type="OGC" primary="true">18-010r7</docidentifier>  <date type="published">    <on>2019-08-13</on>  </date>  <contributor>    <role type="author"/>    <person>      
+<name>        <completename>Roger Lot</completename>      </name>
+    </person>  </contributor>  <contributor>    <role type="publisher"/>    <organization>      
+<name>Open Geospatial Consortium</name>
+    </organization>  </contributor>  <edition>7</edition>  <language>en</language>  <script>Latn</script>  <abstract format="text/plain" language="en" script="Latn">This Standard defines the structure and content of well-known text strings describing coordinate reference systems (CRSs) and coordinate operations between coordinate reference systems. It does not prescribe how implementations should read or write these strings.  This Standard provides an updated version of WKT representation of coordinate reference systems that follows the provisions of ISO 19111:2019. It extends the WKT in OGC document 12-063r5 (ISO 19162) which was based on ISO 19111:2007 and ISO 19111-2:2009. That version consolidated several disparate versions of earlier WKT (so-called WKT1) and added the description of coordinate operations.  This jointly developed draft has been submitted by ISO TC211 for circulation as a Draft International Standard (DIS). This version incorporates comments made during the ISO TC211 New Work Item Proposal acceptance ballot.</abstract>  </bibitem>
+<bibitem id="ogcutc"><formattedref format="application/x-isodoc+xml"><em>OGC definition of the UTC Temporal Reference System</em>, <link target="http://www.opengis.net/def/trs/BIPM/0/UTC"/></formattedref><docidentifier type="OGC">ogcutc</docidentifier></bibitem>
+<bibitem id="rfc2413" type="standard">  <fetched>2022-05-20</fetched>  
+<title format="text/plain" language="en" script="Latn">Dublin Core Metadata for Resource Discovery</title>
+  <uri type="xml">https://raw.githubusercontent.com/relaton/relaton-data-ietf/master/data/reference.RFC.2413.xml</uri>  <uri type="src">https://www.rfc-editor.org/info/rfc2413</uri>  <docidentifier type="RFC" primary="true">RFC 2413</docidentifier>  <docidentifier type="RFC" scope="anchor">RFC2413</docidentifier>  <docidentifier type="DOI">10.17487/RFC2413</docidentifier>  <docnumber>RFC2413</docnumber>  <date type="published">    <on>1998-09</on>  </date>  <contributor>    <role type="publisher"/>    <organization>      
+<name>Internet Engineering Task Force</name>
+      <abbreviation>IETF</abbreviation>    </organization>  </contributor>  <contributor>    <role type="author"/>    <person>      
+<name>        <completename language="en">S. Weibel</completename>      </name>
+    </person>  </contributor>  <contributor>    <role type="author"/>    <person>      
+<name>        <completename language="en">J. Kunze</completename>      </name>
+    </person>  </contributor>  <contributor>    <role type="author"/>    <person>      
+<name>        <completename language="en">C. Lagoze</completename>      </name>
+    </person>  </contributor>  <contributor>    <role type="author"/>    <person>      
+<name>        <completename language="en">M. Wolf</completename>      </name>
+    </person>  </contributor>  <language>en</language>  <script>Latn</script>  <abstract format="text/html" language="en" script="Latn">    <p id="_f238cf82-c7bd-41e6-a2e6-1d8e259b4977">This is the first of a set of Informational RFCs describing the Dublin Core. Its purpose is to introduce the Dublin Core and to describe the consensus reached on the semantics of each of the 15 elements. This memo provides information for the Internet community.</p>
+  </abstract>  <series type="main">    
+<title format="text/plain" language="en" script="Latn">RFC</title>
+    <number>2413</number>  </series></bibitem>
+ <bibitem id="rfc3339" type="standard">  <fetched>2022-05-20</fetched>  
+<title format="text/plain" language="en" script="Latn">Date and Time on the Internet: Timestamps</title>
+  <uri type="xml">https://raw.githubusercontent.com/relaton/relaton-data-ietf/master/data/reference.RFC.3339.xml</uri>  <uri type="src">https://www.rfc-editor.org/info/rfc3339</uri>  <docidentifier type="RFC" primary="true">RFC 3339</docidentifier>  <docidentifier type="RFC" scope="anchor">RFC3339</docidentifier>  <docidentifier type="DOI">10.17487/RFC3339</docidentifier>  <docnumber>RFC3339</docnumber>  <date type="published">    <on>2002-07</on>  </date>  <contributor>    <role type="publisher"/>    <organization>      
+<name>Internet Engineering Task Force</name>
+      <abbreviation>IETF</abbreviation>    </organization>  </contributor>  <contributor>    <role type="author"/>    <person>      
+<name>        <completename language="en">G. Klyne</completename>      </name>
+    </person>  </contributor>  <contributor>    <role type="author"/>    <person>      
+<name>        <completename language="en">C. Newman</completename>      </name>
+    </person>  </contributor>  <language>en</language>  <script>Latn</script>  <abstract format="text/html" language="en" script="Latn">    <p id="_6fe0c169-e5d4-258f-d58d-a958dfb062f4">This document defines a date and time format for use in Internet protocols that is a profile of the ISO 8601 standard for representation of dates and times using the Gregorian calendar.</p>
+  </abstract>  <series type="main">    
+<title format="text/plain" language="en" script="Latn">RFC</title>
+    <number>3339</number>  </series></bibitem>
+ <bibitem id="rfc3896" type="standard">  <fetched>2022-05-20</fetched>  
+<title format="text/plain" language="en" script="Latn">Definitions of Managed Objects for the DS3/E3 Interface Type</title>
+  <uri type="xml">https://raw.githubusercontent.com/relaton/relaton-data-ietf/master/data/reference.RFC.3896.xml</uri>  <uri type="src">https://www.rfc-editor.org/info/rfc3896</uri>  <docidentifier type="RFC" primary="true">RFC 3896</docidentifier>  <docidentifier type="RFC" scope="anchor">RFC3896</docidentifier>  <docidentifier type="DOI">10.17487/RFC3896</docidentifier>  <docnumber>RFC3896</docnumber>  <date type="published">    <on>2004-09</on>  </date>  <contributor>    <role type="publisher"/>    <organization>      
+<name>Internet Engineering Task Force</name>
+      <abbreviation>IETF</abbreviation>    </organization>  </contributor>  <contributor>    <role type="editor"/>    <person>      
+<name>        <completename language="en">O. Nicklass</completename>      </name>
+    </person>  </contributor>  <language>en</language>  <script>Latn</script>  <abstract format="text/html" language="en" script="Latn">    <p id="_041c9c4c-e5b3-c83f-0457-b0591fe59b1b">This memo defines a portion of the Management Information Base (MIB) for use with network management protocols in the Internet community. In particular, it describes objects used for managing DS3 and E3 interfaces. This document is a companion to the documents that define Managed Objects for the DS0, DS1/E1/DS2/E2 and Synchronous Optical Network/Synchronous Digital Hierarchy (SONET/SDH) Interface Types. This document obsoletes RFC 2496. [STANDARDS-TRACK]</p>
+  </abstract>  <series type="main">    
+<title format="text/plain" language="en" script="Latn">RFC</title>
+    <number>3896</number>  </series></bibitem>
+ <bibitem id="rfc4627" type="standard">  <fetched>2022-05-20</fetched>  
+<title format="text/plain" language="en" script="Latn">The application/json Media Type for JavaScript Object Notation (JSON)</title>
+  <uri type="xml">https://raw.githubusercontent.com/relaton/relaton-data-ietf/master/data/reference.RFC.4627.xml</uri>  <uri type="src">https://www.rfc-editor.org/info/rfc4627</uri>  <docidentifier type="RFC" primary="true">RFC 4627</docidentifier>  <docidentifier type="RFC" scope="anchor">RFC4627</docidentifier>  <docidentifier type="DOI">10.17487/RFC4627</docidentifier>  <docnumber>RFC4627</docnumber>  <date type="published">    <on>2006-07</on>  </date>  <contributor>    <role type="publisher"/>    <organization>      
+<name>Internet Engineering Task Force</name>
+      <abbreviation>IETF</abbreviation>    </organization>  </contributor>  <contributor>    <role type="author"/>    <person>      
+<name>        <completename language="en">D. Crockford</completename>      </name>
+    </person>  </contributor>  <language>en</language>  <script>Latn</script>  <abstract format="text/html" language="en" script="Latn">    <p id="_faf5706b-c3bf-c7f8-0f1d-19c4665d349c">JavaScript Object Notation (JSON) is a lightweight, text-based, language-independent data interchange format. It was derived from the ECMAScript Programming Language Standard. JSON defines a small set of formatting rules for the portable representation of structured data. This memo provides information for the Internet community.</p>
+  </abstract>  <series type="main">    
+<title format="text/plain" language="en" script="Latn">RFC</title>
+    <number>4627</number>  </series></bibitem>
+ <bibitem id="rfc4647" type="standard">  <fetched>2022-05-20</fetched>  
+<title format="text/plain" language="en" script="Latn">Matching of Language Tags</title>
+  <uri type="xml">https://raw.githubusercontent.com/relaton/relaton-data-ietf/master/data/reference.RFC.4647.xml</uri>  <uri type="src">https://www.rfc-editor.org/info/rfc4647</uri>  <docidentifier type="RFC" primary="true">RFC 4647</docidentifier>  <docidentifier type="RFC" scope="anchor">RFC4647</docidentifier>  <docidentifier type="DOI">10.17487/RFC4647</docidentifier>  <docnumber>RFC4647</docnumber>  <date type="published">    <on>2006-09</on>  </date>  <contributor>    <role type="publisher"/>    <organization>      
+<name>Internet Engineering Task Force</name>
+      <abbreviation>IETF</abbreviation>    </organization>  </contributor>  <contributor>    <role type="editor"/>    <person>      
+<name>        <completename language="en">A. Phillips</completename>      </name>
+    </person>  </contributor>  <contributor>    <role type="editor"/>    <person>      
+<name>        <completename language="en">M. Davis</completename>      </name>
+    </person>  </contributor>  <language>en</language>  <script>Latn</script>  <abstract format="text/html" language="en" script="Latn">    <p id="_64ca7daf-77d8-e928-5ae1-90da48ea8359">This document describes a syntax, called a “language-range”, for specifying items in a user’s list of language preferences. It also describes different mechanisms for comparing and matching these to language tags. Two kinds of matching mechanisms, filtering and lookup, are defined. Filtering produces a (potentially empty) set of language tags, whereas lookup produces a single language tag. Possible applications include language negotiation or content selection. This document, in combination with RFC 4646, replaces RFC 3066, which replaced RFC 1766. This document specifies an Internet Best Current Practices for the Internet Community, and requests discussion and suggestions for improvements.</p>
+  </abstract>  <series type="main">    
+<title format="text/plain" language="en" script="Latn">BCP</title>
+    <number>47</number>  </series>  <series type="main">    
+<title format="text/plain" language="en" script="Latn">RFC</title>
+    <number>4647</number>  </series></bibitem>
+ <bibitem id="rfc5646" type="standard">  <fetched>2022-05-20</fetched>  
+<title format="text/plain" language="en" script="Latn">Tags for Identifying Languages</title>
+  <uri type="xml">https://raw.githubusercontent.com/relaton/relaton-data-ietf/master/data/reference.RFC.5646.xml</uri>  <uri type="src">https://www.rfc-editor.org/info/rfc5646</uri>  <docidentifier type="RFC" primary="true">RFC 5646</docidentifier>  <docidentifier type="RFC" scope="anchor">RFC5646</docidentifier>  <docidentifier type="DOI">10.17487/RFC5646</docidentifier>  <docnumber>RFC5646</docnumber>  <date type="published">    <on>2009-09</on>  </date>  <contributor>    <role type="publisher"/>    <organization>      
+<name>Internet Engineering Task Force</name>
+      <abbreviation>IETF</abbreviation>    </organization>  </contributor>  <contributor>    <role type="editor"/>    <person>      
+<name>        <completename language="en">A. Phillips</completename>      </name>
+    </person>  </contributor>  <contributor>    <role type="editor"/>    <person>      
+<name>        <completename language="en">M. Davis</completename>      </name>
+    </person>  </contributor>  <language>en</language>  <script>Latn</script>  <abstract format="text/html" language="en" script="Latn">    <p id="_8ce6d30d-060a-035e-1d76-052b9bf6aa6e">This document describes the structure, content, construction, and semantics of language tags for use in cases where it is desirable to indicate the language used in an information object. It also describes how to register values for use in language tags and the creation of user-defined extensions for private interchange. This document specifies an Internet Best Current Practices for the Internet Community, and requests discussion and suggestions for improvements.</p>
+  </abstract>  <series type="main">    
+<title format="text/plain" language="en" script="Latn">BCP</title>
+    <number>47</number>  </series>  <series type="main">    
+<title format="text/plain" language="en" script="Latn">RFC</title>
+    <number>5646</number>  </series></bibitem>
+ <bibitem id="rfc6570" type="standard">  <fetched>2022-05-20</fetched>  
+<title format="text/plain" language="en" script="Latn">URI Template</title>
+  <uri type="xml">https://raw.githubusercontent.com/relaton/relaton-data-ietf/master/data/reference.RFC.6570.xml</uri>  <uri type="src">https://www.rfc-editor.org/info/rfc6570</uri>  <docidentifier type="RFC" primary="true">RFC 6570</docidentifier>  <docidentifier type="RFC" scope="anchor">RFC6570</docidentifier>  <docidentifier type="DOI">10.17487/RFC6570</docidentifier>  <docnumber>RFC6570</docnumber>  <date type="published">    <on>2012-03</on>  </date>  <contributor>    <role type="publisher"/>    <organization>      
+<name>Internet Engineering Task Force</name>
+      <abbreviation>IETF</abbreviation>    </organization>  </contributor>  <contributor>    <role type="author"/>    <person>      
+<name>        <completename language="en">J. Gregorio</completename>      </name>
+    </person>  </contributor>  <contributor>    <role type="author"/>    <person>      
+<name>        <completename language="en">R. Fielding</completename>      </name>
+    </person>  </contributor>  <contributor>    <role type="author"/>    <person>      
+<name>        <completename language="en">M. Hadley</completename>      </name>
+    </person>  </contributor>  <contributor>    <role type="author"/>    <person>      
+<name>        <completename language="en">M. Nottingham</completename>      </name>
+    </person>  </contributor>  <contributor>    <role type="author"/>    <person>      
+<name>        <completename language="en">D. Orchard</completename>      </name>
+    </person>  </contributor>  <language>en</language>  <script>Latn</script>  <abstract format="text/html" language="en" script="Latn">    <p id="_167a7bc2-8f05-2af2-a3ba-3a99592daae5">A URI Template is a compact sequence of characters for describing a range of Uniform Resource Identifiers through variable expansion. This specification defines the URI Template syntax and the process for expanding a URI Template into a URI reference, along with guidelines for the use of URI Templates on the Internet. [STANDARDS-TRACK]</p>
+  </abstract>  <series type="main">    
+<title format="text/plain" language="en" script="Latn">RFC</title>
+    <number>6570</number>  </series></bibitem>
+ <bibitem id="rfc6906" type="standard">  <fetched>2022-05-20</fetched>  
+<title format="text/plain" language="en" script="Latn">The ‘profile’ Link Relation Type</title>
+  <uri type="xml">https://raw.githubusercontent.com/relaton/relaton-data-ietf/master/data/reference.RFC.6906.xml</uri>  <uri type="src">https://www.rfc-editor.org/info/rfc6906</uri>  <docidentifier type="RFC" primary="true">RFC 6906</docidentifier>  <docidentifier type="RFC" scope="anchor">RFC6906</docidentifier>  <docidentifier type="DOI">10.17487/RFC6906</docidentifier>  <docnumber>RFC6906</docnumber>  <date type="published">    <on>2013-03</on>  </date>  <contributor>    <role type="publisher"/>    <organization>      
+<name>Internet Engineering Task Force</name>
+      <abbreviation>IETF</abbreviation>    </organization>  </contributor>  <contributor>    <role type="author"/>    <person>      
+<name>        <completename language="en">E. Wilde</completename>      </name>
+    </person>  </contributor>  <language>en</language>  <script>Latn</script>  <abstract format="text/html" language="en" script="Latn">    <p id="_79ea0623-5fe4-a9c0-55b7-273285b8b34f">This specification defines the ‘profile’ link relation type that allows resource representations to indicate that they are following one or more profiles. A profile is defined not to alter the semantics of the resource representation itself, but to allow clients to learn about additional semantics (constraints, conventions, extensions) that are associated with the resource representation, in addition to those defined by the media type and possibly other mechanisms.</p>
+  </abstract>  <series type="main">    
+<title format="text/plain" language="en" script="Latn">RFC</title>
+    <number>6906</number>  </series></bibitem>
+ <bibitem id="rfc7946" type="standard">  <fetched>2022-05-20</fetched>  
+<title format="text/plain" language="en" script="Latn">The GeoJSON Format</title>
+  <uri type="xml">https://raw.githubusercontent.com/relaton/relaton-data-ietf/master/data/reference.RFC.7946.xml</uri>  <uri type="src">https://www.rfc-editor.org/info/rfc7946</uri>  <docidentifier type="RFC" primary="true">RFC 7946</docidentifier>  <docidentifier type="RFC" scope="anchor">RFC7946</docidentifier>  <docidentifier type="DOI">10.17487/RFC7946</docidentifier>  <docnumber>RFC7946</docnumber>  <date type="published">    <on>2016-08</on>  </date>  <contributor>    <role type="publisher"/>    <organization>      
+<name>Internet Engineering Task Force</name>
+      <abbreviation>IETF</abbreviation>    </organization>  </contributor>  <contributor>    <role type="author"/>    <person>      
+<name>        <completename language="en">H. Butler</completename>      </name>
+    </person>  </contributor>  <contributor>    <role type="author"/>    <person>      
+<name>        <completename language="en">M. Daly</completename>      </name>
+    </person>  </contributor>  <contributor>    <role type="author"/>    <person>      
+<name>        <completename language="en">A. Doyle</completename>      </name>
+    </person>  </contributor>  <contributor>    <role type="author"/>    <person>      
+<name>        <completename language="en">S. Gillies</completename>      </name>
+    </person>  </contributor>  <contributor>    <role type="author"/>    <person>      
+<name>        <completename language="en">S. Hagen</completename>      </name>
+    </person>  </contributor>  <contributor>    <role type="author"/>    <person>      
+<name>        <completename language="en">T. Schaub</completename>      </name>
+    </person>  </contributor>  <language>en</language>  <script>Latn</script>  <abstract format="text/html" language="en" script="Latn">    <p id="_8792135e-3dc0-a5cb-b844-f27b40cafe2a">GeoJSON is a geospatial data interchange format based on JavaScript Object Notation (JSON). It defines several types of JSON objects and the manner in which they are combined to represent data about geographic features, their properties, and their spatial extents. GeoJSON uses a geographic coordinate reference system, World Geodetic System 1984, and units of decimal degrees.</p>
+  </abstract>  <series type="main">    
+<title format="text/plain" language="en" script="Latn">RFC</title>
+    <number>7946</number>  </series></bibitem>
+<bibitem id="w3ccurie"><formattedref format="application/x-isodoc+xml">W3C CURIE Syntax 1.0, Syntax for expressing Compact URIs, Working Group Note, 2010-12-16, <link target="http://www.w3.org/TR/curie/"/></formattedref><docidentifier>CURIEs</docidentifier></bibitem>
+<bibitem id="w3cjsonld10"><formattedref format="application/x-isodoc+xml">W3C JSON-LD1.0, JSON-based Serialization for Linked Data, 2014-01-16 superseded 2020-11-03, <link target="https://www.w3.org/TR/2014/REC-json-ld-20140116/"/></formattedref><docidentifier>JSON-LD</docidentifier></bibitem>
+<bibitem id="UCUM"><formattedref format="application/x-isodoc+xml">Schadow, G., McDonald, C. J.: Unified Code for Units of Measure, <link target="http://unitsofmeasure.org"/></formattedref><docidentifier>UCUM</docidentifier></bibitem>
 
-<p id="_d8f49093-3e24-a245-c931-d5ddeccbc9ad">[ogc07011] Abstract Specification Topic 6 Schema for coverage geometry and functions, OGC 07-011, <link target="https://portal.ogc.org/files/?artifact_id=19820"/> also known as ISO19123:2005</p>
-
-<p id="_d3ccaa27-853b-f1e3-9561-5420e4674275">[ogc18010r7] Lott, R.: Well-Known Text representation of Coordinate Reference Systems, <link target="http://docs.opengeospatial.org/is/18-010r7/18-010r7.html"/></p>
-
-<p id="_faf6048e-10c0-8d73-db01-cf63cb16eb43">[ogcutc] OGC definition of the UTC Temporal Reference System,  <link target="http://www.opengis.net/def/trs/BIPM/0/UTC"/></p>
-
-<p id="_fd4612d4-6921-d348-fee6-cc8e71659efc">[rfc2119] Key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” are to be interpreted as described in IETF RFC 2119, <link target="https://datatracker.ietf.org/doc/html/rfc2119.txt"/></p>
-
-<p id="_32be8b7a-67f8-2443-d405-2d1f07b15089">[rfc2413] Weibel, S., Kunze, J., Lagoze, C., Wolf, M.: IETF RFC 2413, Dublin Core Metadata for Resource Discovery, <link target="https://tools.ietf.org/rfc/rfc2413.txt"/></p>
-
-<p id="_d6ad4dc9-eda8-f76e-4475-0f5179911f8d">[rfc3339] Klyne, G., Newman, C.: IETF RFC 3339, Date and Time on the Internet: Timestamps, <link target="https://tools.ietf.org/rfc/rfc3339.txt"/> (ISO8601-based lexical representation)</p>
-
-<p id="_0cfc7ddf-6cf1-6010-24c2-75a89dad61e8">[rfc3896] Berners-Lee, T., Fielding, R., Masinter, L: IETF RFC 3896, Uniform Resource Identifier (URI): Generic Syntax, <link target="https://tools.ietf.org/rfc/rfc3896.txt"/></p>
-
-<p id="_22bff088-e9cc-a0ae-de33-122d2d94cc77">[rfc4627] Crockford, D.: IETF RFC 4627, The application/json Media Type for JavaScript Object Notation (JSON), and terms <tt>object</tt>, <tt>array</tt>, <tt>name</tt>, <tt>value</tt>, <tt>string</tt>, <tt>number</tt>, and <tt>null</tt>, <link target="https://tools.ietf.org/rfc/rfc4627.txt"/>.</p>
-
-<p id="_71f2dac4-96e0-de68-ecfd-efee8756c072">[rfc4647] Phillips, A., Ed., and M. Davis, Ed., “Matching of Language Tags”, BCP 47, RFC 4647, September 2006, <link target="https://www.rfc-editor.org/info/bcp47"/></p>
-
-<p id="_766b2d9f-e021-fc2f-e938-a14f95a3424f">[rfc5646] Phillips, A., Ed., and M. Davis, Ed., “Tags for Identifying Languages”, BCP 47, RFC 5646, September 2009, <link target="https://www.rfc-editor.org/info/bcp47"/></p>
-
-<p id="_0a44fd58-1702-c448-cf93-91b7b6947183">[rfc6570] Gregorio, J., Fielding, R., Hadley, M., Nottingham, M., Orchard, D.: IETF RFC 6570, URI Template, <link target="https://datatracker.ietf.org/doc/html/rfc6570"/></p>
-
-<p id="_b7715e63-0d8c-53b6-41bf-ab681a740ef7">[rfc6906] Wilde, E.: A ‘profile’ Link Relation Type, IETF RFC 6906, <link target="https://datatracker.ietf.org/doc/html/rfc6906"/></p>
-
-<p id="_5825028d-6e6e-f53a-4630-53388b8f26c7">[rfc7946] Butler, H., Daly, M., Doyle, A., Gillies, S., Hagen, S., Schaub, T.: IETF RFC 7946, The GeoJSON Format, <link target="https://tools.ietf.org/rfc/rfc7946.txt"/></p>
-
-<p id="_d373494a-88a5-59f4-d7ff-259898617366">[w3ccurie] W3C CURIE Syntax 1.0, Syntax for expressing Compact URIs, Working Group Note, 2010-12-16, <link target="http://www.w3.org/TR/curie/"/></p>
-
-<p id="_3434dc6d-0b93-05c3-ff66-9b73e24b9966">[w3cjsonld10] W3C JSON-LD1.0, JSON-based Serialization for Linked Data, 2014-01-16 superseded 2020-11-03, <link target="https://www.w3.org/TR/2014/REC-json-ld-20140116/"/></p>
-
-<p id="_a88d8d72-80b2-c0da-9982-9a9d652df932">[UCUM] Schadow, G., McDonald, C. J.: Unified Code for Units of Measure, <link target="http://unitsofmeasure.org"/></p>
+<p id="_9c9f4a30-77d1-feb2-0375-f61268fc6637">Key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” are to be interpreted as described in IETF RFC 2119, <link target="https://datatracker.ietf.org/doc/html/rfc2119.txt"/></p>
 </references></bibliography>
 </ogc-standard>

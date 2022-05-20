@@ -22,7 +22,7 @@
 :pdf-uri: ./document.pdf
 :xml-uri: ./document.xml
 :doc-uri: ./document.doc
-:edition: 1.0
+:edition: 1.0-draft_0.2.2
 
 
 ////

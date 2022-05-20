@@ -31,17 +31,12 @@ A sophisticated use case is to use tiling objects, where the data values are par
 
 All questions regarding this submission should be directed to the editor or the submitters:
 
-Chris Little    (editor)        UK Met Office
-
-Jon Blower      (editor)        University of Reading
-
-Tom Kralidis    (contributor)   Meteorological Service of Canada
-
-Ethan Davies    (contributor)   Unidata UCAR
-
-Steve Olson     (contributor)   US NWS/NOAA
-
-Lewis McGibbney (contributor)   ESIP/JPL/NASA
+* Chris Little    (editor)        UK Met Office
+* Jon Blower      (editor)        University of Reading
+* Tom Kralidis    (contributor)   Meteorological Service of Canada
+* Ethan Davies    (contributor)   Unidata UCAR
+* Steve Olson     (contributor)   US NWS/NOAA
+* Lewis McGibbney (contributor)   ESIP/JPL/NASA
 
 [.preface]
 == Acknowledgements

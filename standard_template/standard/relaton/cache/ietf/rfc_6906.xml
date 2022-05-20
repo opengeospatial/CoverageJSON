@@ -1,0 +1,40 @@
+<bibdata type="standard">
+  <fetched>2022-05-20</fetched>
+  <title format="text/plain" language="en" script="Latn">The 'profile' Link Relation Type</title>
+  <uri type="xml">https://raw.githubusercontent.com/relaton/relaton-data-ietf/master/data/reference.RFC.6906.xml</uri>
+  <uri type="src">https://www.rfc-editor.org/info/rfc6906</uri>
+  <docidentifier type="RFC" primary="true">RFC 6906</docidentifier>
+  <docidentifier type="RFC" scope="anchor">RFC6906</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC6906</docidentifier>
+  <docnumber>RFC6906</docnumber>
+  <date type="published">
+    <on>2013-03</on>
+  </date>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>Internet Engineering Task Force</name>
+      <abbreviation>IETF</abbreviation>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <completename language="en">E. Wilde</completename>
+      </name>
+    </person>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p>This specification defines the 'profile' link relation type that allows resource representations to indicate that they are following one or more profiles. A profile is defined not to alter the semantics of the resource representation itself, but to allow clients to learn about additional semantics (constraints, conventions, extensions) that are associated with the resource representation, in addition to those defined by the media type and possibly other mechanisms.</p>
+  </abstract>
+  <series type="main">
+    <title format="text/plain" language="en" script="Latn">RFC</title>
+    <number>6906</number>
+  </series>
+  <ext>
+    <doctype>rfc</doctype>
+  </ext>
+</bibdata>

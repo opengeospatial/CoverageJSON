@@ -1,7 +1,7 @@
 MIME-Version: 1.0
-Content-Type: multipart/related; boundary="----=_NextPart_e8af37fc.ed1f.4b09"
+Content-Type: multipart/related; boundary="----=_NextPart_0e7e95e8.547f.45db"
 
-------=_NextPart_e8af37fc.ed1f.4b09
+------=_NextPart_0e7e95e8.547f.45db
 Content-ID: <document.htm>
 Content-Disposition: inline; filename="document.htm"
 Content-Type: text/html; charset="utf-8"
@@ -2314,7 +2314,7 @@ span.AdmittedLabel {
 
 
 <p class="MsoNormal" align="right" style="text-align:right">
-  <span lang="EN-GB" style="mso-no-proof:yes;font-size:10.0pt" xml:lang="EN-GB">Version: 1.0</span>
+  <span lang="EN-GB" style="mso-no-proof:yes;font-size:10.0pt" xml:lang="EN-GB">Version: 1.0-draft_0.2.2</span>
 </p>
 
 
@@ -2513,22 +2513,22 @@ span.AdmittedLabel {
 <p class="MsoToc1"><span lang="EN-GB" xml:lang="EN-GB"><span style="mso-element:field-begin"></span><span style="mso-spacerun:yes">&#xA0;</span>TOC
   \o "1-2" \h \z \u <span style="mso-element:field-separator"></span></span>
 <span class="MsoHyperlink"><span lang="EN-GB" style="mso-no-proof:yes" xml:lang="EN-GB">
-<a href="#_Toc267088141">Copyright notice<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
+<a href="#_Toc953036123">Copyright notice<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-tab-count:1 dotted">. </span>
 </span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-element:field-begin"></span></span>
-<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc267088141 \h </span>
+<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc953036123 \h </span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-separator"></span></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">1</span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-end"></span></span></a></span></span></p>
 
 <p class="MsoToc1">
   <span class="MsoHyperlink">
     <span lang="EN-GB" style="mso-no-proof:yes" xml:lang="EN-GB">
-<a href="#_Toc672387949">Note<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
+<a href="#_Toc852060829">Note<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-tab-count:1 dotted">. </span>
 </span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-element:field-begin"></span></span>
-<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc672387949 \h </span>
+<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc852060829 \h </span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-separator"></span></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">1</span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-end"></span></span></a></span>
   </span>
@@ -2537,11 +2537,11 @@ span.AdmittedLabel {
 <p class="MsoToc1">
   <span class="MsoHyperlink">
     <span lang="EN-GB" style="mso-no-proof:yes" xml:lang="EN-GB">
-<a href="#_Toc218641052">License Agreement<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
+<a href="#_Toc699827318">License Agreement<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-tab-count:1 dotted">. </span>
 </span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-element:field-begin"></span></span>
-<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc218641052 \h </span>
+<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc699827318 \h </span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-separator"></span></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">1</span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-end"></span></span></a></span>
   </span>
@@ -2550,11 +2550,11 @@ span.AdmittedLabel {
 <p class="MsoToc1">
   <span class="MsoHyperlink">
     <span lang="EN-GB" style="mso-no-proof:yes" xml:lang="EN-GB">
-<a href="#_Toc671237949">Notice for Drafts<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
+<a href="#_Toc446113515">Notice for Drafts<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-tab-count:1 dotted">. </span>
 </span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-element:field-begin"></span></span>
-<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc671237949 \h </span>
+<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc446113515 \h </span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-separator"></span></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">1</span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-end"></span></span></a></span>
   </span>
@@ -2563,11 +2563,11 @@ span.AdmittedLabel {
 <p class="MsoToc1">
   <span class="MsoHyperlink">
     <span lang="EN-GB" style="mso-no-proof:yes" xml:lang="EN-GB">
-<a href="#_Toc174072586">I. Abstract<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
+<a href="#_Toc049164785">I. Abstract<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-tab-count:1 dotted">. </span>
 </span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-element:field-begin"></span></span>
-<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc174072586 \h </span>
+<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc049164785 \h </span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-separator"></span></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">1</span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-end"></span></span></a></span>
   </span>
@@ -2576,11 +2576,11 @@ span.AdmittedLabel {
 <p class="MsoToc1">
   <span class="MsoHyperlink">
     <span lang="EN-GB" style="mso-no-proof:yes" xml:lang="EN-GB">
-<a href="#_Toc994715462">II. Keywords<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
+<a href="#_Toc026994902">II. Keywords<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-tab-count:1 dotted">. </span>
 </span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-element:field-begin"></span></span>
-<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc994715462 \h </span>
+<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc026994902 \h </span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-separator"></span></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">1</span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-end"></span></span></a></span>
   </span>
@@ -2589,11 +2589,11 @@ span.AdmittedLabel {
 <p class="MsoToc1">
   <span class="MsoHyperlink">
     <span lang="EN-GB" style="mso-no-proof:yes" xml:lang="EN-GB">
-<a href="#_Toc008564253">III. Preface<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
+<a href="#_Toc792503301">III. Preface<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-tab-count:1 dotted">. </span>
 </span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-element:field-begin"></span></span>
-<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc008564253 \h </span>
+<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc792503301 \h </span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-separator"></span></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">1</span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-end"></span></span></a></span>
   </span>
@@ -2602,11 +2602,11 @@ span.AdmittedLabel {
 <p class="MsoToc1">
   <span class="MsoHyperlink">
     <span lang="EN-GB" style="mso-no-proof:yes" xml:lang="EN-GB">
-<a href="#_Toc830422843">IV. Security considerations<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
+<a href="#_Toc648855839">IV. Security considerations<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-tab-count:1 dotted">. </span>
 </span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-element:field-begin"></span></span>
-<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc830422843 \h </span>
+<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc648855839 \h </span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-separator"></span></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">1</span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-end"></span></span></a></span>
   </span>
@@ -2615,11 +2615,11 @@ span.AdmittedLabel {
 <p class="MsoToc1">
   <span class="MsoHyperlink">
     <span lang="EN-GB" style="mso-no-proof:yes" xml:lang="EN-GB">
-<a href="#_Toc598832165">V. Submitting Organizations<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
+<a href="#_Toc715608019">V. Submitting Organizations<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-tab-count:1 dotted">. </span>
 </span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-element:field-begin"></span></span>
-<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc598832165 \h </span>
+<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc715608019 \h </span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-separator"></span></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">1</span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-end"></span></span></a></span>
   </span>
@@ -2628,11 +2628,11 @@ span.AdmittedLabel {
 <p class="MsoToc1">
   <span class="MsoHyperlink">
     <span lang="EN-GB" style="mso-no-proof:yes" xml:lang="EN-GB">
-<a href="#_Toc599106765">VI. Submitters<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
+<a href="#_Toc272387058">VI. Submitters<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-tab-count:1 dotted">. </span>
 </span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-element:field-begin"></span></span>
-<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc599106765 \h </span>
+<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc272387058 \h </span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-separator"></span></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">1</span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-end"></span></span></a></span>
   </span>
@@ -2641,11 +2641,11 @@ span.AdmittedLabel {
 <p class="MsoToc1">
   <span class="MsoHyperlink">
     <span lang="EN-GB" style="mso-no-proof:yes" xml:lang="EN-GB">
-<a href="#_Toc119648433">VII. Acknowledgements<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
+<a href="#_Toc160120752">VII. Acknowledgements<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-tab-count:1 dotted">. </span>
 </span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-element:field-begin"></span></span>
-<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc119648433 \h </span>
+<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc160120752 \h </span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-separator"></span></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">1</span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-end"></span></span></a></span>
   </span>
@@ -2654,11 +2654,11 @@ span.AdmittedLabel {
 <p class="MsoToc1">
   <span class="MsoHyperlink">
     <span lang="EN-GB" style="mso-no-proof:yes" xml:lang="EN-GB">
-<a href="#_Toc707356212">1. Scope<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
+<a href="#_Toc082090587">1. Scope<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-tab-count:1 dotted">. </span>
 </span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-element:field-begin"></span></span>
-<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc707356212 \h </span>
+<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc082090587 \h </span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-separator"></span></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">1</span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-end"></span></span></a></span>
   </span>
@@ -2667,11 +2667,11 @@ span.AdmittedLabel {
 <p class="MsoToc1">
   <span class="MsoHyperlink">
     <span lang="EN-GB" style="mso-no-proof:yes" xml:lang="EN-GB">
-<a href="#_Toc268493345">2. Conformance<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
+<a href="#_Toc470990210">2. Conformance<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-tab-count:1 dotted">. </span>
 </span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-element:field-begin"></span></span>
-<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc268493345 \h </span>
+<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc470990210 \h </span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-separator"></span></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">1</span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-end"></span></span></a></span>
   </span>
@@ -2680,11 +2680,11 @@ span.AdmittedLabel {
 <p class="MsoToc1">
   <span class="MsoHyperlink">
     <span lang="EN-GB" style="mso-no-proof:yes" xml:lang="EN-GB">
-<a href="#_Toc687942031">3. Normative references<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
+<a href="#_Toc157392581">3. Normative references<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-tab-count:1 dotted">. </span>
 </span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-element:field-begin"></span></span>
-<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc687942031 \h </span>
+<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc157392581 \h </span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-separator"></span></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">1</span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-end"></span></span></a></span>
   </span>
@@ -2693,11 +2693,11 @@ span.AdmittedLabel {
 <p class="MsoToc1">
   <span class="MsoHyperlink">
     <span lang="EN-GB" style="mso-no-proof:yes" xml:lang="EN-GB">
-<a href="#_Toc524117700">4. Terms and definitions<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
+<a href="#_Toc291313978">4. Terms and definitions<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-tab-count:1 dotted">. </span>
 </span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-element:field-begin"></span></span>
-<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc524117700 \h </span>
+<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc291313978 \h </span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-separator"></span></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">1</span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-end"></span></span></a></span>
   </span>
@@ -2706,11 +2706,11 @@ span.AdmittedLabel {
 <p class="MsoToc1">
   <span class="MsoHyperlink">
     <span lang="EN-GB" style="mso-no-proof:yes" xml:lang="EN-GB">
-<a href="#_Toc587193399">5. Conventions<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
+<a href="#_Toc054780297">5. Conventions<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-tab-count:1 dotted">. </span>
 </span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-element:field-begin"></span></span>
-<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc587193399 \h </span>
+<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc054780297 \h </span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-separator"></span></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">1</span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-end"></span></span></a></span>
   </span>
@@ -2719,11 +2719,11 @@ span.AdmittedLabel {
 <p class="MsoToc2">
   <span class="MsoHyperlink">
     <span lang="EN-GB" style="mso-no-proof:yes" xml:lang="EN-GB">
-<a href="#_Toc239589138">5.1. Identifiers<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
+<a href="#_Toc107824054">5.1. Identifiers<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-tab-count:1 dotted">. </span>
 </span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-element:field-begin"></span></span>
-<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc239589138 \h </span>
+<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc107824054 \h </span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-separator"></span></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">1</span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-end"></span></span></a></span>
   </span>
@@ -2732,11 +2732,11 @@ span.AdmittedLabel {
 <p class="MsoToc1">
   <span class="MsoHyperlink">
     <span lang="EN-GB" style="mso-no-proof:yes" xml:lang="EN-GB">
-<a href="#_Toc788603623">6. Full Specification: Normative and Informative intermixed<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
+<a href="#_Toc449580360">6. Full Specification: Normative and Informative intermixed<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-tab-count:1 dotted">. </span>
 </span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-element:field-begin"></span></span>
-<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc788603623 \h </span>
+<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc449580360 \h </span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-separator"></span></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">1</span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-end"></span></span></a></span>
   </span>
@@ -2745,11 +2745,11 @@ span.AdmittedLabel {
 <p class="MsoToc2">
   <span class="MsoHyperlink">
     <span lang="EN-GB" style="mso-no-proof:yes" xml:lang="EN-GB">
-<a href="#_Toc803721131">6.1. Introduction<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
+<a href="#_Toc414004037">6.1. Introduction<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-tab-count:1 dotted">. </span>
 </span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-element:field-begin"></span></span>
-<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc803721131 \h </span>
+<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc414004037 \h </span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-separator"></span></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">1</span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-end"></span></span></a></span>
   </span>
@@ -2758,11 +2758,11 @@ span.AdmittedLabel {
 <p class="MsoToc2">
   <span class="MsoHyperlink">
     <span lang="EN-GB" style="mso-no-proof:yes" xml:lang="EN-GB">
-<a href="#_Toc083276653">6.2. i18n Objects<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
+<a href="#_Toc427877091">6.2. i18n Objects<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-tab-count:1 dotted">. </span>
 </span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-element:field-begin"></span></span>
-<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc083276653 \h </span>
+<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc427877091 \h </span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-separator"></span></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">1</span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-end"></span></span></a></span>
   </span>
@@ -2771,11 +2771,11 @@ span.AdmittedLabel {
 <p class="MsoToc2">
   <span class="MsoHyperlink">
     <span lang="EN-GB" style="mso-no-proof:yes" xml:lang="EN-GB">
-<a href="#_Toc999268465">6.3. Parameter Objects<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
+<a href="#_Toc510854412">6.3. Parameter Objects<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-tab-count:1 dotted">. </span>
 </span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-element:field-begin"></span></span>
-<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc999268465 \h </span>
+<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc510854412 \h </span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-separator"></span></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">1</span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-end"></span></span></a></span>
   </span>
@@ -2784,11 +2784,11 @@ span.AdmittedLabel {
 <p class="MsoToc2">
   <span class="MsoHyperlink">
     <span lang="EN-GB" style="mso-no-proof:yes" xml:lang="EN-GB">
-<a href="#_Toc422142181">6.4. ParameterGroup Objects<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
+<a href="#_Toc341942002">6.4. ParameterGroup Objects<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-tab-count:1 dotted">. </span>
 </span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-element:field-begin"></span></span>
-<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc422142181 \h </span>
+<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc341942002 \h </span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-separator"></span></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">1</span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-end"></span></span></a></span>
   </span>
@@ -2797,11 +2797,11 @@ span.AdmittedLabel {
 <p class="MsoToc2">
   <span class="MsoHyperlink">
     <span lang="EN-GB" style="mso-no-proof:yes" xml:lang="EN-GB">
-<a href="#_Toc934259511">6.5. Reference system objects<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
+<a href="#_Toc141335403">6.5. Reference system objects<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-tab-count:1 dotted">. </span>
 </span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-element:field-begin"></span></span>
-<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc934259511 \h </span>
+<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc141335403 \h </span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-separator"></span></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">1</span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-end"></span></span></a></span>
   </span>
@@ -2810,11 +2810,11 @@ span.AdmittedLabel {
 <p class="MsoToc2">
   <span class="MsoHyperlink">
     <span lang="EN-GB" style="mso-no-proof:yes" xml:lang="EN-GB">
-<a href="#_Toc581616865">6.6. CoverageJSON Objects<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
+<a href="#_Toc058697969">6.6. CoverageJSON Objects<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-tab-count:1 dotted">. </span>
 </span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-element:field-begin"></span></span>
-<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc581616865 \h </span>
+<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc058697969 \h </span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-separator"></span></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">1</span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-end"></span></span></a></span>
   </span>
@@ -2823,11 +2823,11 @@ span.AdmittedLabel {
 <p class="MsoToc2">
   <span class="MsoHyperlink">
     <span lang="EN-GB" style="mso-no-proof:yes" xml:lang="EN-GB">
-<a href="#_Toc814720042">6.7. Extensions<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
+<a href="#_Toc500425905">6.7. Extensions<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-tab-count:1 dotted">. </span>
 </span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-element:field-begin"></span></span>
-<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc814720042 \h </span>
+<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc500425905 \h </span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-separator"></span></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">1</span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-end"></span></span></a></span>
   </span>
@@ -2836,11 +2836,11 @@ span.AdmittedLabel {
 <p class="MsoToc2">
   <span class="MsoHyperlink">
     <span lang="EN-GB" style="mso-no-proof:yes" xml:lang="EN-GB">
-<a href="#_Toc024793022">6.8. JSON-LD<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
+<a href="#_Toc745148052">6.8. JSON-LD<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-tab-count:1 dotted">. </span>
 </span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-element:field-begin"></span></span>
-<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc024793022 \h </span>
+<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc745148052 \h </span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-separator"></span></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">1</span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-end"></span></span></a></span>
   </span>
@@ -2849,11 +2849,11 @@ span.AdmittedLabel {
 <p class="MsoToc2">
   <span class="MsoHyperlink">
     <span lang="EN-GB" style="mso-no-proof:yes" xml:lang="EN-GB">
-<a href="#_Toc286636963">6.9. Resolving domain and range URLs<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
+<a href="#_Toc849390956">6.9. Resolving domain and range URLs<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-tab-count:1 dotted">. </span>
 </span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-element:field-begin"></span></span>
-<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc286636963 \h </span>
+<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc849390956 \h </span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-separator"></span></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">1</span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-end"></span></span></a></span>
   </span>
@@ -2862,11 +2862,11 @@ span.AdmittedLabel {
 <p class="MsoToc2">
   <span class="MsoHyperlink">
     <span lang="EN-GB" style="mso-no-proof:yes" xml:lang="EN-GB">
-<a href="#_Toc362143995">6.10. Common Domain Types<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
+<a href="#_Toc573455343">6.10. Common Domain Types<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-tab-count:1 dotted">. </span>
 </span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-element:field-begin"></span></span>
-<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc362143995 \h </span>
+<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc573455343 \h </span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-separator"></span></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">1</span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-end"></span></span></a></span>
   </span>
@@ -2875,11 +2875,11 @@ span.AdmittedLabel {
 <p class="MsoToc1">
   <span class="MsoHyperlink">
     <span lang="EN-GB" style="mso-no-proof:yes" xml:lang="EN-GB">
-<a href="#_Toc178556565">7. Media Type and File Extension<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
+<a href="#_Toc966410896">7. Media Type and File Extension<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-tab-count:1 dotted">. </span>
 </span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-element:field-begin"></span></span>
-<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc178556565 \h </span>
+<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc966410896 \h </span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-separator"></span></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">1</span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-end"></span></span></a></span>
   </span>
@@ -2888,11 +2888,11 @@ span.AdmittedLabel {
 <p class="MsoToc1">
   <span class="MsoHyperlink">
     <span lang="EN-GB" style="mso-no-proof:yes" xml:lang="EN-GB">
-<a href="#_Toc548107944">Annex A (informative) Conformance Class Abstract Test Suite (Normative)<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
+<a href="#_Toc096585194">Annex A (informative) Conformance Class Abstract Test Suite (Normative)<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-tab-count:1 dotted">. </span>
 </span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-element:field-begin"></span></span>
-<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc548107944 \h </span>
+<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc096585194 \h </span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-separator"></span></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">1</span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-end"></span></span></a></span>
   </span>
@@ -2901,11 +2901,11 @@ span.AdmittedLabel {
 <p class="MsoToc2">
   <span class="MsoHyperlink">
     <span lang="EN-GB" style="mso-no-proof:yes" xml:lang="EN-GB">
-<a href="#_Toc327181715">A.1. Conformance Class A<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
+<a href="#_Toc774625591">A.1. Conformance Class A<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-tab-count:1 dotted">. </span>
 </span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-element:field-begin"></span></span>
-<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc327181715 \h </span>
+<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc774625591 \h </span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-separator"></span></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">1</span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-end"></span></span></a></span>
   </span>
@@ -2914,11 +2914,11 @@ span.AdmittedLabel {
 <p class="MsoToc1">
   <span class="MsoHyperlink">
     <span lang="EN-GB" style="mso-no-proof:yes" xml:lang="EN-GB">
-<a href="#_Toc087533552">Annex B (informative) Coverage Examples ( {Informative} )<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
+<a href="#_Toc517870403">Annex B (informative) Coverage Examples ( {Informative} )<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-tab-count:1 dotted">. </span>
 </span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-element:field-begin"></span></span>
-<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc087533552 \h </span>
+<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc517870403 \h </span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-separator"></span></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">1</span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-end"></span></span></a></span>
   </span>
@@ -2927,11 +2927,11 @@ span.AdmittedLabel {
 <p class="MsoToc2">
   <span class="MsoHyperlink">
     <span lang="EN-GB" style="mso-no-proof:yes" xml:lang="EN-GB">
-<a href="#_Toc300777876">B.1. Vertical Profile Coverage<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
+<a href="#_Toc035944308">B.1. Vertical Profile Coverage<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-tab-count:1 dotted">. </span>
 </span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-element:field-begin"></span></span>
-<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc300777876 \h </span>
+<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc035944308 \h </span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-separator"></span></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">1</span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-end"></span></span></a></span>
   </span>
@@ -2940,11 +2940,11 @@ span.AdmittedLabel {
 <p class="MsoToc2">
   <span class="MsoHyperlink">
     <span lang="EN-GB" style="mso-no-proof:yes" xml:lang="EN-GB">
-<a href="#_Toc618677675">B.2. Coverage Collection<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
+<a href="#_Toc466668850">B.2. Coverage Collection<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-tab-count:1 dotted">. </span>
 </span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-element:field-begin"></span></span>
-<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc618677675 \h </span>
+<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc466668850 \h </span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-separator"></span></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">1</span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-end"></span></span></a></span>
   </span>
@@ -2953,11 +2953,11 @@ span.AdmittedLabel {
 <p class="MsoToc1">
   <span class="MsoHyperlink">
     <span lang="EN-GB" style="mso-no-proof:yes" xml:lang="EN-GB">
-<a href="#_Toc943757553">Annex C (informative)<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
+<a href="#_Toc362683470">Annex C (informative)<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-tab-count:1 dotted">. </span>
 </span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-element:field-begin"></span></span>
-<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc943757553 \h </span>
+<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc362683470 \h </span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-separator"></span></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">1</span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-end"></span></span></a></span>
   </span>
@@ -2966,11 +2966,11 @@ span.AdmittedLabel {
 <p class="MsoToc1">
   <span class="MsoHyperlink">
     <span lang="EN-GB" style="mso-no-proof:yes" xml:lang="EN-GB">
-<a href="#_Toc615137851">C. Bibliography<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
+<a href="#_Toc873946696">C. Bibliography<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-tab-count:1 dotted">. </span>
 </span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-element:field-begin"></span></span>
-<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc615137851 \h </span>
+<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc873946696 \h </span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-separator"></span></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">1</span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-end"></span></span></a></span>
   </span>
@@ -2979,11 +2979,11 @@ span.AdmittedLabel {
 <p class="MsoToc1">
   <span class="MsoHyperlink">
     <span lang="EN-GB" style="mso-no-proof:yes" xml:lang="EN-GB">
-<a href="#_Toc109393006">Annex D (informative) Revision History<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
+<a href="#_Toc022219436">Annex D (informative) Revision History<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-tab-count:1 dotted">. </span>
 </span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">
 <span style="mso-element:field-begin"></span></span>
-<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc109393006 \h </span>
+<span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"> PAGEREF _Toc022219436 \h </span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-separator"></span></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB">1</span>
   <span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"></span><span lang="EN-GB" class="MsoTocTextSpan" xml:lang="EN-GB"><span style="mso-element:field-end"></span></span></a></span>
   </span>
@@ -3023,7 +3023,7 @@ span.AdmittedLabel {
         <p class="MsoNormal"><a name="_0a416fa4-0375-93e6-0c2b-eee6f00069e5" id="_0a416fa4-0375-93e6-0c2b-eee6f00069e5"></a>The next-simplest use case is to put data values for each variable (parameter) in separate array objects in separate CoverageJSON documents, linked from the Coverage object. This is useful for a multi-variable dataset, where one might want temperature, humidity, wind speed, etc., to be recorded in separate files, so the user client only needs to load the variables of interest.</p>
         <p class="MsoNormal"><a name="_79d9ae0f-1589-857e-8317-32998dbb4280" id="_79d9ae0f-1589-857e-8317-32998dbb4280"></a>A sophisticated use case is to use tiling objects, where the data values are partitioned spatially and temporally, so that a single variable&#x2019;s data values would be split among several documents. A simple example of this would be to encode each timestep of a dataset in a separate file, but the tiles could also be divided spatially, like a tiled map server.</p>
       </div>
-      <div class="Section3"><a name="_b8297b66-e648-4df9-b89e-122c0a047ca2" id="_b8297b66-e648-4df9-b89e-122c0a047ca2"></a>
+      <div class="Section3"><a name="_eeed0a57-da84-46a1-9ac2-76e03f0b28e3" id="_eeed0a57-da84-46a1-9ac2-76e03f0b28e3"></a>
         <h1 class="IntroTitle">II.<span style="mso-tab-count:1">&#xA0; </span>Keywords</h1>
         <p class="MsoNormal">The following are keywords to be used by search engines and
     document catalogues.</p>
@@ -3042,7 +3042,7 @@ span.AdmittedLabel {
         <h1 class="IntroTitle">IV.<span style="mso-tab-count:1">&#xA0; </span>Security considerations</h1>
         <p class="MsoNormal"><a name="_6bffb48c-5a4a-c73f-8352-74e8ed0d680a" id="_6bffb48c-5a4a-c73f-8352-74e8ed0d680a"></a>No security considerations have been made for this document.</p>
       </div>
-      <div class="Section3"><a name="_78904ba2-0cfa-4c9c-abd9-7971a1f3f4a3" id="_78904ba2-0cfa-4c9c-abd9-7971a1f3f4a3"></a>
+      <div class="Section3"><a name="_5767105e-dd5c-4a54-aeb1-fb14e49806c7" id="_5767105e-dd5c-4a54-aeb1-fb14e49806c7"></a>
         <h1 class="IntroTitle">V.<span style="mso-tab-count:1">&#xA0; </span>Submitting Organizations</h1>
         <p class="MsoNormal">The following organizations submitted this Document to the
    Open Geospatial Consortium (OGC):</p>
@@ -3055,13 +3055,20 @@ span.AdmittedLabel {
       </div>
       <div class="Section3"><a name="_submitters" id="_submitters"></a>
         <h1 class="IntroTitle">VI.<span style="mso-tab-count:1">&#xA0; </span>Submitters</h1>
-        <p class="MsoNormal"><a name="_4fedf0b3-9809-e845-896b-09a34763f227" id="_4fedf0b3-9809-e845-896b-09a34763f227"></a>All questions regarding this submission should be directed to the editor or the submitters:</p>
-        <p class="MsoNormal"><a name="_5c7bf17f-242f-1c52-a01d-5bfbbe5fcf4d" id="_5c7bf17f-242f-1c52-a01d-5bfbbe5fcf4d"></a>Chris Little    (editor)        UK Met Office</p>
-        <p class="MsoNormal"><a name="_741c9b9f-704e-c6e8-896b-91174c312159" id="_741c9b9f-704e-c6e8-896b-91174c312159"></a>Jon Blower      (editor)        University of Reading</p>
-        <p class="MsoNormal"><a name="_d6a4a345-3af2-2d1a-635e-1392e032ba20" id="_d6a4a345-3af2-2d1a-635e-1392e032ba20"></a>Tom Kralidis    (contributor)   Meteorological Service of Canada</p>
-        <p class="MsoNormal"><a name="_90c136e7-b459-f684-73f1-f4ee3ab10159" id="_90c136e7-b459-f684-73f1-f4ee3ab10159"></a>Ethan Davies    (contributor)   Unidata UCAR</p>
-        <p class="MsoNormal"><a name="_0c76df0d-e1ee-3e6e-8b7e-56c996f3963f" id="_0c76df0d-e1ee-3e6e-8b7e-56c996f3963f"></a>Steve Olson     (contributor)   US NWS/NOAA</p>
-        <p class="MsoNormal"><a name="_8dd785cf-eb2f-ab68-58f7-f638de33df44" id="_8dd785cf-eb2f-ab68-58f7-f638de33df44"></a>Lewis McGibbney (contributor)   ESIP/JPL/NASA</p>
+        <p class="MsoNormal"><a name="_60b1643b-76a7-f154-a489-757cf275f9ed" id="_60b1643b-76a7-f154-a489-757cf275f9ed"></a>All questions regarding this submission should be directed to the editor or the submitters:</p>
+        <p style="mso-list:l3 level1 lfo2;" class="MsoListParagraphCxSpFirst">Chris Little    (editor)        UK Met Office
+</p>
+<p style="mso-list:l3 level1 lfo2;" class="MsoListParagraphCxSpMiddle">Jon Blower      (editor)        University of Reading
+</p>
+<p style="mso-list:l3 level1 lfo2;" class="MsoListParagraphCxSpMiddle">Tom Kralidis    (contributor)   Meteorological Service of Canada
+</p>
+<p style="mso-list:l3 level1 lfo2;" class="MsoListParagraphCxSpMiddle">Ethan Davies    (contributor)   Unidata UCAR
+</p>
+<p style="mso-list:l3 level1 lfo2;" class="MsoListParagraphCxSpMiddle">Steve Olson     (contributor)   US NWS/NOAA
+</p>
+<p style="mso-list:l3 level1 lfo2;" class="MsoListParagraphCxSpLast">Lewis McGibbney (contributor)   ESIP/JPL/NASA
+</p>
+
       </div>
       <div class="Section3"><a name="_acknowledgements" id="_acknowledgements"></a>
         <h1 class="IntroTitle">VII.<span style="mso-tab-count:1">&#xA0; </span>Acknowledgements</h1>
@@ -3090,44 +3097,28 @@ span.AdmittedLabel {
         <p class="MsoNormal"><a name="_bf118c4c-115d-5032-db80-087dc9bbc424" id="_bf118c4c-115d-5032-db80-087dc9bbc424"></a>All requirements-classes and conformance-classes described in this document are owned by the standard(s) identified.</p>
       </div>
       <div><h1>3.<span style="mso-tab-count:1">&#xA0; </span>Normative references</h1>
-<p class="MsoNormal"><a name="_dc52360f-66c0-cd26-ffb9-a1c80e731d3e" id="_dc52360f-66c0-cd26-ffb9-a1c80e731d3e"></a>There are no normative references in this document.</p>
-<p class="MsoNormal"><a name="_ca04a7f0-aa8a-286f-a31f-9abaef44d5b5" id="_ca04a7f0-aa8a-286f-a31f-9abaef44d5b5"></a>The following normative documents contain provisions that, through reference in this text, constitute provisions of this document. For dated references, subsequent amendments to, or revisions of, any of these publications do not apply. For undated references, the latest edition of the normative document referred to applies.</p>
+<p class="MsoNormal"><a name="_1984bddd-729c-8a94-b1f9-c24206c5d230" id="_1984bddd-729c-8a94-b1f9-c24206c5d230"></a>The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.</p>
 
-<p class="MsoNormal"><a name="_436265b8-5260-ab76-d0fa-98bb59749728" id="_436265b8-5260-ab76-d0fa-98bb59749728"></a>[covjson] CoverageJSON original GitHub repository, <a href="https://covjson.org/spec">https://covjson.org/spec</a></p>
 
-<p class="MsoNormal"><a name="_70b1a109-ed37-f3cf-5937-178ab79fe82f" id="_70b1a109-ed37-f3cf-5937-178ab79fe82f"></a>[netcdf] Network Common Data Form (NetCDF), <a href="https://www.unidata.ucar.edu/software/netcdf">https://www.unidata.ucar.edu/software/netcdf</a></p>
+<p class="NormRef"><a name="covjson" id="covjson"></a><i>CoverageJSON original GitHub repository</i>, <a href="https://covjson.org/spec">https://covjson.org/spec</a></p>
+<p class="NormRef"><a name="netcdf" id="netcdf"></a><i>Network Common Data Form (NetCDF)</i>, <a href="https://www.unidata.ucar.edu/software/netcdf">https://www.unidata.ucar.edu/software/netcdf</a></p>
+<p class="NormRef"><a name="OGC07-011" id="OGC07-011"></a>OGC: OGC 07-011, <i>Topic 6&#x2009;&#x2014;&#x2009;Schema for coverage geometry and functions</i>. <span>Open Geospatial Consortium</span> (2007). <a href="https://portal.ogc.org/files/?artifact_id=19820">https://portal.ogc.org/files/?artifact_id=19820</a></p>
+ <p class="NormRef"><a name="OGC18-010r7" id="OGC18-010r7"></a>Roger Lot: OGC 18-010r7, <i>Geographic information &#x2014; Well-known text representation of coordinate reference systems</i>. <span>Open Geospatial Consortium</span> (2019). <a href="http://docs.opengeospatial.org/is/18-010r7/18-010r7.html">http://docs.opengeospatial.org/is/18-010r7/18-010r7.html</a></p>
+<p class="NormRef"><a name="ogcutc" id="ogcutc"></a><i>OGC definition of the UTC Temporal Reference System</i>, <a href="http://www.opengis.net/def/trs/BIPM/0/UTC">http://www.opengis.net/def/trs/BIPM/0/UTC</a></p>
+<p class="NormRef"><a name="rfc2413" id="rfc2413"></a>S. Weibel, J. Kunze, C. Lagoze, M. Wolf: RFC 2413, <i>Dublin Core Metadata for Resource Discovery</i>. <span>Internet Engineering Task Force</span> (1998). <a href="https://www.rfc-editor.org/info/rfc2413">https://www.rfc-editor.org/info/rfc2413</a></p>
+ <p class="NormRef"><a name="rfc3339" id="rfc3339"></a>G. Klyne, C. Newman: RFC 3339, <i>Date and Time on the Internet: Timestamps</i>. <span>Internet Engineering Task Force</span> (2002). <a href="https://www.rfc-editor.org/info/rfc3339">https://www.rfc-editor.org/info/rfc3339</a></p>
+ <p class="NormRef"><a name="rfc3896" id="rfc3896"></a>O. Nicklass: RFC 3896, <i>Definitions of Managed Objects for the DS3/E3 Interface Type</i>. <span>Internet Engineering Task Force</span> (2004). <a href="https://www.rfc-editor.org/info/rfc3896">https://www.rfc-editor.org/info/rfc3896</a></p>
+ <p class="NormRef"><a name="rfc4627" id="rfc4627"></a>D. Crockford: RFC 4627, <i>The application/json Media Type for JavaScript Object Notation (JSON)</i>. <span>Internet Engineering Task Force</span> (2006). <a href="https://www.rfc-editor.org/info/rfc4627">https://www.rfc-editor.org/info/rfc4627</a></p>
+ <p class="NormRef"><a name="rfc4647" id="rfc4647"></a>A. Phillips, M. Davis: RFC 4647, <i>Matching of Language Tags</i>. <span>Internet Engineering Task Force</span> (2006). <a href="https://www.rfc-editor.org/info/rfc4647">https://www.rfc-editor.org/info/rfc4647</a></p>
+ <p class="NormRef"><a name="rfc5646" id="rfc5646"></a>A. Phillips, M. Davis: RFC 5646, <i>Tags for Identifying Languages</i>. <span>Internet Engineering Task Force</span> (2009). <a href="https://www.rfc-editor.org/info/rfc5646">https://www.rfc-editor.org/info/rfc5646</a></p>
+ <p class="NormRef"><a name="rfc6570" id="rfc6570"></a>J. Gregorio, R. Fielding, M. Hadley, M. Nottingham, D. Orchard: RFC 6570, <i>URI Template</i>. <span>Internet Engineering Task Force</span> (2012). <a href="https://www.rfc-editor.org/info/rfc6570">https://www.rfc-editor.org/info/rfc6570</a></p>
+ <p class="NormRef"><a name="rfc6906" id="rfc6906"></a>E. Wilde: RFC 6906, <i>The &#x2018;profile&#x2019; Link Relation Type</i>. <span>Internet Engineering Task Force</span> (2013). <a href="https://www.rfc-editor.org/info/rfc6906">https://www.rfc-editor.org/info/rfc6906</a></p>
+ <p class="NormRef"><a name="rfc7946" id="rfc7946"></a>H. Butler, M. Daly, A. Doyle, S. Gillies, S. Hagen, T. Schaub: RFC 7946, <i>The GeoJSON Format</i>. <span>Internet Engineering Task Force</span> (2016). <a href="https://www.rfc-editor.org/info/rfc7946">https://www.rfc-editor.org/info/rfc7946</a></p>
+<p class="NormRef"><a name="w3ccurie" id="w3ccurie"></a>W3C CURIE Syntax 1.0, Syntax for expressing Compact URIs, Working Group Note, 2010-12-16, <a href="http://www.w3.org/TR/curie/">http://www.w3.org/TR/curie/</a></p>
+<p class="NormRef"><a name="w3cjsonld10" id="w3cjsonld10"></a>W3C JSON-LD1.0, JSON-based Serialization for Linked Data, 2014-01-16 superseded 2020-11-03, <a href="https://www.w3.org/TR/2014/REC-json-ld-20140116/">https://www.w3.org/TR/2014/REC-json-ld-20140116/</a></p>
+<p class="NormRef"><a name="UCUM" id="UCUM"></a>Schadow, G., McDonald, C. J.: Unified Code for Units of Measure, <a href="http://unitsofmeasure.org">http://unitsofmeasure.org</a></p>
 
-<p class="MsoNormal"><a name="_d8f49093-3e24-a245-c931-d5ddeccbc9ad" id="_d8f49093-3e24-a245-c931-d5ddeccbc9ad"></a>[ogc07011] Abstract Specification Topic 6 Schema for coverage geometry and functions, OGC 07-011, <a href="https://portal.ogc.org/files/?artifact_id=19820">https://portal.ogc.org/files/?artifact_id=19820</a> also known as ISO19123:2005</p>
-
-<p class="MsoNormal"><a name="_d3ccaa27-853b-f1e3-9561-5420e4674275" id="_d3ccaa27-853b-f1e3-9561-5420e4674275"></a>[ogc18010r7] Lott, R.: Well-Known Text representation of Coordinate Reference Systems, <a href="http://docs.opengeospatial.org/is/18-010r7/18-010r7.html">http://docs.opengeospatial.org/is/18-010r7/18-010r7.html</a></p>
-
-<p class="MsoNormal"><a name="_faf6048e-10c0-8d73-db01-cf63cb16eb43" id="_faf6048e-10c0-8d73-db01-cf63cb16eb43"></a>[ogcutc] OGC definition of the UTC Temporal Reference System,  <a href="http://www.opengis.net/def/trs/BIPM/0/UTC">http://www.opengis.net/def/trs/BIPM/0/UTC</a></p>
-
-<p class="MsoNormal"><a name="_fd4612d4-6921-d348-fee6-cc8e71659efc" id="_fd4612d4-6921-d348-fee6-cc8e71659efc"></a>[rfc2119] Key words &#x201C;MUST&#x201D;, &#x201C;MUST NOT&#x201D;, &#x201C;REQUIRED&#x201D;, &#x201C;SHALL&#x201D;, &#x201C;SHALL NOT&#x201D;, &#x201C;SHOULD&#x201D;, &#x201C;SHOULD NOT&#x201D;, &#x201C;RECOMMENDED&#x201D;, &#x201C;MAY&#x201D;, and &#x201C;OPTIONAL&#x201D; are to be interpreted as described in IETF RFC 2119, <a href="https://datatracker.ietf.org/doc/html/rfc2119.txt">https://datatracker.ietf.org/doc/html/rfc2119.txt</a></p>
-
-<p class="MsoNormal"><a name="_32be8b7a-67f8-2443-d405-2d1f07b15089" id="_32be8b7a-67f8-2443-d405-2d1f07b15089"></a>[rfc2413] Weibel, S., Kunze, J., Lagoze, C., Wolf, M.: IETF RFC 2413, Dublin Core Metadata for Resource Discovery, <a href="https://tools.ietf.org/rfc/rfc2413.txt">https://tools.ietf.org/rfc/rfc2413.txt</a></p>
-
-<p class="MsoNormal"><a name="_d6ad4dc9-eda8-f76e-4475-0f5179911f8d" id="_d6ad4dc9-eda8-f76e-4475-0f5179911f8d"></a>[rfc3339] Klyne, G., Newman, C.: IETF RFC 3339, Date and Time on the Internet: Timestamps, <a href="https://tools.ietf.org/rfc/rfc3339.txt">https://tools.ietf.org/rfc/rfc3339.txt</a> (ISO8601-based lexical representation)</p>
-
-<p class="MsoNormal"><a name="_0cfc7ddf-6cf1-6010-24c2-75a89dad61e8" id="_0cfc7ddf-6cf1-6010-24c2-75a89dad61e8"></a>[rfc3896] Berners-Lee, T., Fielding, R., Masinter, L: IETF RFC 3896, Uniform Resource Identifier (URI): Generic Syntax, <a href="https://tools.ietf.org/rfc/rfc3896.txt">https://tools.ietf.org/rfc/rfc3896.txt</a></p>
-
-<p class="MsoNormal"><a name="_22bff088-e9cc-a0ae-de33-122d2d94cc77" id="_22bff088-e9cc-a0ae-de33-122d2d94cc77"></a>[rfc4627] Crockford, D.: IETF RFC 4627, The application/json Media Type for JavaScript Object Notation (JSON), and terms <tt>object</tt>, <tt>array</tt>, <tt>name</tt>, <tt>value</tt>, <tt>string</tt>, <tt>number</tt>, and <tt>null</tt>, <a href="https://tools.ietf.org/rfc/rfc4627.txt">https://tools.ietf.org/rfc/rfc4627.txt</a>.</p>
-
-<p class="MsoNormal"><a name="_71f2dac4-96e0-de68-ecfd-efee8756c072" id="_71f2dac4-96e0-de68-ecfd-efee8756c072"></a>[rfc4647] Phillips, A., Ed., and M. Davis, Ed., &#x201C;Matching of Language Tags&#x201D;, BCP 47, RFC 4647, September 2006, <a href="https://www.rfc-editor.org/info/bcp47">https://www.rfc-editor.org/info/bcp47</a></p>
-
-<p class="MsoNormal"><a name="_766b2d9f-e021-fc2f-e938-a14f95a3424f" id="_766b2d9f-e021-fc2f-e938-a14f95a3424f"></a>[rfc5646] Phillips, A., Ed., and M. Davis, Ed., &#x201C;Tags for Identifying Languages&#x201D;, BCP 47, RFC 5646, September 2009, <a href="https://www.rfc-editor.org/info/bcp47">https://www.rfc-editor.org/info/bcp47</a></p>
-
-<p class="MsoNormal"><a name="_0a44fd58-1702-c448-cf93-91b7b6947183" id="_0a44fd58-1702-c448-cf93-91b7b6947183"></a>[rfc6570] Gregorio, J., Fielding, R., Hadley, M., Nottingham, M., Orchard, D.: IETF RFC 6570, URI Template, <a href="https://datatracker.ietf.org/doc/html/rfc6570">https://datatracker.ietf.org/doc/html/rfc6570</a></p>
-
-<p class="MsoNormal"><a name="_b7715e63-0d8c-53b6-41bf-ab681a740ef7" id="_b7715e63-0d8c-53b6-41bf-ab681a740ef7"></a>[rfc6906] Wilde, E.: A &#x2018;profile&#x2019; Link Relation Type, IETF RFC 6906, <a href="https://datatracker.ietf.org/doc/html/rfc6906">https://datatracker.ietf.org/doc/html/rfc6906</a></p>
-
-<p class="MsoNormal"><a name="_5825028d-6e6e-f53a-4630-53388b8f26c7" id="_5825028d-6e6e-f53a-4630-53388b8f26c7"></a>[rfc7946] Butler, H., Daly, M., Doyle, A., Gillies, S., Hagen, S., Schaub, T.: IETF RFC 7946, The GeoJSON Format, <a href="https://tools.ietf.org/rfc/rfc7946.txt">https://tools.ietf.org/rfc/rfc7946.txt</a></p>
-
-<p class="MsoNormal"><a name="_d373494a-88a5-59f4-d7ff-259898617366" id="_d373494a-88a5-59f4-d7ff-259898617366"></a>[w3ccurie] W3C CURIE Syntax 1.0, Syntax for expressing Compact URIs, Working Group Note, 2010-12-16, <a href="http://www.w3.org/TR/curie/">http://www.w3.org/TR/curie/</a></p>
-
-<p class="MsoNormal"><a name="_3434dc6d-0b93-05c3-ff66-9b73e24b9966" id="_3434dc6d-0b93-05c3-ff66-9b73e24b9966"></a>[w3cjsonld10] W3C JSON-LD1.0, JSON-based Serialization for Linked Data, 2014-01-16 superseded 2020-11-03, <a href="https://www.w3.org/TR/2014/REC-json-ld-20140116/">https://www.w3.org/TR/2014/REC-json-ld-20140116/</a></p>
-
-<p class="MsoNormal"><a name="_a88d8d72-80b2-c0da-9982-9a9d652df932" id="_a88d8d72-80b2-c0da-9982-9a9d652df932"></a>[UCUM] Schadow, G., McDonald, C. J.: Unified Code for Units of Measure, <a href="http://unitsofmeasure.org">http://unitsofmeasure.org</a></p>
+<p class="MsoNormal"><a name="_9c9f4a30-77d1-feb2-0375-f61268fc6637" id="_9c9f4a30-77d1-feb2-0375-f61268fc6637"></a>Key words &#x201C;MUST&#x201D;, &#x201C;MUST NOT&#x201D;, &#x201C;REQUIRED&#x201D;, &#x201C;SHALL&#x201D;, &#x201C;SHALL NOT&#x201D;, &#x201C;SHOULD&#x201D;, &#x201C;SHOULD NOT&#x201D;, &#x201C;RECOMMENDED&#x201D;, &#x201C;MAY&#x201D;, and &#x201C;OPTIONAL&#x201D; are to be interpreted as described in IETF RFC 2119, <a href="https://datatracker.ietf.org/doc/html/rfc2119.txt">https://datatracker.ietf.org/doc/html/rfc2119.txt</a></p>
 </div>
       <div><a name="_terms_and_definitions" id="_terms_and_definitions"></a><h1>4.<span style="mso-tab-count:1">&#xA0; </span>Terms and definitions</h1><p class="MsoNormal"><a name="_7fe04b5b-db41-5d9b-ebe1-463b3a0c16c9" id="_7fe04b5b-db41-5d9b-ebe1-463b3a0c16c9"></a>This document uses the terms defined in <a href="https://portal.ogc.org/public_ogc/directives/directives.php">OGC Policy Directive 49</a>, which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word &#x201C;shall&#x201D; (not &#x201C;must&#x201D;) is the verb form used to indicate a requirement to be strictly followed to conform to this document and OGC documents do not use the equivalent phrases in the ISO/IEC Directives, Part 2.</p><p class="MsoNormal"><a name="_e0235fe8-8273-26b4-faeb-a580ad58929f" id="_e0235fe8-8273-26b4-faeb-a580ad58929f"></a>This document also uses terms defined in the OGC Standard for Modular specifications (<a href="https://portal.opengeospatial.org/files/?artifact_id=34762">OGC 08-131r3</a>), also known as the &#x2018;ModSpec&#x2019;. The definitions of terms such as standard, specification, requirement, and conformance test are provided in the ModSpec.</p><p class="MsoNormal"><a name="_1448dc16-8929-d666-6525-0249826c75e3" id="_1448dc16-8929-d666-6525-0249826c75e3"></a>For the purposes of this document, the following additional terms and definitions apply.</p><p class="MsoNormal"><a name="_8519aec7-f0c1-98b9-f960-9328198ca29b" id="_8519aec7-f0c1-98b9-f960-9328198ca29b"></a>The key words &#x201C;MUST&#x201D;, &#x201C;MUST NOT&#x201D;, &#x201C;REQUIRED&#x201D;, &#x201C;SHALL&#x201D;, &#x201C;SHALL NOT&#x201D;, &#x201C;SHOULD&#x201D;, &#x201C;SHOULD NOT&#x201D;, &#x201C;RECOMMENDED&#x201D;,  &#x201C;MAY&#x201D;, and &#x201C;OPTIONAL&#x201D; in this document are to be interpreted as described in IETF RFC 2119.</p><p class="MsoNormal"><a name="_ccf3e63b-6acc-0cd0-687c-fd7f951288d6" id="_ccf3e63b-6acc-0cd0-687c-fd7f951288d6"></a>For the purposes of this document, the following additional terms and definitions apply.</p><p class="TermNum" style="text-align:left;"><a name="term-rfc" id="term-rfc"></a>4.1.&#xA0;<b><b>RFC</b></b></p>
 <p class="MsoNormal"><a name="_abff4a48-e5eb-065e-6394-2d95b929bd18" id="_abff4a48-e5eb-065e-6394-2d95b929bd18"></a>Request For Comment (IETF)</p>
@@ -3188,23 +3179,23 @@ The special language tag <tt>"und"</tt> can be used to identify a value whose la
 
 <p class="MsoNormal"><a name="_62f693e1-e38a-44b7-e671-970a8857fd8a" id="_62f693e1-e38a-44b7-e671-970a8857fd8a"></a>Parameter objects represent metadata about the values of the coverage in terms of the observed property (like water temperature), the units, and others.</p>
 
-<p style="mso-list:l3 level1 lfo2;" class="MsoListParagraphCxSpFirst">A parameter object MAY have any number of members (name/value pairs).
+<p style="mso-list:l3 level1 lfo3;" class="MsoListParagraphCxSpFirst">A parameter object MAY have any number of members (name/value pairs).
 </p>
-<p style="mso-list:l3 level1 lfo2;" class="MsoListParagraphCxSpMiddle">A parameter object MUST have a member with the name <tt>"type"</tt> and the value <tt>"Parameter"</tt>.
+<p style="mso-list:l3 level1 lfo3;" class="MsoListParagraphCxSpMiddle">A parameter object MUST have a member with the name <tt>"type"</tt> and the value <tt>"Parameter"</tt>.
 </p>
-<p style="mso-list:l3 level1 lfo2;" class="MsoListParagraphCxSpMiddle">A parameter object MAY have a member with the name <tt>"id"</tt> where the value MUST be a string and SHOULD be a common identifier.
+<p style="mso-list:l3 level1 lfo3;" class="MsoListParagraphCxSpMiddle">A parameter object MAY have a member with the name <tt>"id"</tt> where the value MUST be a string and SHOULD be a common identifier.
 </p>
-<p style="mso-list:l3 level1 lfo2;" class="MsoListParagraphCxSpMiddle">A parameter object MAY have a member with the name <tt>"label"</tt> where the value MUST be an i18n object that is the name of the parameter and which SHOULD be short. Note that this SHOULD be left out if it would be identical to the <tt>"label"</tt> of the <tt>"observedProperty"</tt> member.
+<p style="mso-list:l3 level1 lfo3;" class="MsoListParagraphCxSpMiddle">A parameter object MAY have a member with the name <tt>"label"</tt> where the value MUST be an i18n object that is the name of the parameter and which SHOULD be short. Note that this SHOULD be left out if it would be identical to the <tt>"label"</tt> of the <tt>"observedProperty"</tt> member.
 </p>
-<p style="mso-list:l3 level1 lfo2;" class="MsoListParagraphCxSpMiddle">A parameter object MAY have a member with the name <tt>"description"</tt> where the value MUST be an i18n object which is a, perhaps lengthy, textual description of the parameter.
+<p style="mso-list:l3 level1 lfo3;" class="MsoListParagraphCxSpMiddle">A parameter object MAY have a member with the name <tt>"description"</tt> where the value MUST be an i18n object which is a, perhaps lengthy, textual description of the parameter.
 </p>
-<p style="mso-list:l3 level1 lfo2;" class="MsoListParagraphCxSpMiddle">A parameter object MUST have a member with the name <tt>"observedProperty"</tt> where the value is an object which MUST have the member <tt>"label"</tt> and which MAY have the members <tt>"id"</tt>, <tt>"description"</tt>, and <tt>"categories"</tt>. The value of <tt>"label"</tt> MUST be an i18n object that is the name of the observed property and which SHOULD be short. If given, the value of <tt>"id"</tt> MUST be a string and SHOULD be a common identifier. If given, the value of <tt>"description"</tt> MUST be an i18n object with a textual description of the observed property. If given, the value of <tt>"categories"</tt> MUST be a non-empty array of category objects. A category object MUST an <tt>"id"</tt> and a <tt>"label"</tt> member,  and MAY have a <tt>"description"</tt> member. The value of <tt>"id"</tt> MUST be a string and SHOULD be a common identifier. The value of <tt>"label"</tt> MUST be an i18n object of the name of the category and SHOULD be short. If given, the value of <tt>"description"</tt> MUST be an i18n object with a textual description of the category.
+<p style="mso-list:l3 level1 lfo3;" class="MsoListParagraphCxSpMiddle">A parameter object MUST have a member with the name <tt>"observedProperty"</tt> where the value is an object which MUST have the member <tt>"label"</tt> and which MAY have the members <tt>"id"</tt>, <tt>"description"</tt>, and <tt>"categories"</tt>. The value of <tt>"label"</tt> MUST be an i18n object that is the name of the observed property and which SHOULD be short. If given, the value of <tt>"id"</tt> MUST be a string and SHOULD be a common identifier. If given, the value of <tt>"description"</tt> MUST be an i18n object with a textual description of the observed property. If given, the value of <tt>"categories"</tt> MUST be a non-empty array of category objects. A category object MUST an <tt>"id"</tt> and a <tt>"label"</tt> member,  and MAY have a <tt>"description"</tt> member. The value of <tt>"id"</tt> MUST be a string and SHOULD be a common identifier. The value of <tt>"label"</tt> MUST be an i18n object of the name of the category and SHOULD be short. If given, the value of <tt>"description"</tt> MUST be an i18n object with a textual description of the category.
 </p>
-<p style="mso-list:l3 level1 lfo2;" class="MsoListParagraphCxSpMiddle">A parameter object MAY have a member with the name <tt>"categoryEncoding"</tt> where the value is an object where each key is equal to an <tt>"id"</tt> value of the <tt>"categories"</tt> array within the <tt>"observedProperty"</tt> member of the parameter object. There MUST be no duplicate keys. The value is either an integer or an array of integers where each integer MUST be unique within the object.
+<p style="mso-list:l3 level1 lfo3;" class="MsoListParagraphCxSpMiddle">A parameter object MAY have a member with the name <tt>"categoryEncoding"</tt> where the value is an object where each key is equal to an <tt>"id"</tt> value of the <tt>"categories"</tt> array within the <tt>"observedProperty"</tt> member of the parameter object. There MUST be no duplicate keys. The value is either an integer or an array of integers where each integer MUST be unique within the object.
 </p>
-<p style="mso-list:l3 level1 lfo2;" class="MsoListParagraphCxSpMiddle">A parameter object MAY have a member with the name <tt>"unit"</tt> where the value is an object which MUST have either or both the members <tt>"label"</tt> or/and &#x201C;symbol&#x201D;, and which MAY have the member <tt>"id"</tt>. If given, the value of <tt>"symbol"</tt> MUST either be a string of the symbolic notation of the unit, or an object with the members <tt>"value"</tt> and <tt>"type"</tt> where <tt>"value"</tt> is the symbolic unit notation and <tt>"type"</tt> references the unit serialization scheme that is used. <tt>"type"</tt> MUST HAVE the value <tt>"http://www.opengis.net/def/uom/UCUM/`" if <a href="http://unitsofmeasure.org">UCUM</a> is used, or a custom value as recommended in section "Extensions". If given, the value of `"label"</tt> MUST be an i18n object of the name of the unit and SHOULD be short. If given, the value of <tt>"id"</tt> MUST be a string and SHOULD be a common identifier. It is RECOMMENDED to reference a unit serialization scheme to allow automatic unit conversion.
+<p style="mso-list:l3 level1 lfo3;" class="MsoListParagraphCxSpMiddle">A parameter object MAY have a member with the name <tt>"unit"</tt> where the value is an object which MUST have either or both the members <tt>"label"</tt> or/and &#x201C;symbol&#x201D;, and which MAY have the member <tt>"id"</tt>. If given, the value of <tt>"symbol"</tt> MUST either be a string of the symbolic notation of the unit, or an object with the members <tt>"value"</tt> and <tt>"type"</tt> where <tt>"value"</tt> is the symbolic unit notation and <tt>"type"</tt> references the unit serialization scheme that is used. <tt>"type"</tt> MUST HAVE the value <tt>"http://www.opengis.net/def/uom/UCUM/`" if <a href="http://unitsofmeasure.org">UCUM</a> is used, or a custom value as recommended in section "Extensions". If given, the value of `"label"</tt> MUST be an i18n object of the name of the unit and SHOULD be short. If given, the value of <tt>"id"</tt> MUST be a string and SHOULD be a common identifier. It is RECOMMENDED to reference a unit serialization scheme to allow automatic unit conversion.
 </p>
-<p style="mso-list:l3 level1 lfo2;" class="MsoListParagraphCxSpLast">A parameter object MUST NOT have a <tt>"unit"</tt> member if the <tt>"observedProperty"</tt> member has a <tt>"categories"</tt> member.
+<p style="mso-list:l3 level1 lfo3;" class="MsoListParagraphCxSpLast">A parameter object MUST NOT have a <tt>"unit"</tt> member if the <tt>"observedProperty"</tt> member has a <tt>"categories"</tt> member.
 </p>
 
 
@@ -3222,21 +3213,21 @@ The special language tag <tt>"und"</tt> can be used to identify a value whose la
 
 <p class="MsoNormal"><a name="_15bf3e13-6742-d96e-7d05-0ce60b532aa8" id="_15bf3e13-6742-d96e-7d05-0ce60b532aa8"></a>Parameter group objects represent logical groups of parameters, for example vector quantities.</p>
 
-<p style="mso-list:l3 level1 lfo3;" class="MsoListParagraphCxSpFirst">A parameter group object MAY have any number of members (name/value pairs).
+<p style="mso-list:l3 level1 lfo4;" class="MsoListParagraphCxSpFirst">A parameter group object MAY have any number of members (name/value pairs).
 </p>
-<p style="mso-list:l3 level1 lfo3;" class="MsoListParagraphCxSpMiddle">A parameter group object MUST have a member with the name <tt>"type"</tt> and the value <tt>"ParameterGroup"</tt>.
+<p style="mso-list:l3 level1 lfo4;" class="MsoListParagraphCxSpMiddle">A parameter group object MUST have a member with the name <tt>"type"</tt> and the value <tt>"ParameterGroup"</tt>.
 </p>
-<p style="mso-list:l3 level1 lfo3;" class="MsoListParagraphCxSpMiddle">A parameter group object MAY have a member with the name <tt>"id"</tt> where the value MUST be a string and SHOULD be a common identifier.
+<p style="mso-list:l3 level1 lfo4;" class="MsoListParagraphCxSpMiddle">A parameter group object MAY have a member with the name <tt>"id"</tt> where the value MUST be a string and SHOULD be a common identifier.
 </p>
-<p style="mso-list:l3 level1 lfo3;" class="MsoListParagraphCxSpMiddle">A parameter group object MAY have a member with the name <tt>"label"</tt> where the value MUST be an i18n object that is the name of the parameter group and which SHOULD be short. Note that this SHOULD be left out if it would be identical to the <tt>"label"</tt> of the <tt>"observedProperty"</tt> member.
+<p style="mso-list:l3 level1 lfo4;" class="MsoListParagraphCxSpMiddle">A parameter group object MAY have a member with the name <tt>"label"</tt> where the value MUST be an i18n object that is the name of the parameter group and which SHOULD be short. Note that this SHOULD be left out if it would be identical to the <tt>"label"</tt> of the <tt>"observedProperty"</tt> member.
 </p>
-<p style="mso-list:l3 level1 lfo3;" class="MsoListParagraphCxSpMiddle">A parameter group object MAY have a member with the name <tt>"description"</tt> where the value MUST be an i18n object which is a, perhaps lengthy, textual description of the parameter group.
+<p style="mso-list:l3 level1 lfo4;" class="MsoListParagraphCxSpMiddle">A parameter group object MAY have a member with the name <tt>"description"</tt> where the value MUST be an i18n object which is a, perhaps lengthy, textual description of the parameter group.
 </p>
-<p style="mso-list:l3 level1 lfo3;" class="MsoListParagraphCxSpMiddle">A parameter group object MAY have a member with the name <tt>"observedProperty"</tt> where the value is an object as specified for parameter objects.
+<p style="mso-list:l3 level1 lfo4;" class="MsoListParagraphCxSpMiddle">A parameter group object MAY have a member with the name <tt>"observedProperty"</tt> where the value is an object as specified for parameter objects.
 </p>
-<p style="mso-list:l3 level1 lfo3;" class="MsoListParagraphCxSpMiddle">A parameter group object MUST have either or both the members <tt>"label"</tt> or/and <tt>"observedProperty"</tt>.
+<p style="mso-list:l3 level1 lfo4;" class="MsoListParagraphCxSpMiddle">A parameter group object MUST have either or both the members <tt>"label"</tt> or/and <tt>"observedProperty"</tt>.
 </p>
-<p style="mso-list:l3 level1 lfo3;" class="MsoListParagraphCxSpLast">A parameter group object MUST have a member with the name <tt>"members"</tt> where the value is a non-empty array of parameter identifiers (see 6.3 Coverage objects).
+<p style="mso-list:l3 level1 lfo4;" class="MsoListParagraphCxSpLast">A parameter group object MUST have a member with the name <tt>"members"</tt> where the value is a non-empty array of parameter identifiers (see 6.3 Coverage objects).
 </p>
 
 
@@ -3274,11 +3265,11 @@ The special language tag <tt>"und"</tt> can be used to identify a value whose la
 
 <p class="MsoNormal"><a name="_a9d5cde8-5f7f-ce0c-3406-eab48af24539" id="_a9d5cde8-5f7f-ce0c-3406-eab48af24539"></a>Geographic CRSs anchor coordinate values to an ellipsoidal approximation of the Earth. They have coordinate axes of geodetic longitude and geodetic latitude, and perhaps height above the ellipsoid (i.e. they can be two- or three-dimensional). The origin of the CRS is on the surface of the ellipsoid.</p>
 
-<p style="mso-list:l3 level1 lfo4;" class="MsoListParagraphCxSpFirst">The value of the <tt>"type"</tt> member MUST be &#x201C;GeographicCRS&#x201D;
+<p style="mso-list:l3 level1 lfo5;" class="MsoListParagraphCxSpFirst">The value of the <tt>"type"</tt> member MUST be &#x201C;GeographicCRS&#x201D;
 </p>
-<p style="mso-list:l3 level1 lfo4;" class="MsoListParagraphCxSpMiddle">The object MAY have an <tt>"id"</tt> member, whose value MUST be a string and SHOULD be a common identifier for the reference system.
+<p style="mso-list:l3 level1 lfo5;" class="MsoListParagraphCxSpMiddle">The object MAY have an <tt>"id"</tt> member, whose value MUST be a string and SHOULD be a common identifier for the reference system.
 </p>
-<p style="mso-list:l3 level1 lfo4;" class="MsoListParagraphCxSpLast">The object MAY have a <tt>"description"</tt> member, where the value MUST be an i18n object, but no standardised content is interpreted from this description.
+<p style="mso-list:l3 level1 lfo5;" class="MsoListParagraphCxSpLast">The object MAY have a <tt>"description"</tt> member, where the value MUST be an i18n object, but no standardised content is interpreted from this description.
 </p>
 
 
@@ -3301,11 +3292,11 @@ The special language tag <tt>"und"</tt> can be used to identify a value whose la
 
 <p class="MsoNormal"><a name="_d80eab1a-1a7a-14f0-ab16-244e8465e82f" id="_d80eab1a-1a7a-14f0-ab16-244e8465e82f"></a>Projected CRSs use two coordinates to denote positions on a Cartesian plane, which is derived from projecting the ellipsoid according to some defined transformation.</p>
 
-<p style="mso-list:l3 level1 lfo5;" class="MsoListParagraphCxSpFirst">The value of the <tt>"type"</tt> member MUST be &#x201C;ProjectedCRS&#x201D;
+<p style="mso-list:l3 level1 lfo6;" class="MsoListParagraphCxSpFirst">The value of the <tt>"type"</tt> member MUST be &#x201C;ProjectedCRS&#x201D;
 </p>
-<p style="mso-list:l3 level1 lfo5;" class="MsoListParagraphCxSpMiddle">The object MAY have an <tt>"id"</tt> member, whose value MUST be a string and SHOULD be a common identifier for the reference system.
+<p style="mso-list:l3 level1 lfo6;" class="MsoListParagraphCxSpMiddle">The object MAY have an <tt>"id"</tt> member, whose value MUST be a string and SHOULD be a common identifier for the reference system.
 </p>
-<p style="mso-list:l3 level1 lfo5;" class="MsoListParagraphCxSpLast">The object MAY have a <tt>"description"</tt> member, where the value MUST be an i18n object, but no standardised content is interpreted from this description.
+<p style="mso-list:l3 level1 lfo6;" class="MsoListParagraphCxSpLast">The object MAY have a <tt>"description"</tt> member, where the value MUST be an i18n object, but no standardised content is interpreted from this description.
 </p>
 
 
@@ -3321,11 +3312,11 @@ The special language tag <tt>"und"</tt> can be used to identify a value whose la
 
 <p class="MsoNormal"><a name="_bbc7ed83-e66b-5b6e-7015-06fcc4dd5b0c" id="_bbc7ed83-e66b-5b6e-7015-06fcc4dd5b0c"></a>Vertical CRSs use a single coordinate to denote some measure of height or depth, usually approximately oriented with gravity.</p>
 
-<p style="mso-list:l3 level1 lfo6;" class="MsoListParagraphCxSpFirst">The value of the <tt>"type"</tt> member MUST be &#x201C;VerticalCRS&#x201D;
+<p style="mso-list:l3 level1 lfo7;" class="MsoListParagraphCxSpFirst">The value of the <tt>"type"</tt> member MUST be &#x201C;VerticalCRS&#x201D;
 </p>
-<p style="mso-list:l3 level1 lfo6;" class="MsoListParagraphCxSpMiddle">The object MAY have an <tt>"id"</tt> member, whose value MUST be a string and SHOULD be a common identifier for the reference system.
+<p style="mso-list:l3 level1 lfo7;" class="MsoListParagraphCxSpMiddle">The object MAY have an <tt>"id"</tt> member, whose value MUST be a string and SHOULD be a common identifier for the reference system.
 </p>
-<p style="mso-list:l3 level1 lfo6;" class="MsoListParagraphCxSpLast">The object MAY have a <tt>"description"</tt> member, where the value MUST be an i18n object, but no standardised content is interpreted from this description.
+<p style="mso-list:l3 level1 lfo7;" class="MsoListParagraphCxSpLast">The object MAY have a <tt>"description"</tt> member, where the value MUST be an i18n object, but no standardised content is interpreted from this description.
 </p>
 
 
@@ -3340,32 +3331,32 @@ The special language tag <tt>"und"</tt> can be used to identify a value whose la
 
 <p class="MsoNormal"><a name="_854ba6bc-35b3-6fcb-2e3b-85e0c1086d87" id="_854ba6bc-35b3-6fcb-2e3b-85e0c1086d87"></a>Time is referenced by a temporal reference system (temporal RS). In the current specification, only a string-based notation for time values is defined. Future versions of this specification may allow for alternative notations, such as recording time values as numeric offsets from a given temporal datum (e.g. &#x201C;days since 1970-01-01&#x201D;).</p>
 
-<p style="mso-list:l3 level1 lfo7;" class="MsoListParagraphCxSpFirst">A temporal RS object MUST have a member <tt>"type"</tt>. The only currently defined value of it is <tt>"TemporalRS"</tt>.
+<p style="mso-list:l3 level1 lfo8;" class="MsoListParagraphCxSpFirst">A temporal RS object MUST have a member <tt>"type"</tt>. The only currently defined value of it is <tt>"TemporalRS"</tt>.
 </p>
-<p style="mso-list:l3 level1 lfo7;" class="MsoListParagraphCxSpMiddle">A temporal RS object MUST have a member <tt>"calendar"</tt> with value <tt>"Gregorian"</tt> or a URI.
+<p style="mso-list:l3 level1 lfo8;" class="MsoListParagraphCxSpMiddle">A temporal RS object MUST have a member <tt>"calendar"</tt> with value <tt>"Gregorian"</tt> or a URI.
 </p>
-<p style="mso-list:l3 level1 lfo7;" class="MsoListParagraphCxSpMiddle">If the Gregorian calendar is used, then <tt>"calendar"</tt> MUST have the value <tt>"Gregorian"</tt> and cannot be a URI.
+<p style="mso-list:l3 level1 lfo8;" class="MsoListParagraphCxSpMiddle">If the Gregorian calendar is used, then <tt>"calendar"</tt> MUST have the value <tt>"Gregorian"</tt> and cannot be a URI.
 </p>
-<p style="mso-list:l3 level1 lfo7;" class="MsoListParagraphCxSpMiddle">A temporal RS object MAY have a member <tt>"timeScale"</tt> with a URI as value.
+<p style="mso-list:l3 level1 lfo8;" class="MsoListParagraphCxSpMiddle">A temporal RS object MAY have a member <tt>"timeScale"</tt> with a URI as value.
 If omitted, the time scale defaults to <tt>"<a href="http://www.opengis.net/def/trs/BIPM/0/UTC">UTC</a>"</tt>.
 If the time scale is UTC, the <tt>"timeScale"</tt> member MUST be omitted.
 </p>
-<p style="mso-list:l3 level1 lfo7;" class="MsoListParagraphCxSpMiddle">If the calendar is based on years, months, days, then the referenced values SHOULD use one of the following ISO8601-based lexical representations:
+<p style="mso-list:l3 level1 lfo8;" class="MsoListParagraphCxSpMiddle">If the calendar is based on years, months, days, then the referenced values SHOULD use one of the following ISO8601-based lexical representations:
 </p>
-<p style="mso-list:l3 level1 lfo7;" class="MsoListParagraphCxSpMiddle">YYYY
+<p style="mso-list:l3 level1 lfo8;" class="MsoListParagraphCxSpMiddle">YYYY
 </p>
-<p style="mso-list:l3 level1 lfo7;" class="MsoListParagraphCxSpMiddle">&#xB1;XYYYY (where X stands for extra year digits)
+<p style="mso-list:l3 level1 lfo8;" class="MsoListParagraphCxSpMiddle">&#xB1;XYYYY (where X stands for extra year digits)
 </p>
-<p style="mso-list:l3 level1 lfo7;" class="MsoListParagraphCxSpMiddle">YYYY-MM
+<p style="mso-list:l3 level1 lfo8;" class="MsoListParagraphCxSpMiddle">YYYY-MM
 </p>
-<p style="mso-list:l3 level1 lfo7;" class="MsoListParagraphCxSpMiddle">YYYY-MM-DD
+<p style="mso-list:l3 level1 lfo8;" class="MsoListParagraphCxSpMiddle">YYYY-MM-DD
 </p>
-<p style="mso-list:l3 level1 lfo7;" class="MsoListParagraphCxSpMiddle">YYYY-MM-DDTHH:MM:SS[.F]Z where Z is either &#x201C;Z&#x201D; or a time scale offset +|-HH:MM
+<p style="mso-list:l3 level1 lfo8;" class="MsoListParagraphCxSpMiddle">YYYY-MM-DDTHH:MM:SS[.F]Z where Z is either &#x201C;Z&#x201D; or a time scale offset +|-HH:MM
 </p>
-<p style="mso-list:l3 level1 lfo7;" class="MsoListParagraphCxSpMiddle">If calendar dates with reduced precision are used in a lexical representation (e.g. <tt>"2016"</tt>), then
+<p style="mso-list:l3 level1 lfo8;" class="MsoListParagraphCxSpMiddle">If calendar dates with reduced precision are used in a lexical representation (e.g. <tt>"2016"</tt>), then
 a client SHOULD interpret those dates in that reduced precision.
 </p>
-<p style="mso-list:l3 level1 lfo7;" class="MsoListParagraphCxSpLast">If <tt>"type"</tt> is <tt>"TemporalRS"</tt> and <tt>"calendar"</tt> is <tt>"Gregorian"</tt>, then the above lexical representation MUST be used.
+<p style="mso-list:l3 level1 lfo8;" class="MsoListParagraphCxSpLast">If <tt>"type"</tt> is <tt>"TemporalRS"</tt> and <tt>"calendar"</tt> is <tt>"Gregorian"</tt>, then the above lexical representation MUST be used.
 </p>
 
 
@@ -3379,19 +3370,19 @@ a client SHOULD interpret those dates in that reduced precision.
 
 <p class="MsoNormal"><a name="_02ec4d0f-fbab-c97e-fb81-e4ca8ff75a36" id="_02ec4d0f-fbab-c97e-fb81-e4ca8ff75a36"></a>Identifier-based reference systems (identifier RS) .</p>
 
-<p style="mso-list:l3 level1 lfo8;" class="MsoListParagraphCxSpFirst">An identifier RS object MUST have a member <tt>"type"</tt> with value <tt>"IdentifierRS"</tt>.
+<p style="mso-list:l3 level1 lfo9;" class="MsoListParagraphCxSpFirst">An identifier RS object MUST have a member <tt>"type"</tt> with value <tt>"IdentifierRS"</tt>.
 </p>
-<p style="mso-list:l3 level1 lfo8;" class="MsoListParagraphCxSpMiddle">An identifier RS object MAY have a member <tt>"id"</tt> where the value MUST be a string and SHOULD be a common identifier for the reference system.
+<p style="mso-list:l3 level1 lfo9;" class="MsoListParagraphCxSpMiddle">An identifier RS object MAY have a member <tt>"id"</tt> where the value MUST be a string and SHOULD be a common identifier for the reference system.
 </p>
-<p style="mso-list:l3 level1 lfo8;" class="MsoListParagraphCxSpMiddle">An identifier RS object MAY have a member <tt>"label"</tt> where the value MUST be an i18n object that is the name of the reference system.
+<p style="mso-list:l3 level1 lfo9;" class="MsoListParagraphCxSpMiddle">An identifier RS object MAY have a member <tt>"label"</tt> where the value MUST be an i18n object that is the name of the reference system.
 </p>
-<p style="mso-list:l3 level1 lfo8;" class="MsoListParagraphCxSpMiddle">An identifier RS object MAY have a member <tt>"description"</tt> where the value MUST be an i18n object that is the (perhaps lengthy) description of the reference system.
+<p style="mso-list:l3 level1 lfo9;" class="MsoListParagraphCxSpMiddle">An identifier RS object MAY have a member <tt>"description"</tt> where the value MUST be an i18n object that is the (perhaps lengthy) description of the reference system.
 </p>
-<p style="mso-list:l3 level1 lfo8;" class="MsoListParagraphCxSpMiddle">An identifier RS object MUST have a member <tt>"targetConcept"</tt> where the value is an object that MUST have a member <tt>"label"</tt> and MAY have a member <tt>"description"</tt> where the value of each MUST be an i18n object that is the name or description, respectively, of the concept which is referenced in the system.
+<p style="mso-list:l3 level1 lfo9;" class="MsoListParagraphCxSpMiddle">An identifier RS object MUST have a member <tt>"targetConcept"</tt> where the value is an object that MUST have a member <tt>"label"</tt> and MAY have a member <tt>"description"</tt> where the value of each MUST be an i18n object that is the name or description, respectively, of the concept which is referenced in the system.
 </p>
-<p style="mso-list:l3 level1 lfo8;" class="MsoListParagraphCxSpMiddle">An identifier RS object MAY have a member <tt>"identifiers"</tt> where the value is an object where each key is an identifier referenced by the identifier RS and each value an object describing the referenced concept, equal to <tt>"targetConcept"</tt>.
+<p style="mso-list:l3 level1 lfo9;" class="MsoListParagraphCxSpMiddle">An identifier RS object MAY have a member <tt>"identifiers"</tt> where the value is an object where each key is an identifier referenced by the identifier RS and each value an object describing the referenced concept, equal to <tt>"targetConcept"</tt>.
 </p>
-<p style="mso-list:l3 level1 lfo8;" class="MsoListParagraphCxSpLast">Coordinate values associated with an identifier RS MUST be strings.
+<p style="mso-list:l3 level1 lfo9;" class="MsoListParagraphCxSpLast">Coordinate values associated with an identifier RS MUST be strings.
 </p>
 
 
@@ -3407,9 +3398,9 @@ a client SHOULD interpret those dates in that reduced precision.
 
 <p class="MsoNormal"><a name="_6bad8053-346f-c133-ad64-b5c2c90b6fba" id="_6bad8053-346f-c133-ad64-b5c2c90b6fba"></a>CoverageJSON documents always consist of a single object. This object (referred to as the CoverageJSON object below) represents a domain, range, coverage, or collection of coverages.</p>
 
-<p style="mso-list:l3 level1 lfo9;" class="MsoListParagraphCxSpFirst">The CoverageJSON object MAY have any number of members (name/value pairs).
+<p style="mso-list:l3 level1 lfo10;" class="MsoListParagraphCxSpFirst">The CoverageJSON object MAY have any number of members (name/value pairs).
 </p>
-<p style="mso-list:l3 level1 lfo9;" class="MsoListParagraphCxSpLast">The CoverageJSON object MUST have a member with the name <tt>"type"</tt> whose value is one of: <tt>"Domain"</tt>, <tt>"NdArray"</tt> (a range encoding), <tt>"TiledNdArray"</tt> (a range encoding), <tt>"Coverage"</tt>, or <tt>"CoverageCollection"</tt>. The case of the type member values MUST be as shown here.
+<p style="mso-list:l3 level1 lfo10;" class="MsoListParagraphCxSpLast">The CoverageJSON object MUST have a member with the name <tt>"type"</tt> whose value is one of: <tt>"Domain"</tt>, <tt>"NdArray"</tt> (a range encoding), <tt>"TiledNdArray"</tt> (a range encoding), <tt>"Coverage"</tt>, or <tt>"CoverageCollection"</tt>. The case of the type member values MUST be as shown here.
 </p>
 
 
@@ -3421,43 +3412,43 @@ Its general structure is:</p>
 <p class="Sourcecode"><a name="_10e53a4e-2087-337c-a245-4b05547fca50" id="_10e53a4e-2087-337c-a245-4b05547fca50"></a>{<br/>&#xA0; "type": "Domain",<br/>&#xA0; "domainType": "...",<br/>&#xA0; "axes": { ... },<br/>&#xA0; "referencing": [...]<br/>}</p>
 
 
-<p style="mso-list:l3 level1 lfo10;" class="MsoListParagraphCxSpFirst">The value of the <tt>"type"</tt> member MUST be <tt>"Domain"</tt>.
+<p style="mso-list:l3 level1 lfo11;" class="MsoListParagraphCxSpFirst">The value of the <tt>"type"</tt> member MUST be <tt>"Domain"</tt>.
 </p>
-<p style="mso-list:l3 level1 lfo10;" class="MsoListParagraphCxSpMiddle">For interoperability reasons it is RECOMMENDED that a domain object has the member <tt>"domainType"</tt> with a string value to indicate that the domain follows a certain structure (e.g. a time series, a vertical profile, a spatio-temporal 4D grid). See the [&#x201C;Common CoverageJSON Domain Types Specification&#x201D;][domain-types], which forms part of this specification, for details. Custom domain types may be used as recommended in the section &#x201C;Extensions&#x201D;.
+<p style="mso-list:l3 level1 lfo11;" class="MsoListParagraphCxSpMiddle">For interoperability reasons it is RECOMMENDED that a domain object has the member <tt>"domainType"</tt> with a string value to indicate that the domain follows a certain structure (e.g. a time series, a vertical profile, a spatio-temporal 4D grid). See the [&#x201C;Common CoverageJSON Domain Types Specification&#x201D;][domain-types], which forms part of this specification, for details. Custom domain types may be used as recommended in the section &#x201C;Extensions&#x201D;.
 </p>
-<p style="mso-list:l3 level1 lfo10;" class="MsoListParagraphCxSpMiddle">A domain object MUST have the member <tt>"axes"</tt> which has as value an object where each key is an axis identifier and each value an axis object as defined below.
+<p style="mso-list:l3 level1 lfo11;" class="MsoListParagraphCxSpMiddle">A domain object MUST have the member <tt>"axes"</tt> which has as value an object where each key is an axis identifier and each value an axis object as defined below.
 </p>
-<p style="mso-list:l3 level1 lfo10;" class="MsoListParagraphCxSpMiddle">The <tt>"axes"</tt> member MUST NOT be empty.
+<p style="mso-list:l3 level1 lfo11;" class="MsoListParagraphCxSpMiddle">The <tt>"axes"</tt> member MUST NOT be empty.
 </p>
-<p style="mso-list:l3 level1 lfo10;" class="MsoListParagraphCxSpMiddle">A domain object MAY have the member <tt>"referencing"</tt> where the value is an array of reference system connection objects as defined below.
+<p style="mso-list:l3 level1 lfo11;" class="MsoListParagraphCxSpMiddle">A domain object MAY have the member <tt>"referencing"</tt> where the value is an array of reference system connection objects as defined below.
 </p>
-<p style="mso-list:l3 level1 lfo10;" class="MsoListParagraphCxSpLast">A domain object MUST have a <tt>"referencing"</tt> member if the domain object is not part of a coverage collection or if the coverage collection does not have a <tt>"referencing"</tt> member.
+<p style="mso-list:l3 level1 lfo11;" class="MsoListParagraphCxSpLast">A domain object MUST have a <tt>"referencing"</tt> member if the domain object is not part of a coverage collection or if the coverage collection does not have a <tt>"referencing"</tt> member.
 </p>
 
 
 <div><a name="_axis_objects" id="_axis_objects"></a><h4>6.6.1.1.<span style="mso-tab-count:1">&#xA0; </span>Axis Objects</h4>
 
-<p style="mso-list:l3 level1 lfo11;" class="MsoListParagraphCxSpFirst">An axis object MUST have either a <tt>"values"</tt> member or, as a compact notation for a regularly spaced numeric axis, all the members <tt>"start"</tt>, <tt>"stop"</tt>, and <tt>"num"</tt>.
+<p style="mso-list:l3 level1 lfo12;" class="MsoListParagraphCxSpFirst">An axis object MUST have either a <tt>"values"</tt> member or, as a compact notation for a regularly spaced numeric axis, all the members <tt>"start"</tt>, <tt>"stop"</tt>, and <tt>"num"</tt>.
 </p>
-<p style="mso-list:l3 level1 lfo11;" class="MsoListParagraphCxSpMiddle">The value of <tt>"values"</tt> is a non-empty array of axis values.
+<p style="mso-list:l3 level1 lfo12;" class="MsoListParagraphCxSpMiddle">The value of <tt>"values"</tt> is a non-empty array of axis values.
 </p>
-<p style="mso-list:l3 level1 lfo11;" class="MsoListParagraphCxSpMiddle">The values of <tt>"start"</tt> and <tt>"stop"</tt> MUST be numbers, and the value of <tt>"num"</tt> an integer greater than zero. If the value of <tt>"num"</tt> is <tt>1</tt>, then <tt>"start"</tt> and <tt>"stop"</tt> MUST have identical values. For <tt>num &gt; 1</tt>, the array elements of <tt>"values"</tt> MAY be reconstructed with the formula <tt>start + i * step</tt> where <tt>i</tt> is the ith element and in the interval <tt>[0, num-1]</tt> and <tt>step = (stop - start) / (num - 1)</tt>. If <tt>num = 1</tt> then <tt>"values"</tt> is <tt>[start]</tt>. Note that <tt>"start"</tt> can be greater than <tt>"stop"</tt> in which case the axis values are descending.
+<p style="mso-list:l3 level1 lfo12;" class="MsoListParagraphCxSpMiddle">The values of <tt>"start"</tt> and <tt>"stop"</tt> MUST be numbers, and the value of <tt>"num"</tt> an integer greater than zero. If the value of <tt>"num"</tt> is <tt>1</tt>, then <tt>"start"</tt> and <tt>"stop"</tt> MUST have identical values. For <tt>num &gt; 1</tt>, the array elements of <tt>"values"</tt> MAY be reconstructed with the formula <tt>start + i * step</tt> where <tt>i</tt> is the ith element and in the interval <tt>[0, num-1]</tt> and <tt>step = (stop - start) / (num - 1)</tt>. If <tt>num = 1</tt> then <tt>"values"</tt> is <tt>[start]</tt>. Note that <tt>"start"</tt> can be greater than <tt>"stop"</tt> in which case the axis values are descending.
 </p>
-<p style="mso-list:l3 level1 lfo11;" class="MsoListParagraphCxSpMiddle">The value of <tt>"dataType"</tt> determines the structure of an axis value and its coordinates that are made available for referencing. The values of <tt>"dataType"</tt> defined in this specification are <tt>"primitive"</tt>, <tt>"tuple"</tt>, and <tt>"polygon"</tt>. Custom values MAY be used as detailed in the &#x201C;Extensions&#x201D; section. For <tt>"primitive"</tt>, there is a single coordinate identifier and each axis value MUST be a number or string. For <tt>"tuple"</tt>, each axis value MUST be an array of fixed size of primitive values in a defined order, where the tuple size corresponds to the number of coordinate identifiers. For <tt>"polygon"</tt>, each axis value MUST be a GeoJSON Polygon coordinate array, where the order of coordinates is given by the <tt>"coordinates"</tt> array.
+<p style="mso-list:l3 level1 lfo12;" class="MsoListParagraphCxSpMiddle">The value of <tt>"dataType"</tt> determines the structure of an axis value and its coordinates that are made available for referencing. The values of <tt>"dataType"</tt> defined in this specification are <tt>"primitive"</tt>, <tt>"tuple"</tt>, and <tt>"polygon"</tt>. Custom values MAY be used as detailed in the &#x201C;Extensions&#x201D; section. For <tt>"primitive"</tt>, there is a single coordinate identifier and each axis value MUST be a number or string. For <tt>"tuple"</tt>, each axis value MUST be an array of fixed size of primitive values in a defined order, where the tuple size corresponds to the number of coordinate identifiers. For <tt>"polygon"</tt>, each axis value MUST be a GeoJSON Polygon coordinate array, where the order of coordinates is given by the <tt>"coordinates"</tt> array.
 </p>
-<p style="mso-list:l3 level1 lfo11;" class="MsoListParagraphCxSpMiddle">If missing, the member <tt>"dataType"</tt> defaults to <tt>"primitive"</tt> and MUST not be included for that default case.
+<p style="mso-list:l3 level1 lfo12;" class="MsoListParagraphCxSpMiddle">If missing, the member <tt>"dataType"</tt> defaults to <tt>"primitive"</tt> and MUST not be included for that default case.
 </p>
-<p style="mso-list:l3 level1 lfo11;" class="MsoListParagraphCxSpMiddle">If <tt>"dataType"</tt> is <tt>"primitive"</tt> and the associated reference system (see 6.1.2) defines a natural ordering of values then the array values in <tt>"values"</tt>, if existing, MUST be ordered monotonically, that is, increasing or decreasing.
+<p style="mso-list:l3 level1 lfo12;" class="MsoListParagraphCxSpMiddle">If <tt>"dataType"</tt> is <tt>"primitive"</tt> and the associated reference system (see 6.1.2) defines a natural ordering of values then the array values in <tt>"values"</tt>, if existing, MUST be ordered monotonically, that is, increasing or decreasing.
 </p>
-<p style="mso-list:l3 level1 lfo11;" class="MsoListParagraphCxSpMiddle">The value of <tt>"coordinates"</tt> is a non-empty array of coordinate identifiers corresponding to the order of the coordinates defined by <tt>"dataType"</tt>.
+<p style="mso-list:l3 level1 lfo12;" class="MsoListParagraphCxSpMiddle">The value of <tt>"coordinates"</tt> is a non-empty array of coordinate identifiers corresponding to the order of the coordinates defined by <tt>"dataType"</tt>.
 </p>
-<p style="mso-list:l3 level1 lfo11;" class="MsoListParagraphCxSpMiddle">If missing, the member <tt>"coordinates"</tt> defaults to a one-element array of the axis identifier and MUST NOT be included for that default case.
+<p style="mso-list:l3 level1 lfo12;" class="MsoListParagraphCxSpMiddle">If missing, the member <tt>"coordinates"</tt> defaults to a one-element array of the axis identifier and MUST NOT be included for that default case.
 </p>
-<p style="mso-list:l3 level1 lfo11;" class="MsoListParagraphCxSpMiddle">A coordinate identifier SHALL NOT be defined more than once in all axis objects of a domain object.
+<p style="mso-list:l3 level1 lfo12;" class="MsoListParagraphCxSpMiddle">A coordinate identifier SHALL NOT be defined more than once in all axis objects of a domain object.
 </p>
-<p style="mso-list:l3 level1 lfo11;" class="MsoListParagraphCxSpMiddle">An axis object MAY have axis value bounds defined in the member <tt>"bounds"</tt> where the value is an array of values of length <tt>len*2</tt> with <tt>len</tt> being the length of the <tt>"values"</tt> array. For each axis value at array index <tt>i</tt> in the <tt>"values"</tt> array, a lower and upper bounding value at positions <tt>2*i</tt> and <tt>2*i+1</tt>, respectively, are given in the bounds array.
+<p style="mso-list:l3 level1 lfo12;" class="MsoListParagraphCxSpMiddle">An axis object MAY have axis value bounds defined in the member <tt>"bounds"</tt> where the value is an array of values of length <tt>len*2</tt> with <tt>len</tt> being the length of the <tt>"values"</tt> array. For each axis value at array index <tt>i</tt> in the <tt>"values"</tt> array, a lower and upper bounding value at positions <tt>2*i</tt> and <tt>2*i+1</tt>, respectively, are given in the bounds array.
 </p>
-<p style="mso-list:l3 level1 lfo11;" class="MsoListParagraphCxSpLast">If a domain axis object has no <tt>"bounds"</tt> member then a bounds array MAY be derived automatically.
+<p style="mso-list:l3 level1 lfo12;" class="MsoListParagraphCxSpLast">If a domain axis object has no <tt>"bounds"</tt> member then a bounds array MAY be derived automatically.
 </p>
 
 
@@ -3488,9 +3479,9 @@ Its general structure is:</p>
 
 <p class="MsoNormal"><a name="_3f67e656-df50-97ae-84a0-90977ad0cc68" id="_3f67e656-df50-97ae-84a0-90977ad0cc68"></a>A reference system connection object creates a link between values within domain axes and a reference system to be able to interpret those values, e.g. as coordinates in a certain coordinate reference system.</p>
 
-<p style="mso-list:l3 level1 lfo12;" class="MsoListParagraphCxSpFirst">A reference system connection object MUST have a member <tt>"coordinates"</tt> which has as value an array of coordinate identifiers that are referenced in this object. Depending on the type of referencing, the ordering of the identifiers MAY be relevant, e.g. for 2D/3D coordinate reference systems. In this case, the order of the identifiers MUST match the order of axes in the coordinate reference system.
+<p style="mso-list:l3 level1 lfo13;" class="MsoListParagraphCxSpFirst">A reference system connection object MUST have a member <tt>"coordinates"</tt> which has as value an array of coordinate identifiers that are referenced in this object. Depending on the type of referencing, the ordering of the identifiers MAY be relevant, e.g. for 2D/3D coordinate reference systems. In this case, the order of the identifiers MUST match the order of axes in the coordinate reference system.
 </p>
-<p style="mso-list:l3 level1 lfo12;" class="MsoListParagraphCxSpLast">A reference system connection object MUST have a member <tt>"system"</tt> whose value MUST be a Reference System Object (defined in section 5 above).
+<p style="mso-list:l3 level1 lfo13;" class="MsoListParagraphCxSpLast">A reference system connection object MUST have a member <tt>"system"</tt> whose value MUST be a Reference System Object (defined in section 5 above).
 </p>
 
 
@@ -3518,17 +3509,17 @@ Its general structure is:</p>
 
 <p class="MsoNormal"><a name="_00c73f48-52b8-4db9-aef7-2d411d9a856e" id="_00c73f48-52b8-4db9-aef7-2d411d9a856e"></a>A CoverageJSON object with the type <tt>"NdArray"</tt> is an NdArray object. It represents a multidimensional (&gt;= 0D) array with named axes, encoded as a flat one-dimensional array in row-major order.</p>
 
-<p style="mso-list:l3 level1 lfo13;" class="MsoListParagraphCxSpFirst">An NdArray object MUST have a member with the name <tt>"values"</tt> where the value is a non-empty array of numbers and nulls, or strings and nulls, where nulls represent missing data.
+<p style="mso-list:l3 level1 lfo14;" class="MsoListParagraphCxSpFirst">An NdArray object MUST have a member with the name <tt>"values"</tt> where the value is a non-empty array of numbers and nulls, or strings and nulls, where nulls represent missing data.
 </p>
-<p style="mso-list:l3 level1 lfo13;" class="MsoListParagraphCxSpMiddle">Zero-dimensional NdArrays MUST have exactly one item in the <tt>"values"</tt> array.
+<p style="mso-list:l3 level1 lfo14;" class="MsoListParagraphCxSpMiddle">Zero-dimensional NdArrays MUST have exactly one item in the <tt>"values"</tt> array.
 </p>
-<p style="mso-list:l3 level1 lfo13;" class="MsoListParagraphCxSpMiddle">An NdArray object MUST have a member with the name <tt>"dataType"</tt> where the value is either <tt>"float"</tt>, <tt>"integer"</tt>, or <tt>"string"</tt> and MUST correspond to the data type of the non-null values in the <tt>"values"</tt> array.
+<p style="mso-list:l3 level1 lfo14;" class="MsoListParagraphCxSpMiddle">An NdArray object MUST have a member with the name <tt>"dataType"</tt> where the value is either <tt>"float"</tt>, <tt>"integer"</tt>, or <tt>"string"</tt> and MUST correspond to the data type of the non-null values in the <tt>"values"</tt> array.
 </p>
-<p style="mso-list:l3 level1 lfo13;" class="MsoListParagraphCxSpMiddle">An NdArray object MAY have a member with the name <tt>"shape"</tt> where the value is an array of integers. For 0D arrays, <tt>"shape"</tt> MAY be omitted (defaulting to <tt>[]</tt>), for &gt;= 1D arrays it MUST be included.
+<p style="mso-list:l3 level1 lfo14;" class="MsoListParagraphCxSpMiddle">An NdArray object MAY have a member with the name <tt>"shape"</tt> where the value is an array of integers. For 0D arrays, <tt>"shape"</tt> MAY be omitted (defaulting to <tt>[]</tt>), for &gt;= 1D arrays it MUST be included.
 </p>
-<p style="mso-list:l3 level1 lfo13;" class="MsoListParagraphCxSpMiddle">An NdArray object MAY have a member with the name <tt>"axisNames"</tt> where the value is a string array of the same length as <tt>"shape"</tt>. For 0D arrays, <tt>"axisNames"</tt> MAY be omitted (defaulting to <tt>[]</tt>), for &gt;= 1D arrays it MUST be included.
+<p style="mso-list:l3 level1 lfo14;" class="MsoListParagraphCxSpMiddle">An NdArray object MAY have a member with the name <tt>"axisNames"</tt> where the value is a string array of the same length as <tt>"shape"</tt>. For 0D arrays, <tt>"axisNames"</tt> MAY be omitted (defaulting to <tt>[]</tt>), for &gt;= 1D arrays it MUST be included.
 </p>
-<p style="mso-list:l3 level1 lfo13;" class="MsoListParagraphCxSpLast">Note that common JSON implementations use 64-bit floating point numbers as data type for <tt>"values"</tt>, therefore precision has to be taken into account. For example, only integers within the extent [-2^32, 2^32] can be accurately represented with 64-bit floating point numbers.
+<p style="mso-list:l3 level1 lfo14;" class="MsoListParagraphCxSpLast">Note that common JSON implementations use 64-bit floating point numbers as data type for <tt>"values"</tt>, therefore precision has to be taken into account. For example, only integers within the extent [-2^32, 2^32] can be accurately represented with 64-bit floating point numbers.
 </p>
 
 
@@ -3542,17 +3533,17 @@ Its general structure is:</p>
 
 <p class="MsoNormal"><a name="_5adcf17c-cf6a-52ee-d680-e2a97d34f23d" id="_5adcf17c-cf6a-52ee-d680-e2a97d34f23d"></a>A CoverageJSON object with the type <tt>"TiledNdArray"</tt> is a TiledNdArray object. It represents a multidimensional (&gt;= 1D) array with named axes that is split up into sets of linked NdArray documents. Each tileset typically covers a specific data access scenario, for example, loading a single time slice of a grid vs. loading a time series of a spatial subset of a grid.</p>
 
-<p style="mso-list:l3 level1 lfo14;" class="MsoListParagraphCxSpFirst">A TiledNdArray object MUST have a member with the name <tt>"dataType"</tt> where the value is either <tt>"float"</tt>, <tt>"integer"</tt>, or <tt>"string"</tt>.
+<p style="mso-list:l3 level1 lfo15;" class="MsoListParagraphCxSpFirst">A TiledNdArray object MUST have a member with the name <tt>"dataType"</tt> where the value is either <tt>"float"</tt>, <tt>"integer"</tt>, or <tt>"string"</tt>.
 </p>
-<p style="mso-list:l3 level1 lfo14;" class="MsoListParagraphCxSpMiddle">A TiledNdArray object MUST have a member with the name <tt>"shape"</tt> where the value is a non-empty array of integers.
+<p style="mso-list:l3 level1 lfo15;" class="MsoListParagraphCxSpMiddle">A TiledNdArray object MUST have a member with the name <tt>"shape"</tt> where the value is a non-empty array of integers.
 </p>
-<p style="mso-list:l3 level1 lfo14;" class="MsoListParagraphCxSpMiddle">A TiledNdArray object MUST have a member with the name <tt>"axisNames"</tt> where the value is a string array of the same length as <tt>"shape"</tt>.
+<p style="mso-list:l3 level1 lfo15;" class="MsoListParagraphCxSpMiddle">A TiledNdArray object MUST have a member with the name <tt>"axisNames"</tt> where the value is a string array of the same length as <tt>"shape"</tt>.
 </p>
-<p style="mso-list:l3 level1 lfo14;" class="MsoListParagraphCxSpMiddle">A TiledNdArray object MUST have a member with the name <tt>"tileSets"</tt> where the value is a non-empty array of TileSet objects.
+<p style="mso-list:l3 level1 lfo15;" class="MsoListParagraphCxSpMiddle">A TiledNdArray object MUST have a member with the name <tt>"tileSets"</tt> where the value is a non-empty array of TileSet objects.
 </p>
-<p style="mso-list:l3 level1 lfo14;" class="MsoListParagraphCxSpMiddle">A TileSet object MUST have a member with the name <tt>"tileShape"</tt> where the value is an array of the same length as <tt>"shape"</tt> and where each array element is either null or an integer lower or equal than the corresponding element in <tt>"shape"</tt>. A null value denotes that the axis is not tiled.
+<p style="mso-list:l3 level1 lfo15;" class="MsoListParagraphCxSpMiddle">A TileSet object MUST have a member with the name <tt>"tileShape"</tt> where the value is an array of the same length as <tt>"shape"</tt> and where each array element is either null or an integer lower or equal than the corresponding element in <tt>"shape"</tt>. A null value denotes that the axis is not tiled.
 </p>
-<p style="mso-list:l3 level1 lfo14;" class="MsoListParagraphCxSpLast">A TileSet object MUST have a member with the name <tt>"urlTemplate"</tt> where the value is a Level 1 URI template as defined in <a href="https://tools.ietf.org/html/rfc6570">RFC 6570</a> . The URI template MUST contain a variable for each axis name whose corresponding element in <tt>"tileShape"</tt> is not null. A variable for an axis of total size <tt>totalSize</tt> (from <tt>"shape"</tt>) and tile size <tt>tileSize</tt> (from <tt>"tileShape"</tt>) has as value one of the integers <tt>0, 1, &#x2026;&#x200B;, q + r - 1</tt> where <tt>q</tt> and <tt>r</tt> are the quotient and remainder obtained by dividing <tt>totalSize</tt> by <tt>tileSize</tt>. Each URI that can be generated from the URI template MUST resolve to an NdArray CoverageJSON document where the members <tt>"dataType"</tt> and <tt>"axisNames`" are identical to the ones of the TiledNdArray object, and where each value of `"shape"</tt> is an integer equal, or lower if an edge tile, to the corresponding element in <tt>"tileShape"</tt> while replacing null with the corresponding element of <tt>"shape"</tt> of the TiledNdArray.
+<p style="mso-list:l3 level1 lfo15;" class="MsoListParagraphCxSpLast">A TileSet object MUST have a member with the name <tt>"urlTemplate"</tt> where the value is a Level 1 URI template as defined in <a href="https://tools.ietf.org/html/rfc6570">RFC 6570</a> . The URI template MUST contain a variable for each axis name whose corresponding element in <tt>"tileShape"</tt> is not null. A variable for an axis of total size <tt>totalSize</tt> (from <tt>"shape"</tt>) and tile size <tt>tileSize</tt> (from <tt>"tileShape"</tt>) has as value one of the integers <tt>0, 1, &#x2026;&#x200B;, q + r - 1</tt> where <tt>q</tt> and <tt>r</tt> are the quotient and remainder obtained by dividing <tt>totalSize</tt> by <tt>tileSize</tt>. Each URI that can be generated from the URI template MUST resolve to an NdArray CoverageJSON document where the members <tt>"dataType"</tt> and <tt>"axisNames`" are identical to the ones of the TiledNdArray object, and where each value of `"shape"</tt> is an integer equal, or lower if an edge tile, to the corresponding element in <tt>"tileShape"</tt> while replacing null with the corresponding element of <tt>"shape"</tt> of the TiledNdArray.
 </p>
 
 
@@ -3586,21 +3577,21 @@ Its general structure is:</p>
 
 <p class="MsoNormal"><a name="_6ae19d07-83d5-1182-b126-6da6c9e5df80" id="_6ae19d07-83d5-1182-b126-6da6c9e5df80"></a>A CoverageJSON object with the type <tt>"Coverage"</tt> is a coverage object.</p>
 
-<p style="mso-list:l3 level1 lfo15;" class="MsoListParagraphCxSpFirst">If a coverage has a commonly used identifier, that identifier SHOULD be included as a member of the coverage object with the name <tt>"id"</tt>.
+<p style="mso-list:l3 level1 lfo16;" class="MsoListParagraphCxSpFirst">If a coverage has a commonly used identifier, that identifier SHOULD be included as a member of the coverage object with the name <tt>"id"</tt>.
 </p>
-<p style="mso-list:l3 level1 lfo15;" class="MsoListParagraphCxSpMiddle">A coverage object MUST have a member with the name <tt>"domain"</tt> where the value is either a domain object or a URL.
+<p style="mso-list:l3 level1 lfo16;" class="MsoListParagraphCxSpMiddle">A coverage object MUST have a member with the name <tt>"domain"</tt> where the value is either a domain object or a URL.
 </p>
-<p style="mso-list:l3 level1 lfo15;" class="MsoListParagraphCxSpMiddle">If the value of <tt>"domain"</tt> is a URL and the referenced domain has a <tt>"domainType"</tt> member, then the coverage object SHOULD have the member <tt>"domainType"</tt> where the value MUST equal that of the referenced domain.
+<p style="mso-list:l3 level1 lfo16;" class="MsoListParagraphCxSpMiddle">If the value of <tt>"domain"</tt> is a URL and the referenced domain has a <tt>"domainType"</tt> member, then the coverage object SHOULD have the member <tt>"domainType"</tt> where the value MUST equal that of the referenced domain.
 </p>
-<p style="mso-list:l3 level1 lfo15;" class="MsoListParagraphCxSpMiddle">If the coverage object is part of a coverage collection which has a <tt>"domainType"</tt> member then that member SHOULD be omitted in the coverage object.
+<p style="mso-list:l3 level1 lfo16;" class="MsoListParagraphCxSpMiddle">If the coverage object is part of a coverage collection which has a <tt>"domainType"</tt> member then that member SHOULD be omitted in the coverage object.
 </p>
-<p style="mso-list:l3 level1 lfo15;" class="MsoListParagraphCxSpMiddle">A coverage object MAY have a member with the name <tt>"parameters"</tt> where the value is an object where each member has as name a short identifier and as value a parameter object. The identifier corresponds to the commonly known concept of &#x201C;variable name&#x201D; and is merely used in clients for conveniently accessing the corresponding range object.
+<p style="mso-list:l3 level1 lfo16;" class="MsoListParagraphCxSpMiddle">A coverage object MAY have a member with the name <tt>"parameters"</tt> where the value is an object where each member has as name a short identifier and as value a parameter object. The identifier corresponds to the commonly known concept of &#x201C;variable name&#x201D; and is merely used in clients for conveniently accessing the corresponding range object.
 </p>
-<p style="mso-list:l3 level1 lfo15;" class="MsoListParagraphCxSpMiddle">A coverage object MUST have a <tt>"parameters"</tt> member if the coverage object is not part of a coverage collection or if the coverage collection does not have a <tt>"parameters"</tt> member.
+<p style="mso-list:l3 level1 lfo16;" class="MsoListParagraphCxSpMiddle">A coverage object MUST have a <tt>"parameters"</tt> member if the coverage object is not part of a coverage collection or if the coverage collection does not have a <tt>"parameters"</tt> member.
 </p>
-<p style="mso-list:l3 level1 lfo15;" class="MsoListParagraphCxSpMiddle">A coverage object MAY have a member with the name <tt>"parameterGroups"</tt> where the value is an array of ParameterGroup objects.
+<p style="mso-list:l3 level1 lfo16;" class="MsoListParagraphCxSpMiddle">A coverage object MAY have a member with the name <tt>"parameterGroups"</tt> where the value is an array of ParameterGroup objects.
 </p>
-<p style="mso-list:l3 level1 lfo15;" class="MsoListParagraphCxSpLast">A coverage object MUST have a member with the name <tt>"ranges"</tt> where the value is a range set object. Any member of a range set object has as name any of the names in a <tt>"parameters"</tt> object in scope and as value either an NdArray or TiledNdArray object or a URL resolving to a CoverageJSON document of such object. A <tt>"parameters"</tt> member in scope is either within the enclosing coverage object or, if part of a coverage collection, in the parent coverage collection object. The shape and axis names of each NdArray or TiledNdArray object MUST correspond to the domain axes defined by <tt>"domain"</tt>, while single-valued axes MAY be omitted. If the referenced parameter object has a <tt>"categoryEncoding"</tt> member, then each non-null array element of the <tt>"values"</tt> member of the NdArray object, or the linked NdArray objects within a TiledNdArray object, MUST be equal to one of the values defined in the <tt>"categoryEncoding"</tt> object and be interpreted as the matching category.
+<p style="mso-list:l3 level1 lfo16;" class="MsoListParagraphCxSpLast">A coverage object MUST have a member with the name <tt>"ranges"</tt> where the value is a range set object. Any member of a range set object has as name any of the names in a <tt>"parameters"</tt> object in scope and as value either an NdArray or TiledNdArray object or a URL resolving to a CoverageJSON document of such object. A <tt>"parameters"</tt> member in scope is either within the enclosing coverage object or, if part of a coverage collection, in the parent coverage collection object. The shape and axis names of each NdArray or TiledNdArray object MUST correspond to the domain axes defined by <tt>"domain"</tt>, while single-valued axes MAY be omitted. If the referenced parameter object has a <tt>"categoryEncoding"</tt> member, then each non-null array element of the <tt>"values"</tt> member of the NdArray object, or the linked NdArray objects within a TiledNdArray object, MUST be equal to one of the values defined in the <tt>"categoryEncoding"</tt> object and be interpreted as the matching category.
 </p>
 
 
@@ -3613,17 +3604,17 @@ Its general structure is:</p>
 
 <p class="MsoNormal"><a name="_0dafc990-2720-6cb6-2953-b692622af64e" id="_0dafc990-2720-6cb6-2953-b692622af64e"></a>A CoverageJSON object with the type <tt>"CoverageCollection"</tt> is a coverage collection object.</p>
 
-<p style="mso-list:l3 level1 lfo16;" class="MsoListParagraphCxSpFirst">A coverage collection object MAY have the member <tt>"domainType"</tt> with a string value to indicate that the coverage collection only contains coverages of the given domain type. See the [&#x201C;Common CoverageJSON Domain Types Specification&#x201D;][domain-types], which forms part of this specification, for details. Custom domain types may be used as recommended in the section &#x201C;Extensions&#x201D;.
+<p style="mso-list:l3 level1 lfo17;" class="MsoListParagraphCxSpFirst">A coverage collection object MAY have the member <tt>"domainType"</tt> with a string value to indicate that the coverage collection only contains coverages of the given domain type. See the [&#x201C;Common CoverageJSON Domain Types Specification&#x201D;][domain-types], which forms part of this specification, for details. Custom domain types may be used as recommended in the section &#x201C;Extensions&#x201D;.
 </p>
-<p style="mso-list:l3 level1 lfo16;" class="MsoListParagraphCxSpMiddle">If a coverage collection object has the member <tt>"domainType"</tt>, then this member is inherited to all included coverages.
+<p style="mso-list:l3 level1 lfo17;" class="MsoListParagraphCxSpMiddle">If a coverage collection object has the member <tt>"domainType"</tt>, then this member is inherited to all included coverages.
 </p>
-<p style="mso-list:l3 level1 lfo16;" class="MsoListParagraphCxSpMiddle">A coverage collection object MUST have a member with the name <tt>"coverages"</tt>. The value corresponding to <tt>"coverages"</tt> is an array. Each element in the array is a coverage object as defined above.
+<p style="mso-list:l3 level1 lfo17;" class="MsoListParagraphCxSpMiddle">A coverage collection object MUST have a member with the name <tt>"coverages"</tt>. The value corresponding to <tt>"coverages"</tt> is an array. Each element in the array is a coverage object as defined above.
 </p>
-<p style="mso-list:l3 level1 lfo16;" class="MsoListParagraphCxSpMiddle">A coverage collection object MAY have a member with the name <tt>"parameters"</tt> where the value is an object where each member has as name a short identifier and as value a parameter object.
+<p style="mso-list:l3 level1 lfo17;" class="MsoListParagraphCxSpMiddle">A coverage collection object MAY have a member with the name <tt>"parameters"</tt> where the value is an object where each member has as name a short identifier and as value a parameter object.
 </p>
-<p style="mso-list:l3 level1 lfo16;" class="MsoListParagraphCxSpMiddle">A coverage collection object MAY have a member with the name <tt>"parameterGroups"</tt> where the value is an array of ParameterGroup objects.
+<p style="mso-list:l3 level1 lfo17;" class="MsoListParagraphCxSpMiddle">A coverage collection object MAY have a member with the name <tt>"parameterGroups"</tt> where the value is an array of ParameterGroup objects.
 </p>
-<p style="mso-list:l3 level1 lfo16;" class="MsoListParagraphCxSpLast">A coverage collection object MAY have a member with the name <tt>"referencing"</tt> where the value is an array of reference system connection objects.
+<p style="mso-list:l3 level1 lfo17;" class="MsoListParagraphCxSpLast">A coverage collection object MAY have a member with the name <tt>"referencing"</tt> where the value is an array of reference system connection objects.
 </p>
 
 
@@ -3659,15 +3650,15 @@ Its general structure is:</p>
 
 <p class="MsoNormal"><a name="_c48a806b-e2c0-6003-5cd4-343282a34908" id="_c48a806b-e2c0-6003-5cd4-343282a34908"></a>Custom types MAY be used with the following members:</p>
 
-<p style="mso-list:l3 level1 lfo17;" class="MsoListParagraphCxSpFirst"><tt>"domainType"</tt> in domain objects
+<p style="mso-list:l3 level1 lfo18;" class="MsoListParagraphCxSpFirst"><tt>"domainType"</tt> in domain objects
 </p>
-<p style="mso-list:l3 level1 lfo17;" class="MsoListParagraphCxSpMiddle"><tt>"dataType"</tt> in axis objects
+<p style="mso-list:l3 level1 lfo18;" class="MsoListParagraphCxSpMiddle"><tt>"dataType"</tt> in axis objects
 </p>
-<p style="mso-list:l3 level1 lfo17;" class="MsoListParagraphCxSpMiddle"><tt>"type"</tt> in reference system objects
+<p style="mso-list:l3 level1 lfo18;" class="MsoListParagraphCxSpMiddle"><tt>"type"</tt> in reference system objects
 </p>
-<p style="mso-list:l3 level1 lfo17;" class="MsoListParagraphCxSpMiddle"><tt>"type"</tt> in unit symbol objects
+<p style="mso-list:l3 level1 lfo18;" class="MsoListParagraphCxSpMiddle"><tt>"type"</tt> in unit symbol objects
 </p>
-<p style="mso-list:l3 level1 lfo17;" class="MsoListParagraphCxSpLast"><tt>"type"</tt> within custom members that have an object as value
+<p style="mso-list:l3 level1 lfo18;" class="MsoListParagraphCxSpLast"><tt>"type"</tt> within custom members that have an object as value
 </p>
 
 
@@ -3713,16 +3704,16 @@ Its general structure is:</p>
 
 <p class="MsoNormal"><a name="_d2f64a24-cc59-087b-cbd8-ebe6ec715f4c" id="_d2f64a24-cc59-087b-cbd8-ebe6ec715f4c"></a>Requirements for all domain types defined in this specification:</p>
 
-<p style="mso-list:l3 level1 lfo18;" class="MsoListParagraphCxSpFirst">The axis and coordinate identifiers <tt>"x"</tt> and <tt>"y"</tt> MUST refer to horizontal spatial coordinates,
+<p style="mso-list:l3 level1 lfo19;" class="MsoListParagraphCxSpFirst">The axis and coordinate identifiers <tt>"x"</tt> and <tt>"y"</tt> MUST refer to horizontal spatial coordinates,
 <tt>"z"</tt> to vertical spatial coordinates, and all of <tt>"x"</tt>, <tt>"y"</tt>, and <tt>"z"</tt> MUST be referenced by a spatial coordinate reference system.
 </p>
-<p style="mso-list:l3 level1 lfo18;" class="MsoListParagraphCxSpMiddle">The axis and coordinate identifier <tt>"t"</tt> MUST refer to temporal coordinates and be referenced by a temporal reference system.
+<p style="mso-list:l3 level1 lfo19;" class="MsoListParagraphCxSpMiddle">The axis and coordinate identifier <tt>"t"</tt> MUST refer to temporal coordinates and be referenced by a temporal reference system.
 </p>
-<p style="mso-list:l3 level1 lfo18;" class="MsoListParagraphCxSpMiddle">If a spatial CRS is used that has the axes longitude and latitude, or easting and northing, then the axis and coordinate identifier <tt>"x"</tt> MUST refer to longitude / easting, and <tt>"y"</tt> to latitude / northing.
+<p style="mso-list:l3 level1 lfo19;" class="MsoListParagraphCxSpMiddle">If a spatial CRS is used that has the axes longitude and latitude, or easting and northing, then the axis and coordinate identifier <tt>"x"</tt> MUST refer to longitude / easting, and <tt>"y"</tt> to latitude / northing.
 </p>
-<p style="mso-list:l3 level1 lfo18;" class="MsoListParagraphCxSpMiddle">A domain that states conformance to one of the domain types in this specification MUST only contain axes defined by the domain type: additional axes are not allowed.
+<p style="mso-list:l3 level1 lfo19;" class="MsoListParagraphCxSpMiddle">A domain that states conformance to one of the domain types in this specification MUST only contain axes defined by the domain type: additional axes are not allowed.
 </p>
-<p style="mso-list:l3 level1 lfo18;" class="MsoListParagraphCxSpLast">In a Coverage object, the axis ordering in <tt>"axisNames"</tt> of NdArray objects SHOULD follow the order &#x201C;t&#x201D;, &#x201C;z&#x201D;, &#x201C;y, &#x201C;x&#x201D;, &#x201C;composite&#x201D;, leaving out all axes that do not exist or are single-valued.
+<p style="mso-list:l3 level1 lfo19;" class="MsoListParagraphCxSpLast">In a Coverage object, the axis ordering in <tt>"axisNames"</tt> of NdArray objects SHOULD follow the order &#x201C;t&#x201D;, &#x201C;z&#x201D;, &#x201C;y, &#x201C;x&#x201D;, &#x201C;composite&#x201D;, leaving out all axes that do not exist or are single-valued.
 </p>
 
 
@@ -3732,7 +3723,7 @@ Its general structure is:</p>
 
 <div><a name="_grid" id="_grid"></a><h3>6.10.1.<span style="mso-tab-count:1">&#xA0; </span>Grid</h3>
 
-<p style="mso-list:l3 level1 lfo19;" class="MsoListParagraphCxSpFirst">A domain with Grid domain type MUST have the axes <tt>"x"</tt> and <tt>"y"</tt> and MAY have the axes <tt>"z"</tt> and <tt>"t"</tt>.
+<p style="mso-list:l3 level1 lfo20;" class="MsoListParagraphCxSpFirst">A domain with Grid domain type MUST have the axes <tt>"x"</tt> and <tt>"y"</tt> and MAY have the axes <tt>"z"</tt> and <tt>"t"</tt>.
 </p>
 
 
@@ -3749,9 +3740,9 @@ Its general structure is:</p>
 
 <div><a name="_verticalprofile" id="_verticalprofile"></a><h3>6.10.2.<span style="mso-tab-count:1">&#xA0; </span>VerticalProfile</h3>
 
-<p style="mso-list:l3 level1 lfo20;" class="MsoListParagraphCxSpFirst">A domain with VerticalProfile domain type MUST have the axes <tt>"x"</tt>, <tt>"y"</tt>, and <tt>"z"</tt>, where <tt>"x"</tt> and <tt>"y"</tt> MUST have a single coordinate value only.
+<p style="mso-list:l3 level1 lfo21;" class="MsoListParagraphCxSpFirst">A domain with VerticalProfile domain type MUST have the axes <tt>"x"</tt>, <tt>"y"</tt>, and <tt>"z"</tt>, where <tt>"x"</tt> and <tt>"y"</tt> MUST have a single coordinate value only.
 </p>
-<p style="mso-list:l3 level1 lfo20;" class="MsoListParagraphCxSpLast">A domain with VerticalProfile domain type MAY have the axis <tt>"t"</tt> which MUST have a single coordinate value only.
+<p style="mso-list:l3 level1 lfo21;" class="MsoListParagraphCxSpLast">A domain with VerticalProfile domain type MAY have the axis <tt>"t"</tt> which MUST have a single coordinate value only.
 </p>
 
 
@@ -3768,9 +3759,9 @@ Its general structure is:</p>
 
 <div><a name="_pointseries" id="_pointseries"></a><h3>6.10.3.<span style="mso-tab-count:1">&#xA0; </span>PointSeries</h3>
 
-<p style="mso-list:l3 level1 lfo21;" class="MsoListParagraphCxSpFirst">A domain with PointSeries domain type MUST have the axes <tt>"x"</tt>, <tt>"y"</tt>, and <tt>"t"</tt> where <tt>"x"</tt> and <tt>"y"</tt> MUST have a single coordinate value only.
+<p style="mso-list:l3 level1 lfo22;" class="MsoListParagraphCxSpFirst">A domain with PointSeries domain type MUST have the axes <tt>"x"</tt>, <tt>"y"</tt>, and <tt>"t"</tt> where <tt>"x"</tt> and <tt>"y"</tt> MUST have a single coordinate value only.
 </p>
-<p style="mso-list:l3 level1 lfo21;" class="MsoListParagraphCxSpLast">A domain with PointSeries domain type MAY have the axis <tt>"z"</tt> which MUST have a single coordinate value only.
+<p style="mso-list:l3 level1 lfo22;" class="MsoListParagraphCxSpLast">A domain with PointSeries domain type MAY have the axis <tt>"z"</tt> which MUST have a single coordinate value only.
 </p>
 
 
@@ -3787,7 +3778,7 @@ Its general structure is:</p>
 
 <div><a name="_point" id="_point"></a><h3>6.10.4.<span style="mso-tab-count:1">&#xA0; </span>Point</h3>
 
-<p style="mso-list:l3 level1 lfo22;" class="MsoListParagraphCxSpFirst">A domain with Point domain type MUST have the axes <tt>"x"</tt> and <tt>"y"</tt> and MAY have the axes <tt>"z"</tt> and <tt>"t"</tt> where all MUST have a single coordinate value only.
+<p style="mso-list:l3 level1 lfo23;" class="MsoListParagraphCxSpFirst">A domain with Point domain type MUST have the axes <tt>"x"</tt> and <tt>"y"</tt> and MAY have the axes <tt>"z"</tt> and <tt>"t"</tt> where all MUST have a single coordinate value only.
 </p>
 
 
@@ -3804,9 +3795,9 @@ Its general structure is:</p>
 
 <div><a name="_multipointseries" id="_multipointseries"></a><h3>6.10.5.<span style="mso-tab-count:1">&#xA0; </span>MultiPointSeries</h3>
 
-<p style="mso-list:l3 level1 lfo23;" class="MsoListParagraphCxSpFirst">A domain with MultiPointSeries domain type MUST have the axes <tt>"composite"</tt> and <tt>"t"</tt>.
+<p style="mso-list:l3 level1 lfo24;" class="MsoListParagraphCxSpFirst">A domain with MultiPointSeries domain type MUST have the axes <tt>"composite"</tt> and <tt>"t"</tt>.
 </p>
-<p style="mso-list:l3 level1 lfo23;" class="MsoListParagraphCxSpLast">The axis <tt>"composite"</tt> MUST have the data type <tt>"tuple"</tt> and the coordinate identifiers <tt>"x","y","z"</tt> or <tt>"x","y"</tt>, in that order.
+<p style="mso-list:l3 level1 lfo24;" class="MsoListParagraphCxSpLast">The axis <tt>"composite"</tt> MUST have the data type <tt>"tuple"</tt> and the coordinate identifiers <tt>"x","y","z"</tt> or <tt>"x","y"</tt>, in that order.
 </p>
 
 
@@ -3828,9 +3819,9 @@ Its general structure is:</p>
 
 <div><a name="_multipoint" id="_multipoint"></a><h3>6.10.6.<span style="mso-tab-count:1">&#xA0; </span>MultiPoint</h3>
 
-<p style="mso-list:l3 level1 lfo24;" class="MsoListParagraphCxSpFirst">A domain with MultiPoint domain type MUST have the axis <tt>"composite"</tt> and MAY have the axis <tt>"t"</tt> where <tt>"t"</tt> MUST have a single coordinate value only.
+<p style="mso-list:l3 level1 lfo25;" class="MsoListParagraphCxSpFirst">A domain with MultiPoint domain type MUST have the axis <tt>"composite"</tt> and MAY have the axis <tt>"t"</tt> where <tt>"t"</tt> MUST have a single coordinate value only.
 </p>
-<p style="mso-list:l3 level1 lfo24;" class="MsoListParagraphCxSpLast">The axis <tt>"composite"</tt> MUST have the data type <tt>"tuple"</tt> and the coordinate identifiers <tt>"x","y","z"</tt> or <tt>"x","y"</tt>, in that order.
+<p style="mso-list:l3 level1 lfo25;" class="MsoListParagraphCxSpLast">The axis <tt>"composite"</tt> MUST have the data type <tt>"tuple"</tt> and the coordinate identifiers <tt>"x","y","z"</tt> or <tt>"x","y"</tt>, in that order.
 </p>
 
 
@@ -3852,11 +3843,11 @@ Its general structure is:</p>
 
 <div><a name="_trajectory" id="_trajectory"></a><h3>6.10.7.<span style="mso-tab-count:1">&#xA0; </span>Trajectory</h3>
 
-<p style="mso-list:l3 level1 lfo25;" class="MsoListParagraphCxSpFirst">A domain with Trajectory domain type MUST have the axis <tt>"composite"</tt> and MAY have the axis <tt>"z"</tt> where <tt>"z"</tt> MUST have a single coordinate value only.
+<p style="mso-list:l3 level1 lfo26;" class="MsoListParagraphCxSpFirst">A domain with Trajectory domain type MUST have the axis <tt>"composite"</tt> and MAY have the axis <tt>"z"</tt> where <tt>"z"</tt> MUST have a single coordinate value only.
 </p>
-<p style="mso-list:l3 level1 lfo25;" class="MsoListParagraphCxSpMiddle">The axis <tt>"composite"</tt> MUST have the data type <tt>"tuple"</tt> and the coordinate identifiers <tt>"t","x","y","z"</tt> or <tt>"t","x","y"</tt>, in that order.
+<p style="mso-list:l3 level1 lfo26;" class="MsoListParagraphCxSpMiddle">The axis <tt>"composite"</tt> MUST have the data type <tt>"tuple"</tt> and the coordinate identifiers <tt>"t","x","y","z"</tt> or <tt>"t","x","y"</tt>, in that order.
 </p>
-<p style="mso-list:l3 level1 lfo25;" class="MsoListParagraphCxSpLast">The value ordering of the axis <tt>"composite"</tt> MUST follow the ordering of its <tt>"t"</tt> coordinate as defined in the corresponding reference system.
+<p style="mso-list:l3 level1 lfo26;" class="MsoListParagraphCxSpLast">The value ordering of the axis <tt>"composite"</tt> MUST follow the ordering of its <tt>"t"</tt> coordinate as defined in the corresponding reference system.
 </p>
 
 
@@ -3883,11 +3874,11 @@ Its general structure is:</p>
 
 <div><a name="_section" id="_section"></a><h3>6.10.8.<span style="mso-tab-count:1">&#xA0; </span>Section</h3>
 
-<p style="mso-list:l3 level1 lfo26;" class="MsoListParagraphCxSpFirst">A domain with Section domain type MUST have the axes <tt>"composite"</tt> and <tt>"z"</tt>.
+<p style="mso-list:l3 level1 lfo27;" class="MsoListParagraphCxSpFirst">A domain with Section domain type MUST have the axes <tt>"composite"</tt> and <tt>"z"</tt>.
 </p>
-<p style="mso-list:l3 level1 lfo26;" class="MsoListParagraphCxSpMiddle">The axis <tt>"composite"</tt> MUST have the data type <tt>"tuple"</tt> and the coordinate identifiers <tt>"t","x","y"</tt>, in that order.
+<p style="mso-list:l3 level1 lfo27;" class="MsoListParagraphCxSpMiddle">The axis <tt>"composite"</tt> MUST have the data type <tt>"tuple"</tt> and the coordinate identifiers <tt>"t","x","y"</tt>, in that order.
 </p>
-<p style="mso-list:l3 level1 lfo26;" class="MsoListParagraphCxSpLast">The value ordering of the axis <tt>"composite"</tt> MUST follow the ordering of its <tt>"t"</tt> coordinate as defined in the corresponding reference system.
+<p style="mso-list:l3 level1 lfo27;" class="MsoListParagraphCxSpLast">The value ordering of the axis <tt>"composite"</tt> MUST follow the ordering of its <tt>"t"</tt> coordinate as defined in the corresponding reference system.
 </p>
 
 
@@ -3908,11 +3899,11 @@ Its general structure is:</p>
 - A LinearRing is an array of 4 or more <tt>[x,y]</tt> arrays where each of <tt>x</tt> and <tt>y</tt> is a coordinate value. The first and last <tt>[x,y]</tt> elements are identical.
 - A Polygon is an array of LinearRing arrays. For Polygons with multiple rings, the first MUST be the exterior ring and any others MUST be interior rings or holes.</p>
 
-<p style="mso-list:l3 level1 lfo27;" class="MsoListParagraphCxSpFirst">A domain with Polygon domain type MUST have the axis <tt>"composite"</tt> which has a single Polygon value.
+<p style="mso-list:l3 level1 lfo28;" class="MsoListParagraphCxSpFirst">A domain with Polygon domain type MUST have the axis <tt>"composite"</tt> which has a single Polygon value.
 </p>
-<p style="mso-list:l3 level1 lfo27;" class="MsoListParagraphCxSpMiddle">The axis <tt>"composite"</tt> MUST have the data type <tt>"polygon"</tt> and the coordinate identifiers <tt>"x","y"</tt>, in that order.
+<p style="mso-list:l3 level1 lfo28;" class="MsoListParagraphCxSpMiddle">The axis <tt>"composite"</tt> MUST have the data type <tt>"polygon"</tt> and the coordinate identifiers <tt>"x","y"</tt>, in that order.
 </p>
-<p style="mso-list:l3 level1 lfo27;" class="MsoListParagraphCxSpLast">A Polygon domain MAY have the axes <tt>"z"</tt> and <tt>"t"</tt> which both MUST have a single coordinate value only.
+<p style="mso-list:l3 level1 lfo28;" class="MsoListParagraphCxSpLast">A Polygon domain MAY have the axes <tt>"z"</tt> and <tt>"t"</tt> which both MUST have a single coordinate value only.
 </p>
 
 
@@ -3929,11 +3920,11 @@ Its general structure is:</p>
 
 <div><a name="_polygonseries" id="_polygonseries"></a><h3>6.10.10.<span style="mso-tab-count:1">&#xA0; </span>PolygonSeries</h3>
 
-<p style="mso-list:l3 level1 lfo28;" class="MsoListParagraphCxSpFirst">A domain with PolygonSeries domain type MUST have the axes <tt>"composite"</tt> and <tt>"t"</tt> where <tt>"composite"</tt> MUST have a single Polygon value. Polygons are defined in the Polygon domain type.
+<p style="mso-list:l3 level1 lfo29;" class="MsoListParagraphCxSpFirst">A domain with PolygonSeries domain type MUST have the axes <tt>"composite"</tt> and <tt>"t"</tt> where <tt>"composite"</tt> MUST have a single Polygon value. Polygons are defined in the Polygon domain type.
 </p>
-<p style="mso-list:l3 level1 lfo28;" class="MsoListParagraphCxSpMiddle">A domain with PolygonSeries domain type MAY have the axis <tt>"z"</tt> which MUST have a single coordinate value only.
+<p style="mso-list:l3 level1 lfo29;" class="MsoListParagraphCxSpMiddle">A domain with PolygonSeries domain type MAY have the axis <tt>"z"</tt> which MUST have a single coordinate value only.
 </p>
-<p style="mso-list:l3 level1 lfo28;" class="MsoListParagraphCxSpLast">The axis <tt>"composite"</tt> MUST have the data type <tt>"polygon"</tt> and the coordinate identifiers <tt>"x","y"</tt>, in that order.
+<p style="mso-list:l3 level1 lfo29;" class="MsoListParagraphCxSpLast">The axis <tt>"composite"</tt> MUST have the data type <tt>"polygon"</tt> and the coordinate identifiers <tt>"x","y"</tt>, in that order.
 </p>
 
 
@@ -3950,11 +3941,11 @@ Its general structure is:</p>
 
 <div><a name="_multipolygon" id="_multipolygon"></a><h3>6.10.11.<span style="mso-tab-count:1">&#xA0; </span>MultiPolygon</h3>
 
-<p style="mso-list:l3 level1 lfo29;" class="MsoListParagraphCxSpFirst">A domain with MultiPolygon domain type MUST have the axis <tt>"composite"</tt> where the values are Polygons. Polygons are defined in the Polygon domain type.
+<p style="mso-list:l3 level1 lfo30;" class="MsoListParagraphCxSpFirst">A domain with MultiPolygon domain type MUST have the axis <tt>"composite"</tt> where the values are Polygons. Polygons are defined in the Polygon domain type.
 </p>
-<p style="mso-list:l3 level1 lfo29;" class="MsoListParagraphCxSpMiddle">The axis <tt>"composite"</tt> MUST have the data type <tt>"polygon"</tt> and the coordinate identifiers <tt>"x","y"</tt>, in that order.
+<p style="mso-list:l3 level1 lfo30;" class="MsoListParagraphCxSpMiddle">The axis <tt>"composite"</tt> MUST have the data type <tt>"polygon"</tt> and the coordinate identifiers <tt>"x","y"</tt>, in that order.
 </p>
-<p style="mso-list:l3 level1 lfo29;" class="MsoListParagraphCxSpLast">A MultiPolygon domain MAY have the axes <tt>"z"</tt> and <tt>"t"</tt> which both MUST have a single coordinate value only.
+<p style="mso-list:l3 level1 lfo30;" class="MsoListParagraphCxSpLast">A MultiPolygon domain MAY have the axes <tt>"z"</tt> and <tt>"t"</tt> which both MUST have a single coordinate value only.
 </p>
 
 
@@ -3971,11 +3962,11 @@ Its general structure is:</p>
 
 <div><a name="_multipolygonseries" id="_multipolygonseries"></a><h3>6.10.12.<span style="mso-tab-count:1">&#xA0; </span>MultiPolygonSeries</h3>
 
-<p style="mso-list:l3 level1 lfo30;" class="MsoListParagraphCxSpFirst">A domain with MultiPolygonSeries domain type MUST have the axes <tt>"composite"</tt> and <tt>"t"</tt> where the values of <tt>"composite"</tt> are Polygons. Polygons are defined in the Polygon domain type.
+<p style="mso-list:l3 level1 lfo31;" class="MsoListParagraphCxSpFirst">A domain with MultiPolygonSeries domain type MUST have the axes <tt>"composite"</tt> and <tt>"t"</tt> where the values of <tt>"composite"</tt> are Polygons. Polygons are defined in the Polygon domain type.
 </p>
-<p style="mso-list:l3 level1 lfo30;" class="MsoListParagraphCxSpMiddle">The axis <tt>"composite"</tt> MUST have the data type <tt>"polygon"</tt> and the coordinate identifiers <tt>"x","y"</tt>, in that order.
+<p style="mso-list:l3 level1 lfo31;" class="MsoListParagraphCxSpMiddle">The axis <tt>"composite"</tt> MUST have the data type <tt>"polygon"</tt> and the coordinate identifiers <tt>"x","y"</tt>, in that order.
 </p>
-<p style="mso-list:l3 level1 lfo30;" class="MsoListParagraphCxSpLast">A MultiPolygon domain MAY have the axis <tt>"z"</tt> which MUST have a single coordinate value only.
+<p style="mso-list:l3 level1 lfo31;" class="MsoListParagraphCxSpLast">A MultiPolygon domain MAY have the axis <tt>"z"</tt> which MUST have a single coordinate value only.
 </p>
 
 
@@ -4095,7 +4086,7 @@ Its general structure is:</p>
 </html>
 
 
-------=_NextPart_e8af37fc.ed1f.4b09
+------=_NextPart_0e7e95e8.547f.45db
 Content-ID: <filelist.xml>
 Content-Disposition: inline; filename="filelist.xml"
 Content-Transfer-Encoding: base64
@@ -4106,7 +4097,7 @@ ICAgICAgIDxvOk1haW5GaWxlIEhSZWY9Ii4uLy9tZXRhbm9ybWEvZG9jdW1lbnQuaHRtIi8+ICA8
 bzpGaWxlIEhSZWY9ImZpbGVsaXN0LnhtbCIvPgogIDxvOkZpbGUgSFJlZj0iaGVhZGVyLmh0bWwi
 Lz4KPC94bWw+Cg==
 
-------=_NextPart_e8af37fc.ed1f.4b09
+------=_NextPart_0e7e95e8.547f.45db
 Content-ID: <header.html>
 Content-Disposition: inline; filename="header.html"
 Content-Transfer-Encoding: base64
@@ -4387,4 +4378,4 @@ L3NwYW4+PC9iPjwhW2VuZGlmXS0tPjxzcGFuDQpsYW5nPUVOLUdCIHN0eWxlPSdmb250LXNpemU6
 MTAuMHB0O21zby1iaWRpLWZvbnQtc2l6ZToxMS4wcHQnPjxvOnA+PC9vOnA+PC9zcGFuPjwvcD4N
 CjwvZGl2Pg0KDQo8L2JvZHk+DQoNCjwvaHRtbD4NCg==
 
-------=_NextPart_e8af37fc.ed1f.4b09--
+------=_NextPart_0e7e95e8.547f.45db--
