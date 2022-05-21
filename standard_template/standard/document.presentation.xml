@@ -179,7 +179,7 @@
 <p id="_0a416fa4-0375-93e6-0c2b-eee6f00069e5">The next-simplest use case is to put data values for each variable (parameter) in separate array objects in separate CoverageJSON documents, linked from the Coverage object. This is useful for a multi-variable dataset, where one might want temperature, humidity, wind speed, etc., to be recorded in separate files, so the user client only needs to load the variables of interest.</p>
 
 <p id="_79d9ae0f-1589-857e-8317-32998dbb4280">A sophisticated use case is to use tiling objects, where the data values are partitioned spatially and temporally, so that a single variable’s data values would be split among several documents. A simple example of this would be to encode each timestep of a dataset in a separate file, but the tiles could also be divided spatially, like a tiled map server.</p>
-</abstract><clause id="_669c7a74-ef2d-4352-a0a4-cb080dc00a91" type="keywords" displayorder="2">
+</abstract><clause id="_c367526b-a40a-4b8f-933e-e74c65795752" type="keywords" displayorder="2">
 <title depth="1">II.<tab/>Keywords</title>
 <p>The following are keywords to be used by search engines and
     document catalogues.</p>
@@ -191,7 +191,7 @@
 <p id="_1672ef82-930c-138c-0481-953514878191">Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.</p>
 
 <p id="_0c62c3b3-5856-0347-1c13-3aecac513578">Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.</p>
-</foreword><clause type="security" id="_81b1ace7-21d3-2259-3346-8f24ee71ed45" obligation="informative" displayorder="4"><title depth="1">IV.<tab/>Security considerations</title><p id="_6bffb48c-5a4a-c73f-8352-74e8ed0d680a">No security considerations have been made for this document.</p></clause><clause id="_04c13f4b-05d6-4f8f-95df-ef9ca89bb06a" type="submitting_orgs" displayorder="5">
+</foreword><clause type="security" id="_81b1ace7-21d3-2259-3346-8f24ee71ed45" obligation="informative" displayorder="4"><title depth="1">IV.<tab/>Security considerations</title><p id="_6bffb48c-5a4a-c73f-8352-74e8ed0d680a">No security considerations have been made for this document.</p></clause><clause id="_a9ccf63b-0181-4ed0-b7a8-da2b925e0865" type="submitting_orgs" displayorder="5">
 <title depth="1">V.<tab/>Submitting Organizations</title>
 <p>The following organizations submitted this Document to the
    Open Geospatial Consortium (OGC):</p>
