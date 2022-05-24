@@ -2,7 +2,7 @@
 
 This GitHub repository contains documents to produce an OGC Community Standard for CoverageJSON.
 
-A daily build of the candidate Community Standard is available [here](https://htmlpreview.github.io/?https://github.com/opengeospatial/CoverageJSON/blob/master/21-069.html).
+A daily build of the candidate Community Standard is available [here](https://opengeospatial.github.io/ogcna-auto-review/21-069.html).
 
 The starting point for the standard was the [work by Jon Blower and Maik Riechert of Reading University](https://covjson.org/), under the auspices of the EU Framework 7 MELODIES project in 2015, and other usage by NASA, NCAR and others.
 
