@@ -8,4 +8,5 @@
 |2021-10-27 |0.1 |Chris Little |all |initial version
 |2021-11-03 |0.2 |Chris Little |6&7 replaced |structured version
 |2022-02-02 |0.2.1 |Chris Little |all |replace standard by specification 
+|2022-05-25 |0.2.2 |Jon Blower, Gobe Hobona, Chris Little, Mark Riechert |all |final publication edits
 |===
