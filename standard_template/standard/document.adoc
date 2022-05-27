@@ -1,5 +1,5 @@
 = OGC CoverageJSON Community Standard
-:doctype: standard
+:doctype: community-standard
 :encoding: utf-8
 :lang: en
 :status: draft
