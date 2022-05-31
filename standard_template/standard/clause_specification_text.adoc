@@ -776,7 +776,7 @@ A CoverageJSON object with the type `"Coverage"` is a coverage object.
 
 Example:
 
-See the https://covjson.org/spec/#vertical-profile-coverage[Vertical Profile Coverage Example]
+See the https://github.com/opengeospatial/CoverageJSON/standard_template/standard/annex-b.adoc[Vertical Profile Coverage Example]
 
 //### 6.5. Coverage Collection Objects
 ==== Coverage Collection Objects
