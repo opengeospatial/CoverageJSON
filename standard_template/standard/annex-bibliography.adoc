@@ -4,7 +4,7 @@
 = Bibliography
 
 [[OGC2015]]
-[1] Blower, J., Riechert, M.: Original GitHub repository, https://covjson.org/spec/
+[1] Blower, J., Riechert, M.: Original GitHub repository, https://github.com/covjson/specification/
 
 [2] Blower, J., Riechert, M., Roberts, B.: Overview of the CoverageJSON format, https://www.w3.org/TR/covjson-overview/
 
