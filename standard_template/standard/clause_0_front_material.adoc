@@ -1,6 +1,6 @@
 .Preface
 
-The specification was an outcome of a European Union project, "Maximizing the Exploitation of Linked Open Data in Enterprise and Science" (MELODIES), run from 2013 to 2016, and released under a Creative Commons 4.0 Licence.
+The specification was an outcome of a European Union project, "Maximizing the Exploitation of Linked Open Data in Enterprise and Science" (MELODIES), run from 2013 to 2016, and released under a Creative Commons 4.0 Licence by the University of Reading.
 
 ////
 *OGC Declaration*
@@ -33,6 +33,7 @@ All questions regarding this submission should be directed to the editor or the 
 
 * Chris Little    (editor)        UK Met Office
 * Jon Blower      (editor)        University of Reading
+* Maik Riechert   (editor)        University of Reading
 * Tom Kralidis    (contributor)   Meteorological Service of Canada
 * Ethan Davies    (contributor)   Unidata UCAR
 * Steve Olson     (contributor)   US NWS/NOAA

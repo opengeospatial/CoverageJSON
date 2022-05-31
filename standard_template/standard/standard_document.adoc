@@ -22,7 +22,7 @@
 |Internal reference number of this OGC(R) document:    21-069
 |Version: 0.2.1
 |Category: OGC(R) Implementation
-|Editor:   Chris Little, Jon Blower, etc
+|Editor:   Jon Blower, Chris Little, Maik Riechert
 |===
 
 [cols = "^", frame = "none"]
