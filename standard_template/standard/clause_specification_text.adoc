@@ -375,11 +375,11 @@ Time is referenced by a temporal reference system (temporal RS). In the current 
   If omitted, the time scale defaults to `"http://www.opengis.net/def/trs/BIPM/0/UTC[UTC]"`.
   If the time scale is UTC, the `"timeScale"` member MUST be omitted.
 - If the calendar is based on years, months, days, then the referenced values SHOULD use one of the following ISO8601-based lexical representations:
-  - YYYY
-  - ±XYYYY (where X stands for extra year digits)
-  - YYYY-MM
-  - YYYY-MM-DD
-  - YYYY-MM-DDTHH:MM:SS[.F]Z where Z is either "Z" or a time scale offset +|-HH:MM
+    * YYYY
+    * ±XYYYY (where X stands for extra year digits)
+    * YYYY-MM
+    * YYYY-MM-DD
+    * YYYY-MM-DDTHH:MM:SS[.F]Z where Z is either "Z" or a time scale offset +|-HH:MM
 - If calendar dates with reduced precision are used in a lexical representation (e.g. `"2016"`), then
   a client SHOULD interpret those dates in that reduced precision.
 - If `"type"` is `"TemporalRS"` and `"calendar"` is `"Gregorian"`, then the above lexical representation MUST be used.
@@ -776,7 +776,7 @@ A CoverageJSON object with the type `"Coverage"` is a coverage object.
 
 Example:
 
-See the https://covjson.org/spec/#vertical-profile-coverage[Vertical Profile Coverage Example]
+See the https://github.com/opengeospatial/CoverageJSON/standard_template/standard/annex-b.adoc#vertical-profile-coverage[Vertical Profile Coverage Example]
 
 //### 6.5. Coverage Collection Objects
 ==== Coverage Collection Objects
@@ -792,7 +792,7 @@ A CoverageJSON object with the type `"CoverageCollection"` is a coverage collect
 
 Example:
 
-See the https://covjson.org/spec/#coverage-collection[Coverage Collection Example]
+See the https://github.com/opengeospatial/CoverageJSON/standard_template/standard/annex-b.adoc#coverage-collection[Coverage Collection Example]
 
 //## 7. Extensions
 === Extensions
