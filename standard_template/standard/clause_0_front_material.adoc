@@ -1,6 +1,6 @@
 .Preface
 
-The specification was an outcome of a European Union project, "Maximizing the Exploitation of Linked Open Data in Enterprise and Science" (MELODIES), run from 2013 to 2016, and released under a Creative Commons 4.0 Licence by Reading University.
+The specification was an outcome of a European Union project, "Maximizing the Exploitation of Linked Open Data in Enterprise and Science" (MELODIES), run from 2013 to 2016, and released under a Creative Commons 4.0 Licence by the University of Reading.
 
 ////
 *OGC Declaration*
