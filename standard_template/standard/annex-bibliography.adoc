@@ -1,8 +1,7 @@
 [appendix]
 :appendix-caption: Annex
 [[Bibliography]]
-= Bibliography
-
+== Bibliography  ( {Informative} )
 [[OGC2015]]
 [1] Blower, J., Riechert, M.: Original GitHub repository, https://github.com/covjson/specification/
 
