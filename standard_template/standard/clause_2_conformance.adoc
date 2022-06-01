@@ -1,9 +1,9 @@
 == Conformance
 
-Conformance with this specification shall be checked using the [JSON schema](https://github.com/covjson/covjson-validator/tree/main/schemas). The schema bundle has been incorporated into the [CoverageJSON Community Playground](https://covjson.org/playground/) which can test files for conformance. Simple guidance on CoverageJSON is available at the [Community Cookbook](https://covjson.org/cookbook/).
+Conformance with this specification shall be checked using the https://github.com/covjson/covjson-validator/tree/main/schemas[JSON schema]. The schema bundle has been incorporated into the https://covjson.org/playground/[CoverageJSON Community Playground] which can test files for conformance. Simple guidance on CoverageJSON is available at the https://covjson.org/cookbook/[Community Cookbook].
 
 The one Standardization Target for this specification is the format of CoverageJSON.
 
-In order to conform to this OGC® Community Standard, a software implementation shall implement any CoverageJSON object as a valid JSON object that conforms to the CoverageJSON schema. 
+In order to conform to this OGC® Community Standard, a software implementation shall implement any CoverageJSON object as a valid JSON object that conforms to the CoverageJSON schema.
 
 All requirements-classes and conformance-classes described in this document are owned by the standard(s) identified.
