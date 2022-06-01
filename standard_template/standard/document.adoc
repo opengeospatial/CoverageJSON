@@ -44,8 +44,6 @@ include::clause_specification_text.adoc[]
 
 include::clause_8_media_types.adoc[]
 
-include::annex-a.adoc[]
-
 include::annex-b.adoc[]
 
 include::annex-history.adoc[]
