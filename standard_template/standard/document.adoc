@@ -12,7 +12,6 @@
 :published-date: 2029-03-30
 :fullname: Chris Little
 :fullname_2: Jon Blower
-:docsubtype: Interface
 :keywords: ogcdoc, OGC document, JSON, JSON-LD, CoverageJSON, CovJSON, Coverage, spatiotemporal, linked-data
 :submitting-organizations: UK Met Office;University of Reading;Meteorological Service of Canada;Unidata UCAR;US NOAA / National Weather Service;ESIP/JPL/NASA
 :mn-document-class: ogc
