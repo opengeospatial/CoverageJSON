@@ -32,9 +32,9 @@ The following normative documents contain provisions that, through reference in 
 
 * [[[rfc7946,IETF RFC 7946]]], Butler, H., Daly, M., Doyle, A., Gillies, S., Hagen, S., Schaub, T.: IETF RFC 7946, The GeoJSON Format, https://tools.ietf.org/rfc/rfc7946.txt
 
-* [[[w3ccurie,CURIEs]]], W3C CURIE Syntax 1.0, Syntax for expressing Compact URIs, Working Group Note, 2010-12-16, http://www.w3.org/TR/curie/
+* [[[w3ccurie,W3C CURIEs]]], W3C CURIE Syntax 1.0, Syntax for expressing Compact URIs, Working Group Note, 2010-12-16, http://www.w3.org/TR/curie/
 
-* [[[w3cjsonld10,JSON-LD]]], W3C JSON-LD1.0, JSON-based Serialization for Linked Data, 2014-01-16 superseded 2020-11-03, https://www.w3.org/TR/2014/REC-json-ld-20140116/
+* [[[w3cjsonld10,W3C JSON-LD]]], W3C JSON-LD 1.0, JSON-based Serialization for Linked Data, 2014-01-16 superseded 2020-11-03, https://www.w3.org/TR/2014/REC-json-ld-20140116/
 
 * [[[UCUM,UCUM]]], Schadow, G., McDonald, C. J.: Unified Code for Units of Measure, http://unitsofmeasure.org
 
@@ -44,7 +44,7 @@ Key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT�
 
 //[rfc3339] Klyne, G., Newman, C.: IETF RFC 3339, Date and Time on the Internet: Timestamps, https://tools.ietf.org/rfc/rfc3339.txt (ISO8601-based lexical representation)
 //[w3ccurie] W3C CURIE Syntax 1.0, Syntax for expressing Compact URIs, Working Group Note, 2010-12-16, http://www.w3.org/TR/curie/
-//[w3cjsonld10] W3C JSON-LD1.0, JSON-based Serialization for Linked Data, 2014-01-16 superseded 2020-11-03, https://www.w3.org/TR/2014/REC-json-ld-20140116/
+//[w3cjsonld10] W3C JSON-LD 1.0, JSON-based Serialization for Linked Data, 2014-01-16 superseded 2020-11-03, https://www.w3.org/TR/2014/REC-json-ld-20140116/
 //[UCUM] Schadow, G., McDonald, C. J.: Unified Code for Units of Measure, http://unitsofmeasure.org
 //[rfc3896] Berners-Lee, T., Fielding, R., Masinter, L: IETF RFC 3896, Uniform Resource Identifier (URI): Generic Syntax, https://tools.ietf.org/rfc/rfc3896.txt
 //[rfc4627] Crockford, D.: IETF RFC 4627, The application/json Media Type for JavaScript Object Notation (JSON), and terms `object`, `array`, `name`, `value`, `string`, `number`, and `null`, https://tools.ietf.org/rfc/rfc4627.txt.
