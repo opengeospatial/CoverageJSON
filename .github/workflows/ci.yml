@@ -1,0 +1,16 @@
+name: metanorma-check
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: metanorma/mn:latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Generate document
+        run: |
+          cd standard_template/standard
+          metanorma compile --agree-to-terms -t ogc -x xml,html,doc document.adoc
