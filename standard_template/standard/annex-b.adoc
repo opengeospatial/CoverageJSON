@@ -2,6 +2,7 @@
 :appendix-caption: Annex
 == Coverage Examples ( {Informative} )
 
+[[annex_vertical_profile_coverage]]
 === Vertical Profile Coverage
 
 [%unnumbered%]
@@ -106,6 +107,7 @@
 }
 ```
 
+[[annex_coverage_collection]]
 === Coverage Collection
 
 [%unnumbered%]

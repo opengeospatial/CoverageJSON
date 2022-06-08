@@ -18,6 +18,8 @@
 <name><completename>Chris Little</completename></name>
 </person></contributor><contributor><role type="editor"/><person>
 <name><completename>Jon Blower</completename></name>
+</person></contributor><contributor><role type="editor"/><person>
+<name><completename>Maik Riechert</completename></name>
 </person></contributor><contributor><role type="publisher"/><organization>
 <name>Open Geospatial Consortium</name>
 </organization></contributor><edition>1.0-draft_0.2.2</edition><version><draft>3.0</draft></version><language current="true">en</language><script current="true">Latn</script><abstract><p>CoverageJSON is a format for publishing geo-temporal data to the Web, based on JavaScript Object Notation (JSON). Simplicity, machine and human readability and efficiency of the format were the primary design goals. The primary use case for CoverageJSON is to enable the development of interactive visual websites that display and manipulate environmental data within a web browser, although other use cases are possible.</p>
@@ -35,7 +37,7 @@
 <p>A sophisticated use case is to use tiling objects, where the data values are partitioned spatially and temporally, so that a single variable’s data values would be split among several documents. A simple example of this would be to encode each timestep of a dataset in a separate file, but the tiles could also be divided spatially, like a tiled map server.</p>
 </abstract><status><stage language="">draft</stage><stage language="en">Draft</stage></status><copyright><from>2022</from><owner><organization>
 <name>Open Geospatial Consortium</name>
-</organization></owner></copyright><keyword>ogcdoc</keyword><keyword>OGC document</keyword><keyword>JSON</keyword><keyword>JSON-LD</keyword><keyword>CoverageJSON</keyword><keyword>CovJSON</keyword><keyword>Coverage</keyword><keyword>spatiotemporal</keyword><keyword>linked-data</keyword><ext><doctype language="">standard</doctype><subdoctype>implementation</subdoctype><editorialgroup><committee>technical</committee></editorialgroup></ext></bibdata><localized-strings><localized-string key="scope" language="en">Scope</localized-string><localized-string key="symbolsabbrev" language="en">Symbols and abbreviated terms</localized-string><localized-string key="abbrev" language="en">Abbreviated terms</localized-string><localized-string key="symbols" language="en">Symbols</localized-string><localized-string key="table_of_contents" language="en">Table of contents</localized-string><localized-string key="introduction" language="en">Introduction</localized-string><localized-string key="foreword" language="en">Preface</localized-string><localized-string key="abstract" language="en">Abstract</localized-string><localized-string key="acknowledgements" language="en">Acknowledgements</localized-string><localized-string key="termsdef" language="en">Terms and definitions</localized-string><localized-string key="termsdefsymbolsabbrev" language="en">Terms, definitions, symbols and abbreviated terms</localized-string><localized-string key="termsdefsymbols" language="en">Terms, definitions and symbols</localized-string><localized-string key="termsdefabbrev" language="en">Terms, definitions and abbreviated terms</localized-string><localized-string key="normref" language="en">Normative references</localized-string><localized-string key="bibliography" language="en">Bibliography</localized-string><localized-string key="preface" language="en">Preface</localized-string><localized-string key="clause" language="en">Clause</localized-string><localized-string key="annex" language="en">Annex</localized-string><localized-string key="appendix" language="en">Appendix</localized-string><localized-string key="no_terms_boilerplate" language="en"><p>No terms and definitions are listed in this document.</p>
+</organization></owner></copyright><keyword>ogcdoc</keyword><keyword>OGC document</keyword><keyword>JSON</keyword><keyword>JSON-LD</keyword><keyword>CoverageJSON</keyword><keyword>CovJSON</keyword><keyword>Coverage</keyword><keyword>spatiotemporal</keyword><keyword>linked-data</keyword><ext><doctype language="">community-standard</doctype><editorialgroup><committee>technical</committee></editorialgroup></ext></bibdata><localized-strings><localized-string key="scope" language="en">Scope</localized-string><localized-string key="symbolsabbrev" language="en">Symbols and abbreviated terms</localized-string><localized-string key="abbrev" language="en">Abbreviated terms</localized-string><localized-string key="symbols" language="en">Symbols</localized-string><localized-string key="table_of_contents" language="en">Table of contents</localized-string><localized-string key="introduction" language="en">Introduction</localized-string><localized-string key="foreword" language="en">Preface</localized-string><localized-string key="abstract" language="en">Abstract</localized-string><localized-string key="acknowledgements" language="en">Acknowledgements</localized-string><localized-string key="termsdef" language="en">Terms and definitions</localized-string><localized-string key="termsdefsymbolsabbrev" language="en">Terms, definitions, symbols and abbreviated terms</localized-string><localized-string key="termsdefsymbols" language="en">Terms, definitions and symbols</localized-string><localized-string key="termsdefabbrev" language="en">Terms, definitions and abbreviated terms</localized-string><localized-string key="normref" language="en">Normative references</localized-string><localized-string key="bibliography" language="en">Bibliography</localized-string><localized-string key="preface" language="en">Preface</localized-string><localized-string key="clause" language="en">Clause</localized-string><localized-string key="annex" language="en">Annex</localized-string><localized-string key="appendix" language="en">Appendix</localized-string><localized-string key="no_terms_boilerplate" language="en"><p>No terms and definitions are listed in this document.</p>
 </localized-string><localized-string key="internal_terms_boilerplate" language="en"><p>This document uses the terms defined in <link target="https://portal.ogc.org/public_ogc/directives/directives.php">OGC Policy Directive 49</link>, which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word “shall” (not “must”) is the verb form used to indicate a requirement to be strictly followed to conform to this document and OGC documents do not use the equivalent phrases in the ISO/IEC Directives, Part 2.</p>
 <p>This document also uses terms defined in the OGC Standard for Modular specifications (<link target="https://portal.opengeospatial.org/files/?artifact_id=34762">OGC 08-131r3</link>), also known as the 'ModSpec'. The definitions of terms such as standard, specification, requirement, and conformance test are provided in the ModSpec.</p>
 <p>For the purposes of this document, the following additional terms and definitions apply.</p>
@@ -160,10 +162,6 @@
 
   <feedback-statement>
     
-    <clause id="boilerplate-standard-feedback">
-      <p id="_bbc1a653-f270-135d-9455-af930feb3587">Suggested additions, changes and comments on this document are welcome and encouraged. Such suggestions may be submitted using the online change request form on OGC web site: <link target="http://portal.opengeospatial.org/public_ogc/change_request.php">http://portal.opengeospatial.org/public_ogc/change_request.php</link></p>
-    </clause>
-    
   </feedback-statement>
 </boilerplate>
 <preface><abstract id="_abstract" displayorder="1"><title depth="1">I.<tab/>Abstract</title><p id="_42d22731-2da2-5d2d-05e7-628e36a323e6">CoverageJSON is a format for publishing geo-temporal data to the Web, based on JavaScript Object Notation (JSON). Simplicity, machine and human readability and efficiency of the format were the primary design goals. The primary use case for CoverageJSON is to enable the development of interactive visual websites that display and manipulate environmental data within a web browser, although other use cases are possible.</p>
@@ -179,19 +177,19 @@
 <p id="_0a416fa4-0375-93e6-0c2b-eee6f00069e5">The next-simplest use case is to put data values for each variable (parameter) in separate array objects in separate CoverageJSON documents, linked from the Coverage object. This is useful for a multi-variable dataset, where one might want temperature, humidity, wind speed, etc., to be recorded in separate files, so the user client only needs to load the variables of interest.</p>
 
 <p id="_79d9ae0f-1589-857e-8317-32998dbb4280">A sophisticated use case is to use tiling objects, where the data values are partitioned spatially and temporally, so that a single variable’s data values would be split among several documents. A simple example of this would be to encode each timestep of a dataset in a separate file, but the tiles could also be divided spatially, like a tiled map server.</p>
-</abstract><clause id="_b74f1988-7aba-40dc-be9d-eea3ecd05c98" type="keywords" displayorder="2">
+</abstract><clause id="_cda65f62-5092-4f34-bab7-f0b90969115e" type="keywords" displayorder="2">
 <title depth="1">II.<tab/>Keywords</title>
 <p>The following are keywords to be used by search engines and
     document catalogues.</p>
 <p>ogcdoc, OGC document, JSON, JSON-LD, CoverageJSON, CovJSON, Coverage, spatiotemporal, linked-data</p></clause>
-<foreword id="_70d4166c-9c82-3d27-d9af-e2ed3cbed392" obligation="informative" displayorder="3">
+<foreword id="_1dd02365-ea4e-96e2-d994-a6a554a24578" obligation="informative" displayorder="3">
 <title depth="1">III.<tab/>Preface</title>
-<p id="_99911c56-8472-7b8f-abbe-cf6b1a215e48">The specification was an outcome of a European Union project, “Maximizing the Exploitation of Linked Open Data in Enterprise and Science” (MELODIES), run from 2013 to 2016, and released under a Creative Commons 4.0 Licence.</p>
+<p id="_9d184b8f-fe52-f7c7-9121-6f57c11974df">The specification was an outcome of a European Union project, “Maximizing the Exploitation of Linked Open Data in Enterprise and Science” (MELODIES), run from 2013 to 2016, and released under a Creative Commons 4.0 Licence by the University of Reading.</p>
 
 <p id="_1672ef82-930c-138c-0481-953514878191">Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.</p>
 
 <p id="_0c62c3b3-5856-0347-1c13-3aecac513578">Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.</p>
-</foreword><clause type="security" id="_81b1ace7-21d3-2259-3346-8f24ee71ed45" obligation="informative" displayorder="4"><title depth="1">IV.<tab/>Security considerations</title><p id="_6bffb48c-5a4a-c73f-8352-74e8ed0d680a">No security considerations have been made for this document.</p></clause><clause id="_bd2d9353-75e9-49cb-936c-30dc242eb03e" type="submitting_orgs" displayorder="5">
+</foreword><clause type="security" id="_81b1ace7-21d3-2259-3346-8f24ee71ed45" obligation="informative" displayorder="4"><title depth="1">IV.<tab/>Security considerations</title><p id="_6bffb48c-5a4a-c73f-8352-74e8ed0d680a">No security considerations have been made for this document.</p></clause><clause id="_a87ae17c-cfd0-4fbc-b505-6fb2d64f4cec" type="submitting_orgs" displayorder="5">
 <title depth="1">V.<tab/>Submitting Organizations</title>
 <p>The following organizations submitted this Document to the
    Open Geospatial Consortium (OGC):</p>
@@ -206,17 +204,19 @@
 <title depth="1">VI.<tab/>Submitters</title>
 <p id="_60b1643b-76a7-f154-a489-757cf275f9ed">All questions regarding this submission should be directed to the editor or the submitters:</p>
 
-<ul id="_a6e8fd6b-b7bf-b673-156c-e9be471e2280"><li><p id="_07babde9-ca7a-07ea-2257-cd6f4aacb3a0">Chris Little    (editor)        UK Met Office</p>
+<ul id="_2fa851e5-2ed9-e68e-f1c9-962f570023cd"><li><p id="_07babde9-ca7a-07ea-2257-cd6f4aacb3a0">Chris Little    (editor)        UK Met Office</p>
 </li>
 <li><p id="_30b7498d-ec2d-de44-3301-3382085b063e">Jon Blower      (editor)        University of Reading</p>
 </li>
-<li><p id="_a34117e0-e64f-ba56-cde6-da483849c4d6">Tom Kralidis    (contributor)   Meteorological Service of Canada</p>
+<li><p id="_9e7b204f-64b1-d845-f3b0-84db20780387">Maik Riechert   (editor)        University of Reading</p>
 </li>
-<li><p id="_c300b1a7-eaee-014a-9dd4-726854455274">Ethan Davies    (contributor)   Unidata UCAR</p>
+<li><p id="_7138c9ac-f4e4-7e8a-32d1-35d0a2789c91">Tom Kralidis    (contributor)   Meteorological Service of Canada</p>
 </li>
-<li><p id="_ff8ecd70-26d3-db50-5e00-bbb5be95bc60">Steve Olson     (contributor)   US NWS/NOAA</p>
+<li><p id="_b8f2ee15-528c-a738-9c86-7ddb9faad0c9">Ethan Davies    (contributor)   Unidata UCAR</p>
 </li>
-<li><p id="_2fbc153a-59c5-0a4a-f797-26aa3c704111">Lewis McGibbney (contributor)   ESIP/JPL/NASA</p>
+<li><p id="_60c64a3d-d39f-4707-49c7-22430b5d9294">Steve Olson     (contributor)   US NWS/NOAA</p>
+</li>
+<li><p id="_8262544f-2946-e6c3-610d-340da3ba842e">Lewis McGibbney (contributor)   ESIP/JPL/NASA</p>
 </li>
 </ul>
 </submitters><acknowledgements id="_acknowledgements" obligation="informative" displayorder="7">
@@ -228,7 +228,7 @@
 
 <clause id="_scope" type="scope" obligation="normative" displayorder="8">
 <title depth="1">1.<tab/>Scope</title>
-<p id="_89aae34d-1a90-b405-99cd-22fb14129022">The specification is a logical implementation of the long-established abstract conceptual standard ISO19123:2005 (also known as OGC Abstract Topic 6). The CoverageJSON specification has been stable for several years, with a wide-spread international community in the environmental sciences. The current version of the open specification, on the <link target="https://covjson.org/spec">original GitHub</link>, is labelled ‘V0.2-draft’. This document proposes that version, with only editorial changes for presentation, as a Community Standard.</p>
+<p id="_89aae34d-1a90-b405-99cd-22fb14129022">The specification is a logical implementation of the long-established abstract conceptual standard ISO19123:2005 (also known as OGC Abstract Topic 6). The CoverageJSON specification has been stable for several years, with a wide-spread international community in the environmental sciences. The current version of the open specification, on the <link target="https://github.com/covjson/specification">original GitHub</link>, is labelled ‘V0.2-draft’. This document proposes that version, with only editorial changes for presentation, as a Community Standard.</p>
 
 <p id="_e7af2889-8c38-2c66-e3cb-b6fb10cc851b">A formal JSON schema has been added for all the JSON objects identified, so that conformance to the specification can be checked.</p>
 
@@ -241,11 +241,11 @@
 
 <clause id="_conformance" type="conformance" obligation="normative">
 <title depth="1">2.<tab/>Conformance</title>
-<p id="_9f9dae8a-e5f6-fc64-b7ea-a59742ea5d80">Conformance with this specification shall be checked using all the relevant tests specified in Annex A (normative) of this document. The framework, concepts, and methodology for testing, and the criteria to claim conformance are specified in the OGC Compliance Testing Policies and Procedures and the OGC Compliance Testing web site.</p>
+<p id="_8b684735-e1de-d388-3567-bb28121c61c3">Conformance with this specification shall be checked using the <link target="https://github.com/covjson/covjson-validator/tree/main/schemas">JSON schema</link>. The schema bundle has been incorporated into the <link target="https://covjson.org/playground/">CoverageJSON Community Playground</link> which can test files for conformance. Simple guidance on CoverageJSON is available at the <link target="https://covjson.org/cookbook/">Community Cookbook</link>.</p>
 
 <p id="_92732bbb-3c28-4256-6ca1-3d8dad9d7ea9">The one Standardization Target for this specification is the format of CoverageJSON.</p>
 
-<p id="_fc91e041-89d7-c705-9856-64590f4557ac">In order to conform to this OGC® Community Standard, a software implementation shall choose to implement any one of the conformance levels specified in Annex A (normative).</p>
+<p id="_8d96adc7-0b67-7286-4a5a-1b183406d2bf">In order to conform to this OGC® Community Standard, a software implementation shall implement any CoverageJSON object as a valid JSON object that conforms to the CoverageJSON schema.</p>
 
 <p id="_bf118c4c-115d-5032-db80-087dc9bbc424">All requirements-classes and conformance-classes described in this document are owned by the standard(s) identified.</p>
 </clause>
@@ -670,7 +670,7 @@ The special language tag <tt>"und"</tt> can be used to identify a value whose la
 <title depth="3">6.5.2.<tab/>Temporal Reference Systems</title>
 <p id="_854ba6bc-35b3-6fcb-2e3b-85e0c1086d87">Time is referenced by a temporal reference system (temporal RS). In the current specification, only a string-based notation for time values is defined. Future versions of this specification may allow for alternative notations, such as recording time values as numeric offsets from a given temporal datum (e.g. “days since 1970-01-01”).</p>
 
-<ul id="_7ce8c327-849b-634c-e6fa-f071907dfa51"><li><p id="_a698d7f2-4cb8-3759-b996-67770ab4f788">A temporal RS object MUST have a member <tt>"type"</tt>. The only currently defined value of it is <tt>"TemporalRS"</tt>.</p>
+<ul id="_98d56d8d-e63c-eccd-6fd7-fd7e4e4381a5"><li><p id="_a698d7f2-4cb8-3759-b996-67770ab4f788">A temporal RS object MUST have a member <tt>"type"</tt>. The only currently defined value of it is <tt>"TemporalRS"</tt>.</p>
 </li>
 <li><p id="_1b24b0dd-5f0a-aaaf-f331-a5f2bc2d97d3">A temporal RS object MUST have a member <tt>"calendar"</tt> with value <tt>"Gregorian"</tt> or a URI.</p>
 </li>
@@ -681,21 +681,22 @@ If omitted, the time scale defaults to <tt>"<link target="http://www.opengis.net
 If the time scale is UTC, the <tt>"timeScale"</tt> member MUST be omitted.</p>
 </li>
 <li><p id="_d91030a0-f404-1c29-12f9-a275ccd81096">If the calendar is based on years, months, days, then the referenced values SHOULD use one of the following ISO8601-based lexical representations:</p>
+<ul id="_8faf9281-f5a6-8831-71f9-c9443346a632"><li><p id="_cc84d80d-505c-9b58-78c9-0569df1bd3ef">YYYY</p>
 </li>
-<li><p id="_e5d48371-ea16-c265-2f4b-100cfeeadc8e">YYYY</p>
+<li><p id="_5c9da99d-925e-2bc3-3662-0cae0b62cb71">±XYYYY (where X stands for extra year digits)</p>
 </li>
-<li><p id="_a7955a00-14f6-82c0-c23c-e6fbe643e52c">±XYYYY (where X stands for extra year digits)</p>
+<li><p id="_79e85cc7-39e7-f9bc-88c6-ebbae9f6ef13">YYYY-MM</p>
 </li>
-<li><p id="_2607ea43-211d-ad23-2fad-d45ca4ce6106">YYYY-MM</p>
+<li><p id="_eb7ff873-3cb9-53c9-7cce-1a583f9cb977">YYYY-MM-DD</p>
 </li>
-<li><p id="_1d955dd6-c44f-4eec-bbce-f9534e308ed5">YYYY-MM-DD</p>
+<li><p id="_cdcd89c4-15e9-9d08-a873-94bc1e015195">YYYY-MM-DDTHH:MM:SS[.F]Z where Z is either “Z” or a time scale offset +|-HH:MM</p>
 </li>
-<li><p id="_75667910-04bd-8432-cf76-a3ed7748b623">YYYY-MM-DDTHH:MM:SS[.F]Z where Z is either “Z” or a time scale offset +|-HH:MM</p>
+</ul>
 </li>
-<li><p id="_dc572953-416b-4bf2-d63b-61911fb757be">If calendar dates with reduced precision are used in a lexical representation (e.g. <tt>"2016"</tt>), then
+<li><p id="_913d5608-d55c-c360-d061-5a6ec0d7d484">If calendar dates with reduced precision are used in a lexical representation (e.g. <tt>"2016"</tt>), then
 a client SHOULD interpret those dates in that reduced precision.</p>
 </li>
-<li><p id="_e57b7d9f-479d-5aa3-3d3d-2ad7a16e1a59">If <tt>"type"</tt> is <tt>"TemporalRS"</tt> and <tt>"calendar"</tt> is <tt>"Gregorian"</tt>, then the above lexical representation MUST be used.</p>
+<li><p id="_17939e7e-85b5-9bdc-6344-e2785c7935de">If <tt>"type"</tt> is <tt>"TemporalRS"</tt> and <tt>"calendar"</tt> is <tt>"Gregorian"</tt>, then the above lexical representation MUST be used.</p>
 </li>
 </ul>
 
@@ -1116,7 +1117,7 @@ Its general structure is:</p>
 
 <p id="_063f84ec-e438-fca0-9d2a-4aa2265fccf6">Example:</p>
 
-<p id="_da52c083-251f-1d17-e48e-8b9f7633ad53">See the <link target="https://covjson.org/spec/#vertical-profile-coverage">Vertical Profile Coverage Example</link></p>
+<p id="_897b6f3c-82b0-ef8f-cab7-417c49a60454">See the <xref target="annex_vertical_profile_coverage">Vertical Profile Coverage Example</xref>.</p>
 </clause>
 
 <clause id="_coverage_collection_objects" obligation="normative">
@@ -1139,7 +1140,7 @@ Its general structure is:</p>
 
 <p id="_0ac15894-a2da-5ce9-1ecd-44fa40789c23">Example:</p>
 
-<p id="_267a39f4-d722-932c-3bfb-cc873202dffe">See the <link target="https://covjson.org/spec/#coverage-collection">Coverage Collection Example</link></p>
+<p id="_c1f40ba0-46cf-2c2b-7465-9b0eba738577">See the <xref target="annex_coverage_collection">Coverage Collection Example</xref>.</p>
 </clause>
 </clause>
 
@@ -2190,38 +2191,11 @@ Its general structure is:</p>
 
 
 
-
-
-</sections><annex id="_conformance_class_abstract_test_suite_normative" obligation="informative" displayorder="14">
-<title><strong>Annex A</strong><br/>(informative)<br/><strong>Conformance Class Abstract Test Suite (Normative)</strong></title>
-<note id="_49fa4119-ff23-ba00-2b10-7c6008e83cc9"><name>NOTE</name><p id="_2f41c6a6-7963-8015-59ca-d74fafa8ae41">Ensure that there is a conformance class for each requirements class and a test for each requirement (identified by requirement name and number)</p>
-</note>
-
-<clause id="_conformance_class_a" obligation="informative">
-<title depth="2">A.1.<tab/>Conformance Class A</title>
-<clause id="_requirement_1" obligation="informative">
-<title depth="3">A.1.1.<tab/>Requirement 1</title>
-<table id="_81b98a43-7fe7-6d5f-4d55-9226a28666f9" width="100%"><name>Table A.1</name><colgroup><col width="20%"/><col width="80%"/></colgroup><tbody><tr><th valign="middle" align="right">Test id:</th>
-<td valign="middle" align="left">/conf/conf-class-a/req-name-1</td>
-</tr><tr><th valign="middle" align="right">Requirement:</th>
-<td valign="middle" align="left">/req/req-class-a/req-name-1</td>
-</tr><tr><th valign="middle" align="right">Test purpose:</th>
-<td valign="middle" align="left">Verify that…​</td>
-</tr><tr><th valign="middle" align="right">Test method:</th>
-<td valign="middle" align="left">Inspect…​</td>
-</tr></tbody>
-</table>
-</clause>
-
-<clause id="_requirement_2" obligation="informative">
-<title depth="3">A.1.2.<tab/>Requirement 2</title>
-</clause>
-</clause>
-</annex><annex id="_coverage_examples_informative" obligation="informative" displayorder="15">
-<title><strong>Annex B</strong><br/>(informative)<br/><strong>Coverage Examples ( {Informative} )</strong></title>
-<clause id="_vertical_profile_coverage" obligation="informative">
-<title depth="2">B.1.<tab/>Vertical Profile Coverage</title>
-<sourcecode id="_81dfcd90-f207-3c3f-0746-d9e86a39d44a" lang="json" unnumbered="true">{
+</sections><annex id="_coverage_examples_informative" obligation="informative" displayorder="14">
+<title><strong>Annex A</strong><br/>(informative)<br/><strong>Coverage Examples ( {Informative} )</strong></title>
+<clause id="annex_vertical_profile_coverage" obligation="informative">
+<title depth="2">A.1.<tab/>Vertical Profile Coverage</title>
+<sourcecode id="_d63e2aa3-ccc2-5b4c-5469-7c10fe046c92" lang="json" unnumbered="true">{
   "type" : "Coverage",
   "domain" : {
     "type" : "Domain",
@@ -2322,9 +2296,9 @@ Its general structure is:</p>
 
 </clause>
 
-<clause id="_coverage_collection" obligation="informative">
-<title depth="2">B.2.<tab/>Coverage Collection</title>
-<sourcecode id="_65a9310b-f62a-c0c8-cfd3-3487a0f34d4a" lang="json" unnumbered="true">{
+<clause id="annex_coverage_collection" obligation="informative">
+<title depth="2">A.2.<tab/>Coverage Collection</title>
+<sourcecode id="_ef31d4cc-3692-3465-a224-0286c1bbc821" lang="json" unnumbered="true">{
   "type" : "CoverageCollection",
   "domainType" : "VerticalProfile",
   "parameters" : {
@@ -2418,16 +2392,16 @@ Its general structure is:</p>
 }</sourcecode>
 
 </clause>
-</annex><annex id="_6523696d-8f97-0e6a-d534-1cff8dca0b7c" obligation="" language="" script="" displayorder="16"><title><strong>Annex C</strong><br/>(informative)</title><references id="Bibliography" normative="false" obligation="informative">
-<title depth="1">C.<tab/>Bibliography</title>
-<p id="OGC2015">[1] Blower, J., Riechert, M.: Original GitHub repository, <link target="https://covjson.org/spec/"/></p>
+</annex><annex id="Bibliography" obligation="informative" displayorder="15">
+<title><strong>Annex B</strong><br/>(informative)<br/><strong>Bibliography  ( {Informative} )</strong></title>
+<p id="OGC2015">[1] Blower, J., Riechert, M.: Original GitHub repository, <link target="https://github.com/covjson/specification/"/></p>
 
-<p id="_35377102-dabc-9643-25d4-b0affc8e7613">[2] Blower, J., Riechert, M., Roberts, B.: Overview of the CoverageJSON format, <link target="https://www.w3.org/TR/covjson-overview/"/></p>
+<p id="_8f475467-0cfb-554f-7b6b-82742791efbe">[2] Blower, J., Riechert, M., Roberts, B.: Overview of the CoverageJSON format, <link target="https://www.w3.org/TR/covjson-overview/"/></p>
 
-<p id="_03b2572a-85d3-6f36-a827-35e5147a9674">[3] W3C JSON-LD 1.1, JSON-based Serialization for Linked Data, W3C Recommendation 2020-07-16, <link target="https://www.w3.org/TR/json-ld11/"/></p>
-</references></annex><annex id="_revision_history" obligation="informative" displayorder="17">
-<title><strong>Annex D</strong><br/>(informative)<br/><strong>Revision History</strong></title>
-<table id="_52ceb458-768b-d65c-433c-20b7432ea940" width="90%"><name>Table D.1</name><thead><tr><th valign="middle" align="left">Date</th>
+<p id="_30fe556e-81ec-1279-94d8-766b8652a8cb">[3] W3C JSON-LD 1.1, JSON-based Serialization for Linked Data, W3C Recommendation 2020-07-16, <link target="https://www.w3.org/TR/json-ld11/"/></p>
+</annex><annex id="_revision_history" obligation="informative" displayorder="16">
+<title><strong>Annex C</strong><br/>(informative)<br/><strong>Revision History</strong></title>
+<table id="_e66a6a22-589f-6b06-e9ed-bbe4630d3be4" width="90%"><name>Table C.1</name><thead><tr><th valign="middle" align="left">Date</th>
 <th valign="middle" align="left">Release</th>
 <th valign="middle" align="left">Editor</th>
 <th valign="middle" align="left">Primary clauses modified</th>
@@ -2448,15 +2422,20 @@ Its general structure is:</p>
 <td valign="middle" align="left">Chris Little</td>
 <td valign="middle" align="left">all</td>
 <td valign="middle" align="left">replace standard by specification</td>
+</tr><tr><td valign="middle" align="left">2022-05-25</td>
+<td valign="middle" align="left">0.2.2</td>
+<td valign="middle" align="left">Jon Blower, Gobe Hobona, Chris Little, Maik Riechert</td>
+<td valign="middle" align="left">all</td>
+<td valign="middle" align="left">final publication edits</td>
 </tr></tbody>
 </table>
 </annex><bibliography><references id="_references" normative="true" obligation="informative" displayorder="9">
 <title depth="1">3.<tab/>Normative references</title><p id="_1984bddd-729c-8a94-b1f9-c24206c5d230">The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.</p>
 
 
-<bibitem id="covjson"><formattedref format="application/x-isodoc+xml"><em>CoverageJSON original GitHub repository</em>, <link target="https://covjson.org/spec"/></formattedref><docidentifier>covjson</docidentifier></bibitem>
+<bibitem id="covjson"><formattedref format="application/x-isodoc+xml"><em>CoverageJSON original GitHub repository</em>, <link target="https://github.com/covjson/specification"/></formattedref><docidentifier>covjson</docidentifier></bibitem>
 <bibitem id="netcdf"><formattedref format="application/x-isodoc+xml"><em>Network Common Data Form (NetCDF)</em>, <link target="https://www.unidata.ucar.edu/software/netcdf"/></formattedref><docidentifier>netcdf</docidentifier></bibitem>
-<bibitem id="OGC07-011" type="standard">  <fetched>2022-05-20</fetched>  
+<bibitem id="OGC07-011" type="standard">  <fetched>2022-05-29</fetched>  
 <title type="title-intro" format="text/plain" language="en" script="Latn">Topic 6</title>
   
 <title type="title-main" format="text/plain" language="en" script="Latn">Schema for coverage geometry and functions</title>
@@ -2467,7 +2446,7 @@ Its general structure is:</p>
     </person>  </contributor>  <contributor>    <role type="publisher"/>    <organization>      
 <name>Open Geospatial Consortium</name>
     </organization>  </contributor>  <language>en</language>  <script>Latn</script>  <abstract format="text/plain" language="en" script="Latn">This International Standard defines a conceptual schema for the spatial characteristics of coverages. Coverages support mapping from a spatial, temporal or spatiotemporal domain to feature attribute values where feature attribute types are common to all geographic positions within the domain. A coverage domain consists of a collection of direct positions in a coordinate space that may be defined in terms of up to three spatial dimensions as well as a temporal dimension.</abstract>  </bibitem>
- <bibitem id="OGC18-010r7" type="standard">  <fetched>2022-05-20</fetched>  
+ <bibitem id="OGC18-010r7" type="standard">  <fetched>2022-05-29</fetched>  
 <title type="title-main" format="text/plain" language="en" script="Latn">Geographic information — Well-known text representation of coordinate reference systems</title>
   
 <title type="main" format="text/plain" language="en" script="Latn">Geographic information — Well-known text representation of coordinate reference systems</title>
@@ -2477,7 +2456,7 @@ Its general structure is:</p>
 <name>Open Geospatial Consortium</name>
     </organization>  </contributor>  <edition>7</edition>  <language>en</language>  <script>Latn</script>  <abstract format="text/plain" language="en" script="Latn">This Standard defines the structure and content of well-known text strings describing coordinate reference systems (CRSs) and coordinate operations between coordinate reference systems. It does not prescribe how implementations should read or write these strings.  This Standard provides an updated version of WKT representation of coordinate reference systems that follows the provisions of ISO 19111:2019. It extends the WKT in OGC document 12-063r5 (ISO 19162) which was based on ISO 19111:2007 and ISO 19111-2:2009. That version consolidated several disparate versions of earlier WKT (so-called WKT1) and added the description of coordinate operations.  This jointly developed draft has been submitted by ISO TC211 for circulation as a Draft International Standard (DIS). This version incorporates comments made during the ISO TC211 New Work Item Proposal acceptance ballot.</abstract>  </bibitem>
 <bibitem id="ogcutc"><formattedref format="application/x-isodoc+xml"><em>OGC definition of the UTC Temporal Reference System</em>, <link target="http://www.opengis.net/def/trs/BIPM/0/UTC"/></formattedref><docidentifier type="OGC">OGC ogcutc</docidentifier></bibitem>
-<bibitem id="rfc2413" type="standard">  <fetched>2022-05-20</fetched>  
+<bibitem id="rfc2413" type="standard">  <fetched>2022-06-08</fetched>  
 <title format="text/plain" language="en" script="Latn">Dublin Core Metadata for Resource Discovery</title>
   <uri type="xml">https://raw.githubusercontent.com/relaton/relaton-data-ietf/master/data/reference.RFC.2413.xml</uri>  <uri type="src">https://www.rfc-editor.org/info/rfc2413</uri>  <docidentifier type="RFC" primary="true">RFC 2413</docidentifier>  <docidentifier type="RFC" scope="anchor">RFC RFC2413</docidentifier>  <docidentifier type="DOI">DOI 10.17487/RFC2413</docidentifier>  <docnumber>RFC2413</docnumber>  <date type="published">    <on>1998</on>  </date>  <contributor>    <role type="publisher"/>    <organization>      
 <name>Internet Engineering Task Force</name>
@@ -2493,7 +2472,7 @@ Its general structure is:</p>
   </abstract>  <series type="main">    
 <title format="text/plain" language="en" script="Latn">RFC</title>
     <number>2413</number>  </series></bibitem>
- <bibitem id="rfc3339" type="standard">  <fetched>2022-05-20</fetched>  
+ <bibitem id="rfc3339" type="standard">  <fetched>2022-06-08</fetched>  
 <title format="text/plain" language="en" script="Latn">Date and Time on the Internet: Timestamps</title>
   <uri type="xml">https://raw.githubusercontent.com/relaton/relaton-data-ietf/master/data/reference.RFC.3339.xml</uri>  <uri type="src">https://www.rfc-editor.org/info/rfc3339</uri>  <docidentifier type="RFC" primary="true">RFC 3339</docidentifier>  <docidentifier type="RFC" scope="anchor">RFC RFC3339</docidentifier>  <docidentifier type="DOI">DOI 10.17487/RFC3339</docidentifier>  <docnumber>RFC3339</docnumber>  <date type="published">    <on>2002</on>  </date>  <contributor>    <role type="publisher"/>    <organization>      
 <name>Internet Engineering Task Force</name>
@@ -2505,7 +2484,7 @@ Its general structure is:</p>
   </abstract>  <series type="main">    
 <title format="text/plain" language="en" script="Latn">RFC</title>
     <number>3339</number>  </series></bibitem>
- <bibitem id="rfc3896" type="standard">  <fetched>2022-05-20</fetched>  
+ <bibitem id="rfc3896" type="standard">  <fetched>2022-06-08</fetched>  
 <title format="text/plain" language="en" script="Latn">Definitions of Managed Objects for the DS3/E3 Interface Type</title>
   <uri type="xml">https://raw.githubusercontent.com/relaton/relaton-data-ietf/master/data/reference.RFC.3896.xml</uri>  <uri type="src">https://www.rfc-editor.org/info/rfc3896</uri>  <docidentifier type="RFC" primary="true">RFC 3896</docidentifier>  <docidentifier type="RFC" scope="anchor">RFC RFC3896</docidentifier>  <docidentifier type="DOI">DOI 10.17487/RFC3896</docidentifier>  <docnumber>RFC3896</docnumber>  <date type="published">    <on>2004</on>  </date>  <contributor>    <role type="publisher"/>    <organization>      
 <name>Internet Engineering Task Force</name>
@@ -2515,7 +2494,7 @@ Its general structure is:</p>
   </abstract>  <series type="main">    
 <title format="text/plain" language="en" script="Latn">RFC</title>
     <number>3896</number>  </series></bibitem>
- <bibitem id="rfc4627" type="standard">  <fetched>2022-05-20</fetched>  
+ <bibitem id="rfc4627" type="standard">  <fetched>2022-06-08</fetched>  
 <title format="text/plain" language="en" script="Latn">The application/json Media Type for JavaScript Object Notation (JSON)</title>
   <uri type="xml">https://raw.githubusercontent.com/relaton/relaton-data-ietf/master/data/reference.RFC.4627.xml</uri>  <uri type="src">https://www.rfc-editor.org/info/rfc4627</uri>  <docidentifier type="RFC" primary="true">RFC 4627</docidentifier>  <docidentifier type="RFC" scope="anchor">RFC RFC4627</docidentifier>  <docidentifier type="DOI">DOI 10.17487/RFC4627</docidentifier>  <docnumber>RFC4627</docnumber>  <date type="published">    <on>2006</on>  </date>  <contributor>    <role type="publisher"/>    <organization>      
 <name>Internet Engineering Task Force</name>
@@ -2525,7 +2504,7 @@ Its general structure is:</p>
   </abstract>  <series type="main">    
 <title format="text/plain" language="en" script="Latn">RFC</title>
     <number>4627</number>  </series></bibitem>
- <bibitem id="rfc4647" type="standard">  <fetched>2022-05-20</fetched>  
+ <bibitem id="rfc4647" type="standard">  <fetched>2022-06-08</fetched>  
 <title format="text/plain" language="en" script="Latn">Matching of Language Tags</title>
   <uri type="xml">https://raw.githubusercontent.com/relaton/relaton-data-ietf/master/data/reference.RFC.4647.xml</uri>  <uri type="src">https://www.rfc-editor.org/info/rfc4647</uri>  <docidentifier type="RFC" primary="true">RFC 4647</docidentifier>  <docidentifier type="RFC" scope="anchor">RFC RFC4647</docidentifier>  <docidentifier type="DOI">DOI 10.17487/RFC4647</docidentifier>  <docnumber>RFC4647</docnumber>  <date type="published">    <on>2006</on>  </date>  <contributor>    <role type="publisher"/>    <organization>      
 <name>Internet Engineering Task Force</name>
@@ -2539,7 +2518,7 @@ Its general structure is:</p>
     <number>47</number>  </series>  <series type="main">    
 <title format="text/plain" language="en" script="Latn">RFC</title>
     <number>4647</number>  </series></bibitem>
- <bibitem id="rfc5646" type="standard">  <fetched>2022-05-20</fetched>  
+ <bibitem id="rfc5646" type="standard">  <fetched>2022-06-08</fetched>  
 <title format="text/plain" language="en" script="Latn">Tags for Identifying Languages</title>
   <uri type="xml">https://raw.githubusercontent.com/relaton/relaton-data-ietf/master/data/reference.RFC.5646.xml</uri>  <uri type="src">https://www.rfc-editor.org/info/rfc5646</uri>  <docidentifier type="RFC" primary="true">RFC 5646</docidentifier>  <docidentifier type="RFC" scope="anchor">RFC RFC5646</docidentifier>  <docidentifier type="DOI">DOI 10.17487/RFC5646</docidentifier>  <docnumber>RFC5646</docnumber>  <date type="published">    <on>2009</on>  </date>  <contributor>    <role type="publisher"/>    <organization>      
 <name>Internet Engineering Task Force</name>
@@ -2553,7 +2532,7 @@ Its general structure is:</p>
     <number>47</number>  </series>  <series type="main">    
 <title format="text/plain" language="en" script="Latn">RFC</title>
     <number>5646</number>  </series></bibitem>
- <bibitem id="rfc6570" type="standard">  <fetched>2022-05-20</fetched>  
+ <bibitem id="rfc6570" type="standard">  <fetched>2022-06-08</fetched>  
 <title format="text/plain" language="en" script="Latn">URI Template</title>
   <uri type="xml">https://raw.githubusercontent.com/relaton/relaton-data-ietf/master/data/reference.RFC.6570.xml</uri>  <uri type="src">https://www.rfc-editor.org/info/rfc6570</uri>  <docidentifier type="RFC" primary="true">RFC 6570</docidentifier>  <docidentifier type="RFC" scope="anchor">RFC RFC6570</docidentifier>  <docidentifier type="DOI">DOI 10.17487/RFC6570</docidentifier>  <docnumber>RFC6570</docnumber>  <date type="published">    <on>2012</on>  </date>  <contributor>    <role type="publisher"/>    <organization>      
 <name>Internet Engineering Task Force</name>
@@ -2571,7 +2550,7 @@ Its general structure is:</p>
   </abstract>  <series type="main">    
 <title format="text/plain" language="en" script="Latn">RFC</title>
     <number>6570</number>  </series></bibitem>
- <bibitem id="rfc6906" type="standard">  <fetched>2022-05-20</fetched>  
+ <bibitem id="rfc6906" type="standard">  <fetched>2022-06-08</fetched>  
 <title format="text/plain" language="en" script="Latn">The ‘profile’ Link Relation Type</title>
   <uri type="xml">https://raw.githubusercontent.com/relaton/relaton-data-ietf/master/data/reference.RFC.6906.xml</uri>  <uri type="src">https://www.rfc-editor.org/info/rfc6906</uri>  <docidentifier type="RFC" primary="true">RFC 6906</docidentifier>  <docidentifier type="RFC" scope="anchor">RFC RFC6906</docidentifier>  <docidentifier type="DOI">DOI 10.17487/RFC6906</docidentifier>  <docnumber>RFC6906</docnumber>  <date type="published">    <on>2013</on>  </date>  <contributor>    <role type="publisher"/>    <organization>      
 <name>Internet Engineering Task Force</name>
@@ -2581,7 +2560,7 @@ Its general structure is:</p>
   </abstract>  <series type="main">    
 <title format="text/plain" language="en" script="Latn">RFC</title>
     <number>6906</number>  </series></bibitem>
- <bibitem id="rfc7946" type="standard">  <fetched>2022-05-20</fetched>  
+ <bibitem id="rfc7946" type="standard">  <fetched>2022-06-08</fetched>  
 <title format="text/plain" language="en" script="Latn">The GeoJSON Format</title>
   <uri type="xml">https://raw.githubusercontent.com/relaton/relaton-data-ietf/master/data/reference.RFC.7946.xml</uri>  <uri type="src">https://www.rfc-editor.org/info/rfc7946</uri>  <docidentifier type="RFC" primary="true">RFC 7946</docidentifier>  <docidentifier type="RFC" scope="anchor">RFC RFC7946</docidentifier>  <docidentifier type="DOI">DOI 10.17487/RFC7946</docidentifier>  <docnumber>RFC7946</docnumber>  <date type="published">    <on>2016</on>  </date>  <contributor>    <role type="publisher"/>    <organization>      
 <name>Internet Engineering Task Force</name>
@@ -2601,8 +2580,8 @@ Its general structure is:</p>
   </abstract>  <series type="main">    
 <title format="text/plain" language="en" script="Latn">RFC</title>
     <number>7946</number>  </series></bibitem>
-<bibitem id="w3ccurie"><formattedref format="application/x-isodoc+xml">W3C CURIE Syntax 1.0, Syntax for expressing Compact URIs, Working Group Note, 2010-12-16, <link target="http://www.w3.org/TR/curie/"/></formattedref><docidentifier>CURIEs</docidentifier></bibitem>
-<bibitem id="w3cjsonld10"><formattedref format="application/x-isodoc+xml">W3C JSON-LD1.0, JSON-based Serialization for Linked Data, 2014-01-16 superseded 2020-11-03, <link target="https://www.w3.org/TR/2014/REC-json-ld-20140116/"/></formattedref><docidentifier>JSON-LD</docidentifier></bibitem>
+<bibitem id="w3ccurie"><formattedref format="application/x-isodoc+xml">W3C CURIE Syntax 1.0, Syntax for expressing Compact URIs, Working Group Note, 2010-12-16, <link target="http://www.w3.org/TR/curie/"/></formattedref><docidentifier type="W3C">W3C CURIEs</docidentifier><docnumber>3C CURIEs</docnumber></bibitem>
+<bibitem id="w3cjsonld10"><formattedref format="application/x-isodoc+xml">W3C JSON-LD 1.0, JSON-based Serialization for Linked Data, 2014-01-16 superseded 2020-11-03, <link target="https://www.w3.org/TR/2014/REC-json-ld-20140116/"/></formattedref><docidentifier type="W3C">W3C JSON-LD</docidentifier><docnumber>3C JSON-LD</docnumber></bibitem>
 <bibitem id="UCUM"><formattedref format="application/x-isodoc+xml">Schadow, G., McDonald, C. J.: Unified Code for Units of Measure, <link target="http://unitsofmeasure.org"/></formattedref><docidentifier>UCUM</docidentifier></bibitem>
 
 <p id="_9c9f4a30-77d1-feb2-0375-f61268fc6637">Key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” are to be interpreted as described in IETF RFC 2119, <link target="https://datatracker.ietf.org/doc/html/rfc2119.txt"/></p>
