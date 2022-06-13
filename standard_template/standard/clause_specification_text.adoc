@@ -776,7 +776,7 @@ A CoverageJSON object with the type `"Coverage"` is a coverage object.
 
 Example:
 
-See the https://github.com/opengeospatial/CoverageJSON/standard_template/standard/annex-b.adoc#vertical-profile-coverage[Vertical Profile Coverage Example]
+See the <<annex_vertical_profile_coverage,Vertical Profile Coverage Example>>.
 
 //### 6.5. Coverage Collection Objects
 ==== Coverage Collection Objects
@@ -792,7 +792,7 @@ A CoverageJSON object with the type `"CoverageCollection"` is a coverage collect
 
 Example:
 
-See the https://github.com/opengeospatial/CoverageJSON/standard_template/standard/annex-b.adoc#coverage-collection[Coverage Collection Example]
+See the <<annex_coverage_collection,Coverage Collection Example>>.
 
 //## 7. Extensions
 === Extensions
