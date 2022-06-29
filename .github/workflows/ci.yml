@@ -12,5 +12,5 @@ jobs:
 
       - name: Generate document
         run: |
-          cd standard_template/standard
+          cd standard
           metanorma compile --agree-to-terms -t ogc -x xml,html,doc document.adoc
