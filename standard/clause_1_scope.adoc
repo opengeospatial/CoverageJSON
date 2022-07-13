@@ -8,4 +8,4 @@ Unused or imprecisely specified components have been removed.
 
 Future improvements have been identified, such as the use of multiple time dimensions, or to use JSON-LD V1.1 which may give better compatibility with the OGC Coverage Implementation Schema (CIS) Version 1.1 (OGC09-146r8), which is a different logical implementation of the abstract conceptual standard ISO19123:2005/OGC Abstract Topic 6. These improvements are out of scope of this document.
 
-This specification does not specify encoding of information in any format other than JSON [IETF RFC 7159](https://datatracker.ietf.org/doc/html/rfc7159).
+This specification does not specify encoding of information in any format other than JSON https://datatracker.ietf.org/doc/html/rfc7159[IETF RFC 7159].
