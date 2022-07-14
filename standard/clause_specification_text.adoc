@@ -783,7 +783,7 @@ See the <<annex_vertical_profile_coverage,Vertical Profile Coverage Example>>.
 
 A CoverageJSON object with the type `"CoverageCollection"` is a coverage collection object.
 
-- A coverage collection object MAY have the member `"domainType"` with a string value to indicate that the coverage collection only contains coverages of the given domain type. See the ["Common CoverageJSON Domain Types Specification"][domain-types], which forms part of this specification, for details. Custom domain types may be used as recommended in the section "Extensions".
+- A coverage collection object MAY have the member `"domainType"` with a string value to indicate that the coverage collection only contains coverages of the given domain type. See the ["Common CoverageJSON Domain Types Specification"][domain-types], which forms part of this Community Standard, for details. Custom domain types may be used as recommended in the section "Extensions".
 - If a coverage collection object has the member `"domainType"`, then this member is inherited to all included coverages.
 - A coverage collection object MUST have a member with the name `"coverages"`. The value corresponding to `"coverages"` is an array. Each element in the array is a coverage object as defined above.
 - A coverage collection object MAY have a member with the name `"parameters"` where the value is an object where each member has as name a short identifier and as value a parameter object.
