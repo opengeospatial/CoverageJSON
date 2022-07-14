@@ -25,7 +25,7 @@ The simplest and most common use case is to embed all the data values of all var
 
 The next-simplest use case is to put data values for each variable (parameter) in separate array objects in separate CoverageJSON documents which are linked from the Coverage object. This is useful for a multi-variable dataset, such as one with temperature, humidity, wind speed, etc., to be recorded in separate files. This allows the client to only load the variables of interest.
 
-A sophisticated use case is to use tiling objects, where the data values are partitioned spatially and temporally, so that a single variable's data values would be split among several documents. A simple example of this use case is encoding each time step of a dataset into a separate file, but the tiles could also be divided spatially, such as using a tiled map server implementation.
+A sophisticated use case is to use tiling objects, where the data values are partitioned spatially and temporally, so that a single variable's data values would be split among several documents. A simple example of this use case is encoding each time step of a dataset into a separate file, but the tiles could also be divided spatially, like a tiled map server implementation.
 
 == Submitters
 
