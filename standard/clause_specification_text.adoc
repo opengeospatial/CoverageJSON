@@ -366,7 +366,7 @@ Example of a vertical CRS, here representing height above the NAV88 datum:
 //### 5.2. Temporal Reference Systems
 ==== Temporal Reference Systems
 
-Time is referenced by a temporal reference system (temporal RS). In the current Community Standard, only a string-based notation for time values is defined. Future versions of this Community Standard may allow for alternative notations, such as recording time values as numeric offsets from a given temporal datum (e.g. "days since 1970-01-01").
+Time is referenced by a temporal reference system (temporal RS). In this Community Standard, only a string-based notation for time values is defined. Future versions of this Community Standard may allow for alternative notations, such as recording time values as numeric offsets from a given temporal datum (e.g. "days since 1970-01-01").
 
 - A temporal RS object MUST have a member `"type"`. The only currently defined value of it is `"TemporalRS"`.
 - A temporal RS object MUST have a member `"calendar"` with value `"Gregorian"` or a URI.
@@ -459,7 +459,7 @@ Its general structure is:
 ```
 
 - The value of the `"type"` member MUST be `"Domain"`.
-- For interoperability reasons it is RECOMMENDED that a domain object has the member `"domainType"` with a string value to indicate that the domain follows a certain structure (e.g. a time series, a vertical profile, a spatio-temporal 4D grid). See the ["Common CoverageJSON Domain Types Specification"][domain-types], which forms part of this specification, for details. Custom domain types may be used as recommended in the section "Extensions".
+- For interoperability reasons it is RECOMMENDED that a domain object has the member `"domainType"` with a string value to indicate that the domain follows a certain structure (e.g. a time series, a vertical profile, a spatio-temporal 4D grid). See the ["Common CoverageJSON Domain Types Specification"][domain-types], which forms part of this Community Standard, for details. Custom domain types may be used as recommended in the section "Extensions".
 - A domain object MUST have the member `"axes"` which has as value an object where each key is an axis identifier and each value an axis object as defined below.
 - The `"axes"` member MUST NOT be empty.
 - A domain object MAY have the member `"referencing"` where the value is an array of reference system connection objects as defined below.
