@@ -366,7 +366,7 @@ Example of a vertical CRS, here representing height above the NAV88 datum:
 //### 5.2. Temporal Reference Systems
 ==== Temporal Reference Systems
 
-Time is referenced by a temporal reference system (temporal RS). In the current specification, only a string-based notation for time values is defined. Future versions of this specification may allow for alternative notations, such as recording time values as numeric offsets from a given temporal datum (e.g. "days since 1970-01-01").
+Time is referenced by a temporal reference system (temporal RS). In the current Community Standard, only a string-based notation for time values is defined. Future versions of this Community Standard may allow for alternative notations, such as recording time values as numeric offsets from a given temporal datum (e.g. "days since 1970-01-01").
 
 - A temporal RS object MUST have a member `"type"`. The only currently defined value of it is `"TemporalRS"`.
 - A temporal RS object MUST have a member `"calendar"` with value `"Gregorian"` or a URI.
@@ -921,15 +921,15 @@ If a domain or range is referenced by a URL in a CoverageJSON document, then the
 //## 10. Common Domain Types
 === Common Domain Types
 
-This specification defines the following domain types: Grid, VerticalProfile, PointSeries, Point, MultiPointSeries, MultiPoint, PolygonSeries, Polygon, MultiPolygonSeries, MultiPolygon, Trajectory, Section.
+This OGC Community Standard defines the following domain types: Grid, VerticalProfile, PointSeries, Point, MultiPointSeries, MultiPoint, PolygonSeries, Polygon, MultiPolygonSeries, MultiPolygon, Trajectory, Section.
 
-Requirements for all domain types defined in this specification:
+Requirements for all domain types defined in this OGC Community Standard:
 
 - The axis and coordinate identifiers `"x"` and `"y"` MUST refer to horizontal spatial coordinates,
 `"z"` to vertical spatial coordinates, and all of `"x"`, `"y"`, and `"z"` MUST be referenced by a spatial coordinate reference system.
 - The axis and coordinate identifier `"t"` MUST refer to temporal coordinates and be referenced by a temporal reference system.
 - If a spatial CRS is used that has the axes longitude and latitude, or easting and northing, then the axis and coordinate identifier `"x"` MUST refer to longitude / easting, and `"y"` to latitude / northing.
-- A domain that states conformance to one of the domain types in this specification MUST only contain axes defined by the domain type: additional axes are not allowed.
+- A domain that states conformance to one of the domain types in this OGC Community Standard MUST only contain axes defined by the domain type: additional axes are not allowed.
 - In a Coverage object, the axis ordering in `"axisNames"` of NdArray objects SHOULD follow the order "t", "z", "y, "x", "composite", leaving out all axes that do not exist or are single-valued.
 
 .Domain Types table
