@@ -37,12 +37,12 @@ A sophisticated use case is to use tiling objects, where the data values are par
 
 The following are keywords to be used by search engines and document catalogues:
 
-ogcdoc, OGC Document, JSON, JSON-LD, CoverageJSON, CovJSON, Coverage, spatiotemporal, linked-data.
+ogcdoc, OGC Document, JSON, JSON-LD, CoverageJSON, CovJSON, Coverage, spatiotemporal, linked data.
 
 [source]
 == Source of this document
 
-The majority of the content in this OGC document is a direct copy of the content originally contained at https://github.com/covjson/specification . No normative changes have been made to the content. This OGC document does contain content not in the original source CovJSON GitHub repository. Specifically, while derived from content of the original CovJSON repository, the Abstract, Keywords, Preface, Security Considerations, Submitting Organizations, Endorsers, Terms and Definitions, and References sections and Annex B (Bibliography) in this document are not found on the original CovJSON.
+The majority of the content in this OGC document is a direct copy of the content originally contained at https://github.com/covjson/specification . No normative changes have been made to the content. This OGC document does contain content not in the original source CoverageJSON GitHub repository. Specifically, while derived from content of the original CoverageJSON repository, the Abstract, Keywords, Preface, Security Considerations, Submitting Organizations, Endorsers, Terms and Definitions, and References sections and Annex B (Bibliography) in this document are not found in the original CoverageJSON repository.
 
 The future community web site and source repository will contain the OGC version.
 
@@ -56,7 +56,7 @@ The Submission Team has reviewed and certified that the snapshot content in this
 * UK Met Office
 * University of Reading
 * Meteorological Service of Canada
-* Enidata UCAR
+* Unidata UCAR
 * US NWS/NOAA
 * ESIP/JPL/NASA
 
