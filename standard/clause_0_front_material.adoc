@@ -37,7 +37,7 @@ A sophisticated use case is to use tiling objects, where the data values are par
 
 The following are keywords to be used by search engines and document catalogues:
 
-ogcdoc, OGC Document, JSON, JSON-LD, CoverageJSON, CovJSON, Coverage, spatiotemproal, linked-data.
+ogcdoc, OGC Document, JSON, JSON-LD, CoverageJSON, CovJSON, Coverage, spatiotemporal, linked-data.
 
 [source]
 == Source of this document
