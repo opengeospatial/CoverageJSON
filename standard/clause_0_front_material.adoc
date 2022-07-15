@@ -43,4 +43,3 @@ All questions regarding this submission should be directed to the editor or the 
 == Acknowledgements
 
 This work was inspired by a demonstration of the concept by Joan Masó of CREAF.
-2
