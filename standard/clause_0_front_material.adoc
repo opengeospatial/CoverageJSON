@@ -42,7 +42,7 @@ ogcdoc, OGC Document, JSON, JSON-LD, CoverageJSON, CovJSON, Coverage, spatiotemp
 [source]
 == Source of this document
 
-The majority of the content in this OGC document is a direct copy of the content originally contained at https://github.com/covjson/specification . No normative changes have been made to the content. This OGC document does contain content not in the original source CoverageJSON GitHub repository. Specifically, while derived from content of the original CoverageJSON repository, the Abstract, Keywords, Preface, Security Considerations, Submitting Organizations, Endorsers, Terms and Definitions, and References sections and Annex B (Bibliography) in this document are not found in the original CoverageJSON repository.
+The majority of the content in this OGC document is a direct copy of the content originally contained at https://github.com/covjson/specification. No normative changes have been made to the content. This OGC document does contain content not in the original source CoverageJSON GitHub repository. Specifically, while derived from content of the original CoverageJSON repository, the Abstract, Keywords, Preface, Security Considerations, Submitting Organizations, Endorsers, Terms and Definitions, and References sections and Annex B (Bibliography) in this document are not found in the original CoverageJSON repository.
 
 The future community web site and source repository will contain the OGC version.
 
