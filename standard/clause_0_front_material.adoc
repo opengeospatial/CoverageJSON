@@ -10,6 +10,11 @@ Attention is drawn to the possibility that some of the elements of this document
 
 Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.
 
+[security]
+== Security Considerations
+
+Given the intended use case of downloading data to a browser, there is no functionality within this specification to facilitate authenticity, integrity and confidentiality (e.g. signatures or encryption). This can be applied at the transport level using standards that apply there. Use cases involving authenticity, integrity and confidentiality outside of the transport context (e.g. offline devices) are not intended or supported.
+
 [abstract]
 == Abstract
 
@@ -26,6 +31,34 @@ The simplest and most common use case is to embed the data values of all variabl
 The next-simplest use case is to put data values for each variable (parameter) in separate array objects in separate CoverageJSON documents, linked from the Coverage object. This is useful for a multi-variable dataset, where one might want temperature, humidity, wind speed, etc., to be recorded in separate files, so the user client only needs to load the variables of interest.
 
 A sophisticated use case is to use tiling objects, where the data values are partitioned spatially and temporally, so that a single variable's data values would be split among several documents. A simple example of this would be to encode each timestep of a dataset in a separate file, but the tiles could also be divided spatially, like a tiled map server.
+
+[keywords]
+== Keywords
+
+The following are keywords to be used by search engines and document catalogues:
+
+ogcdoc, OGC Document, JSON, JSON-LD, CoverageJSON, CovJSON, Coverage, spatiotemporal, linked data.
+
+[source]
+== Source of this document
+
+The majority of the content in this OGC document is a direct copy of the content originally contained at https://github.com/covjson/specification. No normative changes have been made to the content. This OGC document does contain content not in the original source CoverageJSON GitHub repository. Specifically, while derived from content of the original CoverageJSON repository, the Abstract, Keywords, Preface, Security Considerations, Submitting Organizations, Endorsers, Terms and Definitions, and References sections and Annex B (Bibliography) in this document are not found in the original CoverageJSON repository.
+
+The future community web site and source repository will contain the OGC version.
+
+[Validity]
+== Validity of content
+
+The Submission Team has reviewed and certified that the snapshot content in this Community Standard is true and accurate. The snapshot for OGC CoverageJSON Version 1.0 was taken on December 2021 from the https://github.com/covjson/specification[CovJSON Version 0.2 GitHub Repository].
+
+== Submitting Organisations
+
+* UK Met Office
+* University of Reading
+* Meteorological Service of Canada
+* Unidata UCAR
+* US NWS/NOAA
+* ESIP/JPL/NASA
 
 == Submitters
 
