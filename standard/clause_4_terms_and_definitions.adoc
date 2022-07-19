@@ -1,17 +1,23 @@
 == Terms and Definitions
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED",  "MAY", and "OPTIONAL" in this document are to be interpreted as described in IETF RFC 2119.
 
-For the purposes of this document, the following additional terms and definitions apply.
+For the purposes of this document, the following additional terms and definitions apply:
 
-=== *RFC*
-Request For Comment (IETF)
-
-=== *BCP*
-Best Current Practice. It may include several RFCs (IETF)
+=== *BCP* (Best Current Practice)
+subset of RFC documents designated as best current practice [IETF]
 
 === *Coverage*
-feature that acts as a function to return values from its range for any direct position within its spatial, temporal or spatiotemporal domain (ISO19123-1)
+feature that acts as a function to return values from its range for any direct position within its spatial, temporal or spatiotemporal domain [ISO19123]
+
+=== *Domain*
+well-defined set [ISO19123]
 
 === *i18n object*
 string in multiple languages with tags as defined in [BCP 47](http://tools.ietf.org/html/bcp47), and the value is the string in that language.
-The special language tag `"und"` can be used to identify a value whose language is unknown or undetermined. (IETF BCP47)
+The special language tag `"und"` can be used to identify a value whose language is unknown or undetermined. [IETF BCP47]
+
+=== *Range*
+set of feature attribute values associated by a function with the elements of the domain of a coverage [ISO19123]
+
+=== *RFC* (Request For Comment)  
+document containing technical specifications and organizational notes for the Internet [IETF]
