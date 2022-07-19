@@ -1,4 +1,4 @@
-== Full Specification: Normative and Informative intermixed
+== Specification: Normative with Informative Examples
 
 //## 1. Introduction
 === Introduction
