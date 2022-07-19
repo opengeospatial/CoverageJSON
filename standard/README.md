@@ -1,4 +1,4 @@
-# Standard template
+# Standard
 
 ## Content
 
