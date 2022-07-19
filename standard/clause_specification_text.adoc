@@ -1,4 +1,4 @@
-== Specification: Normative with Informative Examples
+== CoverageJSON Encoding: Normative with Informative Examples
 
 //## 1. Introduction
 === Introduction
