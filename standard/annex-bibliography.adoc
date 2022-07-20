@@ -8,3 +8,5 @@
 [2] Blower, J., Riechert, M., Roberts, B.: Overview of the CoverageJSON format, https://www.w3.org/TR/covjson-overview/
 
 [3] W3C JSON-LD 1.1, JSON-based Serialization for Linked Data, W3C Recommendation 2020-07-16, https://www.w3.org/TR/json-ld11/
+
+[4] Baumann, P., Hirschorn, E., Masó, J.: OGC Coverage Implementation Schema with Corrigendum, Version: 1.1.1,  http://docs.opengeospatial.org/is/09-146r8/09-146r8.html 
