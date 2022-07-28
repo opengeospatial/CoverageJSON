@@ -37,10 +37,10 @@ At the December 2021 meeting of the OGC Technical Committee, the following plan 
 * Produce detailed CoverageJSON, CIS JSON, GeoTIFF, and CF-NetCDF3 comparison document via WCS SWG
     * Keen volunteers identified! 
     * Text in GitHub (**DONE**)
-    * Create Conceptual model
+    * Create Conceptual model (**Started**)
 * Request and propose further improvements to CoverageJSON specification:
     * Support for multiple time axes (Tagged V1.1)
-    * Support for JSON representation of CRSs, as in PROJJSON (Tagged V1.1)
+    * Support for JSON representation of CRSs, as in PROJJSON (Tagged V1.2)
     * Other backward compatible improvements (V1.x)
     * Support for JSON-LD V1.1 to allow links from deeply nested objects (not clear if backward compatible)
     * Support binary nD arrays of data (probably not needed because gZip very effective)	
