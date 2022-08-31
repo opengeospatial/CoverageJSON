@@ -330,7 +330,7 @@ Projected CRSs use two coordinates to denote positions on a Cartesian plane, whi
 
  - The value of the `"type"` member MUST be "ProjectedCRS"
  - The object MAY have an `"id"` member, whose value MUST be a string and SHOULD be a common identifier for the reference system.
- - The object MAY have a `"description"` member, where the value MUST be an i18n object, but no standardised content is interpreted from this description.
+ - The object MAY have a `"description"` member, where the value MUST be an i18n object, but no standardized content is interpreted from this description.
 
 If a Coverage conforms to one of the defined [domain types][domain-types] then the coordinate identifier `"x"` is used to denote easting and `"y"` is used for northing.
 
@@ -366,7 +366,7 @@ Example of a vertical CRS, here representing height above the NAV88 datum:
 //### 5.2. Temporal Reference Systems
 ==== Temporal Reference Systems
 
-Time is referenced by a temporal reference system (temporal RS). In this Community Standard, only a string-based notation for time values is defined. Future versions of this Community Standard may allow for alternative notations, such as recording time values as numeric offsets from a given temporal datum (e.g. "days since 1970-01-01").
+Time is referenced by a temporal reference system (temporal RS). In the current version of this Community Standard, only a string-based notation for time values is defined. Future versions of this Community Standard may allow for alternative notations, such as recording time values as numeric offsets from a given temporal datum (e.g. “days since 1970-01-01”).
 
 - A temporal RS object MUST have a member `"type"`. The only currently defined value of it is `"TemporalRS"`.
 - A temporal RS object MUST have a member `"calendar"` with value `"Gregorian"` or a URI.
