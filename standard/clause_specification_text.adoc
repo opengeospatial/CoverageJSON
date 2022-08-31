@@ -297,9 +297,9 @@ Geographic CRSs anchor coordinate values to an ellipsoidal approximation of the 
 
  - The value of the `"type"` member MUST be "GeographicCRS"
  - The object MAY have an `"id"` member, whose value MUST be a string and SHOULD be a common identifier for the reference system.
- - The object MAY have a `"description"` member, where the value MUST be an i18n object, but no standardised content is interpreted from this description.
+ - The object MAY have a `"description"` member, where the value MUST be an i18n object, but no standardized content is interpreted from this description.
 
-Note that sometimes (e.g. for numerical model data) the exact CRS may not be known or may be undefined. In this case the `"id"` may be omitted, but the `"type"` still indicates that this is a geographic CRS. Therefore clients can still use geodetic longitude, geodetic latitude (and maybe height) axes, even if they can't accurately georeference the information.
+Note that sometimes (e.g. for numerical model data) the exact CRS may not be known or may be undefined. In this case the `"id"` may be omitted, but the `"type"` still indicates that this is a geographic CRS. Therefore clients can still use geodetic longitude, geodetic latitude (and maybe height) axes, even if they cannot accurately georeference the information.
 
 If a Coverage conforms to one of the defined [domain types][domain-types] then the coordinate identifier `"x"` is used to denote geodetic longitude, `"y"` is used for geodetic latitude and `z` for ellipsoidal height.
 
