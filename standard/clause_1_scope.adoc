@@ -1,6 +1,6 @@
 == Scope 
 
-This OGC Community Standard is a logical implementation of the long-established abstract conceptual standard ISO19123:2005 (also known as OGC Abstract Topic 6). The source CoverageJSON specification has been stable for several years, with a wide-spread international implementation community in the environmental sciences. The current version of the open specification, available on https://github.com/covjson/specification[original GitHub], is labelled ‘V0.2-draft’. This version is the basis of this Community Standard with only editorial changes for presentation.
+This OGC Community Standard is a logical implementation of the long-established abstract conceptual standard ISO19123:2005 (also known as OGC Abstract Topic 6). The original CoverageJSON specification has been stable for several years, with a wide-spread international implementation community in the environmental sciences. The current version of the open specification, available on https://github.com/covjson/specification[original GitHub], is labelled ‘V0.2-draft’. This version is the basis of this Community Standard with only editorial changes for presentation.
 
 A formal JSON schema has been added for all the JSON objects identified, so that conformance to the OGC Community Standard can be checked. 
 
