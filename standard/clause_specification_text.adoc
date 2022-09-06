@@ -3,7 +3,7 @@
 //## 1. Introduction
 === Introduction
 
-CoverageJSON is a format for encoding coverage data like grids, time series, and vertical profiles, distinguished by the geometry of their spatiotemporal domain. A CoverageJSON object represents a domain, a range, a coverage, or a collection of coverages. A range in CoverageJSON  represents coverage values. A coverage in CoverageJSON is the combination of a domain, parameters, ranges, and additional metadata. A coverage collection represents a list of coverages.
+CoverageJSON is a format for encoding coverage data such as grids, time series, and vertical profiles, each distinguished by the geometry of their spatiotemporal domain. A CoverageJSON object represents a domain, a range, a coverage, or a collection of coverages. A range in CoverageJSON represents coverage values. A coverage in CoverageJSON is the combination of a domain, parameters, ranges, and additional metadata. A coverage collection represents a list of coverages.
 
 A complete CoverageJSON data structure is always an object (in JSON terms). In CoverageJSON, an object consists of a collection of name/value pairs -- also called members. For each member, the name is always a string. Member values are either a string, number, object, array or one of the literals: true, false, and null. An array consists of elements where each element is a value as described above.
 
@@ -297,9 +297,9 @@ Geographic CRSs anchor coordinate values to an ellipsoidal approximation of the 
 
  - The value of the `"type"` member MUST be "GeographicCRS"
  - The object MAY have an `"id"` member, whose value MUST be a string and SHOULD be a common identifier for the reference system.
- - The object MAY have a `"description"` member, where the value MUST be an i18n object, but no standardised content is interpreted from this description.
+ - The object MAY have a `"description"` member, where the value MUST be an i18n object, but no standardized content is interpreted from this description.
 
-Note that sometimes (e.g. for numerical model data) the exact CRS may not be known or may be undefined. In this case the `"id"` may be omitted, but the `"type"` still indicates that this is a geographic CRS. Therefore clients can still use geodetic longitude, geodetic latitude (and maybe height) axes, even if they can't accurately georeference the information.
+Note that sometimes (e.g. for numerical model data) the exact CRS may not be known or may be undefined. In this case the `"id"` may be omitted, but the `"type"` still indicates that this is a geographic CRS. Therefore clients can still use geodetic longitude, geodetic latitude (and maybe height) axes, even if they cannot accurately georeference the information.
 
 If a Coverage conforms to one of the defined [domain types][domain-types] then the coordinate identifier `"x"` is used to denote geodetic longitude, `"y"` is used for geodetic latitude and `z` for ellipsoidal height.
 
@@ -330,7 +330,7 @@ Projected CRSs use two coordinates to denote positions on a Cartesian plane, whi
 
  - The value of the `"type"` member MUST be "ProjectedCRS"
  - The object MAY have an `"id"` member, whose value MUST be a string and SHOULD be a common identifier for the reference system.
- - The object MAY have a `"description"` member, where the value MUST be an i18n object, but no standardised content is interpreted from this description.
+ - The object MAY have a `"description"` member, where the value MUST be an i18n object, but no standardized content is interpreted from this description.
 
 If a Coverage conforms to one of the defined [domain types][domain-types] then the coordinate identifier `"x"` is used to denote easting and `"y"` is used for northing.
 
@@ -366,7 +366,7 @@ Example of a vertical CRS, here representing height above the NAV88 datum:
 //### 5.2. Temporal Reference Systems
 ==== Temporal Reference Systems
 
-Time is referenced by a temporal reference system (temporal RS). In this Community Standard, only a string-based notation for time values is defined. Future versions of this Community Standard may allow for alternative notations, such as recording time values as numeric offsets from a given temporal datum (e.g. "days since 1970-01-01").
+Time is referenced by a temporal reference system (temporal RS). In the current version of this Community Standard, only a string-based notation for time values is defined. Future versions of this Community Standard may allow for alternative notations, such as recording time values as numeric offsets from a given temporal datum (e.g. “days since 1970-01-01”).
 
 - A temporal RS object MUST have a member `"type"`. The only currently defined value of it is `"TemporalRS"`.
 - A temporal RS object MUST have a member `"calendar"` with value `"Gregorian"` or a URI.
@@ -468,7 +468,7 @@ Its general structure is:
 //#### 6.1.1. Axis Objects
 ===== Axis Objects
 
-- An axis object MUST have either a `"values"` member or, as a compact notation for a regularly spaced numeric axis, all the members `"start"`, `"stop"`, and `"num"`.
+- An axis object MUST have either a `"values"` member or, as a compact notation for a regularly spaced numeric axis, have all the members `"start"`, `"stop"`, and `"num"`.
 - The value of `"values"` is a non-empty array of axis values.
 - The values of `"start"` and `"stop"` MUST be numbers, and the value of `"num"` an integer greater than zero. If the value of `"num"` is `1`, then `"start"` and `"stop"` MUST have identical values. For `num > 1`, the array elements of `"values"` MAY be reconstructed with the formula `start + i * step` where `i` is the ith element and in the interval `[0, num-1]` and `step = (stop - start) / (num - 1)`. If `num = 1` then `"values"` is `[start]`. Note that `"start"` can be greater than `"stop"` in which case the axis values are descending.
 - The value of `"dataType"` determines the structure of an axis value and its coordinates that are made available for referencing. The values of `"dataType"` defined in this Community Standard are `"primitive"`, `"tuple"`, and `"polygon"`. Custom values MAY be used as detailed in the "Extensions" section. For `"primitive"`, there is a single coordinate identifier and each axis value MUST be a number or string. For `"tuple"`, each axis value MUST be an array of fixed size of primitive values in a defined order, where the tuple size corresponds to the number of coordinate identifiers. For `"polygon"`, each axis value MUST be a GeoJSON Polygon coordinate array, where the order of coordinates is given by the `"coordinates"` array.
