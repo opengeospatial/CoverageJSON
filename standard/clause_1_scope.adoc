@@ -6,7 +6,7 @@ A formal JSON schema has been added for all the JSON objects identified, so that
 
 Unused or imprecisely specified components have been removed.
 
-Future work have been identified, such as the use of multiple time dimensions, or to use JSON-LD V1.1.
+Future work has been identified, such as the use of multiple time dimensions, or to use JSON-LD V1.1.
 
 This specification does not specify encoding of information in any format other than JSON https://datatracker.ietf.org/doc/html/rfc7159[IETF RFC 7159].
 
