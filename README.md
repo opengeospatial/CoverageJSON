@@ -33,11 +33,11 @@ At the December 2021 meeting of the OGC Technical Committee, the following plan 
     * Produce a full JSON Schema (**DONE**, see [public repo](https://github.com/covjson/covjson-validator) )
     * Tighten specification of support for WKT for CRSs (**DONE**)
     * Alt-Range is not well understood or used, consider removal (**DONE**)
-* Adopt CoverageJSON as OGC Community Standard (Target 2022-03, revised June 2022, passed OAB Review, awaiting final public RFC)
+* Adopt CoverageJSON as OGC Community Standard (Target 2022-03, revised June 2022, passed OAB Review July, addressed comments from final public RFC, submitted to Technical Committee Plenary for final vote 14 Sept 2022)
 * Produce detailed CoverageJSON, CIS JSON, GeoTIFF, and CF-NetCDF3 comparison document via WCS SWG
     * Keen volunteers identified! 
     * Text in GitHub (**DONE**)
-    * Create Conceptual model (**Started**)
+    * Create Conceptual model (Top level model diagram incorporated into candidate Sep 2022)
 * Request and propose further improvements to CoverageJSON specification:
     * Support for multiple time axes (Tagged V1.1)
     * Support for JSON representation of CRSs, as in PROJJSON (Tagged V1.2)
@@ -50,7 +50,7 @@ At the December 2021 meeting of the OGC Technical Committee, the following plan 
 
 See the [Wiki](https://github.com/opengeospatial/CoverageJSON/wiki) for details of progress, minutes of meetings, etc, and [Issues](https://github.com/opengeospatial/CoverageJSON/issues).
 
-The specification has been reviewed by the OGC Architecture Board and approved for release for Public Comment after some minor editorial changes, and then approval as an OGC Community Standard.
+The specification was reviewed by the OGC Architecture Board and approved for release for Public Comment after some minor editorial changes. The only Public Comments were largely editorial and were incorporated. Now submitted to the OGC Technical Committee for approval as an OGC Community Standard.
 
 The specification is backwards compatible with the original specification, but with some little-used sections removed, some vague sections clarified, and a complete JSON schema added and made available through the [Playground/Sandbox](https://covjson.org/playground). A [more detailed overview](https://github.com/opengeospatial/CoverageJSON/wiki/Change-List-OGC-V1.0.0) of the changes is also available. 
 
