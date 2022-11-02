@@ -10,12 +10,12 @@ Attention is drawn to the possibility that some of the elements of this document
 
 Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.
 
-[security]
+[[security_considerations]]
 == Security Considerations
 
 Given the intended use case of downloading data to a browser, there is no functionality within this specification to facilitate authenticity, integrity and confidentiality (e.g. signatures or encryption). This can be applied at the transport level using standards that apply there. Use cases involving authenticity, integrity and confidentiality outside of the transport context (e.g. offline devices) are not intended or supported.
 
-[abstract]
+[[abstract]]
 == Abstract
 
 Based on JavaScript Object Notation (JSON), CoverageJSON is a format for publishing spatiotemporal data to the Web. The primary design goals are simplicity, machine and human readability and efficiency. While other use cases are possible, the primary CoverageJSON use case is enabling the development of interactive visual websites that display and manipulate environmental data within a web browser.
@@ -32,25 +32,26 @@ The next simplest use case is to put data values for each variable (parameter) i
 
 A sophisticated use case is to use tiling objects, where the data values are partitioned spatially and temporally, so that a single variable’s data values would be split among several documents. A simple example of this use case is encoding each time step of a dataset into a separate file, but the tiles could also be divided spatially in a manner similar to a tiled map server.
 
-[keywords]
+[[keywords]]
 == Keywords
 
 The following are keywords to be used by search engines and document catalogues:
 
 ogcdoc, OGC Document, JSON, JSON-LD, CoverageJSON, CovJSON, Coverage, spatiotemporal, linked data.
 
-[source]
+[[source_of_this_document]]
 == Source of this document
 
 The majority of the content in this OGC document is a direct copy of the content originally contained at https://github.com/covjson/specification. No normative changes have been made to the content. This OGC document does contain content not in the original source CoverageJSON GitHub repository. Specifically, while derived from content of the original CoverageJSON repository, the Abstract, Keywords, Preface, Security Considerations, Submitting Organizations, Endorsers, Terms and Definitions, and References sections and Annex B (Bibliography) in this document are not found in the original CoverageJSON repository.
 
 The future community web site and source repository will contain the OGC version.
 
-[Validity]
+[[validity_of_content]]
 == Validity of content
 
 The Submission Team has reviewed and certified that the snapshot content in this Community Standard is true and accurate. The snapshot for OGC CoverageJSON Version 1.0 was taken on December 2021 from the https://github.com/covjson/specification[CovJSON Version 0.2 GitHub Repository].
 
+[[submitting_organisations]]
 == Submitting Organisations
 
 * UK Met Office
@@ -60,6 +61,7 @@ The Submission Team has reviewed and certified that the snapshot content in this
 * US NWS/NOAA
 * ESIP/JPL/NASA
 
+[[submitters]]
 == Submitters
 
 All questions regarding this submission should be directed to the editor or the submitters:
