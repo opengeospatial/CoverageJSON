@@ -15,7 +15,7 @@ well-defined set [ISO19123]
 Note: Commonly, a set of n-dimensional direct positions, usually including space and time, for which a coverage provides values of properties
 
 === *i18n object*
-string in multiple languages with tags as defined in [BCP 47](http://tools.ietf.org/html/bcp47), and the value is the string in that language.
+string in multiple languages with tags as defined in http://tools.ietf.org/html/bcp47[BCP 47], and the value is the string in that language.
 The special language tag `"und"` can be used to identify a value whose language is unknown or undetermined. [IETF BCP47]
 
 === *Range*
