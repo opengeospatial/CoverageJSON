@@ -969,7 +969,7 @@ Requirements for all domain types defined in this OGC Community Standard:
 |[+]   | Optional axis with one or more coordinates
 |=====
 
-[[Grid]]
+[[grid]]
 //### 10.1. Grid
 ==== Grid
 
