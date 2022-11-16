@@ -554,7 +554,7 @@ Example of a reference system connection object:
 //#### 6.1.3. Examples
 ===== Examples
 
-Example of a domain object with [`"Grid"`][domain-types] domain type:
+Example of a domain object with <<grid,`"Grid"`>><<domain-types>> domain type:
 
 [%unnumbered%]
 ```json
@@ -926,6 +926,7 @@ In this example, additional semantics for the registered `dct` prefix are provid
 
 If a domain or range is referenced by a URL in a CoverageJSON document, then the client should, whenever is appropriate, load the data from the given URL and treat the loaded data as if it was directly embedded in place of the URL. When sending HTTP requests, the `Accept` header SHOULD be set appropriately to the CoverageJSON media type.
 
+[[domain-types]]
 //## 10. Common Domain Types
 === Common Domain Types
 
@@ -968,6 +969,7 @@ Requirements for all domain types defined in this OGC Community Standard:
 |[+]   | Optional axis with one or more coordinates
 |=====
 
+[[Grid]]
 //### 10.1. Grid
 ==== Grid
 
