@@ -301,7 +301,7 @@ Geographic CRSs anchor coordinate values to an ellipsoidal approximation of the 
 
 Note that sometimes (e.g. for numerical model data) the exact CRS may not be known or may be undefined. In this case the `"id"` may be omitted, but the `"type"` still indicates that this is a geographic CRS. Therefore clients can still use geodetic longitude, geodetic latitude (and maybe height) axes, even if they cannot accurately georeference the information.
 
-If a Coverage conforms to one of the defined [domain types][domain-types] then the coordinate identifier `"x"` is used to denote geodetic longitude, `"y"` is used for geodetic latitude and `z` for ellipsoidal height.
+If a Coverage conforms to one of the defined <<domain-types,domain types>> then the coordinate identifier `"x"` is used to denote geodetic longitude, `"y"` is used for geodetic latitude and `z` for ellipsoidal height.
 
 Example of a two-dimensional geographic CRS (longitude-latitude):
 
