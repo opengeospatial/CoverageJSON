@@ -554,7 +554,7 @@ Example of a reference system connection object:
 //#### 6.1.3. Examples
 ===== Examples
 
-Example of a domain object with <<grid,"Grid">><<domain-types,"domain type">>:
+Example of a domain object with <<grid,Grid>> <<domain-types,domain type>>:
 
 [%unnumbered%]
 ```json
