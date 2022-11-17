@@ -1,7 +1,7 @@
 [[media_type_and_file_extension]]
 == Media Type and File Extension
 
-The CoverageJSON media type SHALL be `application/prs.coverage+json` with an optional parameter `profile` which is a non-empty list of space-separated URIs identifying specific constraints or conventions that apply to a CoverageJSON document according to http://www.ietf.org/rfc/rfc6906.txt[RFC6906]. 
+The CoverageJSON media type SHALL be `application/vnd.cov+json` with an optional parameter `profile` which is a non-empty list of space-separated URIs identifying specific constraints or conventions that apply to a CoverageJSON document according to http://www.ietf.org/rfc/rfc6906.txt[RFC6906]. 
 
 The value of the profile parameter must be quoted, as profile URIs include special characters. 
 
