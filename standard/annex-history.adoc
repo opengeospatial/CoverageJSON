@@ -1,5 +1,6 @@
 [appendix]
 :appendix-caption: Annex
+[[annex_revision_history]]
 == Revision History
 
 [width="90%",options="header"]
