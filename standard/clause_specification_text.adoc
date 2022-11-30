@@ -6,7 +6,7 @@
 
 CoverageJSON is a format for encoding coverage data such as grids, time series, and vertical profiles, each distinguished by the geometry of their spatiotemporal domain. A CoverageJSON object represents a domain, a range, a coverage, or a collection of coverages. A range in CoverageJSON represents coverage values. A coverage in CoverageJSON is the combination of a domain, parameters, ranges, and additional metadata. A coverage collection represents a list of coverages.
 
-A complete CoverageJSON data structure is always an object (in JSON terms). In CoverageJSON, an object consists of a collection of name/value pairs -- also called members. For each member, the name is always a string. Member values are either a string, number, object, array or one of the literals: true, false, and null. An array consists of elements where each element is a value as described above.
+A complete CoverageJSON data structure is always an object (in JSON terms). In CoverageJSON, an object consists of a collection of name/value pairs -- also called members. For each member, the name is always a string. Member values are either a string, number, object, array or one of the literals: `true`, `false` or `null`. An array consists of elements where each element is a value as described above.
 
 The following is an illustrative example of using CoverageJSON to encode air temperature data on a global grid at a resolution of one degree:
 
@@ -78,6 +78,30 @@ where `"http://example.com/coverages/123/TEMP"` points to the following document
 }
 ```
 Range data can also be directly embedded into the main CoverageJSON document, making it standalone.
+
+//### 1.2. UML diagram
+==== UML diagram
+
+The following is a high-level UML class diagram of the main CoverageJSON objects and the relationships between them.
+
+```mermaid
+classDiagram
+    CoverageCollection "0..1" o-- "1..*" Coverage
+
+    Coverage "1" *-- "1" Domain
+    Coverage "1" *-- "1..*" Parameter
+    Coverage "1" *-- "*" ParameterGroup
+    Coverage "1" *-- "1..*" Range
+
+    Domain "1" *-- "1..*" Axis
+    Domain "1" *-- "*" ReferenceSystem
+
+    Range <|-- NdArray
+    Range <|-- TiledNdArray
+    TiledNdArray "0..1" *-- "1..*" NdArray
+
+    ParameterGroup "0..1" *-- "1..*" Parameter
+```
 
 //## 2. i18n Objects
 === i18n Objects
