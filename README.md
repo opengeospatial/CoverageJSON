@@ -33,7 +33,7 @@ At the December 2021 meeting of the OGC Technical Committee, the following plan 
     * Produce a full JSON Schema (**DONE**, see [public repo](https://github.com/covjson/covjson-validator) )
     * Tighten specification of support for WKT for CRSs (**DONE**)
     * Alt-Range is not well understood or used, consider removal (**DONE**)
-* Adopt CoverageJSON as OGC Community Standard (Target 2022-03, revised June 2022, passed OAB Review July, addressed comments from final public RFC, submitted to Technical Committee Plenary for final vote 14 Sept 2022)
+* Adopt CoverageJSON as OGC Community Standard (Target 2022-03, revised June 2022, passed OAB Review July, addressed comments from final public RFC, passed Technical Committee approval vote 25 Nov 2022 (27 YES, 10 Abstain, 0 No). Awaiting Planning Committee approval.
 * Produce detailed CoverageJSON, CIS JSON, GeoTIFF, and CF-NetCDF3 comparison document via WCS SWG
     * Keen volunteers identified! 
     * Text in GitHub (**DONE**)
