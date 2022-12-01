@@ -565,7 +565,7 @@ Example of an axis object with Polygon values:
 A reference system connection object creates a link between values within domain axes and a reference system to be able to interpret those values, e.g. as coordinates in a certain coordinate reference system.
 
 - A reference system connection object MUST have a member `"coordinates"` which has as value an array of coordinate identifiers that are referenced in this object. Depending on the type of referencing, the ordering of the identifiers MAY be relevant, e.g. for 2D/3D coordinate reference systems. In this case, the order of the identifiers MUST match the order of axes in the coordinate reference system.
-- A reference system connection object MUST have a member `"system"` whose value MUST be a Reference System Object (defined in section 5 above).
+- A reference system connection object MUST have a member `"system"` whose value MUST be a <<reference_system_objects,Reference System Object>>.
 
 Example of a reference system connection object:
 
