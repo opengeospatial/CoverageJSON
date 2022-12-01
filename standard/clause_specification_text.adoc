@@ -8,6 +8,8 @@ CoverageJSON is a format for encoding coverage data such as grids, time series, 
 
 A complete CoverageJSON data structure is always an object (in JSON terms). In CoverageJSON, an object consists of a collection of name/value pairs -- also called members. For each member, the name is always a string. Member values are either a string, number, object, array or one of the literals: `true`, `false` or `null`. An array consists of elements where each element is a value as described above.
 
+//### 1.1. Illustrative Example
+==== Illustrative Example
 The following is an illustrative example of using CoverageJSON to encode air temperature data on a global grid at a resolution of one degree:
 
 [%unnumbered%]
@@ -79,8 +81,8 @@ where `"http://example.com/coverages/123/TEMP"` points to the following document
 ```
 Range data can also be directly embedded into the main CoverageJSON document, making it standalone.
 
-//### 1.2. UML diagram
-==== UML diagram
+//### 1.2. UML Diagram
+==== UML Diagram
 
 The following is a high-level UML class diagram of the main CoverageJSON objects and the relationships between them.
 
