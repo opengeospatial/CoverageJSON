@@ -133,7 +133,7 @@ Parameter objects represent metadata about the values of the coverage in terms o
 - A parameter object MAY have a member with the name `"description"` where the value MUST be an i18n object which is a, perhaps lengthy, textual description of the parameter.
 - A parameter object MUST have a member with the name `"observedProperty"` where the value is an object which MUST have the member `"label"` and which MAY have the members `"id"`, `"description"`, and `"categories"`. The value of `"label"` MUST be an i18n object that is the name of the observed property and which SHOULD be short. If given, the value of `"id"` MUST be a string and SHOULD be a common identifier. If given, the value of `"description"` MUST be an i18n object with a textual description of the observed property. If given, the value of `"categories"` MUST be a non-empty array of category objects. A category object MUST an `"id"` and a `"label"` member,  and MAY have a `"description"` member. The value of `"id"` MUST be a string and SHOULD be a common identifier. The value of `"label"` MUST be an i18n object of the name of the category and SHOULD be short. If given, the value of `"description"` MUST be an i18n object with a textual description of the category.
 - A parameter object MAY have a member with the name `"categoryEncoding"` where the value is an object where each key is equal to an `"id"` value of the `"categories"` array within the `"observedProperty"` member of the parameter object. There MUST be no duplicate keys. The value is either an integer or an array of integers where each integer MUST be unique within the object.
-- A parameter object MAY have a member with the name `"unit"` where the value is an object which MUST have either or both the members `"label"` or/and "`symbol`", and which MAY have the member `"id"`. If given, the value of `"symbol"` MUST either be a string of the symbolic notation of the unit, or an object with the members `"value"` and `"type"` where `"value"` is the symbolic unit notation and `"type"` references the unit serialization scheme that is used. `"type"` MUST HAVE the value `"http://www.opengis.net/def/uom/UCUM/`" if http://unitsofmeasure.org[UCUM] is used, or a custom value as recommended in section "Extensions". If given, the value of `"label"` MUST be an i18n object of the name of the unit and SHOULD be short. If given, the value of `"id"` MUST be a string and SHOULD be a common identifier. It is RECOMMENDED to reference a unit serialization scheme to allow automatic unit conversion.
+- A parameter object MAY have a member with the name `"unit"` where the value is an object which MUST have either or both the members `"label"` or/and `"symbol"`, and which MAY have the member `"id"`. If given, the value of `"symbol"` MUST either be a string of the symbolic notation of the unit, or an object with the members `"value"` and `"type"` where `"value"` is the symbolic unit notation and `"type"` references the unit serialization scheme that is used. `"type"` MUST HAVE the value `"http://www.opengis.net/def/uom/UCUM/"` if http://unitsofmeasure.org[UCUM] is used, or a custom value as recommended in section <<extensions,Extensions>>. If given, the value of `"label"` MUST be an i18n object of the name of the unit and SHOULD be short. If given, the value of `"id"` MUST be a string and SHOULD be a common identifier. It is RECOMMENDED to reference a unit serialization scheme to allow automatic unit conversion.
 - A parameter object MUST NOT have a `"unit"` member if the `"observedProperty"` member has a `"categories"` member.
 
 
@@ -308,7 +308,7 @@ and `"SST_stddev"`:
 //## 5. Reference system objects
 === Reference system objects
 
-Reference system objects are used to provide information about how to interpret coordinate values within the domain. Coordinates are usually geospatial or temporal in nature, but may also be categorical (based on identifiers). All reference system objects MUST have a member `"type"`, the possible values of which are given in the sections below. Custom values MAY be used as detailed in the "Extensions" section below.
+Reference system objects are used to provide information about how to interpret coordinate values within the domain. Coordinates are usually geospatial or temporal in nature, but may also be categorical (based on identifiers). All reference system objects MUST have a member `"type"`, the possible values of which are given in the sections below. Custom values MAY be used as detailed in the <<extensions,Extensions>> section.
 
 [[geospatial_coordinate_reference_systems]]
 //### 5.1. Geospatial Coordinate Reference Systems
@@ -326,7 +326,7 @@ Geographic CRSs anchor coordinate values to an ellipsoidal approximation of the 
 
 Note that sometimes (e.g. for numerical model data) the exact CRS may not be known or may be undefined. In this case the `"id"` may be omitted, but the `"type"` still indicates that this is a geographic CRS. Therefore clients can still use geodetic longitude, geodetic latitude (and maybe height) axes, even if they cannot accurately georeference the information.
 
-If a Coverage conforms to one of the defined <<common_domain_types,domain types>> then the coordinate identifier `"x"` is used to denote geodetic longitude, `"y"` is used for geodetic latitude and `z` for ellipsoidal height.
+If a Coverage conforms to one of the defined <<common_domain_types,domain types>> then the coordinate identifier `"x"` is used to denote geodetic longitude, `"y"` is used for geodetic latitude and `"z"` for ellipsoidal height.
 
 Example of a two-dimensional geographic CRS (longitude-latitude):
 
@@ -357,7 +357,7 @@ Projected CRSs use two coordinates to denote positions on a Cartesian plane, whi
  - The object MAY have an `"id"` member, whose value MUST be a string and SHOULD be a common identifier for the reference system.
  - The object MAY have a `"description"` member, where the value MUST be an i18n object, but no standardized content is interpreted from this description.
 
-If a Coverage conforms to one of the defined [domain types][domain-types] then the coordinate identifier `"x"` is used to denote easting and `"y"` is used for northing.
+If a Coverage conforms to one of the defined <<common_domain_types,domain types>> then the coordinate identifier `"x"` is used to denote easting and `"y"` is used for northing.
 
 Example of a projected CRS using the http://spatialreference.org/ref/epsg/osgb-1936-british-national-grid/[British National Grid]:
 
@@ -487,7 +487,7 @@ Its general structure is:
 ```
 
 - The value of the `"type"` member MUST be `"Domain"`.
-- For interoperability reasons it is RECOMMENDED that a domain object has the member `"domainType"` with a string value to indicate that the domain follows a certain structure (e.g. a time series, a vertical profile, a spatio-temporal 4D grid). See the ["Common CoverageJSON Domain Types Specification"][domain-types], which forms part of this Community Standard, for details. Custom domain types may be used as recommended in the section "Extensions".
+- For interoperability reasons it is RECOMMENDED that a domain object has the member `"domainType"` with a string value to indicate that the domain follows a certain structure (e.g. a time series, a vertical profile, a spatio-temporal 4D grid). See the section <<common_domain_types,Common Domain Types>> for details. Custom domain types may be used as recommended in the section <<extensions,Extensions>>.
 - A domain object MUST have the member `"axes"` which has as value an object where each key is an axis identifier and each value an axis object as defined below.
 - The `"axes"` member MUST NOT be empty.
 - A domain object MAY have the member `"referencing"` where the value is an array of reference system connection objects as defined below.
@@ -500,7 +500,7 @@ Its general structure is:
 - An axis object MUST have either a `"values"` member or, as a compact notation for a regularly spaced numeric axis, have all the members `"start"`, `"stop"`, and `"num"`.
 - The value of `"values"` is a non-empty array of axis values.
 - The values of `"start"` and `"stop"` MUST be numbers, and the value of `"num"` an integer greater than zero. If the value of `"num"` is `1`, then `"start"` and `"stop"` MUST have identical values. For `num > 1`, the array elements of `"values"` MAY be reconstructed with the formula `start + i * step` where `i` is the ith element and in the interval `[0, num-1]` and `step = (stop - start) / (num - 1)`. If `num = 1` then `"values"` is `[start]`. Note that `"start"` can be greater than `"stop"` in which case the axis values are descending.
-- The value of `"dataType"` determines the structure of an axis value and its coordinates that are made available for referencing. The values of `"dataType"` defined in this Community Standard are `"primitive"`, `"tuple"`, and `"polygon"`. Custom values MAY be used as detailed in the "Extensions" section. For `"primitive"`, there is a single coordinate identifier and each axis value MUST be a number or string. For `"tuple"`, each axis value MUST be an array of fixed size of primitive values in a defined order, where the tuple size corresponds to the number of coordinate identifiers. For `"polygon"`, each axis value MUST be a GeoJSON Polygon coordinate array, where the order of coordinates is given by the `"coordinates"` array.
+- The value of `"dataType"` determines the structure of an axis value and its coordinates that are made available for referencing. The values of `"dataType"` defined in this Community Standard are `"primitive"`, `"tuple"`, and `"polygon"`. Custom values MAY be used as detailed in the <<extensions,Extensions>> section. For `"primitive"`, there is a single coordinate identifier and each axis value MUST be a number or string. For `"tuple"`, each axis value MUST be an array of fixed size of primitive values in a defined order, where the tuple size corresponds to the number of coordinate identifiers. For `"polygon"`, each axis value MUST be a GeoJSON Polygon coordinate array, where the order of coordinates is given by the `"coordinates"` array.
 - If missing, the member `"dataType"` defaults to `"primitive"` and MUST not be included for that default case.
 - If `"dataType"` is `"primitive"` and the associated reference system (see 6.1.2) defines a natural ordering of values then the array values in `"values"`, if existing, MUST be ordered monotonically, that is, increasing or decreasing.
 - The value of `"coordinates"` is a non-empty array of coordinate identifiers corresponding to the order of the coordinates defined by `"dataType"`.
@@ -565,7 +565,7 @@ Example of an axis object with Polygon values:
 A reference system connection object creates a link between values within domain axes and a reference system to be able to interpret those values, e.g. as coordinates in a certain coordinate reference system.
 
 - A reference system connection object MUST have a member `"coordinates"` which has as value an array of coordinate identifiers that are referenced in this object. Depending on the type of referencing, the ordering of the identifiers MAY be relevant, e.g. for 2D/3D coordinate reference systems. In this case, the order of the identifiers MUST match the order of axes in the coordinate reference system.
-- A reference system connection object MUST have a member `"system"` whose value MUST be a Reference System Object (defined in section 5 above).
+- A reference system connection object MUST have a member `"system"` whose value MUST be a <<reference_system_objects,Reference System Object>>.
 
 Example of a reference system connection object:
 
@@ -824,7 +824,7 @@ See the <<annex_vertical_profile_coverage,Vertical Profile Coverage Example>>.
 
 A CoverageJSON object with the type `"CoverageCollection"` is a coverage collection object.
 
-- A coverage collection object MAY have the member `"domainType"` with a string value to indicate that the coverage collection only contains coverages of the given domain type. See the ["Common CoverageJSON Domain Types Specification"][domain-types], which forms part of this Community Standard, for details. Custom domain types may be used as recommended in the section "Extensions".
+- A coverage collection object MAY have the member `"domainType"` with a string value to indicate that the coverage collection only contains coverages of the given domain type. See the section <<common_domain_types,Common Domain Types>> for details. Custom domain types may be used as recommended in the section <<extensions,Extensions>>.
 - If a coverage collection object has the member `"domainType"`, then this member is inherited to all included coverages.
 - A coverage collection object MUST have a member with the name `"coverages"`. The value corresponding to `"coverages"` is an array. Each element in the array is a coverage object as defined above.
 - A coverage collection object MAY have a member with the name `"parameters"` where the value is an object where each member has as name a short identifier and as value a parameter object.
