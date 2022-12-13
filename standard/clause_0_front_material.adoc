@@ -56,15 +56,6 @@ The future community web site and source repository will contain the OGC version
 
 The Submission Team has reviewed and certified that the snapshot content in this Community Standard is true and accurate. The snapshot for OGC CoverageJSON Version 1.0 was taken on December 2021 from the https://github.com/covjson/specification[CovJSON Version 0.2 GitHub Repository].
 
-[[submitting_organisations]]
-== Submitting Organisations
-
-* UK Met Office
-* University of Reading
-* Meteorological Service of Canada
-* Unidata UCAR
-* US NWS/NOAA
-* ESIP/JPL/NASA
 
 [[submitters]]
 == Submitters
