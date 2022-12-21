@@ -86,24 +86,23 @@ Range data can also be directly embedded into the main CoverageJSON document, ma
 
 The following is a high-level UML class diagram of the main CoverageJSON objects and the relationships between them.
 
-```mermaid
-classDiagram
-    CoverageCollection "0..1" o-- "1..*" Coverage
+@startuml
+CoverageCollection "0..1" o-- "1..*" Coverage
 
-    Coverage "1" *-- "1" Domain
-    Coverage "1" *-- "1..*" Parameter
-    Coverage "1" *-- "*" ParameterGroup
-    Coverage "1" *-- "1..*" Range
+Coverage "1" *-- "1" Domain
+Coverage "1" *-- "1..*" Parameter
+Coverage "1" *-- "*" ParameterGroup
+Coverage "1" *-- "1..*" Range
 
-    Domain "1" *-- "1..*" Axis
-    Domain "1" *-- "*" ReferenceSystem
+Domain "1" *-- "1..*" Axis
+Domain "1" *-- "*" ReferenceSystem
 
-    Range <|-- NdArray
-    Range <|-- TiledNdArray
-    TiledNdArray "0..1" *-- "1..*" NdArray
+Range <|-- NdArray
+Range <|-- TiledNdArray
+TiledNdArray "0..1" *-- "1..*" NdArray
 
-    ParameterGroup "0..1" *-- "1..*" Parameter
-```
+ParameterGroup "0..1" *-- "1..*" Parameter
+@enduml
 
 //## 2. i18n Objects
 === i18n Objects
