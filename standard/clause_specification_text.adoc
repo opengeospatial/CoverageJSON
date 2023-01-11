@@ -86,6 +86,8 @@ Range data can also be directly embedded into the main CoverageJSON document, ma
 
 The following is a high-level UML class diagram of the main CoverageJSON objects and the relationships between them.
 
+[plantuml]
+....
 @startuml
 CoverageCollection "0..1" o-- "1..*" Coverage
 
@@ -103,6 +105,7 @@ TiledNdArray "0..1" *-- "1..*" NdArray
 
 ParameterGroup "0..1" *-- "1..*" Parameter
 @enduml
+....
 
 //## 2. i18n Objects
 === i18n Objects
