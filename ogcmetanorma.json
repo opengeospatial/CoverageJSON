@@ -1,0 +1,9 @@
+{
+        "0":  {
+                "OGC_doc_number": "21-069r1",
+                "urn":"http://www.opengis.net/doc/CS/covjson/1.0",
+                "title":"OGC CoverageJSON Community Standard",
+                "version":"1.0",
+                "path":"standard/document.adoc"
+        }
+}
