@@ -1,7 +1,7 @@
 [[conformance]]
 == Conformance
 
-Conformance with this OGC Community Standard shall be checked using the https://github.com/covjson/covjson-validator/tree/main/schemas[JSON schema]. The schema bundle has been incorporated into the https://covjson.org/playground/[CoverageJSON Community Playground] which can test files for conformance. Simple guidance on CoverageJSON is available at the https://covjson.org/cookbook/[Community Cookbook].
+Conformance with this OGC Community Standard shall be checked using the https://schemas.opengis.net/covjson/1.0/[JSON schema] files. The schema bundle has been incorporated into the https://covjson.org/playground/[CoverageJSON Community Playground] which can test files for conformance. Simple guidance on CoverageJSON is available at the https://covjson.org/cookbook/[Community Cookbook].
 
 The one Standardization Target for this OGC Community Standard is the format of CoverageJSON.
 
