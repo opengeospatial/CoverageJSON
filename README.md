@@ -18,7 +18,7 @@ After more information, the supporters formally processed all the public comment
 
 The OGC Technical Committee vote was 20 YES votes, 14 ABSTAIN and 5 NO votes, and quorum was readily achieved. So the work proceeded, under the auspices of the Coverages Standards Working Group. The various comments from the votes have been published, addressed and closed, in this repo as labelled Issues.
 
-At the December 2021 meeting of the OGC Technical Committee, the following plan was agreed and progress as of June 2022 is shown:
+At the December 2021 meeting of the OGC Technical Committee, the following plan was agreed and progress as of June 2023 is shown:
 
 ### Objectives
 * Publish existing community specification (V0.2) as OGC Community Standard in March 2022
@@ -34,15 +34,15 @@ At the December 2021 meeting of the OGC Technical Committee, the following plan 
     * Produce a full JSON Schema (**DONE**, see [public repo](https://github.com/covjson/covjson-validator) )
     * Tighten specification of support for WKT for CRSs (**DONE**)
     * Alt-Range is not well understood or used, consider removal (**DONE**)
-* Adopt CoverageJSON as OGC Community Standard (Target 2022-03, revised June 2022, passed OAB Review July, addressed comments from final public RFC, passed Technical Committee approval vote 25 Nov 2022 (27 YES, 10 Abstain, 0 No). Awaiting Planning Committee approval.
+* Adopt CoverageJSON as OGC Community Standard (Target 2022-03, revised June 2022, passed OAB Review July, addressed comments from final public RFC, passed Technical Committee approval vote 25 Nov 2022 (27 YES, 10 Abstain, 0 No). Planning Committee **approved Dec 2022**.
 * Produce detailed CoverageJSON, CIS JSON, GeoTIFF, and CF-NetCDF3 comparison document via WCS SWG
     * Keen volunteers identified! 
     * Text in GitHub (**DONE**)
-    * Create Conceptual model (Top level model diagram incorporated into candidate Sep 2022)
+    * Create Conceptual model (**DONE**) Top level model diagram incorporated into candidate Sep 2022)
 * Request and propose further improvements to CoverageJSON specification:
-    * Support for multiple time axes (Tagged V1.1)
-    * Support for JSON representation of CRSs, as in PROJJSON (Tagged V1.2)
-    * Other backward compatible improvements (V1.x)
+    * Support for multiple time axes (Tagged **V1.1**)
+    * Support for JSON representation of CRSs, as in PROJJSON (Tagged **V1.2**)
+    * Other backward compatible improvements (**V1.x**)
     * Support for JSON-LD V1.1 to allow links from deeply nested objects (not clear if backward compatible)
     * Support binary nD arrays of data (probably not needed because gZip very effective)	
     * Identify and plan V2.x
@@ -51,7 +51,7 @@ At the December 2021 meeting of the OGC Technical Committee, the following plan 
 
 See the [Wiki](https://github.com/opengeospatial/CoverageJSON/wiki) for details of progress, minutes of meetings, etc, and [Issues](https://github.com/opengeospatial/CoverageJSON/issues).
 
-The specification was reviewed by the OGC Architecture Board and approved for release for Public Comment after some minor editorial changes. The only Public Comments were largely editorial and were incorporated. Now submitted to the OGC Technical Committee for approval as an OGC Community Standard.
+The specification was reviewed by the OGC Architecture Board and approved for release for Public Comment after some minor editorial changes. The only Public Comments were largely editorial and were incorporated. Approved by the OGC Technical Committee and then the Planning Committee on 12 Dec 2022 as an OGC Community Standard.
 
 The specification is backwards compatible with the original specification, but with some little-used sections removed, some vague sections clarified, and a complete JSON schema added and made available through the [Playground/Sandbox](https://covjson.org/playground). A [more detailed overview](https://github.com/opengeospatial/CoverageJSON/wiki/Change-List-OGC-V1.0.0) of the changes is also available. 
 
