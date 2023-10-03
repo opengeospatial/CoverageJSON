@@ -2,7 +2,7 @@
 
 This GitHub repository contains documents to produce an OGC Community Standard for CoverageJSON. The standard was approved in December 2022 and is available [here](https://docs.ogc.org/cs/21-069r2/21-069r2.html).
 
-A daily build is available [here](https://opengeospatial.github.io/ogcna-auto-review/21-069.html).
+
 
 CoverageJSON has a [JSON Schema](https://covjson.org/schema/dev/coveragejson.json) which can be used in the CoverageJSON [Community Playground/Sandbox](https://covjson.org/playground/).
 
