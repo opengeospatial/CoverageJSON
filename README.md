@@ -10,7 +10,7 @@ The starting point for the standard was the [work by Maik Riechert and Jon Blowe
 
 As there had been little development, though plenty of use, of CoverageJSON since the end of the EU project, and there was no clear governance framework, some key supporters of the format agreed to ask OGC to adopt CoverageJSON, unchanged, as an OGC Community Standard.
 
-After any adoption, it is proposed that the commonalities and differences with other OGC coverage payload formats, such as CIS-JSON, GeoTiff and NetCDF, be investigated with view to producing a developmental roadmap for CoverageJSON, to be pursued within the OGC governance framework.
+After the adoption, it was proposed that the commonalities and differences with other OGC coverage payload formats, such as CIS-JSON, GeoTiff and NetCDF, be investigated with view to producing a developmental roadmap for CoverageJSON, to be pursued within the OGC governance framework.
 
 The Business Justification for this plan finished a formal Public Comment period on 25 July 2021 and responses to the received comments were processed at an OGC GoToMeeting session on 28 July 2021. All were agreed to be closed apart from one, which needed more information for a considered meaningful response. Further information was requested from the original commentator.
 
@@ -51,7 +51,7 @@ At the December 2021 meeting of the OGC Technical Committee, the following plan 
 
 See the [Wiki](https://github.com/opengeospatial/CoverageJSON/wiki) for details of progress, minutes of meetings, etc, and [Issues](https://github.com/opengeospatial/CoverageJSON/issues).
 
-The specification was reviewed by the OGC Architecture Board and approved for release for Public Comment after some minor editorial changes. The only Public Comments were largely editorial and were incorporated. Approved by the OGC Technical Committee and then the Planning Committee on 12 Dec 2022 as an OGC Community Standard.
+The specification was reviewed by the OGC Architecture Board and approved for release for Public Comment after some minor editorial changes. The only Public Comments were largely editorial and were incorporated. Approved by the OGC Technical Committee and then the Planning Committee on 12 Dec 2022 as an OGC Community Standard and published on 22 August 2023.
 
 The specification is backwards compatible with the original specification, but with some little-used sections removed, some vague sections clarified, and a complete JSON schema added and made available through the [Playground/Sandbox](https://covjson.org/playground). A [more detailed overview](https://github.com/opengeospatial/CoverageJSON/wiki/Change-List-OGC-V1.0.0) of the changes is also available. 
 
