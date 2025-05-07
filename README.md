@@ -1,8 +1,6 @@
 # OGC CoverageJSON
 
-This GitHub repository contains documents to produce an OGC Community Standard for CoverageJSON. The standard was approved in December 2022 and is available [here](https://docs.ogc.org/cs/21-069r2/21-069r2.html).
-
-
+This GitHub repository contains documents of the OGC Community Standard for CoverageJSON. The standard was approved in December 2022 and is available [here](https://docs.ogc.org/cs/21-069r2/21-069r2.html).
 
 CoverageJSON has a [JSON Schema](https://covjson.org/schema/dev/coveragejson.json) which can be used in the CoverageJSON [Community Playground/Sandbox](https://covjson.org/playground/).
 
@@ -49,10 +47,12 @@ At the December 2021 meeting of the OGC Technical Committee, the following plan 
 
 ## Status
 
-See the [Wiki](https://github.com/opengeospatial/CoverageJSON/wiki) for details of progress, minutes of meetings, etc, and [Issues](https://github.com/opengeospatial/CoverageJSON/issues).
+See the [Wiki](https://github.com/opengeospatial/CoverageJSON/wiki) for details of progress, minutes of meetings, current status and developments, [Issues](https://github.com/opengeospatial/CoverageJSON/issues) , etc.
 
 The specification was reviewed by the OGC Architecture Board and approved for release for Public Comment after some minor editorial changes. The only Public Comments were largely editorial and were incorporated. Approved by the OGC Technical Committee and then the Planning Committee on 12 Dec 2022 as an OGC Community Standard and published on 22 August 2023.
 
 The specification is backwards compatible with the original specification, but with some little-used sections removed, some vague sections clarified, and a complete JSON schema added and made available through the [Playground/Sandbox](https://covjson.org/playground). A [more detailed overview](https://github.com/opengeospatial/CoverageJSON/wiki/Change-List-OGC-V1.0.0) of the changes is also available. 
+
+The community of users is now considering a V1.0.1 corrigendum and a V1.1. See the [Wiki](https://github.com/opengeospatial/CoverageJSON/wiki) for details.
 
 Any contributor to this repo should understand that any contributions, if accepted by the OGC Membership, shall be incorporated into OGC standards documents and that all copyright and intellectual property shall be vested in the University of Reading.
