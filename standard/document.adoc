@@ -9,7 +9,7 @@
 :docnumber: 21-069r2
 :received-date: 2021-12-09
 :issued-date: 2022-12-12
-:published-date: YYYY-MM-DD
+:published-date: 2023-08-22
 :fullname: Chris Little
 :fullname_2: Jon Blower
 :fullname_3: Maik Riechert
@@ -24,7 +24,7 @@
 :pdf-uri: ./document.pdf
 :xml-uri: ./document.xml
 :doc-uri: ./document.doc
-:edition: 1.0-draft_0.2.2
+:edition: 1.0
 
 
 ////
