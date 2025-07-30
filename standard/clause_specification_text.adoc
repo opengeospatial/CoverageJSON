@@ -15,9 +15,7 @@ The following is an illustrative example of using CoverageJSON to encode air tem
 [%unnumbered%]
 ```json
 {
-  "conformsTo": [
-    "http://www.opengis.net/spec/covjson/1.0"
-  ],
+  "version": "1.0.0",
   "type" : "Coverage",
   "domain" : {
     "type": "Domain",
@@ -113,18 +111,16 @@ ParameterGroup "0..1" *-- "1..*" Parameter
 //##
 === Version
 
-//## 2. Conformance
-=== Conformance
+//## 2. Version
+=== Version
 
-The ``conformsTo`` property to identifies the version of the CoverageJSON standard that the metadata record conforms to. Conformance identification is valuable for version detection and handling of content.
+The ``version`` property to identifies the version of the CoverageJSON standard that the metadata record conforms to, which is valuable for version-specific detection handling of content.
 
 Example:
 
 [%unnumbered%]
 ```json
-"conformsTo": [
-  "http://www.opengis.net/spec/covjson/1.0"
-]
+"version": "1.0.0"
 ```
 
 //## 3. i18n Objects
