@@ -15,7 +15,7 @@ The following is an illustrative example of using CoverageJSON to encode air tem
 [%unnumbered%]
 ```json
 {
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type" : "Coverage",
   "domain" : {
     "type": "Domain",
@@ -120,7 +120,7 @@ Example:
 
 [%unnumbered%]
 ```json
-"version": "1.0.0"
+"version": "1.0.1"
 ```
 
 //## 3. i18n Objects
