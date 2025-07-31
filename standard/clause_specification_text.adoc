@@ -15,6 +15,7 @@ The following is an illustrative example of using CoverageJSON to encode air tem
 [%unnumbered%]
 ```json
 {
+  "version": "1.0.1",
   "type" : "Coverage",
   "domain" : {
     "type": "Domain",
@@ -107,7 +108,22 @@ ParameterGroup "0..1" *-- "1..*" Parameter
 @enduml
 ....
 
-//## 2. i18n Objects
+//##
+=== Version
+
+//## 2. Version
+=== Version
+
+The ``version`` property to identifies the version of the CoverageJSON standard that the metadata record conforms to, which is valuable for version-specific detection handling of content.
+
+Example:
+
+[%unnumbered%]
+```json
+"version": "1.0.1"
+```
+
+//## 3. i18n Objects
 === i18n Objects
 
 An i18n object represents a string in multiple languages where each key is a language tag as defined in http://tools.ietf.org/html/bcp47[BCP 47], and the value is the string in that language.
@@ -123,7 +139,7 @@ Example:
 }
 ```
 [[parameter_objects]]
-//## 3. Parameter Objects
+//## 4. Parameter Objects
 === Parameter Objects
 
 Parameter objects represent metadata about the values of the coverage in terms of the observed property (like water temperature), the units, and others.
@@ -208,7 +224,7 @@ Example for a categorical-data parameter:
 }
 ```
 [[parametergroup_objects]]
-//## 4. ParameterGroup Objects
+//## 5. ParameterGroup Objects
 === ParameterGroup Objects
 
 Parameter group objects represent logical groups of parameters, for example vector quantities.
@@ -307,17 +323,17 @@ and `"SST_stddev"`:
 }
 ```
 [[reference_system_objects]]
-//## 5. Reference system objects
+//## 6. Reference system objects
 === Reference system objects
 
 Reference system objects are used to provide information about how to interpret coordinate values within the domain. Coordinates are usually geospatial or temporal in nature, but may also be categorical (based on identifiers). All reference system objects MUST have a member `"type"`, the possible values of which are given in the sections below. Custom values MAY be used as detailed in the <<extensions,Extensions>> section.
 
 [[geospatial_coordinate_reference_systems]]
-//### 5.1. Geospatial Coordinate Reference Systems
+//### 6.1. Geospatial Coordinate Reference Systems
 ==== Geospatial Coordinate Reference Systems
 Geospatial coordinate reference systems (CRSs) link coordinate values to the Earth.
 
-//#### 5.1.1 Geographic Coordinate Reference Systems
+//#### 6.1.1 Geographic Coordinate Reference Systems
 ===== Geographic Coordinate Reference Systems
 
 Geographic CRSs anchor coordinate values to an ellipsoidal approximation of the Earth. They have coordinate axes of geodetic longitude and geodetic latitude, and perhaps height above the ellipsoid (i.e. they can be two- or three-dimensional). The origin of the CRS is on the surface of the ellipsoid.
@@ -350,7 +366,7 @@ Example of a three-dimensional geographic CRS (latitude-longitude-height):
 }
 ```
 
-//#### 5.1.2 Projected Coordinate Reference Systems
+//#### 6.1.2 Projected Coordinate Reference Systems
 ===== Projected Coordinate Reference Systems
 
 Projected CRSs use two coordinates to denote positions on a Cartesian plane, which is derived from projecting the ellipsoid according to some defined transformation.
@@ -371,7 +387,7 @@ Example of a projected CRS using the http://spatialreference.org/ref/epsg/osgb-1
 }
 ```
 
-//#### 5.1.3 Vertical Coordinate Reference Systems
+//#### 6.1.3 Vertical Coordinate Reference Systems
 ===== Vertical Coordinate Reference Systems
 
 Vertical CRSs use a single coordinate to denote some measure of height or depth, usually approximately oriented with gravity.
@@ -391,7 +407,7 @@ Example of a vertical CRS, here representing height above the NAVD88 datum in me
 ```
 
 [[temporal_reference_systems]]
-//### 5.2. Temporal Reference Systems
+//### 6.2. Temporal Reference Systems
 ==== Temporal Reference Systems
 
 Time is referenced by a temporal reference system (temporal RS). In the current version of this Community Standard, only a string-based notation for time values is defined. Future versions of this Community Standard may allow for alternative notations, such as recording time values as numeric offsets from a given temporal datum (e.g. “days since 1970-01-01”).
@@ -423,7 +439,7 @@ Example:
 ```
 
 [[identifier_based_reference_systems]]
-//### 5.3. Identifier-based Reference Systems
+//### 6.3. Identifier-based Reference Systems
 ==== Identifier-based Reference Systems
 
 Identifier-based reference systems (identifier RS) .
@@ -463,7 +479,7 @@ Example of a geographic identifier reference system:
 The domain values in the above example would be `"de"` and `"gb"`.
 
 [[coveragejson_objects]]
-//## 6. CoverageJSON Objects
+//## 7. CoverageJSON Objects
 === CoverageJSON Objects
 
 CoverageJSON documents always consist of a single object. This object (referred to as the CoverageJSON object below) represents a domain, range, coverage, or collection of coverages.
@@ -472,7 +488,7 @@ CoverageJSON documents always consist of a single object. This object (referred 
 - The CoverageJSON object MUST have a member with the name `"type"` whose value is one of: `"Domain"`, `"NdArray"` (a range encoding), `"TiledNdArray"` (a range encoding), `"Coverage"`, or `"CoverageCollection"`. The case of the type member values MUST be as shown here.
 
 [[domain_objects]]
-//### 6.1. Domain Objects
+//### 7.1. Domain Objects
 ==== Domain Objects
 
 A domain object is a CoverageJSON object which defines a set of positions and their extent in one or more referencing systems.
@@ -496,7 +512,7 @@ Its general structure is:
 - A domain object MUST have a `"referencing"` member if the domain object is not part of a coverage collection or if the coverage collection does not have a `"referencing"` member.
 
 [[axis_objects]]
-//#### 6.1.1. Axis Objects
+//#### 7.1.1. Axis Objects
 ===== Axis Objects
 
 - An axis object MUST have either a `"values"` member or, as a compact notation for a regularly spaced numeric axis, have all the members `"start"`, `"stop"`, and `"num"`.
@@ -562,7 +578,7 @@ Example of an axis object with Polygon values:
 ```
 
 [[reference_system_connection_objects]]
-//#### 6.1.2. Reference System Connection Objects
+//#### 7.1.2. Reference System Connection Objects
 ===== Reference System Connection Objects
 A reference system connection object creates a link between values within domain axes and a reference system to be able to interpret those values, e.g. as coordinates in a certain coordinate reference system.
 
@@ -582,7 +598,7 @@ Example of a reference system connection object:
 }
 ```
 
-//#### 6.1.3. Examples
+//#### 7.1.3. Examples
 ===== Examples
 
 Example of a domain object with <<grid,Grid>> <<common_domain_types,domain type>>:
@@ -648,7 +664,7 @@ Example of a domain object with <<trajectory,Trajectory>> <<common_domain_types,
 ```
 
 [[ndarray_objects]]
-//### 6.2. NdArray Objects
+//### 7.2. NdArray Objects
 ==== NdArray Objects
 
 A CoverageJSON object with the type `"NdArray"` is an NdArray object. It represents a multidimensional (>= 0D) array with named axes, encoded as a flat, one-dimensional JSON array in row-major order.
@@ -685,7 +701,7 @@ The ordering of the data values with respect to their dimensions is equivalent t
 ```
 
 [[tiledndarray_objects]]
-//### 6.3. TiledNdArray Objects
+//### 7.3. TiledNdArray Objects
 ==== TiledNdArray Objects
 
 A CoverageJSON object with the type `"TiledNdArray"` is a TiledNdArray object. It represents a multidimensional (>= 1D) array with named axes that is split up into sets of linked NdArray documents. Each tileset typically covers a specific data access scenario, for example, loading a single time slice of a grid vs. loading a time series of a spatial subset of a grid.
@@ -802,7 +818,7 @@ Example:
 ```
 
 [[coverage_objects]]
-//### 6.4. Coverage Objects
+//### 7.4. Coverage Objects
 ==== Coverage Objects
 
 A CoverageJSON object with the type `"Coverage"` is a coverage object.
@@ -821,7 +837,7 @@ Example:
 See the <<annex_vertical_profile_coverage,Vertical Profile Coverage Example>>.
 
 [[coverage_collection_objects]]
-//### 6.5. Coverage Collection Objects
+//### 7.5. Coverage Collection Objects
 ==== Coverage Collection Objects
 
 A CoverageJSON object with the type `"CoverageCollection"` is a coverage collection object.
@@ -838,13 +854,13 @@ Example:
 See the <<annex_coverage_collection,Coverage Collection Example>>.
 
 [[extensions]]
-//## 7. Extensions
+//## 8. Extensions
 === Extensions
 
 A CoverageJSON document can be extended with custom members and types in a robust and interoperable way. For that, it makes use of absolute URIs and compact URIs (prefix:suffix) in order to avoid conflicts with other extensions and future versions of the format. A central registry of compact URI prefixes is provided which anyone can extend and which is a simple mapping from compact URI prefix to namespace URI in order to avoid collisions with other extensions that are based on compact URIs as well. Extensions that do not follow this approach MAY use simple names instead of absolute or compact URIs but have to accept the consequence of the document being less interoperable and future-proof. In certain use cases this is not an issue and may be a preferred solution for simplicity reasons, for example, if such CoverageJSON documents are only used internally and are not meant to be shared to a wider audience.
 
 [[custom_members]]
-//### 7.1. Custom members
+//### 8.1. Custom members
 ==== Custom members
 
 If a custom member is added to a CoverageJSON document, its name SHOULD be a compact URIs of the form `"prefix:suffix"`.
@@ -881,7 +897,7 @@ Example of a different value structure:
 ```
 
 [[custom_types]]
-//### 7.2. Custom types
+//### 8.2. Custom types
 ==== Custom types
 
 Custom types MAY be used with the following members:
@@ -927,7 +943,7 @@ Example of a custom reference system type using a compact URI:
 ```
 
 [[jsonld]]
-//## 8. JSON-LD
+//## 9. JSON-LD
 === JSON-LD
 
 If no JSON-LD context is given, then the default context `https://covjson.org/context.jsonld` SHALL be assumed. Note that this context includes https://covjson.org/prefixes/[registered namespace prefixes] and MAY be updated in a backwards-compatible way as the format evolves.
@@ -961,14 +977,14 @@ Example:
 In this example, additional semantics for the registered `dct` prefix are provided by stating that the `"dct:license"` member value in this document is an identifier and not just an unstructured string.
 
 [[resolving_domain_and_range_urls]]
-//## 9. Resolving domain and range URLs
+//## 10. Resolving domain and range URLs
 === Resolving domain and range URLs
 
 If a domain or range is referenced by a URL in a CoverageJSON document, then the client should, whenever is appropriate, load the data from the given URL and treat the loaded data as if it was directly embedded in place of the URL. When sending HTTP requests, the `Accept` header SHOULD be set appropriately to the CoverageJSON media type.
 
 
 [[common_domain_types]]
-//## 10. Common Domain Types
+//## 11. Common Domain Types
 === Common Domain Types
 
 This OGC Community Standard defines the following domain types: Grid, VerticalProfile, PointSeries, Point, MultiPointSeries, MultiPoint, PolygonSeries, Polygon, MultiPolygonSeries, MultiPolygon, Trajectory, Section.
@@ -1011,7 +1027,7 @@ Requirements for all domain types defined in this OGC Community Standard:
 |=====
 
 [[grid]]
-//### 10.1. Grid
+//### 11.1. Grid
 ==== Grid
 
 - A domain with Grid domain type MUST have the axes `"x"` and `"y"` and MAY have the axes `"z"` and `"t"`.
@@ -1065,7 +1081,7 @@ Coverage example:
 }
 ```
 [[vertical_profile]]
-//### 10.2. VerticalProfile
+//### 11.2. VerticalProfile
 ==== VerticalProfile
 
 - A domain with VerticalProfile domain type MUST have the axes `"x"`, `"y"`, and `"z"`, where `"x"` and `"y"` MUST have a single coordinate value only.
@@ -1121,7 +1137,7 @@ Coverage example:
 ```
 
 [[pointseries]]
-//### 10.3. PointSeries
+//### 11.3. PointSeries
 ==== PointSeries
 
 - A domain with PointSeries domain type MUST have the axes `"x"`, `"y"`, and `"t"` where `"x"` and `"y"` MUST have a single coordinate value only.
@@ -1177,7 +1193,7 @@ Coverage example:
 ```
 
 [[point]]
-//### 10.4. Point
+//### 11.4. Point
 ==== Point
 
 - A domain with Point domain type MUST have the axes `"x"` and `"y"` and MAY have the axes `"z"` and `"t"` where all MUST have a single coordinate value only.
@@ -1230,7 +1246,7 @@ Coverage example:
 ```
 
 [[multipointseries]]
-//### 10.5. MultiPointSeries
+//### 11.5. MultiPointSeries
 ==== MultiPointSeries
 
 - A domain with MultiPointSeries domain type MUST have the axes `"composite"` and `"t"`.
@@ -1318,7 +1334,7 @@ Coverage example:
 ```
 
 [[multipoint]]
-//### 10.6. MultiPoint
+//### 11.6. MultiPoint
 ==== MultiPoint
 
 - A domain with MultiPoint domain type MUST have the axis `"composite"` and MAY have the axis `"t"` where `"t"` MUST have a single coordinate value only.
@@ -1403,7 +1419,7 @@ Coverage example:
 }
 ```
 [[trajectory]]
-//### 10.7. Trajectory
+//### 11.7. Trajectory
 ==== Trajectory
 
 - A domain with Trajectory domain type MUST have the axis `"composite"` and MAY have the axis `"z"` where `"z"` MUST have a single coordinate value only.
@@ -1511,7 +1527,7 @@ Coverage example:
 ```
 
 [[section]]
-//### 10.8. Section
+//### 11.8. Section
 ==== Section
 
 - A domain with Section domain type MUST have the axes `"composite"` and `"z"`.
@@ -1578,7 +1594,7 @@ Coverage example:
 ```
 
 [[polygon]]
-//### 10.9. Polygon
+//### 11.9. Polygon
 ==== Polygon
 
 Polygons in this domain domain type are defined equally to GeoJSON, except that they can only contain `[x,y]` positions (and not `z` or additional coordinates):
@@ -1647,7 +1663,7 @@ Coverage example:
 ```
 
 [[polygonseries]]
-//### 10.10. PolygonSeries
+//### 11.10. PolygonSeries
 ==== PolygonSeries
 
 - A domain with PolygonSeries domain type MUST have the axes `"composite"` and `"t"` where `"composite"` MUST have a single Polygon value. Polygons are defined in the Polygon domain type.
@@ -1714,7 +1730,7 @@ Coverage example:
 ```
 
 [[multipolygon]]
-//### 10.11. MultiPolygon
+//### 11.11. MultiPolygon
 ==== MultiPolygon
 
 - A domain with MultiPolygon domain type MUST have the axis `"composite"` where the values are Polygons. Polygons are defined in the Polygon domain type.
@@ -1783,7 +1799,7 @@ Coverage example:
 ```
 
 [[multipolygonseries]]
-//### 10.12. MultiPolygonSeries
+//### 11.12. MultiPolygonSeries
 ==== MultiPolygonSeries
 
 - A domain with MultiPolygonSeries domain type MUST have the axes `"composite"` and `"t"` where the values of `"composite"` are Polygons. Polygons are defined in the Polygon domain type.
