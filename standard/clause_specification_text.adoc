@@ -254,7 +254,7 @@ Example of a group describing a vector quantity:
 ```
 where `"WIND_SPEED"` and `"WIND_DIR"` reference existing parameters in a CoverageJSON coverage or collection object by their short identifiers.
 
-Example of a group describing uncertainty of a parameter:
+Example of a group describing uncertainty of a parameter by including the mean and standard deviation:
 
 [%unnumbered%]
 ```json
@@ -295,7 +295,7 @@ where `"SST_mean"` references the following parameter:
 }
 ```
 
-and `"SST_stddev"`:
+and `"SST_stddev"` references the following parameter:
 
 [%unnumbered%]
 ```json
@@ -953,6 +953,8 @@ Note that domain axis values and range values SHOULD NOT be exposed as linked da
 
 Example:
 
+In this example, additional semantics for the registered `dct` prefix are provided by stating that the `"dct:license"` member value in this document is an identifier and not just an unstructured string.
+
 [%unnumbered%]
 ```json
 {
@@ -969,7 +971,38 @@ Example:
 }
 ```
 
-In this example, additional semantics for the registered `dct` prefix are provided by stating that the `"dct:license"` member value in this document is an identifier and not just an unstructured string.
+Example:
+
+In this example, extra attributes of the `Parameter` have been declared stating that the parameter is a more specific example in the context of a more general vocabulary. ** Note: not sure about the `statisticalMeasure` attribute and why square brackets?**
+
+[%unnumbered%]
+```json
+{
+ "@context": [
+    "https://covjson.org/context.jsonld",
+    {
+      "skos": "http://www.w3.org/2004/02/skos/core",
+    }
+  ],
+"type" : "Parameter",
+  "observedProperty" : {
+    "label" : {
+      "en": "Sea surface temperature daily mean"
+    },
+    "statisticalMeasure": "http://www.uncertml.org/statistics/mean",
+    "narrower": ["http://vocab.nerc.ac.uk/standard_name/sea_surface_temperature/"]
+  },
+  "unit" : {
+    "label": {
+      "en": "Kelvin"
+    },
+    "symbol": {
+      "value": "K",
+      "type": "http://www.opengis.net/def/uom/UCUM/"
+    }
+  }
+}
+```
 
 [[resolving_domain_and_range_urls]]
 //## 10. Resolving domain and range URLs
