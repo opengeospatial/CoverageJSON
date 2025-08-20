@@ -282,9 +282,6 @@ where `"SST_mean"` references the following parameter:
     "label" : {
       "en": "Sea surface temperature daily mean"
     },
-    "statisticalMeasure": "http://www.uncertml.org/statistics/mean",
-    "statisticalPeriod": "P1D",
-    "narrowerThan": ["http://vocab.nerc.ac.uk/standard_name/sea_surface_temperature/"]
   },
   "unit" : {
     "label": {
@@ -308,8 +305,6 @@ and `"SST_stddev"`:
     "label" : {
       "en": "Sea surface temperature standard deviation of daily mean"
     },
-    "statisticalMeasure": "http://www.uncertml.org/statistics/standard-deviation",
-    "narrowerThan": ["http://vocab.nerc.ac.uk/standard_name/sea_surface_temperature/"]
   },
   "unit" : {
     "label": {
