@@ -973,7 +973,7 @@ In this example, additional semantics for the registered `dct` prefix are provid
 
 Example:
 
-In this example, extra attributes of the `Parameter` have been declared stating that the parameter is a more specific example in the context of a more general vocabulary. ** Note: not sure about the `statisticalMeasure` attribute and why square brackets?**
+In this example, extra attributes of the `Parameter` have been declared stating that the parameter is a more specific example in the context of a more general vocabulary.
 
 [%unnumbered%]
 ```json
