@@ -282,6 +282,8 @@ where `"SST_mean"` references the following parameter:
     "label" : {
       "en": "Sea surface temperature daily mean"
     },
+"statisticalMeasure": "https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Glossary:Arithmetic_mean",
+"narrower": "http://www.w3.org/2004/02/skos/core"
   },
   "unit" : {
     "label": {
@@ -305,6 +307,8 @@ and `"SST_stddev"` references the following parameter:
     "label" : {
       "en": "Sea surface temperature standard deviation of daily mean"
     },
+"statisticalMeasure": "https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Glossary:Standard_deviation",
+"narrower": "http://www.w3.org/2004/02/skos/core"
   },
   "unit" : {
     "label": {
