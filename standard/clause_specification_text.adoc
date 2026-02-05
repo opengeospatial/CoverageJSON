@@ -982,12 +982,7 @@ In this example, extra attributes of the `Parameter` have been declared stating 
 [%unnumbered%]
 ```json
 {
- "@context": [
-    "https://covjson.org/context.jsonld",
-    {
-      "skos": "http://www.w3.org/2004/02/skos/core",
-    }
-  ],
+ "@context": [ "https://covjson.org/context.jsonld" ],
 "type" : "Parameter",
   "observedProperty" : {
     "label" : {
