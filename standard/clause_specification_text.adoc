@@ -988,7 +988,7 @@ In this example, extra attributes of the `Parameter` have been declared stating 
     "label" : {
       "en": "Sea surface temperature daily mean"
     },
-    "statisticalMeasure": "https://web.archive.org/web/20161029215223/http://uncertml.org/statistics/mean",
+    "statisticalMeasure": "https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Glossary:Arithmetic_mean",
     "narrower": ["http://vocab.nerc.ac.uk/standard_name/sea_surface_temperature/"]
   },
   "unit" : {
