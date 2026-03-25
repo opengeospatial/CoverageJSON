@@ -254,7 +254,7 @@ Example of a group describing a vector quantity:
 ```
 where `"WIND_SPEED"` and `"WIND_DIR"` reference existing parameters in a CoverageJSON coverage or collection object by their short identifiers.
 
-Example of a group describing uncertainty of a parameter:
+Example of a group describing uncertainty of a parameter by including the mean and standard deviation:
 
 [%unnumbered%]
 ```json
@@ -282,9 +282,8 @@ where `"SST_mean"` references the following parameter:
     "label" : {
       "en": "Sea surface temperature daily mean"
     },
-    "statisticalMeasure": "http://www.uncertml.org/statistics/mean",
-    "statisticalPeriod": "P1D",
-    "narrowerThan": ["http://vocab.nerc.ac.uk/standard_name/sea_surface_temperature/"]
+    "statisticalMeasure": "https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Glossary:Arithmetic_mean",
+    "narrower": ["http://vocab.nerc.ac.uk/standard_name/sea_surface_temperature/"]
   },
   "unit" : {
     "label": {
@@ -298,7 +297,7 @@ where `"SST_mean"` references the following parameter:
 }
 ```
 
-and `"SST_stddev"`:
+and `"SST_stddev"` references the following parameter:
 
 [%unnumbered%]
 ```json
@@ -308,8 +307,8 @@ and `"SST_stddev"`:
     "label" : {
       "en": "Sea surface temperature standard deviation of daily mean"
     },
-    "statisticalMeasure": "http://www.uncertml.org/statistics/standard-deviation",
-    "narrowerThan": ["http://vocab.nerc.ac.uk/standard_name/sea_surface_temperature/"]
+    "statisticalMeasure": "https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Glossary:Standard_deviation",
+    "narrower": ["http://vocab.nerc.ac.uk/standard_name/sea_surface_temperature/"]
   },
   "unit" : {
     "label": {
@@ -958,6 +957,8 @@ Note that domain axis values and range values SHOULD NOT be exposed as linked da
 
 Example:
 
+In this example, additional semantics for the registered `dct` prefix are provided by stating that the `"dct:license"` member value in this document is an identifier and not just an unstructured string.
+
 [%unnumbered%]
 ```json
 {
@@ -974,7 +975,33 @@ Example:
 }
 ```
 
-In this example, additional semantics for the registered `dct` prefix are provided by stating that the `"dct:license"` member value in this document is an identifier and not just an unstructured string.
+Example:
+
+In this example, extra attributes of the `Parameter` have been declared stating that the parameter is a more specific concept in the context of a more general vocabulary.
+
+[%unnumbered%]
+```json
+{
+ "@context": [ "https://covjson.org/context.jsonld" ],
+"type" : "Parameter",
+  "observedProperty" : {
+    "label" : {
+      "en": "Sea surface temperature daily mean"
+    },
+    "statisticalMeasure": "https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Glossary:Arithmetic_mean",
+    "narrower": ["http://vocab.nerc.ac.uk/standard_name/sea_surface_temperature/"]
+  },
+  "unit" : {
+    "label": {
+      "en": "Kelvin"
+    },
+    "symbol": {
+      "value": "K",
+      "type": "http://www.opengis.net/def/uom/UCUM/"
+    }
+  }
+}
+```
 
 [[resolving_domain_and_range_urls]]
 //## 10. Resolving domain and range URLs

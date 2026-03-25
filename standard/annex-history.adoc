@@ -12,4 +12,6 @@
 |2022-05-25 |0.2.2 |Jon Blower, Gobe Hobona, Chris Little, Maik Riechert |all |final publication edits
 |2022-07-14 |0.2.3 |Chris Little, Jon Blower |all |incorporate OGC Architecture Board editorial edits
 |2022-09-14 |0.2.4 |Chris Little, Jon Blower |all |incorporate final Public Comments editorial edits
+|2023-08-22 |1.0.0 |OGC Staff |Approved OGC Community standard
+|2026-02-05 |1.0.1 |Chris Little, Kathi Schleidt |Improved JSON-LD examples
 |===
