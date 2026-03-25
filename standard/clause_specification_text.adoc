@@ -907,7 +907,9 @@ Custom types MAY be used with the following members:
 - `"type"` in unit symbol objects
 - `"type"` within custom members that have an object as value
 
-The custom value of those members SHOULD be either an absolute URI or a compact URI. If a compact URI is used, then the prefix SHOULD be registered at <https://www.opengis.net/def/namespaces>.
+The prefix SHOULD be registered at <https://www.opengis.net/def/namespaces> which in the example above would be `dct = http://purl.org/dc/terms/`. In CoverageJSON V1.0.0 and earlier, prefixes were defined by the community register at <https://covjson.org/prefixes/>. 
+
+The custom value of those members SHOULD be either an absolute URI or a compact URI. If a compact URI is used, then the prefix SHOULD be registered at <https://www.opengis.net/def/namespaces>. 
 
 Example of a custom unit symbol type using an absolute URI:
 
@@ -945,7 +947,9 @@ Example of a custom reference system type using a compact URI:
 //## 9. JSON-LD
 === JSON-LD
 
-If no JSON-LD context is given, then the default context `https://covjson.org/context.jsonld` SHALL be assumed. Note that this context includes https://www.opengis.net/def/namespaces[registered namespace prefixes] and MAY be updated in a backwards-compatible way as the format evolves.
+If no JSON-LD context is given, then the default context `https://schemas.opengis.net/covjson/1.0/context.jsonld` SHALL be assumed. Note that this context includes https://www.opengis.net/def/namespaces[registered namespace prefixes] and MAY be updated in a backwards-compatible way as the format evolves. 
+
+In CoverageJSON V1.0.0 and earlier, the JSON-LD context was defined by the community site at <https://covjson.org/context.jsonld>
 
 Additional semantics not provided by the default context MAY be provided by specifying an explicit `"@context"` member in the root of a CoverageJSON document. The value of that member MUST be an array where the first element is the default context URL. Any additional context definitions SHALL NOT override definitions of the default context, except when the definition is identical.
 
@@ -963,7 +967,7 @@ In this example, additional semantics for the registered `dct` prefix are provid
 ```json
 {
   "@context": [
-    "https://covjson.org/context.jsonld",
+    "https://schemas.opengis.net/covjson/1.0/context.jsonld",
     {
       "dct": "http://purl.org/dc/terms/",
       "dct:license": { "@type": "@id" }
@@ -982,7 +986,7 @@ In this example, extra attributes of the `Parameter` have been declared stating 
 [%unnumbered%]
 ```json
 {
- "@context": [ "https://covjson.org/context.jsonld" ],
+ "@context": [ "https://schemas.opengis.net/covjson/1.0/context.jsonld" ],
 "type" : "Parameter",
   "observedProperty" : {
     "label" : {
