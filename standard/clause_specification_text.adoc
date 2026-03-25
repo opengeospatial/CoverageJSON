@@ -1632,7 +1632,7 @@ Polygons in this domain domain type are defined equivalent to GeoJSON, except th
 - The axis `"composite"` MUST have the data type `"polygon"` and the coordinate identifiers `"x","y"`, in that order.
 - A Polygon domain MAY have the axes `"z"` and `"t"` which both MUST have a single coordinate value only.
 
-Domain example of a Simple Polygon:
+Domain example of a simple Polygon:
 
 [%unnumbered%]
 ```json
@@ -1654,7 +1654,7 @@ Domain example of a Simple Polygon:
 }
 ```
 
-Domain example of a Polygon with two holes:
+Domain example of a Polygon with two holes, one square, the other triangular:
 
 [%unnumbered%]
 ```json
@@ -1787,7 +1787,7 @@ Coverage example:
 - A domain with MultiPolygon domain type MUST have the axis `"composite"` where the values are Polygons. Polygons are defined in the Polygon domain type.
 - The axis `"composite"` MUST have the data type `"polygon"` and the coordinate identifiers `"x","y"`, in that order.
 - A MultiPolygon domain MAY have the axes `"z"` and `"t"` which both MUST have a single coordinate value only.
-- A MultiPolygon may represent several polygons that define non-contiguous regions of one underlying coverage range. It is not intended to represent several polygons that are separate coverages each with their own separate ranges. The latter case is a collection of coverages.
+- A MultiPolygon is intended to represent several polygons, possibly with holes, that define non-contiguous regions of one underlying coverage range. It is not intended to represent several polygons that are separate coverages, each with their own separate ranges. The latter case is a collection of coverages.
 
 Domain example:
 
