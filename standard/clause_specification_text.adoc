@@ -1624,7 +1624,7 @@ Coverage example:
 //### 11.9. Polygon
 ==== Polygon
 
-Polygons in this domain domain type are defined equally to GeoJSON, except that they can only contain `[x,y]` positions (and not `z` or additional coordinates):
+Polygons in this domain domain type are defined equivalent to GeoJSON, except that they can only contain `[x,y]` positions (and not `z` or additional coordinates):
 - A LinearRing is an array of 4 or more `[x,y]` arrays where each of `x` and `y` is a coordinate value. The first and last `[x,y]` elements are identical.
 - A Polygon is an array of LinearRing arrays. For Polygons with multiple rings, the first MUST be the exterior ring and any others MUST be interior rings or holes.
 
@@ -1632,7 +1632,7 @@ Polygons in this domain domain type are defined equally to GeoJSON, except that 
 - The axis `"composite"` MUST have the data type `"polygon"` and the coordinate identifiers `"x","y"`, in that order.
 - A Polygon domain MAY have the axes `"z"` and `"t"` which both MUST have a single coordinate value only.
 
-Domain example:
+Domain example of a Simple Polygon:
 
 [%unnumbered%]
 ```json
@@ -1645,6 +1645,30 @@ Domain example:
       "coordinates": ["x","y"],
       "values": [
         [ [ [100.0, 0.0], [101.0, 0.0], [101.0, 1.0], [100.0, 1.0], [100.0, 0.0] ]  ]
+      ]
+    },
+    "z": { "values": [2] },
+    "t": { "values": ["2008-01-01T04:00:00Z"] }
+  },
+  "referencing": [...]
+}
+```
+
+Domain example of a Polygon with two holes:
+
+[%unnumbered%]
+```json
+{
+  "type": "Domain",
+  "domainType": "Polygon",
+  "axes": {
+    "composite": {
+      "dataType": "polygon",
+      "coordinates": ["x","y"],
+      "values": [
+        [ [ [100.0, 0.0], [101.0, 0.0], [101.0, 1.0], [100.0, 1.0], [100.0, 0.0] ]  
+          [ [100.3, 0.2], [100.3, 0.4], [100.5, 0.4], [100.5, 0.2], [100.3, 0.2] ]
+          [ [100.7, 0.6], [100.8, 0.8], [100.9, 0.6], [100.7, 0.6] ] ]
       ]
     },
     "z": { "values": [2] },
