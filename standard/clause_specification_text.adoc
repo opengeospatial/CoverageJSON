@@ -1737,7 +1737,7 @@ Domain example:
       ]
     },
     "z": { "values": [2] },
-    "t": { "values": ["2008-01-01T04:00:00Z","2008-01-01T05:00:00Z"] }
+    "t": { "values": ["2008-01-01T04:00:00Z","2008-01-01T05:00:00Z","2008-01-01T06:00:00Z] }
   },
   "referencing": [...]
 }
@@ -1761,7 +1761,7 @@ Coverage example:
         ]
       },
       "z": { "values": [2] },
-      "t": { "values": ["2008-01-01T04:00:00Z","2008-01-01T05:00:00Z"] }
+      "t": { "values": ["2008-01-01T04:00:00Z","2008-01-01T05:00:00Z","2008-01-01T05:00:00Z] }
     },
     "referencing": [...]
   },
@@ -1773,7 +1773,7 @@ Coverage example:
       "type" : "NdArray",
       "dataType": "float",
       "axisNames": ["t"],
-      "shape": [2],
+      "shape": [3],
       "values" : [...]
     }
   }
@@ -1787,6 +1787,7 @@ Coverage example:
 - A domain with MultiPolygon domain type MUST have the axis `"composite"` where the values are Polygons. Polygons are defined in the Polygon domain type.
 - The axis `"composite"` MUST have the data type `"polygon"` and the coordinate identifiers `"x","y"`, in that order.
 - A MultiPolygon domain MAY have the axes `"z"` and `"t"` which both MUST have a single coordinate value only.
+- A MultiPolygon may represent several polygons that define non-contiguous regions of one underlying coverage range. It is not intended to represent several polygons that are separate coverages each with their own separate ranges. The latter case is a collection of coverages.
 
 Domain example:
 
@@ -1874,7 +1875,7 @@ Domain example:
       ]
     },
     "z": { "values": [2] },
-    "t": { "values": ["2008-01-01T04:00:00Z", "2010-01-01T00:00:00Z"] }
+    "t": { "values": ["2008-01-01T00:00:00Z", "2010-01-01T00:00:00Z", "2012-01-01T00:00:00Z"] }
   },
   "referencing": [...]
 }
