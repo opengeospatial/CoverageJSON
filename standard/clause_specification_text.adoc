@@ -114,7 +114,7 @@ ParameterGroup "0..1" *-- "1..*" Parameter
 //## 2. Version
 === Version
 
-The ``version`` property to identifies the version of the CoverageJSON standard that the metadata record conforms to, which is valuable for version-specific detection handling of content.
+The `version` property to identifies the version of the CoverageJSON standard that the content conforms to, which is valuable for version-specific detection handling of content. If there is no `version` property, the version is assumed to be V1.0.0.
 
 Example:
 
@@ -875,7 +875,7 @@ Example:
 }
 ```
 
-The prefix SHOULD be registered at <https://covjson.org/prefixes/> which in the example above would be `dct = http://purl.org/dc/terms/`.
+The prefix SHOULD be registered at <https://www.opengis.net/def/namespaces> which in the example above would be `dct = http://purl.org/dc/terms/`. In CoverageJSON V1.0.0 and earlier, prefixes were defined by the community register at <https://covjson.org/prefixes/>. 
 
 If the value of a custom member can have multiple structures, for example a string or an object, then a client should ignore the member if it does not understand the structure that is used.
 
@@ -907,7 +907,9 @@ Custom types MAY be used with the following members:
 - `"type"` in unit symbol objects
 - `"type"` within custom members that have an object as value
 
-The custom value of those members SHOULD be either an absolute URI or a compact URI. If a compact URI is used, then the prefix SHOULD be registered at <https://covjson.org/prefixes/>.
+The prefix SHOULD be registered at <https://www.opengis.net/def/namespaces> which in the example above would be `dct = http://purl.org/dc/terms/`. In CoverageJSON V1.0.0 and earlier, prefixes were defined by the community register at <https://covjson.org/prefixes/>. 
+
+The custom value of those members SHOULD be either an absolute URI or a compact URI. If a compact URI is used, then the prefix SHOULD be registered at <https://www.opengis.net/def/namespaces>. 
 
 Example of a custom unit symbol type using an absolute URI:
 
@@ -945,13 +947,15 @@ Example of a custom reference system type using a compact URI:
 //## 9. JSON-LD
 === JSON-LD
 
-If no JSON-LD context is given, then the default context `https://covjson.org/context.jsonld` SHALL be assumed. Note that this context includes https://covjson.org/prefixes/[registered namespace prefixes] and MAY be updated in a backwards-compatible way as the format evolves.
+If no JSON-LD context is given, then the default context `https://schemas.opengis.net/covjson/1.0/context.jsonld` SHALL be assumed. Note that this context includes https://www.opengis.net/def/namespaces[registered namespace prefixes] and MAY be updated in a backwards-compatible way as the format evolves. 
+
+In CoverageJSON V1.0.0 and earlier, the JSON-LD context was defined by the community site at <https://covjson.org/context.jsonld>
 
 Additional semantics not provided by the default context MAY be provided by specifying an explicit `"@context"` member in the root of a CoverageJSON document. The value of that member MUST be an array where the first element is the default context URL. Any additional context definitions SHALL NOT override definitions of the default context, except when the definition is identical.
 
 Providing an explicit context is especially useful for extensions. A recommended practice is to include any used namespace prefixes, even if registered, in the explicit context. This provides additional clarity and helps humans understand the document more quickly.
 
-It is NOT RECOMMENDED to use the explicit JSON-LD context to map simple names, for example, `"license": "dct:license"`. On one side, this would hinder interoperability for generic non-JSON-LD clients, as they generally rely on absolute URIs or https://covjson.org/prefixes/[registered prefixes] of compact URIs. On the other side, it would make documents less future-proof as there may be name collisions with future versions of the format where semantics of that name may be defined differently. It is therefore RECOMMENDED to use compact or absolute URIs if an explicit JSON-LD context is included.
+It is NOT RECOMMENDED to use the explicit JSON-LD context to map simple names, for example, `"license": "dct:license"`. On one side, this would hinder interoperability for generic non-JSON-LD clients, as they generally rely on absolute URIs or https://www.opengis.net/def/namespaces[registered prefixes] of compact URIs. On the other side, it would make documents less future-proof as there may be name collisions with future versions of the format where semantics of that name may be defined differently. It is therefore RECOMMENDED to use compact or absolute URIs if an explicit JSON-LD context is included.
 
 Note that domain axis values and range values SHOULD NOT be exposed as linked data via the JSON-LD context since they are not suitable for such representation.
 
@@ -963,7 +967,7 @@ In this example, additional semantics for the registered `dct` prefix are provid
 ```json
 {
   "@context": [
-    "https://covjson.org/context.jsonld",
+    "https://schemas.opengis.net/covjson/1.0/context.jsonld",
     {
       "dct": "http://purl.org/dc/terms/",
       "dct:license": { "@type": "@id" }
@@ -982,7 +986,7 @@ In this example, extra attributes of the `Parameter` have been declared stating 
 [%unnumbered%]
 ```json
 {
- "@context": [ "https://covjson.org/context.jsonld" ],
+ "@context": [ "https://schemas.opengis.net/covjson/1.0/context.jsonld" ],
 "type" : "Parameter",
   "observedProperty" : {
     "label" : {
