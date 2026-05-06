@@ -1787,7 +1787,7 @@ Coverage example:
 - A domain with MultiPolygon domain type MUST have the axis `"composite"` where the values are Polygons. Polygons are defined in the Polygon domain type.
 - The axis `"composite"` MUST have the data type `"polygon"` and the coordinate identifiers `"x","y"`, in that order.
 - A MultiPolygon domain MAY have the axes `"z"` and `"t"` which both MUST have a single coordinate value only.
-- A MultiPolygon is intended to represent several polygons, possibly with holes, that define non-contiguous regions of one underlying coverage range. It is not intended to represent several polygons that are separate coverages, each with their own separate ranges. The latter case is a collection of coverages.
+- A MultiPolygon uses multiple polygons to represent non-contiguous regions, which are collectively treated as a single coverage domain, with a single associated range value. For example the MultiPolygon could represent the individual islands within a country, associated with the total population of that country.
 
 Domain example:
 
