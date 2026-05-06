@@ -1624,7 +1624,7 @@ Coverage example:
 //### 11.9. Polygon
 ==== Polygon
 
-Polygons in this domain domain type are defined equivalent to GeoJSON, except that they can only contain `[x,y]` positions (and not `z` or additional coordinates):
+Polygons in this domain type are defined equivalent to GeoJSON, except that they can only contain `[x,y]` positions (and not `z` or additional coordinates):
 - A LinearRing is an array of 4 or more `[x,y]` arrays where each of `x` and `y` is a coordinate value. The first and last `[x,y]` elements are identical.
 - A Polygon is an array of LinearRing arrays. For Polygons with multiple rings, the first MUST be the exterior ring and any others MUST be interior rings or holes.
 
@@ -1758,7 +1758,7 @@ Coverage example of a Polygon with two holes, one square, the other triangular:
 - A domain with PolygonSeries domain type MAY have the axis `"z"` which MUST have a single coordinate value only.
 - The axis `"composite"` MUST have the data type `"polygon"` and the coordinate identifiers `"x","y"`, in that order.
 
-Domain example:
+Domain example of a PolygonSeries:
 
 [%unnumbered%]
 ```json
@@ -1780,7 +1780,7 @@ Domain example:
 }
 ```
 
-Coverage example:
+Coverage example of a PolygonSeries:
 
 [%unnumbered%]
 ```json
@@ -1826,7 +1826,7 @@ Coverage example:
 - A MultiPolygon domain MAY have the axes `"z"` and `"t"` which both MUST have a single coordinate value only.
 - A MultiPolygon uses multiple polygons to represent non-contiguous regions, which are collectively treated as a single coverage domain, with a single associated range value. For example the MultiPolygon could represent the individual islands within a country, associated with the total population of that country.
 
-Domain example:
+Domain example of a MultiPolygon:
 
 [%unnumbered%]
 ```json
@@ -1849,7 +1849,7 @@ Domain example:
 }
 ```
 
-Coverage example:
+Coverage example of a MultiPolygon:
 
 [%unnumbered%]
 ```json
@@ -1882,6 +1882,111 @@ Coverage example:
       "axisNames": ["composite"],
       "shape": [2],
       "values" : [...]
+    }
+  }
+}
+```
+
+Domain example of a MultiPolygon where one polygon has a hole:
+
+[%unnumbered%]
+```json
+{
+  "type": "Coverage",
+  "domain": {
+    "type": "Domain",
+    "domainType": "MultiPolygon",
+    "axes": {
+      "composite": {
+        "dataType": "polygon",
+        "coordinates": ["x", "y"],
+        "values": [
+          [
+            [
+              [40, 40],
+              [20, 45],
+              [45, 30],
+              [40, 40]
+            ]
+          ],
+          [
+            [
+              [20, 35],
+              [10, 30],
+              [10, 10],
+              [30, 5],
+              [45, 20],
+              [20, 35]
+            ],
+            [
+              [30, 20],
+              [20, 15],
+              [20, 25],
+              [30, 20]
+            ]
+          ]
+        ]
+      },
+      "z": {
+        "values": [2]
+      },
+      "t": {
+        "values": ["2008-01-01T04:00:00Z"]
+      }
+    },
+    "referencing": [...]
+  },
+  "parameters": {
+  },
+  "ranges": {
+    "temperature": {
+      "type": "NdArray",
+      "dataType": "float",
+      "axisNames": ["composite"],
+      "shape": [2],
+      "values": [23.1, 24.7]
+    }
+  }
+}
+```
+
+Coverage example of a MultiPolygon where one of the Polygons has a hole.
+
+[%unnumbered%]
+```json
+{
+  "type": "Coverage",
+  "domain": {
+    "type": "Domain",
+    "domainType": "MultiPolygon",
+    "axes": {
+      "composite": {
+        "dataType": "polygon",
+        "coordinates": ["x", "y"],
+        "values": [
+          [[[40, 40],[20, 45],[45, 30],[40, 40]]],
+           [[[20, 35],[10, 30],[10, 10],[30, 5],[45, 20],[20, 35]],
+            [[30, 20],[20, 15],[20, 25],[30, 20]]
+        ]
+      },
+      "z": {
+        "values": [2]
+      },
+      "t": {
+        "values": ["2008-01-01T04:00:00Z"]
+      }
+    },
+    "referencing": [...]
+  },
+  "parameters": {
+  },
+  "ranges": {
+    "temperature": {
+      "type": "NdArray",
+      "dataType": "float",
+      "axisNames": ["composite"],
+      "shape": [2],
+      "values": [23.1, 24.7]
     }
   }
 }
