@@ -1063,7 +1063,7 @@ Requirements for all domain types defined in this OGC Community Standard:
 
 - A domain with Grid domain type MUST have the axes `"x"` and `"y"` and MAY have the axes `"z"` and `"t"`.
 
-Domain example:
+Domain example of a Grid:
 
 [%unnumbered%]
 ```json
@@ -1080,7 +1080,7 @@ Domain example:
 }
 ```
 
-Coverage example:
+Coverage example of a Grid:
 
 [%unnumbered%]
 ```json
@@ -1118,7 +1118,7 @@ Coverage example:
 - A domain with VerticalProfile domain type MUST have the axes `"x"`, `"y"`, and `"z"`, where `"x"` and `"y"` MUST have a single coordinate value only.
 - A domain with VerticalProfile domain type MAY have the axis `"t"` which MUST have a single coordinate value only.
 
-Domain example:
+Domain example of a VerticalProfile:
 
 [%unnumbered%]
 ```json
@@ -1135,7 +1135,7 @@ Domain example:
 }
 ```
 
-Coverage example:
+Coverage example of a VerticalProfile:
 
 [%unnumbered%]
 ```json
@@ -1174,7 +1174,7 @@ Coverage example:
 - A domain with PointSeries domain type MUST have the axes `"x"`, `"y"`, and `"t"` where `"x"` and `"y"` MUST have a single coordinate value only.
 - A domain with PointSeries domain type MAY have the axis `"z"` which MUST have a single coordinate value only.
 
-Domain example:
+Domain example of a PointSeries:
 
 [%unnumbered%]
 ```json
@@ -1191,7 +1191,7 @@ Domain example:
 }
 ```
 
-Coverage example:
+Coverage example of a PointSeries:
 
 [%unnumbered%]
 ```json
@@ -1229,7 +1229,7 @@ Coverage example:
 
 - A domain with Point domain type MUST have the axes `"x"` and `"y"` and MAY have the axes `"z"` and `"t"` where all MUST have a single coordinate value only.
 
-Domain example:
+Domain example of a Point:
 
 [%unnumbered%]
 ```json
@@ -1246,7 +1246,7 @@ Domain example:
 }
 ```
 
-Coverage example:
+Coverage example of a Point:
 
 [%unnumbered%]
 ```json
@@ -1283,7 +1283,7 @@ Coverage example:
 - A domain with MultiPointSeries domain type MUST have the axes `"composite"` and `"t"`.
 - The axis `"composite"` MUST have the data type `"tuple"` and the coordinate identifiers `"x","y","z"` or `"x","y"`, in that order.
 
-Domain example:
+Domain example of a MultiPointSeries:
 
 [%unnumbered%]
 ```json
@@ -1305,7 +1305,7 @@ Domain example:
 }
 ```
 
-Domain example without z:
+Domain example a MultiPointSeries without z:
 
 [%unnumbered%]
 ```json
@@ -1327,7 +1327,7 @@ Domain example without z:
 }
 ```
 
-Coverage example:
+Coverage example of a MultiPointSeries:
 
 [%unnumbered%]
 ```json
@@ -1371,7 +1371,7 @@ Coverage example:
 - A domain with MultiPoint domain type MUST have the axis `"composite"` and MAY have the axis `"t"` where `"t"` MUST have a single coordinate value only.
 - The axis `"composite"` MUST have the data type `"tuple"` and the coordinate identifiers `"x","y","z"` or `"x","y"`, in that order.
 
-Domain example:
+Domain example of a MultiPoint:
 
 [%unnumbered%]
 ```json
@@ -1393,7 +1393,7 @@ Domain example:
 }
 ```
 
-Domain example without z and t:
+Domain example of a MultiPoint without z and t:
 
 [%unnumbered%]
 ```json
@@ -1414,7 +1414,7 @@ Domain example without z and t:
 }
 ```
 
-Coverage example:
+Coverage example of a MultiPoint:
 
 [%unnumbered%]
 ```json
@@ -1457,7 +1457,7 @@ Coverage example:
 - The axis `"composite"` MUST have the data type `"tuple"` and the coordinate identifiers `"t","x","y","z"` or `"t","x","y"`, in that order.
 - The value ordering of the axis `"composite"` MUST follow the ordering of its `"t"` coordinate as defined in the corresponding reference system.
 
-Domain example:
+Domain example of a Trajectory:
 
 [%unnumbered%]
 ```json
@@ -1478,7 +1478,7 @@ Domain example:
 }
 ```
 
-Domain example without z:
+Domain example of a Trajectory without z:
 
 [%unnumbered%]
 ```json
@@ -1499,7 +1499,7 @@ Domain example without z:
 }
 ```
 
-Domain example with z defined as constant value:
+Domain example of a Trajectory with z defined as constant value:
 
 [%unnumbered%]
 ```json
@@ -1521,7 +1521,7 @@ Domain example with z defined as constant value:
 }
 ```
 
-Coverage example:
+Coverage example of a Trajectory:
 
 [%unnumbered%]
 ```json
@@ -1565,7 +1565,7 @@ Coverage example:
 - The axis `"composite"` MUST have the data type `"tuple"` and the coordinate identifiers `"t","x","y"`, in that order.
 - The value ordering of the axis `"composite"` MUST follow the ordering of its `"t"` coordinate as defined in the corresponding reference system.
 
-Domain example:
+Domain example of a Section:
 
 [%unnumbered%]
 ```json
@@ -1587,7 +1587,7 @@ Domain example:
 }
 ```
 
-Coverage example:
+Coverage example of a Section:
 
 [%unnumbered%]
 ```json
@@ -1628,15 +1628,14 @@ Coverage example:
 //### 11.9. Polygon
 ==== Polygon
 
-Polygons in this domain domain type are defined equally to GeoJSON, except that they can only contain `[x,y]` positions (and not `z` or additional coordinates):
+Polygons in this domain type are defined equivalent to GeoJSON, except that they can only contain `[x,y]` positions (and not `z` or additional coordinates):
 - A LinearRing is an array of 4 or more `[x,y]` arrays where each of `x` and `y` is a coordinate value. The first and last `[x,y]` elements are identical.
 - A Polygon is an array of LinearRing arrays. For Polygons with multiple rings, the first MUST be the exterior ring and any others MUST be interior rings or holes.
-
 - A domain with Polygon domain type MUST have the axis `"composite"` which has a single Polygon value.
 - The axis `"composite"` MUST have the data type `"polygon"` and the coordinate identifiers `"x","y"`, in that order.
 - A Polygon domain MAY have the axes `"z"` and `"t"` which both MUST have a single coordinate value only.
 
-Domain example:
+Domain example of a simple Polygon:
 
 [%unnumbered%]
 ```json
@@ -1658,7 +1657,7 @@ Domain example:
 }
 ```
 
-Coverage example:
+Coverage example of a simple Polygon:
 
 [%unnumbered%]
 ```json
@@ -1693,6 +1692,67 @@ Coverage example:
 }
 ```
 
+Domain example of a Polygon with two holes, one square, the other triangular:
+
+[%unnumbered%]
+```json
+{
+  "type": "Domain",
+  "domainType": "Polygon",
+  "axes": {
+    "composite": {
+      "dataType": "polygon",
+      "coordinates": ["x","y"],
+      "values": [
+        [ [ [100.0, 0.0], [101.0, 0.0], [101.0, 1.0], [100.0, 1.0], [100.0, 0.0] ], 
+          [ [100.3, 0.2], [100.3, 0.4], [100.5, 0.4], [100.5, 0.2], [100.3, 0.2] ],
+          [ [100.7, 0.6], [100.8, 0.8], [100.9, 0.6], [100.7, 0.6] ] ]
+      ]
+    },
+    "z": { "values": [2] },
+    "t": { "values": ["2008-01-01T04:00:00Z"] }
+  },
+  "referencing": [...]
+}
+```
+
+Coverage example of a Polygon with two holes, one square, the other triangular:
+
+[%unnumbered%]
+```json
+{
+  "type" : "Coverage",
+  "domain" : {
+    "type": "Domain",
+    "domainType": "Polygon",
+    "axes": {
+      "composite": {
+        "dataType": "polygon",
+        "coordinates": ["x","y"],
+        "values": [
+          [ [ [100.0, 0.0], [101.0, 0.0], [101.0, 1.0], [100.0, 1.0], [100.0, 0.0] ],
+            [ [100.3, 0.2], [100.3, 0.4], [100.5, 0.4], [100.5, 0.2], [100.3, 0.2] ],
+            [ [100.7, 0.6], [100.8, 0.8], [100.9, 0.6], [100.7, 0.6] ] ]
+        ]
+      },
+      "z": { "values": [2] },
+      "t": { "values": ["2008-01-01T04:00:00Z"] }
+    },
+    "referencing": [...]
+  },
+  "parameters" : {
+    "temperature": {...}
+  },
+  "ranges" : {
+    "temperature" : {
+      "type" : "NdArray",
+      "dataType": "float",
+      "values" : [273.15]
+    }
+  }
+}
+```
+
 [[polygonseries]]
 //### 11.10. PolygonSeries
 ==== PolygonSeries
@@ -1701,7 +1761,7 @@ Coverage example:
 - A domain with PolygonSeries domain type MAY have the axis `"z"` which MUST have a single coordinate value only.
 - The axis `"composite"` MUST have the data type `"polygon"` and the coordinate identifiers `"x","y"`, in that order.
 
-Domain example:
+Domain example of a PolygonSeries:
 
 [%unnumbered%]
 ```json
@@ -1717,13 +1777,13 @@ Domain example:
       ]
     },
     "z": { "values": [2] },
-    "t": { "values": ["2008-01-01T04:00:00Z","2008-01-01T05:00:00Z"] }
+    "t": { "values": ["2008-01-01T04:00:00Z","2008-01-01T05:00:00Z","2008-01-01T06:00:00Z"] }
   },
   "referencing": [...]
 }
 ```
 
-Coverage example:
+Coverage example of a PolygonSeries:
 
 [%unnumbered%]
 ```json
@@ -1741,7 +1801,7 @@ Coverage example:
         ]
       },
       "z": { "values": [2] },
-      "t": { "values": ["2008-01-01T04:00:00Z","2008-01-01T05:00:00Z"] }
+      "t": { "values": ["2008-01-01T04:00:00Z","2008-01-01T05:00:00Z","2008-01-01T05:00:00Z"] }
     },
     "referencing": [...]
   },
@@ -1753,7 +1813,7 @@ Coverage example:
       "type" : "NdArray",
       "dataType": "float",
       "axisNames": ["t"],
-      "shape": [2],
+      "shape": [3],
       "values" : [...]
     }
   }
@@ -1767,8 +1827,9 @@ Coverage example:
 - A domain with MultiPolygon domain type MUST have the axis `"composite"` where the values are Polygons. Polygons are defined in the Polygon domain type.
 - The axis `"composite"` MUST have the data type `"polygon"` and the coordinate identifiers `"x","y"`, in that order.
 - A MultiPolygon domain MAY have the axes `"z"` and `"t"` which both MUST have a single coordinate value only.
+- A MultiPolygon uses multiple polygons to represent non-contiguous regions, which are collectively treated as a single coverage domain, with a single associated range value. For example the MultiPolygon could represent the individual islands within a country, associated with the total population of that country.
 
-Domain example:
+Domain example of a MultiPolygon:
 
 [%unnumbered%]
 ```json
@@ -1791,7 +1852,7 @@ Domain example:
 }
 ```
 
-Coverage example:
+Coverage example of a MultiPolygon:
 
 [%unnumbered%]
 ```json
@@ -1829,6 +1890,77 @@ Coverage example:
 }
 ```
 
+Domain example of a MultiPolygon where one polygon has a hole:
+
+[%unnumbered%]
+```json
+{
+  "domain": {
+    "type": "Domain",
+    "domainType": "MultiPolygon",
+    "axes": {
+      "composite": {
+        "dataType": "polygon",
+        "coordinates": ["x", "y"],
+        "values": [
+          [ [[40, 40], [20, 45],[45, 30], [40, 40]] ],
+          [ [[20, 35],[10, 30],[10, 10],[30, 5],[45, 20],[20, 35]],
+            [[30, 20],[20, 15],[20, 25],[30, 20]] ]
+        ]
+      },
+      "z": {
+        "values": [2]
+      },
+      "t": {
+        "values": ["2008-01-01T04:00:00Z"]
+      }
+    },
+    "referencing": [...]
+}
+```
+
+Coverage example of a MultiPolygon where one of the Polygons has a hole.
+
+[%unnumbered%]
+```json
+{
+  "type": "Coverage",
+  "domain": {
+    "type": "Domain",
+    "domainType": "MultiPolygon",
+    "axes": {
+      "composite": {
+        "dataType": "polygon",
+        "coordinates": ["x", "y"],
+        "values": [
+          [ [[40, 40],[20, 45],[45, 30],[40, 40]] ],
+          [ [[20, 35],[10, 30],[10, 10],[30, 5],[45, 20],[20, 35]],
+            [[30, 20],[20, 15],[20, 25],[30, 20]] ]
+        ]
+      },
+      "z": {
+        "values": [2]
+      },
+      "t": {
+        "values": ["2008-01-01T04:00:00Z"]
+      }
+    },
+    "referencing": [...]
+  },
+  "parameters": {
+  },
+  "ranges": {
+    "temperature": {
+      "type": "NdArray",
+      "dataType": "float",
+      "axisNames": ["composite"],
+      "shape": [2],
+      "values": [23.1, 24.7]
+    }
+  }
+}
+```
+
 [[multipolygonseries]]
 //### 11.12. MultiPolygonSeries
 ==== MultiPolygonSeries
@@ -1837,7 +1969,7 @@ Coverage example:
 - The axis `"composite"` MUST have the data type `"polygon"` and the coordinate identifiers `"x","y"`, in that order.
 - A MultiPolygon domain MAY have the axis `"z"` which MUST have a single coordinate value only.
 
-Domain example:
+Domain example of a MultiPolygonSeries:
 
 [%unnumbered%]
 ```json
@@ -1849,18 +1981,18 @@ Domain example:
       "dataType": "polygon",
       "coordinates": ["x","y"],
       "values": [
-        [ [ [100.0, 0.0], [101.0, 0.0], [101.0, 1.0], [100.0, 1.0], [100.0, 0.0] ]  ],
-        [ [ [200.0, 10.0], [201.0, 10.0], [201.0, 11.0], [200.0, 11.0], [200.0, 10.0] ] ]
+        [ [[100.0, 0.0], [101.0, 0.0], [101.0, 1.0], [100.0, 1.0], [100.0, 0.0]]  ],
+        [ [[200.0, 10.0], [201.0, 10.0], [201.0, 11.0], [200.0, 11.0], [200.0, 10.0]] ]
       ]
     },
     "z": { "values": [2] },
-    "t": { "values": ["2008-01-01T04:00:00Z", "2010-01-01T00:00:00Z"] }
+    "t": { "values": ["2008-01-01T00:00:00Z", "2010-01-01T00:00:00Z", "2012-01-01T00:00:00Z"] }
   },
   "referencing": [...]
 }
 ```
 
-Coverage example:
+Coverage example of a MultiPolygonSeries:
 
 [%unnumbered%]
 ```json
