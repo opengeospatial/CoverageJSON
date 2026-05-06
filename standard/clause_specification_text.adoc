@@ -1891,7 +1891,6 @@ Domain example of a MultiPolygon where one polygon has a hole:
 [%unnumbered%]
 ```json
 {
-  "type": "Coverage",
   "domain": {
     "type": "Domain",
     "domainType": "MultiPolygon",
@@ -1913,18 +1912,6 @@ Domain example of a MultiPolygon where one polygon has a hole:
       }
     },
     "referencing": [...]
-  },
-  "parameters": {
-  },
-  "ranges": {
-    "temperature": {
-      "type": "NdArray",
-      "dataType": "float",
-      "axisNames": ["composite"],
-      "shape": [2],
-      "values": [23.1, 24.7]
-    }
-  }
 }
 ```
 
