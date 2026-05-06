@@ -34,7 +34,7 @@ The next simplest use case is to put data values for each variable (parameter) i
 
 A sophisticated use case is to use tiling objects, where the data values are partitioned spatially and temporally, so that a single variable’s data values would be split among several documents. A simple example of this use case is encoding each time step of a dataset into a separate file, but the tiles could also be divided spatially in a manner similar to a tiled map server.
 
-The abstract, conceptual, definition of a coverage allows its Domain to have any number of coordinate dimensions, such 1 (e.g. timeseries), 2 (e.g. an area), 3 (e.g. a volume), 4 (e.g. an animated, multi-band, satellite image) or more. The coverageJSON Standard is currently restricted to 4 spatio-temporal dimensions (x,y,z,t).
+The abstract, conceptual, definition of a coverage allows its Domain to have any number of coordinate dimensions, such 1 (e.g. a timeseries), 2 (e.g. an area), 3 (e.g. a volume), 4 (e.g. an animated, multi-band, satellite image) or more. Similarly, a coverage can have multiple ranges or parameters (e.g. pressure, temperature and humidity across a domain). The coverageJSON Standard supports this definition but the convenient, predefined Domain Types are currently restricted to 4 spatio-temporal dimensions (x,y,z,t).
 
 [keywords]
 [[keywords]]
