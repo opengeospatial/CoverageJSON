@@ -432,7 +432,7 @@ The temporal datum, also know as an epoch, for both kinds of Temporal Reference 
   a client SHOULD interpret those dates in that reduced precision.
 - If `"type"` is `"TemporalRS"` and `"calendar"` is `"Gregorian"`, then the above lexical representation MUST be used.
 
-Example:
+Example of a calendar based Temporal Reference System:
 
 [%unnumbered%]
 ```json
@@ -441,6 +441,22 @@ Example:
   "calendar": "Gregorian"
 }
 ```
+
+Example of a Temporal Coordinate Reference System:
+
+[%unnumbered%]
+```json
+{
+  "type": "TemporalCRS",
+  "description": "Unix Time in Seconds, not milliseconds" 
+  "calendar": "Gregorian"
+  "epoch": "http://www.opengis.net/def/datum/OGC/0/UnixTimeDatum"
+  "id": "http://www.opengis.net/def/axis/OGC/0/seconds"
+}
+```
+The value of the `"type"` member MUST be "TemporalCRS"
+- The object MAY have an `"id"` member, whose value MUST be a string and SHOULD be a common identifier for the reference system.
+- The object MAY have a `"description"` member, where the value MUST be an i18n object, but no standardised content is interpreted from this description.
 
 [[identifier_based_reference_systems]]
 //### 6.3. Identifier-based Reference Systems
