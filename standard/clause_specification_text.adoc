@@ -409,9 +409,14 @@ Example of a vertical CRS, here representing height above the NAVD88 datum in me
 //### 6.2. Temporal Reference Systems
 ==== Temporal Reference Systems
 
-Time is referenced by a temporal reference system (temporal RS). In the current version of this Community Standard, only a string-based notation for time values is defined. Future versions of this Community Standard may allow for alternative notations, such as recording time values as numeric offsets from a given temporal datum (e.g. “days since 1970-01-01”).
+Time is referenced by a temporal reference system (temporal RS). A Temporal Reference System may be Calendar based, using dat-time specified with strings, or may be a Temporal Coordinate Reference System, using numeric values rather than strings.  
+In the orignal version, V1.0, of this Community Standard, only a string-based notation for time values is defined. 
 
-- A temporal RS object MUST have a member `"type"`. The only currently defined value of it is `"TemporalRS"`.
+This version, v1.0.1, of the Community Standard allows for the alternative notation, allowing the recording of time values as numeric offsets from a given temporal datum (e.g. “days since 1970-01-01”).
+
+The temporal datum, also know as an epoch, for both kinds of Temporal Reference Systems is always specified as a calendar based string.
+
+- A temporal RS object MUST have a member `"type"`. The only currently defined values are `"TemporalRS"` or `"TemporalCRS"`.
 - A temporal RS object MUST have a member `"calendar"` with value `"Gregorian"` or a URI.
 - If the Gregorian calendar is used, then `"calendar"` MUST have the value `"Gregorian"` and cannot be a URI.
 - A temporal RS object MAY have a member `"timeScale"` with a URI as value.
