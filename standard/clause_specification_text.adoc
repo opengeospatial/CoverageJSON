@@ -330,7 +330,7 @@ Reference system objects are used to provide information about how to interpret 
 [[geospatial_coordinate_reference_systems]]
 //### 6.1. Geospatial Coordinate Reference Systems
 ==== Geospatial Coordinate Reference Systems
-Geospatial coordinate reference systems (CRSs) link coordinate values to the Earth.
+Geospatial Coordinate Reference Systems (CRSs) link coordinate values to the Earth.  The fixed, stable, position on the Earth for anchoring the CRS is called a `datum`. A CRS definition may have a specific datum included, so that the CRS is complete. Other CRS definitions may rely on a separate datum definition that has to be specified explicitly. For example, if long term precision and accuracy of coordinates are required, the datum may be defined as fixed to a specific continental tectonic plate.
 
 //#### 6.1.1 Geographic Coordinate Reference Systems
 ===== Geographic Coordinate Reference Systems
@@ -339,6 +339,7 @@ Geographic CRSs anchor coordinate values to an ellipsoidal approximation of the 
 
  - The value of the `"type"` member MUST be "GeographicCRS"
  - The object MAY have an `"id"` member, whose value MUST be a string and SHOULD be a common identifier for the reference system.
+ - The object SHOULD have a `"datum"` member if the identified reference system definition does not specify a datum. 
  - The object MAY have a `"description"` member, where the value MUST be an i18n object, but no standardized content is interpreted from this description.
 
 Note that sometimes (e.g. for numerical model data) the exact CRS may not be known or may be undefined. In this case the `"id"` may be omitted, but the `"type"` still indicates that this is a geographic CRS. Therefore clients can still use geodetic longitude, geodetic latitude (and maybe height) axes, even if they cannot accurately georeference the information.
@@ -351,7 +352,7 @@ Example of a two-dimensional geographic CRS (longitude-latitude):
 ```json
 {
   "type": "GeographicCRS",
-  "id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+  "id": "https://www.opengis.net/def/crs/OGC/1.3/CRS84"
 }
 ```
 
@@ -361,7 +362,18 @@ Example of a three-dimensional geographic CRS (latitude-longitude-height):
 ```json
 {
   "type": "GeographicCRS",
-  "id": "http://www.opengis.net/def/crs/EPSG/0/4979"
+  "id": "https://www.opengis.net/def/crs/EPSG/0/4979"
+}
+```
+Example of a two-dimensional geographic CRS (longitude-latitude) that needs a separate datum:
+
+[%unnumbered%]
+```json
+{
+  "type": "GeographicCRS",
+  "id": "https://epsg.io/4277",
+  "datum": "https://epsg.io/6277-datum",
+  "description": "UK National Grid with the 1936 datum"
 }
 ```
 
@@ -372,6 +384,7 @@ Projected CRSs use two coordinates to denote positions on a Cartesian plane, whi
 
  - The value of the `"type"` member MUST be "ProjectedCRS"
  - The object MAY have an `"id"` member, whose value MUST be a string and SHOULD be a common identifier for the reference system.
+ - The object SHOULD have a `"datum"` member if the identified reference system definition does not specify a datum. 
  - The object MAY have a `"description"` member, where the value MUST be an i18n object, but no standardized content is interpreted from this description.
 
 If a Coverage conforms to one of the defined <<common_domain_types,domain types>> then the coordinate identifier `"x"` is used to denote easting and `"y"` is used for northing.
@@ -382,7 +395,19 @@ Example of a projected CRS using the http://spatialreference.org/ref/epsg/osgb-1
 ```json
 {
   "type": "ProjectedCRS",
-  "id": "http://www.opengis.net/def/crs/EPSG/0/27700"
+  "id": "https://www.opengis.net/def/crs/EPSG/0/27700"
+  "description": "British National Grid, United Kingdom Ordnance Survey" 
+}
+```
+Example of a projected CRS using a separate datum:
+
+[%unnumbered%]
+```json
+{
+  "type": "ProjectedCRS",
+  "id": "https://epsg.io/7706",
+  "datum": "https://epsg.io/6167-datum",
+  "description": "A moving platform grid with the New Zealand Geodetic Datum valid from March 2000"
 }
 ```
 
@@ -393,6 +418,7 @@ Vertical CRSs use a single coordinate to denote some measure of height or depth,
 
 - The value of the `"type"` member MUST be "VerticalCRS"
 - The object MAY have an `"id"` member, whose value MUST be a string and SHOULD be a common identifier for the reference system.
+- The object SHOULD have a `"datum"` member if the identified reference system definition does not specify a datum. 
 - The object MAY have a `"description"` member, where the value MUST be an i18n object, but no standardised content is interpreted from this description.
 
 Example of a vertical CRS, here representing height above the NAVD88 datum in metres:
@@ -401,7 +427,8 @@ Example of a vertical CRS, here representing height above the NAVD88 datum in me
 ```json
 {
   "type": "VerticalCRS",
-  "id": "http://www.opengis.net/def/crs/EPSG/0/5703"
+  "id": "https://www.opengis.net/def/crs/EPSG/0/5703"
+  "description": "North American Vertical Datum 1988"
 }
 ```
 
@@ -409,9 +436,14 @@ Example of a vertical CRS, here representing height above the NAVD88 datum in me
 //### 6.2. Temporal Reference Systems
 ==== Temporal Reference Systems
 
-Time is referenced by a temporal reference system (temporal RS). In the current version of this Community Standard, only a string-based notation for time values is defined. Future versions of this Community Standard may allow for alternative notations, such as recording time values as numeric offsets from a given temporal datum (e.g. “days since 1970-01-01”).
+Time is referenced by a Temporal Reference System (TemporalRS). A Temporal Reference System may be calendar-based, using date-time specified with strings, or may be a Temporal Coordinate Reference System (TemporalCRS), using numeric values rather than strings.  
+In the original version, V1.0, of this Community Standard, only a string-based notation for time values was defined. 
 
-- A temporal RS object MUST have a member `"type"`. The only currently defined value of it is `"TemporalRS"`.
+This version, V1.0.1, of the Community Standard allows for the alternative notation, allowing the recording of time values as numeric offsets from a given fixed temporal datum (e.g. “days since 1970-01-01”).
+
+The temporal datum, also know as an epoch, for both kinds of Temporal Reference Systems is always specified as a calendar-based string.
+
+- A temporal RS object MUST have a member `"type"`. The only currently defined values are `"TemporalRS"` or `"TemporalCRS"`.
 - A temporal RS object MUST have a member `"calendar"` with value `"Gregorian"` or a URI.
 - If the Gregorian calendar is used, then `"calendar"` MUST have the value `"Gregorian"` and cannot be a URI.
 - A temporal RS object MAY have a member `"timeScale"` with a URI as value.
@@ -427,12 +459,52 @@ Time is referenced by a temporal reference system (temporal RS). In the current 
   a client SHOULD interpret those dates in that reduced precision.
 - If `"type"` is `"TemporalRS"` and `"calendar"` is `"Gregorian"`, then the above lexical representation MUST be used.
 
-Example:
+//#### 6.2.1 Temporal calendar-based Reference Systems
+===== Temporal, calendar-based, Reference Systems
+
+A Temporal Reference System uses a calendar-based string notation to specify a date-time with respect to an epoch.
+
+Example of a calendar-based Temporal Reference System:
 
 [%unnumbered%]
 ```json
 {
   "type": "TemporalRS",
+  "calendar": "Gregorian"
+}
+```
+
+//#### 6.2.2 Temporal Coordinate Reference Systems
+===== Temporal Coordinate Reference Systems
+
+Temporal CRSs use a single coordinate with numerical values to denote some measure of time using a single unit of time.
+
+The value of the `"type"` member MUST be "TemporalCRS"
+- The object MAY have an `"id"` member, whose value MUST be a string and SHOULD be a common identifier for the reference system.
+- The object SHOULD have a `"datum"` member if the identified Temporal Coordinate Reference System definition does not specify a datum. 
+- The object MAY have a `"description"` member, where the value MUST be an i18n object, but no standardised content is interpreted from this description.
+
+Example of a Temporal Coordinate Reference System:
+
+[%unnumbered%]
+```json
+{
+  "type": "TemporalCRS",
+  "id": "http://www.opengis.net/def/axis/OGC/0/UnixTime",
+  "description": "Unix Time in Seconds since 1970-01-01T00:00 UTC",
+  "calendar": "Gregorian"
+  }
+```
+
+Example of a Temporal Coordinate Reference System with a separate datum/epoch:
+
+[%unnumbered%]
+```json
+{
+  "type": "TemporalCRS",
+  "id": "http://www.opengis.net/def/cs/OGC/0/Days",
+  "datum": "http://www.opengis.net/def/datum/OGC/0/TruncatedJulianDateDatum",
+  "description": "Julian Days, counted from an epoch of 1968-05-24T00:00 UTC", 
   "calendar": "Gregorian"
 }
 ```
