@@ -1,1 +1,755 @@
-
+$id	"https://schemas.opengis.net/covjson/1.0/coveragejson.json"
+$schema	"http://json-schema.org/draft-07/schema"
+description	"A CoverageJSON object"
+type	"object"
+properties	
+type	
+enum	
+0	"Domain"
+1	"NdArray"
+2	"TiledNdArray"
+3	"Coverage"
+4	"CoverageCollection"
+required	
+0	"type"
+allOf	
+0	
+if	
+properties	
+type	
+const	"Domain"
+then	
+$ref	"#/definitions/domain"
+1	
+if	
+properties	
+type	
+const	"NdArray"
+then	
+$ref	"#/definitions/ndArray"
+2	
+if	
+properties	
+type	
+const	"TiledNdArray"
+then	
+$ref	"#/definitions/tiledNdArray"
+3	
+if	
+properties	
+type	
+const	"Coverage"
+then	
+$ref	"#/definitions/coverage"
+4	
+if	
+properties	
+type	
+const	"CoverageCollection"
+then	
+$ref	"#/definitions/coverageCollection"
+definitions	
+anyAxis	
+description	"Validates any axis"
+if	
+required	
+0	"values"
+then	
+$ref	"#/definitions/valuesAxis"
+else	
+$ref	"#/definitions/numericRegularlySpacedAxis"
+coverage	
+allOf	
+0	
+$ref	"#/definitions/coverageBase"
+1	
+required	
+0	"parameters"
+properties	
+domain	
+if	
+type	"object"
+then	
+required	[ "referencing" ]
+coverageBase	
+description	"A Coverage, representing a mapping from a domain to sets of data values described by parameters."
+type	"object"
+properties	
+type	
+const	"Coverage"
+id	
+type	"string"
+domainType	
+type	"string"
+domain	
+allOf	
+0	
+type	
+0	"string"
+1	"object"
+1	
+if	
+type	"object"
+then	
+$ref	"#/definitions/domainBase"
+parameters	
+type	"object"
+patternProperties	
+.+	
+$ref	"#/definitions/parameter"
+parameterGroups	
+type	"array"
+items	
+$ref	"#/definitions/parameterGroup"
+ranges	
+type	"object"
+patternProperties	
+.+	
+allOf	
+0	{ type: (2)[…] }
+1	{ if: {…}, then: {…} }
+2	{ if: {…}, then: {…} }
+3	{ if: {…}, then: {…} }
+rangeAlternates	
+type	"object"
+required	
+0	"type"
+1	"domain"
+2	"ranges"
+coverageCollection	
+description	"A collection of coverage objects"
+properties	
+type	
+const	"CoverageCollection"
+domainType	
+type	"string"
+parameters	
+type	"object"
+patternProperties	
+.+	
+$ref	"#/definitions/parameter"
+parameterGroups	
+type	"array"
+items	
+$ref	"#/definitions/parameterGroup"
+referencing	
+type	"array"
+items	
+$ref	"#/definitions/referenceSystemConnection"
+coverages	
+type	"array"
+items	
+$ref	"#/definitions/coverageBase"
+required	
+0	"type"
+1	"coverages"
+allOf	
+0	
+$comment	"If no parameters are present at collection level then each coverage must have their own"
+if	
+not	
+required	
+0	"parameters"
+then	
+properties	
+coverages	
+items	{ required: (1)[…] }
+1	
+$comment	'If no "referencing" member is present at collection level then each coverage domain must have its own'
+if	
+not	
+required	
+0	"referencing"
+then	
+properties	
+coverages	
+items	{ properties: {…} }
+domain	
+allOf	
+0	
+$ref	"#/definitions/domainBase"
+1	
+required	
+0	"referencing"
+domainBase	
+description	"A Domain, which defines a set of positions and their extent in one or more referencing systems"
+type	"object"
+properties	
+type	
+const	"Domain"
+domainType	
+type	"string"
+axes	
+type	"object"
+description	"Set of Axis objects, keyed by axis identifier"
+minProperties	1
+patternProperties	
+.+	
+$ref	"#/definitions/anyAxis"
+referencing	
+type	"array"
+items	
+$ref	"#/definitions/referenceSystemConnection"
+required	
+0	"type"
+1	"axes"
+dependencies	
+domainType	
+allOf	
+0	
+if	
+properties	{ domainType: {…} }
+then	
+description	"Grid domain: x and y are required, z and t optional"
+properties	{ axes: {…} }
+1	
+if	
+properties	{ domainType: {…} }
+then	
+description	"Trajectory domain: mandatory composite axis and optional z axis"
+properties	{ axes: {…} }
+2	
+if	
+properties	{ domainType: {…} }
+then	
+description	"Vertical Profile domain: mandatory x, y and z axis and optional t axis"
+properties	{ axes: {…} }
+3	
+if	
+properties	{ domainType: {…} }
+then	
+description	"Point domain: mandatory x and y axis, optional z and t axis"
+properties	{ axes: {…} }
+4	
+if	
+properties	{ domainType: {…} }
+then	
+description	"PointSeries domain: mandatory x, y and t axis, optional z axis"
+properties	{ axes: {…} }
+5	
+if	
+properties	{ domainType: {…} }
+then	
+description	"MultiPoint domain: mandatory composite axis, optional t axis"
+properties	{ axes: {…} }
+6	
+if	
+properties	{ domainType: {…} }
+then	
+description	"MultiPointSeries domain: mandatory composite and t axes"
+properties	{ axes: {…} }
+7	
+if	
+properties	{ domainType: {…} }
+then	
+description	"Section domain: mandatory composite and z axes"
+properties	{ axes: {…} }
+8	
+if	
+properties	{ domainType: {…} }
+then	
+description	"Polygon domain: mandatory composite axis, optional z and t axes"
+properties	{ axes: {…} }
+9	
+if	
+properties	{ domainType: {…} }
+then	
+description	"PolygonSeries domain: mandatory composite axis, optional z and t axes"
+properties	{ axes: {…} }
+10	
+if	
+properties	{ domainType: {…} }
+then	
+description	"MultiPolygon domain: mandatory composite axis, optional z and t axes"
+properties	{ axes: {…} }
+11	
+if	
+properties	{ domainType: {…} }
+then	
+description	"MultiPolygonSeries domain: mandatory composite axis, optional z and t axes"
+properties	{ axes: {…} }
+i18n	
+type	"object"
+description	"Object representing an internationalised string where keys are BCP 47 language tags."
+patternProperties	
+^(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*))$	
+type	"string"
+additionalProperties	false
+ndArray	
+type	"object"
+description	"Object representing a multidimensional (>= 0D) array with named axes, encoded as a flat one-dimensional array in row-major order"
+properties	
+type	
+const	"NdArray"
+dataType	
+enum	
+0	"float"
+1	"integer"
+2	"string"
+shape	
+type	"array"
+items	
+type	"number"
+axisNames	
+type	"array"
+items	
+type	"string"
+uniqueItems	true
+values	
+type	"array"
+minItems	1
+allOf	
+0	
+if	
+properties	
+dataType	
+const	"float"
+then	
+properties	
+values	
+items	{ type: (2)[…] }
+1	
+if	
+properties	
+dataType	
+const	"integer"
+then	
+properties	
+values	
+items	{ type: (2)[…] }
+2	
+if	
+properties	
+dataType	
+const	"string"
+then	
+properties	
+values	
+items	{ type: (2)[…] }
+3	
+if	
+anyOf	
+0	
+properties	{ values: {…} }
+1	
+properties	{ shape: {…} }
+required	[ "shape" ]
+2	
+properties	{ axisNames: {…} }
+required	[ "axisNames" ]
+then	
+properties	
+shape	
+minItems	1
+axisNames	
+minItems	1
+required	
+0	"shape"
+1	"axisNames"
+required	
+0	"type"
+1	"dataType"
+2	"values"
+numericAxis	
+description	"Simple axis with numeric values"
+if	
+required	
+0	"values"
+then	
+$ref	"#/definitions/numericValuesAxis"
+else	
+$ref	"#/definitions/numericRegularlySpacedAxis"
+numericRegularlySpacedAxis	
+description	"A regularly-spaced numeric axis"
+properties	
+start	
+type	"number"
+stop	
+type	"number"
+num	
+type	"integer"
+minimum	1
+required	
+0	"start"
+1	"stop"
+2	"num"
+additionalProperties	false
+numericSingleValueAxis	
+description	"Axis defined by single numeric value"
+allOf	
+0	
+$ref	"#/definitions/numericValuesAxis"
+1	
+properties	
+values	
+maxItems	1
+numericValuesAxis	
+description	"Axis defined by list of numeric axis values and optional bounds"
+allOf	
+0	
+$ref	"#/definitions/valuesAxisBase"
+1	
+properties	
+values	
+items	
+type	"number"
+bounds	
+items	
+type	"number"
+additionalProperties	false
+observedProperty	
+type	"object"
+description	"A definition of the quantity being measured."
+properties	
+id	
+type	"string"
+label	
+$ref	"#/definitions/i18n"
+description	
+$ref	"#/definitions/i18n"
+categories	
+type	"array"
+items	
+type	"object"
+properties	
+id	
+type	"string"
+label	
+$ref	"#/definitions/i18n"
+description	
+$ref	"#/definitions/i18n"
+required	
+0	"id"
+1	"label"
+minItems	1
+required	
+0	"label"
+parameter	
+type	"object"
+description	"Represents metadata about the values of the coverage"
+properties	
+id	
+type	"string"
+type	
+description	'Type of the parameter object, must be "Parameter"'
+const	"Parameter"
+description	
+$ref	"#/definitions/i18n"
+observedProperty	
+$ref	"#/definitions/observedProperty"
+unit	
+$ref	"#/definitions/unit"
+categoryEncoding	
+type	"object"
+description	"Maps IDs of categories in the observedProperty to range values"
+patternProperties	
+.+	
+oneOf	
+0	{ type: "integer" }
+1	{ type: "array", minItems: 1, uniqueItems: true, … }
+required	
+0	"type"
+1	"observedProperty"
+parameterGroup	
+type	"object"
+description	"Represents logical groups of parameters"
+properties	
+type	
+description	'Type of the parameter group object, must be "ParameterGroup"'
+const	"ParameterGroup"
+id	
+type	"string"
+label	
+$ref	"#/definitions/i18n"
+description	
+$ref	"#/definitions/i18n"
+observedProperty	
+$ref	"#/definitions/observedProperty"
+members	
+type	"array"
+items	
+type	"string"
+minItems	1
+uniqueItems	true
+required	
+0	"type"
+1	"members"
+anyOf	
+0	
+required	
+0	"label"
+1	
+required	
+0	"observedProperty"
+polygonValuesAxis	
+description	"Polygon-based axis"
+allOf	
+0	
+$ref	"#/definitions/valuesAxisBase"
+1	
+properties	
+dataType	
+const	"polygon"
+values	
+items	
+description	"A GeoJSON polygon"
+type	"array"
+items	{ type: "array", minItems: 1, items: {…} }
+minItems	1
+coordinates	{}
+required	
+0	"dataType"
+1	"values"
+2	"coordinates"
+additionalProperties	false
+primitiveValuesAxis	
+description	"Validates any axis with primitive values"
+allOf	
+0	
+$ref	"#/definitions/valuesAxisBase"
+1	
+$comment	"This redundant branch exists to fail early with succinct errors"
+properties	
+values	
+items	
+oneOf	[ {…}, {…} ]
+2	
+if	
+properties	
+values	
+items	{ type: "number" }
+then	
+$ref	"#/definitions/numericValuesAxis"
+else	
+$ref	"#/definitions/stringValuesAxis"
+referenceSystem	
+type	"object"
+properties	
+type	
+type	"string"
+required	
+0	"type"
+allOf	
+0	
+if	
+properties	
+type	
+const	"TemporalRS"
+then	
+description	"Temporal reference system"
+properties	
+calendar	
+type	"string"
+oneOf	[ {…}, {…} ]
+timeScale	
+type	"string"
+required	
+0	"calendar"
+1	
+if	
+properties	
+type	
+const	"IdentifierRS"
+then	
+description	"An identifier-based reference system"
+properties	
+id	
+type	"string"
+label	
+$ref	"#/definitions/i18n"
+description	
+$ref	"#/definitions/i18n"
+targetConcept	
+$ref	"#/definitions/targetConcept"
+identifiers	
+type	"object"
+patternProperties	{ ".+": {…} }
+required	
+0	"targetConcept"
+referenceSystemConnection	
+description	"Reference System Connection object: connects coordinates to reference systems"
+type	"object"
+properties	
+coordinates	
+type	"array"
+items	
+type	"string"
+minItems	1
+system	
+$ref	"#/definitions/referenceSystem"
+required	
+0	"coordinates"
+1	"system"
+stringSingleValueAxis	
+description	"Axis defined by single string value"
+allOf	
+0	
+$ref	"#/definitions/stringValuesAxis"
+1	
+properties	
+values	
+maxItems	1
+stringValuesAxis	
+description	"Simple axis with string values (e.g. time strings)"
+allOf	
+0	
+$ref	"#/definitions/valuesAxisBase"
+1	
+properties	
+values	
+items	
+type	"string"
+bounds	
+items	
+type	"string"
+additionalProperties	false
+targetConcept	
+type	"object"
+properties	
+id	
+type	"string"
+label	
+$ref	"#/definitions/i18n"
+description	
+$ref	"#/definitions/i18n"
+required	
+0	"label"
+tiledNdArray	
+type	"object"
+description	"Object representing a multidimensional (>= 1D) array with named axes split up into sets of linked NdArray documents"
+properties	
+type	
+const	"TiledNdArray"
+dataType	
+enum	
+0	"float"
+1	"integer"
+2	"string"
+shape	
+type	"array"
+items	
+type	"number"
+minItems	1
+axisNames	
+type	"array"
+items	
+type	"string"
+minItems	1
+uniqueItems	true
+tileSets	
+type	"array"
+minItems	1
+items	
+type	"object"
+properties	
+tileShape	
+type	"array"
+items	{ type: (2)[…] }
+minItems	1
+urlTemplate	
+type	"string"
+description	"RFC 6570 Level 1 URI template"
+required	
+0	"tileShape"
+1	"urlTemplate"
+required	
+0	"type"
+1	"dataType"
+2	"shape"
+3	"axisNames"
+4	"tileSets"
+tupleValuesAxis	
+description	"Tuple-based axis"
+allOf	
+0	
+$ref	"#/definitions/valuesAxisBase"
+1	
+properties	
+dataType	
+const	"tuple"
+values	
+items	
+description	"A tuple of axis values (numbers or strings)"
+type	"array"
+items	{ type: (2)[…] }
+minItems	2
+coordinates	{}
+required	
+0	"dataType"
+1	"values"
+2	"coordinates"
+additionalProperties	false
+unit	
+type	"object"
+description	"The units of measure"
+properties	
+id	
+type	"string"
+label	
+$ref	"#/definitions/i18n"
+symbol	
+allOf	
+0	
+type	
+0	"string"
+1	"object"
+1	
+if	
+type	"object"
+then	
+properties	{ type: {…}, value: {…} }
+required	[ "type", "value" ]
+anyOf	
+0	
+required	
+0	"label"
+1	
+required	
+0	"symbol"
+valuesAxis	
+description	"Validates any values-based axis"
+allOf	
+0	
+$ref	"#/definitions/valuesAxisBase"
+1	
+if	
+not	
+required	
+0	"dataType"
+then	
+$ref	"#/definitions/primitiveValuesAxis"
+dependencies	
+dataType	
+allOf	
+0	
+if	
+properties	{ dataType: {…} }
+then	
+$ref	"#/definitions/tupleValuesAxis"
+1	
+if	
+properties	{ dataType: {…} }
+then	
+$ref	"#/definitions/polygonValuesAxis"
+valuesAxisBase	
+$comment	"Base schema for values-based axis schemas"
+properties	
+dataType	
+type	"string"
+not	
+const	"primitive"
+values	
+type	"array"
+minItems	1
+uniqueItems	true
+coordinates	
+type	"array"
+items	
+type	"string"
+minItems	2
+bounds	
+description	'Optional axis bounds. Must be twice as long (and same data type) as "values"'
+type	"array"
+minItems	2
+required	
+0
