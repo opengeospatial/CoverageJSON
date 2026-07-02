@@ -1,0 +1,11 @@
+{
+    "$id": "/schemas/targetConcept",
+    "description" : "A concept in an identifier-based reference system",
+    "properties" :
+    {
+        "id" : { "type" : "string" },
+        "label" : { "$ref" : "/schemas/i18n" },
+        "description" : { "$ref" : "/schemas/i18n" }
+    },
+    "required" : [ "label" ]
+}

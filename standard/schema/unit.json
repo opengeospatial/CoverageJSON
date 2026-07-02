@@ -1,0 +1,36 @@
+{
+    "$id": "/schemas/unit",
+    "type" : "object",
+    "description" : "The units of measure",
+    "properties" :
+    {
+       "id" : { "type" : "string" },
+       "label" : { "$ref" : "/schemas/i18n" },
+       "symbol" :
+       {
+           "allOf":
+           [
+                { 
+                    "type": [ "string", "object" ]
+                },
+                {
+                    "if": { "type": "object" },
+                    "then":
+                    {
+                        "properties" :
+                        {
+                            "type" : { "type" : "string" },
+                            "value" : { "type" : "string" }
+                        },
+                        "required" : [ "type", "value" ]
+                    }
+                }
+           ]
+       }
+    },
+    "anyOf" :
+    [
+        { "required" : [ "label" ] },
+        { "required" : [ "symbol" ] }
+    ]
+}

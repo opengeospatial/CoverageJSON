@@ -1,0 +1,102 @@
+{
+    "$id" : "/schemas/coverageBase",
+    "description" : "A Coverage, representing a mapping from a domain to sets of data values described by parameters.",
+    "type" : "object",
+    "properties" :
+    {
+        "type" : { "const" : "Coverage" },
+        "id": { "type": "string" },
+        "domainType" : { "type" : "string" },
+        "domain":
+        {
+            "allOf" : 
+            [
+                { 
+                    "type": [ "string", "object" ]
+                },
+                {
+                    "if": { "type": "object" },
+                    "then": { "$ref" : "/schemas/domainBase" }
+                }
+            ]
+        },
+        "parameters":
+        {
+            "type": "object",
+            "patternProperties" :
+            {
+                ".+" : { "$ref": "/schemas/parameter" }
+            }
+        },
+        "parameterGroups":
+        {
+            "type": "array",
+            "items": { "$ref": "/schemas/parameterGroup" }
+        },
+        "ranges":
+        {
+            "type": "object",
+            "patternProperties" :
+            {
+                ".+" : 
+                {
+                    "allOf" : 
+                    [
+                        { 
+                            "type": [ "string", "object" ]
+                        },
+                        {
+                            "if":
+                            {
+                                "type": "object"
+                            },
+                            "then":
+                            {
+                                "properties":
+                                {
+                                    "type": 
+                                    {
+                                        "enum":
+                                        [
+                                            "NdArray",
+                                            "TiledNdArray"
+                                        ]
+                                    }
+                                },
+                                "required": ["type"]
+                            }
+                        },
+                        {
+                            "if":
+                            {
+                                "type": "object",
+                                "properties" :
+                                {
+                                    "type" : { "const" : "NdArray" }
+                                }
+                            },
+                            "then":{ "$ref": "/schemas/ndArray" }
+                        },
+                        {
+                            "if":
+                            {
+                                "type": "object",
+                                "properties" :
+                                {
+                                    "type" : { "const" : "TiledNdArray" }
+                                }
+                            },
+                            "then":{ "$ref": "/schemas/tiledNdArray" }
+                        }
+                    ]
+                }
+            }
+        },
+        "rangeAlternates":
+        {
+            "type": "object"
+        }
+    },
+    "required" : [ "type", "domain", "ranges" ]
+
+}

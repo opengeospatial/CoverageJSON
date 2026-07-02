@@ -1,0 +1,56 @@
+{
+    "$id": "/schemas/referenceSystem",
+    "type" : "object",
+    "properties" :
+    {
+        "type" : { "type": "string" }
+    },
+    "required" : [ "type" ],
+    "allOf" :
+    [
+        {
+            "if": { "properties" : { "type" : { "const" : "TemporalRS" } } },
+            "then":
+            {
+                "description" : "Temporal reference system",
+                "properties" :
+                {
+                    "calendar" : 
+                    {
+                        "type" : "string",
+                        "oneOf" :
+                        [
+                            { "const" : "Gregorian" },
+                            { "pattern": "^https?://" }
+                        ]
+                    },
+                    "timeScale" : { "type" : "string" }
+                },
+                "required" : [ "calendar" ]
+            }
+        },
+        {
+            "if": { "properties" : { "type" : { "const" : "IdentifierRS" } } },
+            "then":
+            {
+                "description" : "An identifier-based reference system",
+                "properties" :
+                {
+                    "id" : { "type" : "string" },
+                    "label" : { "$ref" : "/schemas/i18n" },
+                    "description" : { "$ref" : "/schemas/i18n" },
+                    "targetConcept" : { "$ref" : "/schemas/targetConcept" },
+                    "identifiers" :
+                    {
+                        "type" : "object",
+                        "patternProperties" :
+                        {
+                            ".+" : { "$ref" : "/schemas/targetConcept" }
+                        }
+                    }
+                },
+                "required" : [ "targetConcept" ]
+            }
+        }
+    ]
+}

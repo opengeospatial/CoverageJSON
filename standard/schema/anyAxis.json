@@ -1,0 +1,7 @@
+{
+    "$id": "/schemas/anyAxis",
+    "description" : "Validates any axis",
+    "if" : { "required" : [ "values" ] },
+    "then": { "$ref": "/schemas/valuesAxis"  },
+    "else": { "$ref": "/schemas/numericRegularlySpacedAxis" }
+}

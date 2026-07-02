@@ -1,0 +1,17 @@
+{
+    "$id": "/schemas/stringSingleValueAxis",
+    "description" : "Axis defined by single string value",
+    "allOf" :
+    [
+        { "$ref": "/schemas/stringValuesAxis" },
+        {
+            "properties" :
+            {
+                "values" :
+                {
+                    "maxItems" : 1
+                }
+            }
+        }
+    ]
+}

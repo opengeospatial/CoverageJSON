@@ -1,0 +1,13 @@
+{
+    "$id" : "/schemas/coverage",
+    "$ref": "/schemas/coverageBase",
+    "required" : [ "parameters" ],
+    "properties":
+    {
+        "domain":
+        {
+            "if": { "type": "object" },
+            "then": { "required": [ "referencing" ] }
+        }
+    }
+}

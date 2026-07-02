@@ -1,0 +1,5 @@
+{
+    "$id" : "/schemas/domain",
+    "$ref": "/schemas/domainBase",
+    "required" : [ "referencing" ]
+}

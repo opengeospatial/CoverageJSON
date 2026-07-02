@@ -1,0 +1,31 @@
+{
+    "$id": "/schemas/parameterGroup",
+    "type" : "object",
+    "description" : "Represents logical groups of parameters",
+    "properties" :
+    {
+        "type":
+        {
+            "description": "Type of the parameter group object, must be \"ParameterGroup\"",
+            "const": "ParameterGroup"
+        },
+        "id": { "type": "string" },
+        "label" : { "$ref" : "/schemas/i18n" },
+        "description": { "$ref" : "/schemas/i18n" },
+        "observedProperty": { "$ref" : "/schemas/observedProperty" },
+        "members":
+        {
+            "type": "array",
+            "items": { "type": "string" },
+            "minItems": 1,
+            "uniqueItems": true
+        }
+
+    },
+    "required": [ "type", "members" ],
+    "anyOf":
+    [
+        { "required": [ "label" ] },
+        { "required": [ "observedProperty" ]}
+    ]
+}

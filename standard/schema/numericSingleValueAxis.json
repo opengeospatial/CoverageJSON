@@ -1,0 +1,17 @@
+{
+    "$id": "/schemas/numericSingleValueAxis",
+    "description" : "Axis defined by single numeric value",
+    "allOf" :
+    [
+        { "$ref": "/schemas/numericValuesAxis" },
+        {
+            "properties" :
+            {
+                "values" :
+                {
+                    "maxItems" : 1
+                }
+            }
+        }
+    ]
+}

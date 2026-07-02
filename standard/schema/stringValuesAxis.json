@@ -1,0 +1,21 @@
+{
+    "$id": "/schemas/stringValuesAxis",
+    "description" : "Simple axis with string values (e.g. time strings)",
+    "allOf" : [
+        { "$ref": "/schemas/valuesAxisBase" },
+        {
+            "properties" :
+            {
+                "values" :
+                {
+                    "items" : { "type" : "string" }
+                },
+                "bounds" :
+                {
+                    "items" : { "type" : "string" }
+                }
+            },
+            "additionalProperties" : false
+        }
+    ]
+}
