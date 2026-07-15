@@ -1,0 +1,39 @@
+{
+    "$id": "/schemas/parameter",
+    "type" : "object",
+    "description" : "Represents metadata about the values of the coverage",
+    "properties" :
+    {
+        "id": { "type": "string" },
+        "type":
+        {
+            "description": "Type of the parameter object, must be \"Parameter\"",
+            "const": "Parameter"
+        },
+        "description": { "$ref" : "/schemas/i18n" },
+        "observedProperty": { "$ref" : "/schemas/observedProperty" },
+        "unit": { "$ref" : "/schemas/unit" },
+        "categoryEncoding" :
+        {
+            "type" : "object",
+            "description" : "Maps IDs of categories in the observedProperty to range values",
+            "patternProperties" :
+            {
+                ".+" :
+                {
+                    "oneOf" :
+                    [
+                        { "type" : "integer" },
+                        {
+                            "type" : "array",
+                            "items" : { "type" : "integer" },
+                            "minItems" : 1,
+                            "uniqueItems" : true
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "required": [ "type", "observedProperty" ]
+}

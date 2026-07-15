@@ -1,0 +1,3 @@
+The various components of the CoverageJSON schema, which can be built into the CoverageJSON.json bundle and also tweaked to create the appropriate dialect of JSON Schema. 
+The original community-based CoverageJSON used dialect DRAFT-07. The current OGC version 1.0 uses 2019-09. V1.0.1 will probably use dialect 2020-12, as required by OpenAPI V3.1.
+In the future, IETF will probably define a standardised JSON Schema.

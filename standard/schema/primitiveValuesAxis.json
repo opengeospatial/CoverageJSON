@@ -1,0 +1,36 @@
+{
+    "$id": "/schemas/primitiveValuesAxis",
+    "description" : "Validates any axis with primitive values",
+    "allOf" :
+    [
+        { "$ref" : "/schemas/valuesAxisBase" },
+        {
+            "$comment": "This redundant branch exists to fail early with succinct errors",
+            "properties" : 
+            {
+                "values" : 
+                {
+                    "items" :
+                    {
+                        "oneOf" :
+                        [
+                            { "type" : "number" },
+                            { "type" : "string" }
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "if" :
+            {
+                "properties" :
+                {
+                    "values" : { "items" : { "type" : "number" } }
+                }
+            },
+            "then": { "$ref" : "/schemas/numericValuesAxis" },
+            "else": { "$ref" : "/schemas/stringValuesAxis" }
+        }
+    ]
+}

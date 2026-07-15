@@ -1,0 +1,41 @@
+{
+    "$id": "/schemas/valuesAxis",
+    "description" : "Validates any values-based axis",
+    "allOf" :
+    [
+        { "$ref": "/schemas/valuesAxisBase" },
+        {
+            "if": { "not": { "required": [ "dataType" ] } },
+            "then": { "$ref" : "/schemas/primitiveValuesAxis" }
+        }
+    ],
+    "dependentSchemas":
+    {
+        "dataType":
+        {
+            "allOf":
+            [
+                {
+                    "if" :
+                    {
+                        "properties" :
+                        {
+                            "dataType" : { "const": "tuple" }
+                        }
+                    },
+                    "then": { "$ref" : "/schemas/tupleValuesAxis" }
+                },
+                {
+                    "if" :
+                    {
+                        "properties" :
+                        {
+                            "dataType" : { "const": "polygon" }
+                        }
+                    },
+                    "then": { "$ref" : "/schemas/polygonValuesAxis" }
+                }
+            ]
+        }
+    }
+}

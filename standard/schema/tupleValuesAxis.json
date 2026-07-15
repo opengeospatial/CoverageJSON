@@ -1,0 +1,29 @@
+{
+    "$id": "/schemas/tupleValuesAxis",
+    "description" : "Tuple-based axis",
+    "allOf" : [
+        { "$ref": "/schemas/valuesAxisBase" },
+        {
+            "properties" :
+            {
+                "dataType" : { "const" : "tuple" },
+                "values" :
+                {
+                    "items" :
+                    {
+                        "description" : "A tuple of axis values (numbers or strings)",
+                        "type" : "array",
+                        "items" :
+                        {
+                            "type": [ "number", "string" ]
+                        },
+                        "minItems" : 2
+                    }
+                },
+                "coordinates": { }
+            },
+            "required" : [ "dataType", "values", "coordinates" ],
+            "additionalProperties" : false
+        }
+]
+}

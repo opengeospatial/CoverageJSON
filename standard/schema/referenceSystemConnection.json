@@ -1,0 +1,19 @@
+{
+    "$id" : "/schemas/referenceSystemConnection",
+    "description" : "Reference System Connection object: connects coordinates to reference systems",
+    "type" : "object",
+    "properties" :
+    {
+        "coordinates" :
+        {
+            "type" : "array",
+            "items" : { "type" : "string" },
+            "minItems" : 1
+        },
+        "system" :
+        {
+            "$ref" : "/schemas/referenceSystem"
+        }
+    },
+    "required" : [ "coordinates", "system" ]
+}

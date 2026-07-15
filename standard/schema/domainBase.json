@@ -1,0 +1,453 @@
+{
+    "$id" : "/schemas/domainBase",
+    "description" : "A Domain, which defines a set of positions and their extent in one or more referencing systems",
+    "type" : "object",
+    "properties" :
+    {
+        "type" : { "const" : "Domain" },
+        "domainType" : { "type" : "string" },
+        "axes" :
+        {
+            "type" : "object",
+            "description" : "Set of Axis objects, keyed by axis identifier",
+            "minProperties" : 1,
+            "patternProperties" :
+            {
+                ".+" : { "$ref" : "/schemas/anyAxis" }
+            }
+        },
+        "referencing" :
+        {
+            "type" : "array",
+            "items" : { "$ref" : "/schemas/referenceSystemConnection" }
+        }
+    },
+    "required" : [ "type", "axes" ],
+    "dependentSchemas":
+    {
+        "domainType":
+        {
+            "allOf":
+            [
+                {
+                    "if": { "properties" : { "domainType" : { "const" : "Grid" } } },
+                    "then":
+                    {
+                        "description" : "Grid domain: x and y are required, z and t optional",
+                        "properties" :
+                        { 
+                            "axes" :
+                            {
+                                "properties" :
+                                {
+                                    "x" : { "$ref" : "/schemas/numericAxis" },
+                                    "y" : { "$ref" : "/schemas/numericAxis" },
+                                    "z" : { "$ref" : "/schemas/numericAxis" },
+                                    "t" : { "$ref" : "/schemas/stringValuesAxis" }
+                                },
+                                "required" : [ "x", "y" ],
+                                "additionalProperties" : false
+                            }
+                        }
+                    }
+                },
+                {
+                    "if": { "properties" : { "domainType" : { "const" : "Trajectory" } } },
+                    "then":
+                    {
+                        "description" : "Trajectory domain: mandatory composite axis and optional z axis",
+                        "properties" :
+                        { 
+                            "axes" :
+                            {
+                                "properties" :
+                                {
+                                    "composite" :
+                                    {
+                                        "allOf" :
+                                        [
+                                            { "$ref": "/schemas/tupleValuesAxis" },
+                                            {
+                                                "properties" :
+                                                {
+                                                    "values" :
+                                                    {
+                                                        "items" :
+                                                        {
+                                                            "$comment" : "In a Trajectory, tuples always have 3 (txy) or 4 (txyz) values",
+                                                            "minItems" : 3,
+                                                            "maxItems" : 4
+                                                        }
+                                                    },
+                                                    "coordinates": 
+                                                    {
+                                                        "enum":
+                                                        [
+                                                            ["t", "x", "y", "z"],
+                                                            ["t", "x", "y"]
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "z" : { "$ref" : "/schemas/numericSingleValueAxis"}
+                                },
+                                "required" : [ "composite" ],
+                                "additionalProperties" : false
+                            }
+                        }
+                    }
+                },
+                {
+                    "if": { "properties" : { "domainType" : { "const" : "VerticalProfile" } } },
+                    "then":
+                    {
+                        "description" : "Vertical Profile domain: mandatory x, y and z axis and optional t axis",
+                        "properties" :
+                        { 
+                            "axes" :
+                            {
+                                "properties" :
+                                {
+                                    "x" : { "$ref" : "/schemas/numericSingleValueAxis"},
+                                    "y" : { "$ref" : "/schemas/numericSingleValueAxis"},
+                                    "z" : { "$ref" : "/schemas/numericAxis" },
+                                    "t" : { "$ref" : "/schemas/stringSingleValueAxis" }
+                                },
+                                "required" : [ "x", "y", "z" ],
+                                "additionalProperties" : false
+                            }
+                        }
+                    }
+                },
+                {
+                    "if": { "properties" : { "domainType" : { "const" : "Point" } } },
+                    "then":
+                    {
+                        "description" : "Point domain: mandatory x and y axis, optional z and t axis",
+                        "properties" :
+                        { 
+                            "axes" :
+                            {
+                                "properties" :
+                                {
+                                    "x" : { "$ref" : "/schemas/numericSingleValueAxis" },
+                                    "y" : { "$ref" : "/schemas/numericSingleValueAxis" },
+                                    "z" : { "$ref" : "/schemas/numericSingleValueAxis" },
+                                    "t" : { "$ref" : "/schemas/stringSingleValueAxis" }
+                                },
+                                "required" : [ "x", "y" ],
+                                "additionalProperties" : false
+                            }
+                        }
+                    }
+                },
+                {
+                    "if": { "properties" : { "domainType" : { "const" : "PointSeries" } } },
+                    "then":
+                    {
+                        "description" : "PointSeries domain: mandatory x, y and t axis, optional z axis",
+                        "properties" :
+                        { 
+                            "axes" :
+                            {
+                                "properties" :
+                                {
+                                    "x" : { "$ref" : "/schemas/numericSingleValueAxis" },
+                                    "y" : { "$ref" : "/schemas/numericSingleValueAxis" },
+                                    "z" : { "$ref" : "/schemas/numericSingleValueAxis" },
+                                    "t" : { "$ref" : "/schemas/stringValuesAxis" }
+                                },
+                                "required" : [ "x", "y", "t" ],
+                                "additionalProperties" : false
+                            }
+                        }
+                    }
+                },
+                {
+                    "if": { "properties" : { "domainType" : { "const" : "MultiPoint" } } },
+                    "then":
+                    {
+                        "description" : "MultiPoint domain: mandatory composite axis, optional t axis",
+                        "properties" :
+                        { 
+                            "axes" :
+                            {
+                                "properties" :
+                                {
+                                    "composite" :
+                                    {
+                                        "allOf" :
+                                        [
+                                            { "$ref": "/schemas/tupleValuesAxis" },
+                                            {
+                                                "properties" :
+                                                {
+                                                    "values" :
+                                                    {
+                                                        "items" :
+                                                        {
+                                                            "$comment" : "In a MultiPoint, tuples always have 2 (xy) or 3 values (xyz)",
+                                                            "minItems" : 2,
+                                                            "maxItems" : 3
+                                                        }
+                                                    },
+                                                    "coordinates": 
+                                                    {
+                                                        "enum":
+                                                        [
+                                                            ["x", "y", "z"],
+                                                            ["x", "y"]
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "t" : { "$ref" : "/schemas/stringSingleValueAxis" }
+                                },
+                                "required" : [ "composite" ],
+                                "additionalProperties" : false
+                            }
+                        }
+                    }
+                },
+                {
+                    "if": { "properties" : { "domainType" : { "const" : "MultiPointSeries" } } },
+                    "then":
+                    {
+                        "description" : "MultiPointSeries domain: mandatory composite and t axes",
+                        "properties" :
+                        { 
+                            "axes" :
+                            {
+                                "properties" :
+                                {
+                                    "composite" :
+                                    {
+                                        "allOf" :
+                                        [
+                                            { "$ref": "/schemas/tupleValuesAxis" },
+                                            {
+                                                "properties" :
+                                                {
+                                                    "values" :
+                                                    {
+                                                        "items" :
+                                                        {
+                                                            "$comment" : "In a MultiPointSeries, tuples always have 2 (xy) or 3 values (xyz)",
+                                                            "minItems" : 2,
+                                                            "maxItems" : 3
+                                                        }
+                                                    },
+                                                    "coordinates": 
+                                                    {
+                                                        "enum":
+                                                        [
+                                                            ["x", "y", "z"],
+                                                            ["x", "y"]
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "t" : { "$ref" : "/schemas/stringValuesAxis" }
+                                },
+                                "required" : [ "composite", "t" ],
+                                "additionalProperties" : false
+                            }
+                        }
+                    }
+                },
+                {
+                    "if": { "properties" : { "domainType" : { "const" : "Section" } } },
+                    "then":
+                    {
+                        "description" : "Section domain: mandatory composite and z axes",
+                        "properties" :
+                        { 
+                            "axes" :
+                            {
+                                "properties" :
+                                {
+                                    "composite" :
+                                    {
+                                        "allOf" :
+                                        [
+                                            { "$ref": "/schemas/tupleValuesAxis" },
+                                            {
+                                                "properties" :
+                                                {
+                                                    "values" :
+                                                    {
+                                                        "items" :
+                                                        {
+                                                            "$comment" : "In a Section, tuples always have 3 values (txy)",
+                                                            "minItems" : 3,
+                                                            "maxItems" : 3
+                                                        }
+                                                    },
+                                                    "coordinates": 
+                                                    {
+                                                        "const": ["t", "x", "y"]
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "z" : { "$ref" : "/schemas/numericAxis" }
+                                },
+                                "required" : [ "composite", "z" ],
+                                "additionalProperties" : false
+                            }
+                        }
+                    }
+                },
+                {
+                    "if": { "properties" : { "domainType" : { "const" : "Polygon" } } },
+                    "then":
+                    {
+                        "description" : "Polygon domain: mandatory composite axis, optional z and t axes",
+                        "properties" :
+                        { 
+                            "axes" :
+                            {
+                                "properties" :
+                                {
+                                    "composite" :
+                                    {
+                                        "allOf" :
+                                        [
+                                            { "$ref": "/schemas/polygonValuesAxis" },
+                                            {
+                                                "properties" :
+                                                {
+                                                    "values" :
+                                                    {
+                                                        "$comment" : "There can only be one polygon in the axis",
+                                                        "maxItems" : 1
+                                                    },
+                                                    "coordinates": { "const" : ["x", "y"] }
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "z" : { "$ref" : "/schemas/numericSingleValueAxis" },
+                                    "t" : { "$ref" : "/schemas/stringSingleValueAxis" }
+                                },
+                                "required" : [ "composite" ],
+                                "additionalProperties" : false
+                            }
+                        }
+                    }
+                },
+                {
+                    "if": { "properties" : { "domainType" : { "const" : "PolygonSeries" } } },
+                    "then":
+                    {
+                        "description" : "PolygonSeries domain: mandatory composite axis, optional z and t axes",
+                        "properties" :
+                        { 
+                            "axes" :
+                            {
+                                "properties" :
+                                {
+                                    "composite" :
+                                    {
+                                        "allOf" :
+                                        [
+                                            { "$ref": "/schemas/polygonValuesAxis" },
+                                            {
+                                                "properties" :
+                                                {
+                                                    "values" :
+                                                    {
+                                                        "$comment" : "There can only be one polygon in the axis",
+                                                        "maxItems" : 1
+                                                    },
+                                                    "coordinates": { "const" : ["x", "y"] }
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "z" : { "$ref" : "/schemas/numericSingleValueAxis" },
+                                    "t" : { "$ref" : "/schemas/stringValuesAxis" }
+                                },
+                                "required" : [ "composite" ],
+                                "additionalProperties" : false
+                            }
+                        }
+                    }
+                },
+                {
+                    "if": { "properties" : { "domainType" : { "const" : "MultiPolygon" } } },
+                    "then":
+                    {
+                        "description" : "MultiPolygon domain: mandatory composite axis, optional z and t axes",
+                        "properties" :
+                        { 
+                            "axes" :
+                            {
+                                "properties" :
+                                {
+                                    "composite" :
+                                    { 
+                                        "allOf" :
+                                        [
+                                            { "$ref": "/schemas/polygonValuesAxis" },
+                                            {
+                                                "properties" :
+                                                {
+                                                    "coordinates": { "const" : ["x", "y"] }
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "z" : { "$ref" : "/schemas/numericSingleValueAxis" },
+                                    "t" : { "$ref" : "/schemas/stringSingleValueAxis" }
+                                },
+                                "required" : [ "composite" ],
+                                "additionalProperties" : false
+                            }
+                        }
+                    }
+                },
+                {
+                    "if": { "properties" : { "domainType" : { "const" : "MultiPolygonSeries" } } },
+                    "then":
+                    {
+                        "description" : "MultiPolygonSeries domain: mandatory composite axis, optional z and t axes",
+                        "properties" :
+                        { 
+                            "axes" :
+                            {
+                                "properties" :
+                                {
+                                    "composite" :
+                                    {
+                                        "allOf" :
+                                        [
+                                            { "$ref": "/schemas/polygonValuesAxis" },
+                                            {
+                                                "properties" :
+                                                {
+                                                    "coordinates": { "const" : ["x", "y"] }
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "z" : { "$ref" : "/schemas/numericSingleValueAxis" },
+                                    "t" : { "$ref" : "/schemas/stringValuesAxis" }
+                                },
+                                "required" : [ "composite" ],
+                                "additionalProperties" : false
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

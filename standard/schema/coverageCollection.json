@@ -1,0 +1,88 @@
+{
+    "$id" : "/schemas/coverageCollection",
+    "description": "A collection of coverage objects",
+    "properties":
+    {
+        "type" : { "const" : "CoverageCollection" },
+        "domainType": { "type": "string" },
+        "parameters":
+        {
+            "type": "object",
+            "patternProperties" :
+            {
+                ".+" : { "$ref": "/schemas/parameter" }
+            }
+        },
+        "parameterGroups":
+        {
+            "type": "array",
+            "items": { "$ref": "/schemas/parameterGroup" }
+        },
+        "referencing":
+        {
+            "type": "array",
+            "items": { "$ref": "/schemas/referenceSystemConnection" }
+        },
+        "coverages": {
+            "type": "array",
+            "items": { "$ref": "/schemas/coverageBase" }
+        }
+    },
+    "required" : [ "type", "coverages" ],
+    "allOf":
+    [
+        {
+            "$comment": "If no parameters are present at collection level then each coverage must have their own",
+            "if":
+            {
+                "not":
+                {
+                    "required": [ "parameters" ]
+                }
+            },
+            "then":
+            {
+                "properties":
+                {
+                    "coverages":
+                    {
+                        "items":
+                        {
+                            "required": [ "parameters" ]
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "$comment": "If no \"referencing\" member is present at collection level then each coverage domain must have its own",
+            "if":
+            {
+                "not":
+                {
+                    "required": [ "referencing" ]
+                }
+            },
+            "then":
+            {
+                "properties":
+                {
+                    "coverages":
+                    {
+                        "items":
+                        {
+                            "properties":
+                            {
+                                "domain":
+                                {
+                                    "if": { "type": "object" },
+                                    "then": { "required": [ "referencing" ] }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}

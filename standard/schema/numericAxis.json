@@ -1,0 +1,7 @@
+{
+    "$id": "/schemas/numericAxis",
+    "description" : "Simple axis with numeric values",
+    "if" : { "required" : [ "values" ] },
+    "then": { "$ref" : "/schemas/numericValuesAxis" },
+    "else": { "$ref" : "/schemas/numericRegularlySpacedAxis" }
+}

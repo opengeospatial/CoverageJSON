@@ -1,0 +1,37 @@
+{
+    "$id": "/schemas/polygonValuesAxis",
+    "description" : "Polygon-based axis",
+    "allOf" : [
+        { "$ref": "/schemas/valuesAxisBase" },
+        {
+            "properties" :
+            {
+                "dataType" : { "const" : "polygon" },
+                "values" :
+                {
+                    "items" :
+                    {
+                        "description" : "A GeoJSON polygon",
+                        "type" : "array",
+                        "items" :
+                        {
+                            "type" : "array",
+                            "items" :
+                            {
+                                "description" : "The inner array: the coordinates themselves",
+                                "type" : "array",
+                                "items" : { "type" : "number" },
+                                "minItems" : 2
+                            },
+                            "minItems" : 1
+                        },
+                        "minItems" : 1
+                    }
+                },
+                "coordinates": { }
+            },
+            "required" : [ "dataType", "values", "coordinates" ],
+            "additionalProperties" : false
+        }
+    ]
+}

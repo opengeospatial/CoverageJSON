@@ -1,0 +1,28 @@
+{
+    "$id": "/schemas/observedProperty",
+    "type" : "object",
+    "description" : "A definition of the quantity being measured.",
+    "properties" :
+    {
+      "id" : { "type" : "string" },
+      "label" : { "$ref" : "/schemas/i18n" },
+      "description" : { "$ref" : "/schemas/i18n" },
+      "categories" :
+      {
+        "type" : "array",
+        "items" :
+        {
+          "type" : "object",
+          "properties" :
+          {
+            "id" : { "type" : "string" },
+            "label" : { "$ref" : "/schemas/i18n" },
+            "description" : { "$ref" : "/schemas/i18n" }
+          },
+          "required" : [ "id", "label" ]
+        },
+        "minItems" : 1
+      }
+    },
+    "required" : [ "label" ]
+}
