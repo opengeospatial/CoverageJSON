@@ -43,7 +43,10 @@
                                     "x" : { "$ref" : "/schemas/numericAxis" },
                                     "y" : { "$ref" : "/schemas/numericAxis" },
                                     "z" : { "$ref" : "/schemas/numericAxis" },
-                                    "t" : { "$ref" : "/schemas/stringValuesAxis" }
+                                    "t" : {  "oneOf": [  { "$ref" : "/schemas/numericAxis" },
+                                                         { "$ref" : "/schemas/stringValuesAxis" }
+                                                      ] 
+                                          }                        
                                 },
                                 "required" : [ "x", "y" ],
                                 "additionalProperties" : false
