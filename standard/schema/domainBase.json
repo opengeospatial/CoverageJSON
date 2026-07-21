@@ -116,10 +116,7 @@
                                     "x" : { "$ref" : "/schemas/numericSingleValueAxis"},
                                     "y" : { "$ref" : "/schemas/numericSingleValueAxis"},
                                     "z" : { "$ref" : "/schemas/numericAxis" },
-                                    "t" : {  "oneOf": [  { "$ref" : "/schemas/numericAxis" },
-                                                         { "$ref" : "/schemas/stringValuesAxis" }
-                                                      ] 
-                                          }                        
+                                    "t" : { "$ref" : "/schemas/stringSingleValuesAxis" }                      
                                 },
                                 "required" : [ "x", "y", "z" ],
                                 "additionalProperties" : false
@@ -141,10 +138,7 @@
                                     "x" : { "$ref" : "/schemas/numericSingleValueAxis" },
                                     "y" : { "$ref" : "/schemas/numericSingleValueAxis" },
                                     "z" : { "$ref" : "/schemas/numericSingleValueAxis" },
-                                    "t" : {  "oneOf": [  { "$ref" : "/schemas/numericAxis" },
-                                                         { "$ref" : "/schemas/stringValuesAxis" }
-                                                      ] 
-                                          }                        
+                                    "t" : { "$ref" : "/schemas/stringSingleValuesAxis" }                       
                                 },
                                 "required" : [ "x", "y" ],
                                 "additionalProperties" : false
@@ -217,10 +211,7 @@
                                             }
                                         ]
                                     },
-                                    "t" : {  "oneOf": [  { "$ref" : "/schemas/numericAxis" },
-                                                         { "$ref" : "/schemas/stringValuesAxis" }
-                                                      ] 
-                                          }                        
+                                    "t" : { "$ref" : "/schemas/stringSingleValuesAxis" }                      
                                 },
                                 "required" : [ "composite" ],
                                 "additionalProperties" : false
@@ -353,10 +344,7 @@
                                         ]
                                     },
                                     "z" : { "$ref" : "/schemas/numericSingleValueAxis" },
-                                    "t" : {  "oneOf": [  { "$ref" : "/schemas/numericAxis" },
-                                                         { "$ref" : "/schemas/stringValuesAxis" }
-                                                      ] 
-                                          }                        
+                                    "t" : { "$ref" : "/schemas/stringSingleValuesAxis" }                 
                                 },
                                 "required" : [ "composite" ],
                                 "additionalProperties" : false
@@ -430,10 +418,7 @@
                                         ]
                                     },
                                     "z" : { "$ref" : "/schemas/numericSingleValueAxis" },
-                                    "t" : {  "oneOf": [  { "$ref" : "/schemas/numericAxis" },
-                                                         { "$ref" : "/schemas/stringValuesAxis" }
-                                                      ] 
-                                          }                        
+                                    "t" : { "$ref" : "/schemas/stringSingleValuesAxis" }                      
                                 },
                                 "required" : [ "composite" ],
                                 "additionalProperties" : false
