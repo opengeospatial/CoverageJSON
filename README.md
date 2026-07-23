@@ -38,6 +38,7 @@ At the December 2021 meeting of the OGC Technical Committee, the following plan 
     * Text in GitHub (**DONE**)
     * Create Conceptual model (**DONE**) Top level model diagram incorporated into candidate Sep 2022)
 * Request and propose further improvements to CoverageJSON specification:
+    * Copy JSON-LD context files & namespaces to OGC registers, support ISO19156 OMS attributes, add numeric TemporalCRS to string TemporalRS (current **Master V1.0.1**) branch  
     * Support for multiple time axes (Tagged **V1.1**)
     * Support for JSON representation of CRSs, as in PROJJSON (Tagged **V1.2**)
     * Other backward compatible improvements (**V1.x**)
