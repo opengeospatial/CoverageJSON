@@ -8,6 +8,7 @@ This folder contains the text for the standard
 * remaining adocs - each section of the standard document is in a separate document: follow directions in each document to populate
 * figures - figures go here
 * images - Image files for graphics go here. Image files for figures go in the "figures" directory. Only place in here images not used in figures (e.g., as parts of tables, as logos, etc.)
+* schemas used by the standard during development are here, though the final approved standard schema will be in an OGC Schema register 
 * requirements - directory for requirements and requirement classes to be referenced in the document
 * code - sample code to accompany the standard, if desired
 * abstract_tests - the Abstract Test Suite comprising one test for every requirement, optional
