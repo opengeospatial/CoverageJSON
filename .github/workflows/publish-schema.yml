@@ -1,6 +1,7 @@
 name: Build schema
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - master
@@ -14,6 +15,7 @@ jobs:
 
     permissions:
       contents: write
+      pull-requests: write      
 
     steps:
     - uses: actions/checkout@v4
@@ -47,14 +49,27 @@ jobs:
     - name: Remove intermediate bundle
       run: rm -rf build
 
-    - name: Commit generated schemas
+    - name: Open PR for generated schemas
+      env:
+        GH_TOKEN: ${{ github.token }}
       run: |
         git config user.name "github-actions[bot]"
         git config user.email "github-actions[bot]@users.noreply.github.com"
         git add standard/schema/build/
+
         if git diff --cached --quiet; then
           echo "No changes to generated schemas"
-        else
-          git commit -m "build: regenerate bundled schemas from fragments"
-          git push
+          exit 0
         fi
+
+        branch="automation/schema-${{ github.run_id }}"
+        git switch -c "$branch"
+        git commit -m "build: regenerate bundled schemas from fragments"
+        git push origin "$branch"
+
+        gh pr create \
+          --repo "$GITHUB_REPOSITORY" \
+          --base master \
+          --head "$branch" \
+          --title "Regenerate bundled schemas" \
+          --body "Generated from the schema fragments by the Build schema workflow."
