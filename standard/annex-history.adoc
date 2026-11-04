@@ -14,4 +14,5 @@
 |2022-09-14 |0.2.4 |Chris Little, Jon Blower |all |incorporate final Public Comments editorial edits
 |2023-08-22 |1.0.0 |OGC Staff |Approved OGC Community standard
 |2026-02-05 |1.0.1 |Chris Little, Kathi Schleidt |Improved JSON-LD examples
+|2026-10-15 |1.0.1 |Chris Little |Final Draft
 |===
