@@ -6,9 +6,9 @@
 :committee: technical
 :draft: 3.0
 :external-id: http://www.opengis.net/doc/CS/covjson/1.0
-:docnumber: 21-069r2
-:received-date: 2021-12-09
-:issued-date: 2022-12-12
+:docnumber: 21-069r3
+:received-date: 2026-09-23
+:issued-date: 2026-09-23
 :published-date: YYYY-MM-DD
 :fullname: Chris Little
 :fullname_2: Jon Blower
@@ -24,7 +24,7 @@
 :pdf-uri: ./document.pdf
 :xml-uri: ./document.xml
 :doc-uri: ./document.doc
-:edition: 1.0-draft_0.2.2
+:edition: 1.0.1-draft
 
 
 ////
